@@ -7,7 +7,7 @@ class CheckoutsController < ApplicationController
     )
 
     redirect_to session.url, allow_other_host: true
-  rescue KeyError
+  rescue KeyError, CourseCheckout::MissingConfigurationError
     redirect_to page_path("curso-fundamentos"), alert: "O checkout ainda não está configurado. Falta ligar o preço Stripe do curso."
   rescue Stripe::StripeError => e
     Rails.logger.error "Stripe checkout error: #{e.message}"
@@ -16,6 +16,8 @@ class CheckoutsController < ApplicationController
 
   def success
     if params[:mock_checkout].present?
+      return redirect_to(page_path("curso-fundamentos"), alert: "O checkout de teste está desativado.") unless CourseCheckout.mock_checkout_enabled?
+
       return fulfill_mock_checkout if params[:email].present?
 
       render :mock_success
@@ -29,6 +31,9 @@ class CheckoutsController < ApplicationController
         expand: [ "customer_details" ]
       )
       @enrollment = CourseCheckout.fulfill_checkout_session!(checkout_session)
+      return redirect_to(new_course_session_path, alert: "Ainda estamos a confirmar o pagamento. Peça o link de acesso com o email usado no checkout.") if @enrollment.blank?
+
+      session[:learner_id] = @enrollment.learner_id if @enrollment.present?
     end
 
     render :success
@@ -48,6 +53,7 @@ class CheckoutsController < ApplicationController
       email: params[:email],
       name: params[:name].presence || params[:email].to_s.split("@").first
     )
+    session[:learner_id] = @enrollment.learner_id
     render :success
   end
 end

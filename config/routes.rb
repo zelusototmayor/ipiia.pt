@@ -1,20 +1,20 @@
 Rails.application.routes.draw do
   root "pages#home"
 
-  resources :bookings, only: [:create, :show], param: :confirmation_token do
+  resources :bookings, only: [ :create, :show ], param: :confirmation_token do
     member do
       delete :cancel
     end
   end
 
-  resources :ai_assessments, only: [:create]
+  resources :ai_assessments, only: [ :create ]
 
-  resource :checkout, only: [:create] do
+  resource :checkout, only: [ :create ] do
     get :success
     get :cancel
   end
 
-  resource :course_session, only: [:new, :create, :destroy], path: "entrar" do
+  resource :course_session, only: [ :new, :create, :destroy ], path: "entrar", path_names: { new: "" } do
     get :magic, path: "magic/:token"
   end
 

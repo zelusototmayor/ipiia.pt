@@ -7,7 +7,7 @@
   const NAV_HTML = `
 <nav class="nav" id="nav">
   <div class="container nav-inner">
-    <a href="index.html" class="nav-logo">
+    <a href="/" class="nav-logo">
       <img src="${logoCubePath}" alt="IPIIA">
       <div class="nav-wordmark">
         <div class="nav-name">Instituto Português de Implementação de IA</div>
@@ -15,14 +15,14 @@
       </div>
     </a>
     <div class="nav-links">
-      <a class="nav-link" href="missao.html">Missão</a>
-      <a class="nav-link" href="metodo.html">Método</a>
-      <a class="nav-link" href="servicos.html">Serviços</a>
-      <a class="nav-link" href="fundos-europeus-ia-pmes">Apoios IA</a>
-      <a class="nav-link" href="teste.html">Teste IA</a>
-      <a class="nav-link" href="casos.html">Casos</a>
-      <a class="nav-link" href="sobre.html">Sobre</a>
-      <a class="btn btn-primary nav-cta" href="book-call.html">Intro call 15 min →</a>
+      <a class="nav-link" href="/missao.html">Missão</a>
+      <a class="nav-link" href="/metodo.html">Método</a>
+      <a class="nav-link" href="/servicos.html">Serviços</a>
+      <a class="nav-link" href="/fundos-europeus-ia-pmes">Apoios IA</a>
+      <a class="nav-link" href="/teste.html">Teste IA</a>
+      <a class="nav-link" href="/casos.html">Casos</a>
+      <a class="nav-link" href="/sobre.html">Sobre</a>
+      <a class="btn btn-primary nav-cta" href="/book-call.html">Intro call 15 min →</a>
     </div>
   </div>
 </nav>`;
@@ -31,7 +31,7 @@
 <footer class="footer">
   <div class="container footer-inner">
     <div class="footer-logo-wrap">
-      <a href="index.html" class="footer-logo">
+      <a href="/" class="footer-logo">
         <img src="${logoCubePath}" alt="IPIIA">
         <span class="footer-logo-name">Instituto Português de Implementação de IA</span>
       </a>
@@ -44,27 +44,27 @@
     <div class="footer-cols">
       <div class="footer-col">
         <span class="footer-col-label">Instituto</span>
-        <a href="missao.html" class="footer-link">Missão</a>
-        <a href="sobre.html" class="footer-link">Sobre</a>
-        <a href="book-call.html" class="footer-link">Intro call</a>
-        <a href="contacto.html" class="footer-link">Contacto</a>
+        <a href="/missao.html" class="footer-link">Missão</a>
+        <a href="/sobre.html" class="footer-link">Sobre</a>
+        <a href="/book-call.html" class="footer-link">Intro call</a>
+        <a href="/contacto.html" class="footer-link">Contacto</a>
       </div>
       <div class="footer-col">
         <span class="footer-col-label">Serviços</span>
-        <a href="metodo.html" class="footer-link">Método</a>
-        <a href="servicos.html" class="footer-link">Serviços</a>
-        <a href="fundos-europeus-ia-pmes" class="footer-link">Fundos europeus IA</a>
-        <a href="curso-fundamentos.html" class="footer-link">Curso fundamentos</a>
-        <a href="curso-proficiencia.html" class="footer-link">Certificado avançado</a>
-        <a href="casos.html" class="footer-link">Casos de uso</a>
+        <a href="/metodo.html" class="footer-link">Método</a>
+        <a href="/servicos.html" class="footer-link">Serviços</a>
+        <a href="/fundos-europeus-ia-pmes" class="footer-link">Fundos europeus IA</a>
+        <a href="/curso-fundamentos.html" class="footer-link">Curso fundamentos</a>
+        <a href="/curso-proficiencia.html" class="footer-link">Certificado avançado</a>
+        <a href="/casos.html" class="footer-link">Casos de uso</a>
       </div>
       <div class="footer-col">
         <span class="footer-col-label">Recursos</span>
-        <a href="teste.html" class="footer-link">Teste IA gratuito</a>
+        <a href="/teste.html" class="footer-link">Teste IA gratuito</a>
         <a href="mailto:zelu@zelusottomayor.com" class="footer-link">zelu@zelusottomayor.com</a>
-        <a href="privacidade.html" class="footer-link">Privacidade</a>
-        <a href="termos.html" class="footer-link">Termos</a>
-        <a href="cookies.html" class="footer-link">Cookies</a>
+        <a href="/privacidade.html" class="footer-link">Privacidade</a>
+        <a href="/termos.html" class="footer-link">Termos</a>
+        <a href="/cookies.html" class="footer-link">Cookies</a>
       </div>
     </div>
   </div>
@@ -79,7 +79,7 @@
     // Active nav link based on current page
     const file = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
     document.querySelectorAll('.nav-link, .nav-cta').forEach((a) => {
-      const href = (a.getAttribute('href') || '').toLowerCase();
+      const href = (a.getAttribute('href') || '').replace(/^\//, '').toLowerCase();
       if (
         href === file ||
         href === `${file}.html` ||

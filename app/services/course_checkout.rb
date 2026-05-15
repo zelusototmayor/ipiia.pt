@@ -1,6 +1,8 @@
 require "ostruct"
 
 class CourseCheckout
+  class MissingConfigurationError < StandardError; end
+
   COURSE_SLUG = CourseCatalog.fundamentos.slug
 
   def self.create_session(return_url:, cancel_url:, learner_email: nil)
@@ -23,8 +25,10 @@ class CourseCheckout
         allow_promotion_codes: true,
         automatic_tax: { enabled: ENV.fetch("STRIPE_AUTOMATIC_TAX", "false") == "true" }
       )
-    else
+    elsif mock_checkout_enabled?
       OpenStruct.new(url: "#{return_url}?mock_checkout=1&course_slug=#{COURSE_SLUG}", id: "mock_#{SecureRandom.hex(8)}")
+    else
+      raise MissingConfigurationError, "Stripe checkout is not configured"
     end
   end
 
@@ -32,10 +36,19 @@ class CourseCheckout
     ENV["STRIPE_SECRET_KEY"].present? && ENV["STRIPE_PRICE_FUNDAMENTOS_IA"].present?
   end
 
+  def self.mock_checkout_enabled?
+    default = Rails.env.development? || Rails.env.test? ? "true" : "false"
+    ENV.fetch("ALLOW_MOCK_COURSE_CHECKOUT", default) == "true"
+  end
+
   def self.fulfill_checkout_session!(session)
+    return unless session.payment_status == "paid"
+
     metadata = session.metadata.respond_to?(:to_h) ? session.metadata.to_h : {}
     course_slug = metadata["course_slug"] || COURSE_SLUG
     email = session.customer_details&.email || session.customer_email
+    raise MissingConfigurationError, "Checkout session has no customer email" if email.blank?
+
     name = session.customer_details&.name || email.to_s.split("@").first
 
     learner = Learner.find_or_initialize_from_checkout(
@@ -63,6 +76,8 @@ class CourseCheckout
   end
 
   def self.fulfill_mock_checkout!(email:, name:)
+    raise MissingConfigurationError, "Mock checkout is disabled" unless mock_checkout_enabled?
+
     learner = Learner.find_or_initialize_from_checkout(email: email, name: name)
     learner.save!
 

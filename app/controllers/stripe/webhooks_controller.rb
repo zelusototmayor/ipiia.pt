@@ -3,6 +3,8 @@ module Stripe
     skip_before_action :verify_authenticity_token
 
     def webhook
+      return head :service_unavailable if Rails.env.production? && ENV["STRIPE_WEBHOOK_SECRET"].blank?
+
       event = build_event
 
       if event.type == "checkout.session.completed"
