@@ -1,0 +1,29 @@
+<div id="nav-mount"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow fade-in">Área do aluno</span>
+    <h1 class="fade-in delay-1">Entrar no <em>curso</em>.</h1>
+    <p class="lead fade-in delay-2">
+      Indique o email usado na compra. Enviamos um link seguro para retomar o curso
+      em qualquer dispositivo, sem password.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container narrow-container">
+    <%= form_with url: course_session_path, method: :post, class: "panel-form" do %>
+      <div class="form-group">
+        <%= label_tag :email, "Email", class: "form-label" %>
+        <%= email_field_tag :email, params[:email], class: "form-input", placeholder: "joao@empresa.pt", required: true %>
+      </div>
+      <button class="btn btn-terracota" type="submit">Enviar link de acesso</button>
+      <p class="form-disclaimer">
+        O acesso ao curso é vitalício. Se mudar de computador ou telemóvel, peça um novo link com o mesmo email.
+      </p>
+    <% end %>
+  </div>
+</section>
+
+<div id="footer-mount"></div>

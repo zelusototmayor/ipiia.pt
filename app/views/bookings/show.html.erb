@@ -1,0 +1,50 @@
+<div id="nav-mount"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow fade-in">Intro call</span>
+    <h1 class="fade-in delay-1">
+      <% if @booking.cancelled? %>
+        Reserva <em>cancelada</em>.
+      <% elsif @booking.confirmed? %>
+        Intro call <em>confirmada</em>.
+      <% else %>
+        Pedido de intro call <em>recebido</em>.
+      <% end %>
+    </h1>
+    <p class="lead fade-in delay-2">
+      <% if @booking.confirmed? %>
+        O evento foi criado no calendário. Use o link abaixo para entrar na reunião.
+      <% else %>
+        Guardámos os dados da reserva. A confirmação por email será enviada quando o calendário terminar de sincronizar.
+      <% end %>
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="coming-soon fade-in">
+      <span class="coming-soon-eyebrow"><%= @booking.status %></span>
+      <h3><%= @booking.display_date %></h3>
+      <p>
+        <strong><%= @booking.display_time_range %></strong><br>
+        <%= @booking.guest_name %> · <%= @booking.guest_email %>
+      </p>
+
+      <% if @booking.google_meet_link.present? && !@booking.cancelled? %>
+        <div class="coming-soon-row">
+          <a class="btn btn-primary" href="<%= @booking.google_meet_link %>" target="_blank" rel="noopener">Entrar no Google Meet →</a>
+        </div>
+      <% end %>
+
+      <% if !@booking.cancelled? && @booking.starts_at.future? %>
+        <div class="coming-soon-row">
+          <%= button_to "Cancelar reserva", cancel_booking_path(@booking.confirmation_token), method: :delete, class: "btn btn-secondary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<div id="footer-mount"></div>

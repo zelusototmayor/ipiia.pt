@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <title><%= @page_title || "IPIIA — Instituto Português de Implementação de IA" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="<%= @meta_description || "Diagnóstico, formação e implementação de IA para PMEs portuguesas." %>">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
+    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+
+    <%= favicon_link_tag "logo-cube.png", type: "image/png" %>
+
+    <%= stylesheet_link_tag "shared", "styles", "data-turbo-track": "reload" %>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script>
+      window.IPIIA_ASSETS = {
+        logoCube: "<%= asset_path("logo-cube.png") %>"
+      };
+    </script>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <% if notice.present? || alert.present? %>
+      <div class="flash-stack">
+        <% if notice.present? %><div class="flash flash-notice"><%= notice %></div><% end %>
+        <% if alert.present? %><div class="flash flash-alert"><%= alert %></div><% end %>
+      </div>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

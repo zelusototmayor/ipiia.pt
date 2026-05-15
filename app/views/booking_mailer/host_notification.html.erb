@@ -1,0 +1,14 @@
+<p>Nova intro call IPIIA.</p>
+
+<p>
+  <strong>Nome:</strong> <%= @booking.guest_name %><br>
+  <strong>Email:</strong> <%= @booking.guest_email %><br>
+  <strong>Empresa:</strong> <%= @booking.guest_company.presence || "Não indicada" %><br>
+  <strong>Tema:</strong> <%= @booking.topic.presence || "Não indicado" %><br>
+  <strong>Data:</strong> <%= @booking.display_date %><br>
+  <strong>Hora:</strong> <%= @booking.host_display_time_range %>
+</p>
+
+<% if @booking.notes.present? %>
+  <p><strong>Contexto:</strong><br><%= simple_format(@booking.notes) %></p>
+<% end %>

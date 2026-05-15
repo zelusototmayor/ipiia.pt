@@ -1,0 +1,31 @@
+<div id="nav-mount"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow fade-in">Modo teste</span>
+    <h1 class="fade-in delay-1">Criar matrícula <em>local</em>.</h1>
+    <p class="lead fade-in delay-2">
+      O Stripe ainda não tem chaves nesta instalação. Para testar a área do curso,
+      crie uma matrícula local com nome e email.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container narrow-container">
+    <form class="panel-form" method="get" action="<%= success_checkout_path %>">
+      <input type="hidden" name="mock_checkout" value="1">
+      <div class="form-group">
+        <label class="form-label" for="mock-name">Nome</label>
+        <input class="form-input" id="mock-name" name="name" type="text" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="mock-email">Email</label>
+        <input class="form-input" id="mock-email" name="email" type="email" required>
+      </div>
+      <button class="btn btn-terracota" type="submit">Criar acesso de teste</button>
+    </form>
+  </div>
+</section>
+
+<div id="footer-mount"></div>

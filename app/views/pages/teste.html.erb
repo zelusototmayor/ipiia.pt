@@ -1,0 +1,185 @@
+<div id="nav-mount"></div>
+
+<script type="application/json" id="ai-test-questions"><%= raw AiReadinessTest.public_questions.to_json %></script>
+
+<section class="page-hero test-hero">
+  <div class="container">
+    <span class="eyebrow fade-in">Teste IA · Gratuito</span>
+    <h1 class="fade-in delay-1">Descubra o seu <em>nível de prontidão IA</em>.</h1>
+    <p class="lead fade-in delay-2">
+      Um diagnóstico curto para perceber como usa, avalia e aplica IA no trabalho.
+      No fim, recebe por email uma análise estruturada por dimensão e o próximo
+      percurso recomendado.
+    </p>
+    <div class="test-hero-actions fade-in delay-3">
+      <button class="btn btn-primary" type="button" data-ai-test-start>Iniciar teste →</button>
+      <a class="btn btn-secondary" href="#como-funciona">Como funciona</a>
+    </div>
+  </div>
+</section>
+
+<section class="section cta-section" id="teste-ia">
+  <div class="container">
+    <div class="test-shell" id="ai-test-shell" data-endpoint="<%= ai_assessments_path %>">
+      <div class="test-shell-head">
+        <div>
+          <span class="eyebrow eyebrow-dark">Diagnóstico guiado</span>
+          <h2>Responda sem pressa. Cada pergunta desbloqueia a seguinte.</h2>
+        </div>
+        <p>
+          O teste demora cerca de 5 a 7 minutos. Não mostramos uma nota no fim:
+          enviamos um relatório por email com leitura por área, riscos e próximos passos.
+        </p>
+      </div>
+
+      <div class="test-start-panel" id="ai-test-start-panel">
+        <h3>Antes de começar</h3>
+        <p>
+          Pense no seu contexto real de trabalho. O objetivo é diagnosticar maturidade
+          prática, não testar memorização.
+        </p>
+        <button class="btn btn-terracota" type="button" data-ai-test-start>Iniciar teste →</button>
+      </div>
+
+      <div class="test-card" id="ai-test-card" hidden>
+        <div class="test-progress">
+          <span id="ai-test-progress-label">Pergunta 1 de 12</span>
+          <div class="test-progress-track">
+            <div class="test-progress-fill" id="ai-test-progress-fill"></div>
+          </div>
+        </div>
+
+        <fieldset class="test-question">
+          <legend id="ai-test-question-text"></legend>
+          <div class="test-options" id="ai-test-options"></div>
+        </fieldset>
+
+        <div class="test-actions">
+          <button class="btn btn-secondary" type="button" id="ai-test-prev">← Anterior</button>
+          <button class="btn btn-terracota" type="button" id="ai-test-next" disabled>Seguinte →</button>
+        </div>
+      </div>
+
+      <form class="test-lead-form" id="ai-test-lead-form" hidden>
+        <div class="test-progress">
+          <span>Último passo</span>
+          <div class="test-progress-track">
+            <div class="test-progress-fill" style="width:100%"></div>
+          </div>
+        </div>
+        <div class="test-lead-copy">
+          <span class="coming-soon-eyebrow">Receber resultado</span>
+          <h3>Para onde enviamos o seu diagnóstico?</h3>
+          <p>
+            O relatório inclui perfil recomendado, pontuação por dimensão e notas
+            específicas sobre segurança, validação e automação.
+          </p>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="ai-lead-name">Nome</label>
+            <input class="form-input" id="ai-lead-name" name="name" type="text" placeholder="João Silva" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ai-lead-email">Email</label>
+            <input class="form-input" id="ai-lead-email" name="email" type="email" placeholder="joao@empresa.pt" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="ai-lead-role">Perfil</label>
+            <select class="form-input" id="ai-lead-role" name="role" required>
+              <option value="">Escolha uma opção</option>
+              <option>Gestão / Direção</option>
+              <option>Operações</option>
+              <option>Comercial / Marketing</option>
+              <option>Técnico / Produto</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ai-lead-company">Empresa</label>
+            <input class="form-input" id="ai-lead-company" name="company" type="text" placeholder="Empresa Lda.">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="ai-lead-use-case">Que tarefa real gostaria de melhorar com IA?</label>
+          <textarea class="form-textarea" id="ai-lead-use-case" name="use_case" placeholder="Ex.: responder a pedidos repetitivos, preparar propostas, resumir documentos, analisar dados..." required></textarea>
+        </div>
+
+        <div class="test-actions">
+          <button class="btn btn-secondary" type="button" id="ai-test-back-to-questions">← Voltar</button>
+          <button class="btn btn-terracota" type="submit" id="ai-test-submit">Enviar diagnóstico →</button>
+        </div>
+        <p class="form-disclaimer">
+          Usamos estes dados para enviar o resultado do teste e recomendações relacionadas.
+        </p>
+      </form>
+
+      <div class="test-complete" id="ai-test-complete" hidden>
+        <span class="coming-soon-eyebrow">Diagnóstico enviado</span>
+        <h3>O seu relatório está a caminho.</h3>
+        <p id="ai-test-complete-message">
+          Enviámos a análise para o email indicado. Se não aparecer em poucos minutos,
+          confirme a pasta de spam ou promoções.
+        </p>
+        <div class="coming-soon-row">
+          <a class="btn btn-primary" href="book-call.html">Marcar intro call</a>
+          <a class="btn btn-secondary" href="servicos.html">Ver serviços</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="como-funciona">
+  <div class="container">
+    <div class="problem-intro">
+      <div class="fade-in">
+        <span class="eyebrow">Como funciona</span>
+        <h2>Um teste de <em>5 a 7 minutos</em>, com recomendação prática.</h2>
+      </div>
+      <p class="lead fade-in delay-1">
+        O objetivo não é dar uma nota escolar. É perceber se a próxima etapa deve
+        ser fundamentos, uso avançado, automação ou uma conversa sobre implementação.
+      </p>
+    </div>
+    <div class="problem-grid fade-in delay-2">
+      <div class="problem-card">
+        <span class="problem-num">01</span>
+        <h3>Uma pergunta de cada vez</h3>
+        <p>Avança apenas depois de responder, para manter foco e reduzir respostas automáticas.</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-num">02</span>
+        <h3>Quatro opções por pergunta</h3>
+        <p>Cada opção contribui para dimensões diferentes, como segurança, avaliação ou automação.</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-num">03</span>
+        <h3>Score por dimensão</h3>
+        <p>O relatório não depende só de percentagem total; identifica forças, riscos e prioridades.</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-num">04</span>
+        <h3>Relatório por email</h3>
+        <p>No fim, recebe uma análise no tom IPIIA e o próximo percurso recomendado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <span class="eyebrow eyebrow-dark">Próximo passo</span>
+    <h2>Quer aplicar isto à sua empresa?</h2>
+    <p class="lead">
+      O teste ajuda a perceber a maturidade individual. Para mapear processos,
+      riscos e oportunidades reais, o caminho é uma intro call.
+    </p>
+    <a class="btn btn-terracota" href="book-call.html">Marcar intro call de 15 min →</a>
+  </div>
+</section>
+
+<div id="footer-mount"></div>

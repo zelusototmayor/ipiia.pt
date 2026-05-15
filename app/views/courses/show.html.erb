@@ -1,0 +1,57 @@
+<div id="nav-mount"></div>
+
+<section class="course-shell">
+  <aside class="course-sidebar">
+    <span class="eyebrow eyebrow-dark">Curso</span>
+    <h1><%= @course.title %></h1>
+    <div class="course-progress">
+      <div class="course-progress-meta">
+        <span>Progresso</span>
+        <strong><%= @enrollment.progress_percent %>%</strong>
+      </div>
+      <div class="test-progress-track">
+        <div class="test-progress-fill" style="width:<%= @enrollment.progress_percent %>%"></div>
+      </div>
+    </div>
+    <%= link_to "Continuar", course_lesson_path(@next_lesson[:key]), class: "btn btn-terracota course-wide-button" %>
+    <%= button_to "Sair", course_session_path, method: :delete, class: "btn btn-secondary course-wide-button" %>
+  </aside>
+
+  <main class="course-main">
+    <div class="course-topline">
+      <div>
+        <span class="eyebrow">Área do aluno</span>
+        <h2>Bem-vindo, <%= current_learner.name %>.</h2>
+      </div>
+      <% if @enrollment.certificate.present? %>
+        <%= link_to "Ver certificado", certificate_path(@enrollment.certificate.code), class: "btn btn-primary" %>
+      <% else %>
+        <%= link_to "Avaliação final", course_quiz_path, class: "btn btn-secondary" %>
+      <% end %>
+    </div>
+
+    <% @course.modules.each do |mod| %>
+      <section class="course-module">
+        <div class="course-module-head">
+          <span><%= mod[:key].upcase %></span>
+          <div>
+            <h3><%= mod[:title] %></h3>
+            <p><%= mod[:objective] %></p>
+          </div>
+        </div>
+        <div class="lesson-list">
+          <% mod[:lessons].each do |lesson| %>
+            <% completed = @enrollment.lesson_completed?(lesson[:key]) %>
+            <%= link_to course_lesson_path(lesson[:key]), class: "lesson-row #{'is-complete' if completed}" do %>
+              <span class="lesson-status"><%= completed ? "✓" : "○" %></span>
+              <span>
+                <strong><%= lesson[:title] %></strong>
+                <small><%= lesson[:duration] %> · <%= lesson[:objective] %></small>
+              </span>
+            <% end %>
+          <% end %>
+        </div>
+      </section>
+    <% end %>
+  </main>
+</section>

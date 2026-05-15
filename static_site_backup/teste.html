@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teste IA gratuito — IPIIA</title>
+<meta name="description" content="Teste gratuito de conhecimento de IA para perceber o seu nível e receber o percurso de formação recomendado.">
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="assets/logo-cube.png">
+</head>
+<body>
+
+<div id="nav-mount"></div>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow fade-in">Teste IA · Gratuito</span>
+    <h1 class="fade-in delay-1">Descubra o seu <em>nível de prontidão IA</em>.</h1>
+    <p class="lead fade-in delay-2">
+      Um diagnóstico curto para perceber como usa, avalia e aplica IA no trabalho.
+      No fim, recebe por email o percurso recomendado.
+    </p>
+  </div>
+</section>
+
+<!-- ── ASSESSMENT STRUCTURE ── -->
+<section class="section">
+  <div class="container">
+    <div class="problem-intro">
+      <div class="fade-in">
+        <span class="eyebrow">Como funciona</span>
+        <h2>Um teste de <em>5 a 7 minutos</em>, com recomendação prática.</h2>
+      </div>
+      <p class="lead fade-in delay-1">
+        O objetivo não é dar uma nota escolar. É perceber se a próxima etapa deve
+        ser fundamentos, uso avançado, automação ou uma conversa sobre implementação.
+      </p>
+    </div>
+    <div class="problem-grid fade-in delay-2">
+      <div class="problem-card">
+        <span class="problem-num">01</span>
+        <h3>Pergunta aberta inicial</h3>
+        <p>Identifica uma tarefa real onde a IA pode ajudar e o que teria de verificar antes de confiar no resultado.</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-num">02</span>
+        <h3>Questões objetivas</h3>
+        <p>10 a 12 perguntas sobre fundamentos, prompting, avaliação de outputs, segurança e automação.</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-num">03</span>
+        <h3>Perfil por dimensão</h3>
+        <p>Recebe um score por área, não apenas uma percentagem única sem contexto.</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-num">04</span>
+        <h3>Próximo módulo recomendado</h3>
+        <p>Com base no resultado, encaminhamos para fundamentos, implementação avançada ou intro call.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── INTERACTIVE ASSESSMENT ── -->
+<section class="section cta-section">
+  <div class="container">
+    <form class="assessment" id="ai-readiness-test">
+      <div class="assessment-header">
+        <div>
+          <span class="eyebrow eyebrow-dark">Teste IA gratuito</span>
+          <h2>Responda uma vez. Receba um percurso recomendado.</h2>
+        </div>
+        <p class="lead">
+          Esta versão já calcula o resultado no browser. Quando ligarmos o backend,
+          os mesmos dados passam a criar lead, enviar email e desbloquear o curso certo.
+        </p>
+      </div>
+
+      <div class="assessment-card">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="lead-name">Nome</label>
+            <input class="form-input" id="lead-name" name="nome" type="text" placeholder="João Silva" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="lead-email">Email</label>
+            <input class="form-input" id="lead-email" name="email" type="email" placeholder="joao@empresa.pt" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="lead-role">Perfil</label>
+            <select class="form-input" id="lead-role" name="perfil" required>
+              <option value="">Escolha uma opção</option>
+              <option>Gestão / Direção</option>
+              <option>Operações</option>
+              <option>Comercial / Marketing</option>
+              <option>Técnico / Produto</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="lead-company">Empresa</label>
+            <input class="form-input" id="lead-company" name="empresa" type="text" placeholder="Empresa Lda.">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="open-use-case">Que tarefa real gostaria de melhorar com IA?</label>
+          <textarea class="form-textarea" id="open-use-case" name="caso" placeholder="Ex.: responder a pedidos repetitivos, preparar propostas, resumir documentos, analisar dados..." required></textarea>
+        </div>
+      </div>
+
+      <div class="quiz-grid">
+        <fieldset class="quiz-question">
+          <legend>1. O que é mais verdadeiro sobre modelos como o ChatGPT?</legend>
+          <label><input type="radio" name="q1" data-dimension="foundations" data-score="0" required> Guardam uma base de dados perfeita de factos.</label>
+          <label><input type="radio" name="q1" data-dimension="foundations" data-score="2"> Geram respostas prováveis a partir de padrões e contexto.</label>
+          <label><input type="radio" name="q1" data-dimension="foundations" data-score="1"> Só funcionam bem para programadores.</label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>2. Um bom pedido à IA deve incluir sobretudo...</legend>
+          <label><input type="radio" name="q2" data-dimension="prompting" data-score="0" required> Uma frase curta e genérica.</label>
+          <label><input type="radio" name="q2" data-dimension="prompting" data-score="2"> Objetivo, contexto, fontes, formato e critérios de qualidade.</label>
+          <label><input type="radio" name="q2" data-dimension="prompting" data-score="1"> O máximo de palavras possível, mesmo sem estrutura.</label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>3. Se a IA der uma resposta convincente mas sem fontes...</legend>
+          <label><input type="radio" name="q3" data-dimension="evaluation" data-score="0" required> Pode ser usada tal como está.</label>
+          <label><input type="radio" name="q3" data-dimension="evaluation" data-score="2"> Deve ser verificada antes de entrar num processo real.</label>
+          <label><input type="radio" name="q3" data-dimension="evaluation" data-score="1"> Basta pedir para a IA “ter mais certeza”.</label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>4. Um colaborador deve colocar dados pessoais de clientes numa ferramenta pública de IA?</legend>
+          <label><input type="radio" name="q4" data-dimension="responsible" data-score="0" required> Sim, se isso poupar tempo.</label>
+          <label><input type="radio" name="q4" data-dimension="responsible" data-score="2"> Não sem regras claras, base legal e ferramenta adequada.</label>
+          <label><input type="radio" name="q4" data-dimension="responsible" data-score="1"> Só se apagar o nome do ficheiro.</label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>5. Qual destes processos é melhor candidato a automação com IA?</legend>
+          <label><input type="radio" name="q5" data-dimension="automation" data-score="2" required> Classificar e encaminhar emails repetitivos com revisão humana.</label>
+          <label><input type="radio" name="q5" data-dimension="automation" data-score="0"> Tomar decisões legais finais sem supervisão.</label>
+          <label><input type="radio" name="q5" data-dimension="automation" data-score="1"> Substituir toda a equipa num processo pouco claro.</label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>6. Quando a IA erra, a causa mais provável é...</legend>
+          <label><input type="radio" name="q6" data-dimension="foundations" data-score="1" required> Apenas falta de “inteligência”.</label>
+          <label><input type="radio" name="q6" data-dimension="foundations" data-score="2"> Contexto insuficiente, tarefa ambígua, dados fracos ou limitação do modelo.</label>
+          <label><input type="radio" name="q6" data-dimension="foundations" data-score="0"> A IA nunca erra se for uma versão paga.</label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>7. Para melhorar uma resposta fraca, o melhor próximo passo é...</legend>
+          <label><input type="radio" name="q7" data-dimension="prompting" data-score="2" required> Dar feedback específico, exemplos e critérios de sucesso.</label>
+          <label><input type="radio" name="q7" data-dimension="prompting" data-score="0"> Repetir exatamente o mesmo pedido.</label>
+          <label><input type="radio" name="q7" data-dimension="prompting" data-score="1"> Pedir “faz melhor” sem explicar o que falhou.</label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>8. Antes de usar uma análise gerada por IA numa decisão de negócio, deve...</legend>
+          <label><input type="radio" name="q8" data-dimension="evaluation" data-score="2" required> Confirmar dados, pressupostos e recomendações críticas.</label>
+          <label><input type="radio" name="q8" data-dimension="evaluation" data-score="0"> Assumir que a IA viu todos os dados relevantes.</label>
+          <label><input type="radio" name="q8" data-dimension="evaluation" data-score="1"> Ver apenas se o texto está bem escrito.</label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>9. Uma política interna de IA deve definir...</legend>
+          <label><input type="radio" name="q9" data-dimension="responsible" data-score="2" required> Dados permitidos, ferramentas aprovadas, revisão humana e casos proibidos.</label>
+          <label><input type="radio" name="q9" data-dimension="responsible" data-score="0"> Que todos podem usar qualquer ferramenta livremente.</label>
+          <label><input type="radio" name="q9" data-dimension="responsible" data-score="1"> Só o nome da ferramenta recomendada.</label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>10. Um agente de IA é mais indicado quando...</legend>
+          <label><input type="radio" name="q10" data-dimension="automation" data-score="2" required> Há passos repetíveis, ferramentas claras, dados acessíveis e guardrails.</label>
+          <label><input type="radio" name="q10" data-dimension="automation" data-score="0"> O processo é confuso e ninguém sabe como funciona.</label>
+          <label><input type="radio" name="q10" data-dimension="automation" data-score="1"> Queremos parecer inovadores.</label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>11. A melhor métrica para um piloto de IA deve ser...</legend>
+          <label><input type="radio" name="q11" data-dimension="automation" data-score="2" required> Definida antes do piloto e ligada a tempo, qualidade, custo ou capacidade.</label>
+          <label><input type="radio" name="q11" data-dimension="automation" data-score="0"> Escolhida depois, se a demo parecer boa.</label>
+          <label><input type="radio" name="q11" data-dimension="automation" data-score="1"> Apenas número de prompts usados.</label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>12. O melhor primeiro projeto de IA numa PME costuma ser...</legend>
+          <label><input type="radio" name="q12" data-dimension="evaluation" data-score="2" required> Pequeno, repetitivo, mensurável e com risco operacional controlado.</label>
+          <label><input type="radio" name="q12" data-dimension="evaluation" data-score="0"> O processo mais crítico da empresa, sem testes.</label>
+          <label><input type="radio" name="q12" data-dimension="evaluation" data-score="1"> Uma ideia vaga para “usar IA em tudo”.</label>
+        </fieldset>
+      </div>
+
+      <div class="assessment-actions">
+        <button class="btn btn-terracota" type="submit">Ver resultado →</button>
+        <span class="form-disclaimer">Resultado instantâneo no browser.<br>Envio por email será ligado no backend.</span>
+      </div>
+    </form>
+
+    <div class="assessment-result" id="assessment-result" hidden>
+      <span class="coming-soon-eyebrow">Resultado</span>
+      <h3 id="result-title">Percurso recomendado</h3>
+      <p id="result-body"></p>
+      <div class="score-bars" id="score-bars"></div>
+      <div class="coming-soon-row">
+        <a class="btn btn-primary" id="result-course-link" href="curso-fundamentos.html">Ver percurso recomendado →</a>
+        <a class="btn btn-secondary" href="book-call.html">Marcar intro call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── COURSE PATHS ── -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="offers-header">
+      <div class="fade-in">
+        <span class="eyebrow">Percursos pagos</span>
+        <h2>Depois do teste, há <em>dois caminhos</em>.</h2>
+      </div>
+      <p class="lead fade-in delay-1">
+        Os cursos serão desenhados de raiz. A lógica já fica preparada: quem precisa
+        de base entra no curso de fundamentos; quem já demonstra maturidade avança
+        para implementação e workflows.
+      </p>
+    </div>
+    <div class="offers-grid fade-in delay-2">
+      <div class="offer-card">
+        <div class="offer-eyebrow">Percurso 01</div>
+        <div class="offer-title">Fundamentos de IA no Trabalho</div>
+        <div class="offer-duration">Uso prático e seguro</div>
+        <div class="offer-sep"></div>
+        <ul class="offer-features">
+          <li>Capacidades e limites dos modelos</li>
+          <li>Framework de prompting reutilizável</li>
+          <li>Verificação, privacidade e uso responsável</li>
+        </ul>
+        <span class="offer-scope">Curso pago</span>
+        <a class="btn btn-primary" href="curso-fundamentos.html">Ver página do curso →</a>
+      </div>
+      <div class="offer-card featured">
+        <div class="offer-badge">Avançado</div>
+        <div class="offer-eyebrow dark">Percurso 02</div>
+        <div class="offer-title dark">Proficiência em Implementação de IA</div>
+        <div class="offer-duration dark">Workflows, automações e agentes</div>
+        <div class="offer-sep dark"></div>
+        <ul class="offer-features dark">
+          <li>Chat vs automação vs agente</li>
+          <li>Desenho de workflows com guardrails</li>
+          <li>Teste final e desafio avaliado automaticamente</li>
+        </ul>
+        <span class="offer-scope dark">Certificado IPIIA</span>
+        <a class="btn btn-terracota" href="curso-proficiencia.html">Ver certificado →</a>
+      </div>
+      <div class="offer-card">
+        <div class="offer-eyebrow">Empresas</div>
+        <div class="offer-title">Formação para equipas</div>
+        <div class="offer-duration">Online ou presencial</div>
+        <div class="offer-sep"></div>
+        <ul class="offer-features">
+          <li>Programa adaptado ao contexto da empresa</li>
+          <li>Exercícios por função e processo</li>
+          <li>Handoff para diagnóstico ou piloto</li>
+        </ul>
+        <span class="offer-scope">Sob proposta</span>
+        <a class="btn btn-primary" href="book-call.html">Marcar intro call →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-mount"></div>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

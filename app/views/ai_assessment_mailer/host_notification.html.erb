@@ -1,0 +1,20 @@
+<p>Novo teste IA concluído.</p>
+
+<p>
+  <strong>Nome:</strong> <%= @assessment.name %><br>
+  <strong>Email:</strong> <%= @assessment.email %><br>
+  <strong>Perfil:</strong> <%= @assessment.role.presence || "Não indicado" %><br>
+  <strong>Empresa:</strong> <%= @assessment.company.presence || "Não indicada" %><br>
+  <strong>Resultado:</strong> <%= @assessment.overall_score %>% · <%= @assessment.profile_title %>
+</p>
+
+<p><strong>Scores:</strong></p>
+<ul>
+  <% @assessment.dimension_scores.each do |key, score| %>
+    <li><%= AiReadinessTest::DIMENSIONS.fetch(key).fetch(:label) %>: <%= score %>%</li>
+  <% end %>
+</ul>
+
+<% if @assessment.use_case.present? %>
+  <p><strong>Caso indicado:</strong><br><%= simple_format(@assessment.use_case) %></p>
+<% end %>

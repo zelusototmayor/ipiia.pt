@@ -1,0 +1,30 @@
+<div id="nav-mount"></div>
+
+<section class="certificate-page">
+  <div class="certificate-card">
+    <span class="eyebrow">Instituto Português de Implementação de IA</span>
+    <h1><%= @course.certificate_name %></h1>
+    <p>Certifica-se que</p>
+    <h2><%= @learner.name %></h2>
+    <p>
+      concluiu com aproveitamento o curso <strong><%= @course.title %></strong>,
+      emitido pelo Instituto Português de Implementação de IA, incluindo avaliação
+      de conhecimentos e exercício prático aplicado.
+    </p>
+    <div class="certificate-meta">
+      <span>Nota final: <strong><%= @certificate.final_score %>%</strong></span>
+      <span>Código: <strong><%= @certificate.code %></strong></span>
+      <span>Emitido em <strong><%= @certificate.issued_at.strftime("%d/%m/%Y") %></strong></span>
+    </div>
+    <p class="certificate-note">
+      Este certificado é emitido por entidade privada e independente. Não constitui
+      certificação oficial, pública, regulatória ou universitária.
+    </p>
+    <div class="coming-soon-row">
+      <%= link_to "Descarregar PDF", certificate_path(@certificate.code, format: :pdf), class: "btn btn-primary" %>
+      <%= link_to "Voltar ao curso", course_dashboard_path, class: "btn btn-secondary" if current_learner.present? %>
+    </div>
+  </div>
+</section>
+
+<div id="footer-mount"></div>

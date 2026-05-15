@@ -1,0 +1,107 @@
+<div style="margin:0;background:#f5efe6;padding:0;font-family:Arial,Helvetica,sans-serif;color:#202020;">
+  <div style="max-width:720px;margin:0 auto;padding:32px 18px;">
+    <div style="background:#071b34;color:#f5efe6;padding:28px 30px;border-radius:8px 8px 0 0;">
+      <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#d9a05b;margin-bottom:18px;">
+        Instituto Português de Implementação de IA
+      </div>
+      <h1 style="font-family:Georgia,serif;font-weight:400;font-size:34px;line-height:1.06;margin:0 0 12px;">
+        O seu diagnóstico de prontidão IA
+      </h1>
+      <p style="font-size:16px;line-height:1.6;color:rgba(245,239,230,.78);margin:0;">
+        Olá <%= @assessment.name %>, analisámos as suas respostas e preparámos uma leitura prática por dimensão.
+      </p>
+    </div>
+
+    <div style="background:#fffaf2;border:1px solid #d4c9b5;border-top:0;padding:30px;">
+      <div style="border-bottom:1px solid #d4c9b5;padding-bottom:22px;margin-bottom:24px;">
+        <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#c65a3b;margin-bottom:8px;">
+          Perfil recomendado
+        </div>
+        <h2 style="font-family:Georgia,serif;font-weight:400;font-size:28px;line-height:1.1;color:#071b34;margin:0 0 10px;">
+          <%= @assessment.profile_title %>
+        </h2>
+        <p style="font-size:16px;line-height:1.65;margin:0;color:#333;">
+          <%= @assessment.profile_summary %>
+        </p>
+      </div>
+
+      <h3 style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#071b34;margin:0 0 14px;">
+        Score por dimensão
+      </h3>
+      <% @assessment.dimension_scores.each do |key, score| %>
+        <% label = AiReadinessTest::DIMENSIONS.fetch(key).fetch(:label) %>
+        <div style="margin-bottom:14px;">
+          <div style="display:flex;justify-content:space-between;gap:18px;font-size:13px;color:#333;margin-bottom:6px;">
+            <strong><%= label %></strong>
+            <span><%= score %>%</span>
+          </div>
+          <div style="height:8px;background:#ede3d4;border:1px solid #d4c9b5;">
+            <div style="height:8px;background:#c65a3b;width:<%= score %>%;"></div>
+          </div>
+        </div>
+      <% end %>
+
+      <% if @assessment.strengths.any? %>
+        <div style="margin-top:28px;">
+          <h3 style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#071b34;margin:0 0 12px;">
+            Pontos fortes
+          </h3>
+          <% @assessment.strengths.each do |item| %>
+            <p style="font-size:15px;line-height:1.6;margin:0 0 10px;color:#333;">
+              <strong style="color:#071b34;"><%= item["label"] %>:</strong>
+              <%= item["copy"] %>
+            </p>
+          <% end %>
+        </div>
+      <% end %>
+
+      <% if @assessment.priorities.any? %>
+        <div style="margin-top:24px;">
+          <h3 style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#071b34;margin:0 0 12px;">
+            Prioridades de melhoria
+          </h3>
+          <% @assessment.priorities.each do |item| %>
+            <p style="font-size:15px;line-height:1.6;margin:0 0 10px;color:#333;">
+              <strong style="color:#071b34;"><%= item["label"] %>:</strong>
+              <%= item["copy"] %>
+            </p>
+          <% end %>
+        </div>
+      <% end %>
+
+      <% if @assessment.signals.any? %>
+        <div style="margin-top:24px;background:#f5efe6;border-left:4px solid #d9a05b;padding:18px;">
+          <h3 style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#071b34;margin:0 0 12px;">
+            Notas específicas
+          </h3>
+          <% @assessment.signals.first(3).each do |signal| %>
+            <p style="font-size:15px;line-height:1.6;margin:0 0 10px;color:#333;">
+              <%= signal["copy"] %>
+            </p>
+          <% end %>
+        </div>
+      <% end %>
+
+      <% if @assessment.use_case.present? %>
+        <div style="margin-top:24px;">
+          <h3 style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#071b34;margin:0 0 10px;">
+            Caso indicado
+          </h3>
+          <p style="font-size:15px;line-height:1.6;margin:0;color:#333;">
+            <%= @assessment.use_case %>
+          </p>
+        </div>
+      <% end %>
+
+      <div style="margin-top:30px;text-align:center;">
+        <a href="https://<%= ENV.fetch("APP_HOST", "ipiia.pt") %>/<%= @assessment.recommended_path %>" style="display:inline-block;background:#071b34;color:#f5efe6;text-decoration:none;padding:14px 20px;border-radius:3px;font-weight:bold;">
+          Ver próximo passo recomendado
+        </a>
+      </div>
+    </div>
+
+    <div style="background:#071b34;color:rgba(245,239,230,.55);padding:18px 30px;border-radius:0 0 8px 8px;font-size:12px;line-height:1.6;">
+      Este diagnóstico é educativo e indicativo. Para avaliar processos reais da empresa, o próximo passo é uma intro call ou diagnóstico dedicado.
+    </div>
+  </div>
+</div>

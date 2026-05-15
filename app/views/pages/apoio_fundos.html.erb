@@ -1,0 +1,151 @@
+<div id="nav-mount"></div>
+
+<% content_for :head do %>
+  <link rel="canonical" href="https://ipiia.pt<%= FundingSupportPages::BASE_PATH %>/<%= params[:apoio] %>">
+  <meta property="og:title" content="<%= @funding_page[:title] %>">
+  <meta property="og:description" content="<%= @funding_page[:description] %>">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ipiia.pt<%= FundingSupportPages::BASE_PATH %>/<%= params[:apoio] %>">
+<% end %>
+
+<section class="page-hero support-hero">
+  <div class="container support-hero-inner">
+    <div>
+      <a class="support-back" href="/fundos-europeus-ia-pmes">← Voltar aos fundos europeus IA</a>
+      <span class="eyebrow fade-in"><%= @funding_page[:eyebrow] %></span>
+      <h1 class="fade-in delay-1"><%= @funding_page[:h1] %></h1>
+      <p class="lead fade-in delay-2"><%= @funding_page[:summary] %></p>
+      <div class="hero-actions fade-in delay-3">
+        <a class="btn btn-primary" href="mailto:<%= FundingSupportPages::CONTACT_EMAIL %>?subject=Dúvida sobre <%= ERB::Util.url_encode(@funding_page[:label]) %>">Tenho dúvidas →</a>
+        <a class="btn btn-secondary" href="#como-candidatar">Como candidatar-se</a>
+      </div>
+    </div>
+    <aside class="support-status fade-in delay-4">
+      <span class="funds-panel-label">Estado e cuidado</span>
+      <p><%= @funding_page[:status] %></p>
+    </aside>
+  </div>
+</section>
+
+<section class="funds-alert">
+  <div class="container">
+    <p>
+      Guia prático independente. Não substitui aviso formal, regulamento, parecer de contabilista,
+      consultor de incentivos ou entidade gestora. Confirme sempre datas, taxas, regiões, anexos e condições no link oficial.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container support-layout">
+    <aside class="support-toc fade-in">
+      <span class="funds-panel-label">Nesta página</span>
+      <a href="#quando-faz-sentido">Quando faz sentido</a>
+      <a href="#quem-pode">Quem pode candidatar-se</a>
+      <a href="#requisitos">Requisitos do projeto</a>
+      <a href="#despesas">Despesas e documentos</a>
+      <a href="#como-candidatar">Como candidatar-se</a>
+      <a href="#links-oficiais">Links oficiais</a>
+    </aside>
+
+    <div class="support-content">
+      <section id="quando-faz-sentido" class="support-block fade-in">
+        <span class="eyebrow">Enquadramento</span>
+        <h2>Quando este apoio faz sentido para IA</h2>
+        <ul class="support-list">
+          <% @funding_page[:when_it_fits].each do |item| %>
+            <li><%= item %></li>
+          <% end %>
+        </ul>
+      </section>
+
+      <section id="quem-pode" class="support-block fade-in">
+        <span class="eyebrow">Elegibilidade</span>
+        <h2>Quem pode candidatar-se</h2>
+        <ul class="support-list">
+          <% @funding_page[:who_can_apply].each do |item| %>
+            <li><%= item %></li>
+          <% end %>
+        </ul>
+      </section>
+
+      <section id="requisitos" class="support-block fade-in">
+        <span class="eyebrow">Projeto</span>
+        <h2>Requisitos e necessidades do projeto</h2>
+        <ul class="support-list">
+          <% @funding_page[:project_requirements].each do |item| %>
+            <li><%= item %></li>
+          <% end %>
+        </ul>
+      </section>
+
+      <section id="despesas" class="support-block fade-in">
+        <span class="eyebrow">Preparação</span>
+        <h2>Despesas e documentos a preparar</h2>
+        <div class="support-two-col">
+          <div class="support-card">
+            <h3>Despesas que podem fazer sentido</h3>
+            <ul class="support-list compact">
+              <% @funding_page[:eligible_costs].each do |item| %>
+                <li><%= item %></li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="support-card">
+            <h3>Documentos e evidências</h3>
+            <ul class="support-list compact">
+              <% @funding_page[:documents].each do |item| %>
+                <li><%= item %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="como-candidatar" class="support-block fade-in">
+        <span class="eyebrow">Passo a passo</span>
+        <h2>Como preparar e submeter a candidatura</h2>
+        <ol class="support-ordered">
+          <% @funding_page[:apply_steps].each do |item| %>
+            <li><%= item %></li>
+          <% end %>
+        </ol>
+      </section>
+
+      <section class="support-block fade-in">
+        <span class="eyebrow">Atenção</span>
+        <h2>Erros que podem enfraquecer a candidatura</h2>
+        <ul class="support-list">
+          <% @funding_page[:avoid].each do |item| %>
+            <li><%= item %></li>
+          <% end %>
+        </ul>
+      </section>
+
+      <section id="links-oficiais" class="support-block fade-in">
+        <span class="eyebrow">Fontes</span>
+        <h2>Links oficiais para confirmar e candidatar-se</h2>
+        <div class="support-links">
+          <% @funding_page[:official_links].each do |label, url| %>
+            <a href="<%= url %>" target="_blank" rel="noopener"><%= label %> →</a>
+          <% end %>
+        </div>
+        <p class="support-note"><%= @funding_page[:source_note] %></p>
+      </section>
+
+      <section class="support-contact fade-in">
+        <div>
+          <span class="eyebrow eyebrow-dark">Está com dúvidas?</span>
+          <h2>Contacte a equipa IPIIA.</h2>
+          <p>
+            Envie o nome da empresa, região, setor e uma descrição curta do projeto de IA.
+            Respondemos com uma primeira leitura do possível enquadramento.
+          </p>
+        </div>
+        <a class="btn btn-terracota" href="mailto:<%= FundingSupportPages::CONTACT_EMAIL %>?subject=Dúvida sobre <%= ERB::Util.url_encode(@funding_page[:label]) %>&body=Empresa:%0D%0ASetor:%0D%0ARegião:%0D%0AProjeto de IA:%0D%0ADúvida:%0D%0A">Enviar email →</a>
+      </section>
+    </div>
+  </div>
+</section>
+
+<div id="footer-mount"></div>

@@ -1,0 +1,14 @@
+<p>Olá <%= @booking.guest_name %>,</p>
+
+<p>A sua intro call com o IPIIA está confirmada.</p>
+
+<p>
+  <strong>Data:</strong> <%= @booking.display_date %><br>
+  <strong>Hora:</strong> <%= @booking.display_time_range %>
+</p>
+
+<% if @booking.google_meet_link.present? %>
+  <p><a href="<%= @booking.google_meet_link %>">Entrar na reunião Google Meet</a></p>
+<% end %>
+
+<p>Até breve,<br>IPIIA</p>

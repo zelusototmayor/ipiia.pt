@@ -1,0 +1,21 @@
+# Local runtime
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Local databases, uploads, and generated assets
+/storage/*
+!/storage/.keep
+/public/assets
+
+# Credentials and local environment
+/config/master.key
+/.env
+/.env.*
+!/.env.example
+
+# OS/editor noise
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,29 @@
+<div style="margin:0;background:#f5efe6;padding:0;font-family:Arial,Helvetica,sans-serif;color:#202020;">
+  <div style="max-width:680px;margin:0 auto;padding:32px 18px;">
+    <div style="background:#071b34;color:#f5efe6;padding:28px 30px;border-radius:8px 8px 0 0;">
+      <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#d9a05b;margin-bottom:18px;">
+        Instituto Português de Implementação de IA
+      </div>
+      <h1 style="font-family:Georgia,serif;font-weight:400;font-size:32px;line-height:1.08;margin:0 0 12px;">
+        O seu acesso ao curso
+      </h1>
+      <p style="font-size:16px;line-height:1.6;color:rgba(245,239,230,.78);margin:0;">
+        Olá <%= @learner.name %>, pode entrar no curso <%= @course.title %> por este link.
+      </p>
+    </div>
+
+    <div style="background:#fffaf2;border:1px solid #d4c9b5;border-top:0;padding:30px;">
+      <p style="font-size:16px;line-height:1.65;margin:0 0 22px;color:#333;">
+        O acesso é vitalício. Se mudar de dispositivo ou sair da sessão, basta pedir um novo link na página de entrada usando este mesmo email.
+      </p>
+      <p style="text-align:center;margin:30px 0;">
+        <a href="<%= @login_url %>" style="display:inline-block;background:#071b34;color:#f5efe6;text-decoration:none;padding:14px 22px;border-radius:3px;font-weight:bold;">
+          Entrar no curso
+        </a>
+      </p>
+      <p style="font-size:13px;line-height:1.55;margin:0;color:#666;">
+        Por segurança, este link expira. Pode pedir outro a qualquer momento em https://<%= ENV.fetch("APP_HOST", "ipiia.pt") %>/entrar
+      </p>
+    </div>
+  </div>
+</div>

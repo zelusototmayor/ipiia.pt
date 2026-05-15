@@ -1,0 +1,117 @@
+<% course = CourseCatalog.fundamentos %>
+
+<div id="nav-mount"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow fade-in">Curso online · Fundamentos</span>
+    <h1 class="fade-in delay-1">Fundamentos de <em>IA para o Trabalho</em>.</h1>
+    <p class="lead fade-in delay-2">
+      Aprenda a usar inteligência artificial de forma prática, segura e produtiva
+      no trabalho diário, sem depender de programação nem de teoria em excesso.
+    </p>
+    <div class="hero-actions fade-in delay-3">
+      <%= button_to "Comprar por 39,99€", checkout_path, method: :post, class: "btn btn-primary" %>
+      <%= link_to "Já comprei", new_course_session_path, class: "btn btn-secondary" %>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="offers-header">
+      <div class="fade-in">
+        <span class="eyebrow">Para quem é</span>
+        <h2>O curso certo para quem recebeu uma recomendação de fundamentos.</h2>
+      </div>
+      <p class="lead fade-in delay-1">
+        Pensado para profissionais de PMEs que já experimentaram IA, mas ainda precisam
+        de método, validação, segurança e templates reutilizáveis.
+      </p>
+    </div>
+    <div class="problem-grid fade-in delay-2">
+      <div class="problem-card">
+        <span class="problem-num">01</span>
+        <h3>90 a 120 minutos</h3>
+        <p>Formato assíncrono, guiado e focado em tarefas reais.</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-num">02</span>
+        <h3>6 módulos práticos</h3>
+        <p>IA sem hype, prompting, meta-prompting, casos por função, segurança e workflow final.</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-num">03</span>
+        <h3>Templates copiáveis</h3>
+        <p>O.C.F.R.I., entrevista-me primeiro, validação de resposta e workflow pessoal.</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-num">04</span>
+        <h3>Certificado IPIIA</h3>
+        <p>Emitido após quiz e submissão prática com aproveitamento mínimo de 65%.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="problem-intro">
+      <div>
+        <span class="eyebrow">Programa</span>
+        <h2>Uma experiência curta, aplicada e sem aulas passivas.</h2>
+      </div>
+      <p class="lead">
+        Cada lesson inclui explicação curta, exemplo, exercício, template copiável,
+        checkpoint e critério de conclusão.
+      </p>
+    </div>
+    <div class="method-detail">
+      <% course.modules.each_with_index do |mod, index| %>
+        <div class="method-detail-row">
+          <div class="method-detail-num"><%= format("%02d", index + 1) %></div>
+          <div>
+            <div class="method-detail-title"><%= mod[:title] %></div>
+            <span class="method-detail-meta"><%= mod[:lessons].size %> lições</span>
+          </div>
+          <div class="method-detail-body"><%= mod[:objective] %></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-split">
+      <div>
+        <span class="eyebrow">Acesso vitalício</span>
+        <h2>39,99€ para desbloquear o curso completo.</h2>
+        <p class="lead">
+          Depois da compra recebe um link por email. Se sair da sessão ou trocar de
+          dispositivo, pede novo link e continua onde ficou.
+        </p>
+      </div>
+      <div class="price-panel">
+        <span>Pagamento único</span>
+        <strong>39,99€</strong>
+        <%= button_to "Comprar agora", checkout_path, method: :post, class: "btn btn-terracota course-wide-button" %>
+        <%= link_to "Fazer teste primeiro", page_path("teste"), class: "btn btn-secondary course-wide-button" %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta-banner">
+  <div class="container fade-in">
+    <span class="eyebrow eyebrow-dark">Antes de comprar</span>
+    <h2>Não sabe se este é o percurso certo?</h2>
+    <p class="lead">
+      O teste gratuito recomenda este curso quando a prioridade é consolidar
+      fundamentos, prompting, validação e uso seguro.
+    </p>
+    <a class="btn btn-terracota" href="teste.html">Fazer teste IA →</a>
+  </div>
+</section>
+
+<div id="footer-mount"></div>

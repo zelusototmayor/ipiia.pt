@@ -1,0 +1,41 @@
+<div id="nav-mount"></div>
+
+<section class="course-shell">
+  <aside class="course-sidebar">
+    <%= link_to "← Voltar ao curso", course_dashboard_path, class: "course-back-link" %>
+    <span class="eyebrow eyebrow-dark">Avaliação final</span>
+    <h1>Quiz de fundamentos</h1>
+    <p>Nota mínima: <%= CourseEnrollment::CERTIFICATE_THRESHOLD %>%.</p>
+    <% if @attempt.present? %>
+      <div class="score-card">
+        <span>Melhor nota</span>
+        <strong><%= @attempt.score %>%</strong>
+      </div>
+    <% end %>
+  </aside>
+
+  <main class="course-main">
+    <div class="course-topline">
+      <div>
+        <span class="eyebrow">15 perguntas</span>
+        <h2>Valide os conceitos antes da submissão prática.</h2>
+      </div>
+      <%= link_to "Submissão prática", new_course_submission_path, class: "btn btn-secondary" %>
+    </div>
+
+    <%= form_with url: course_quiz_path, method: :post, class: "quiz-form" do %>
+      <% @quiz.each_with_index do |question, index| %>
+        <div class="lms-quiz-question">
+          <h3><span><%= index + 1 %></span><%= question[:question] %></h3>
+          <% question[:options].each_with_index do |option, option_index| %>
+            <label>
+              <%= radio_button_tag "answers[#{question[:id]}]", option_index, false, required: true %>
+              <%= option %>
+            </label>
+          <% end %>
+        </div>
+      <% end %>
+      <button class="btn btn-terracota" type="submit">Submeter quiz</button>
+    <% end %>
+  </main>
+</section>

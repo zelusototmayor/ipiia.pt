@@ -1,0 +1,49 @@
+<div id="nav-mount"></div>
+
+<section class="course-shell">
+  <aside class="course-sidebar">
+    <%= link_to "← Voltar ao curso", course_dashboard_path, class: "course-back-link" %>
+    <span class="eyebrow eyebrow-dark">Submissão prática</span>
+    <h1>Mini-workflow pessoal</h1>
+    <p>A avaliação é automática por IA e segue uma rubrica fixa.</p>
+  </aside>
+
+  <main class="course-main lesson-content">
+    <span class="eyebrow">Entrega final</span>
+    <h2>Descreva um workflow real que possa repetir no trabalho.</h2>
+    <p class="lesson-paragraph">
+      Inclua tarefa recorrente, frequência, input, passos da IA, output esperado,
+      validação humana e critério de sucesso. Evite dados pessoais ou confidenciais.
+    </p>
+
+    <% if @submission.persisted? && @submission.ai_score.present? %>
+      <div class="evaluation-panel">
+        <h3>Última avaliação: <%= @submission.ai_score %>%</h3>
+        <p><%= @submission.feedback["summary"] %></p>
+        <% if @submission.feedback["criteria"].present? %>
+          <div class="criteria-grid">
+            <% @submission.feedback["criteria"].each do |criterion| %>
+              <div>
+                <strong><%= criterion["name"] %> · <%= criterion["score"] %>%</strong>
+                <p><%= criterion["comment"] %></p>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+        <% if @submission.feedback["improvements"].present? %>
+          <ul>
+            <% @submission.feedback["improvements"].each do |item| %>
+              <li><%= item %></li>
+            <% end %>
+          </ul>
+        <% end %>
+      </div>
+    <% end %>
+
+    <%= form_with url: course_submissions_path, method: :post, class: "lesson-block lesson-form" do %>
+      <label class="form-label" for="workflow_text">Workflow pessoal</label>
+      <%= text_area_tag :workflow_text, @submission.workflow_text, class: "form-textarea", rows: 14, required: true, placeholder: "Tarefa recorrente: ...\nFrequência: ...\nInput: ...\nPassos: ...\nOutput: ...\nValidação: ...\nCritério de sucesso: ..." %>
+      <button class="btn btn-terracota" type="submit">Avaliar workflow</button>
+    <% end %>
+  </main>
+</section>

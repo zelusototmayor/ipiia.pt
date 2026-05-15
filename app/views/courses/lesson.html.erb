@@ -1,0 +1,54 @@
+<div id="nav-mount"></div>
+
+<section class="course-shell">
+  <aside class="course-sidebar">
+    <%= link_to "← Voltar ao curso", course_dashboard_path, class: "course-back-link" %>
+    <span class="eyebrow eyebrow-dark">Lesson</span>
+    <h1><%= @lesson[:title] %></h1>
+    <p><%= @lesson[:duration] %></p>
+    <div class="course-progress">
+      <div class="course-progress-meta">
+        <span>Progresso</span>
+        <strong><%= @enrollment.progress_percent %>%</strong>
+      </div>
+      <div class="test-progress-track">
+        <div class="test-progress-fill" style="width:<%= @enrollment.progress_percent %>%"></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="course-main lesson-content">
+    <span class="eyebrow">Objetivo</span>
+    <h2><%= @lesson[:objective] %></h2>
+
+    <% @lesson[:explanation].each do |paragraph| %>
+      <p class="lesson-paragraph"><%= paragraph %></p>
+    <% end %>
+
+    <div class="lesson-block">
+      <h3>Exemplo prático</h3>
+      <p><%= @lesson[:example] %></p>
+    </div>
+
+    <div class="lesson-block">
+      <h3>Prompt/template copiável</h3>
+      <textarea class="copy-template" readonly><%= @lesson[:template] %></textarea>
+      <button class="btn btn-secondary copy-template-button" type="button">Copiar template</button>
+    </div>
+
+    <%= form_with url: complete_course_lesson_path(@lesson[:key]), method: :patch, class: "lesson-block lesson-form" do %>
+      <h3>Exercício guiado</h3>
+      <p><%= @lesson[:exercise] %></p>
+      <%= text_area_tag :exercise_response, @progress.exercise_response, class: "form-textarea", placeholder: "Escreva aqui a sua resposta ou notas de aplicação...", rows: 6 %>
+
+      <div class="checkpoint-list">
+        <% @lesson[:checkpoint].each do |item| %>
+          <label><input type="checkbox" required> <%= item %></label>
+        <% end %>
+      </div>
+
+      <p class="completion-criterion"><strong>Critério de conclusão:</strong> <%= @lesson[:completion] %></p>
+      <button class="btn btn-terracota" type="submit"><%= @progress.completed? ? "Guardar e continuar" : "Concluir lesson" %></button>
+    <% end %>
+  </main>
+</section>
