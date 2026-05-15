@@ -1,0 +1,106 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "stripe"
+require "uri"
+
+Stripe.api_key = ENV["STRIPE_SECRET_KEY"]
+Stripe.api_version = "2026-02-25.clover"
+
+COURSE_SLUG = "fundamentos-ia-trabalho"
+PRODUCT_NAME = "Fundamentos de IA para o Trabalho"
+PRICE_LOOKUP_KEY = "#{COURSE_SLUG}-eur-3999"
+WEBHOOK_EVENTS = [ "checkout.session.completed" ].freeze
+
+def abort_missing_env!(name)
+  return if ENV[name].to_s.strip != ""
+
+  abort "Missing #{name}. Set it in your shell before running this setup."
+end
+
+def public_base_url
+  host = ENV.fetch("APP_HOST", "ipiia.pt").strip
+  host = "https://#{host}" unless host.start_with?("http://", "https://")
+
+  uri = URI.parse(host)
+  "#{uri.scheme}://#{uri.host}"
+end
+
+def find_course_product
+  Stripe::Product.search(
+    query: "metadata['ipiia_course_slug']:'#{COURSE_SLUG}' AND active:'true'",
+    limit: 1
+  ).data.first
+rescue Stripe::InvalidRequestError
+  Stripe::Product.list(active: true, limit: 100).auto_paging_each.find do |product|
+    product.metadata["ipiia_course_slug"] == COURSE_SLUG
+  end
+end
+
+def find_course_price
+  Stripe::Price.list(
+    active: true,
+    lookup_keys: [ PRICE_LOOKUP_KEY ],
+    limit: 1
+  ).data.first
+end
+
+def find_webhook_endpoint(url)
+  Stripe::WebhookEndpoint.list(limit: 100).auto_paging_each.find do |endpoint|
+    endpoint.status != "deleted" &&
+      endpoint.url == url &&
+      (WEBHOOK_EVENTS - endpoint.enabled_events).empty?
+  end
+end
+
+abort_missing_env!("STRIPE_SECRET_KEY")
+
+product = find_course_product || Stripe::Product.create(
+  name: PRODUCT_NAME,
+  description: "Curso introdutorio da IPIIA para aprender fundamentos praticos de IA no trabalho.",
+  metadata: {
+    ipiia_course_slug: COURSE_SLUG,
+    ipiia_course_level: "basico"
+  }
+)
+
+price = find_course_price || Stripe::Price.create(
+  product: product.id,
+  currency: "eur",
+  unit_amount: 3999,
+  lookup_key: PRICE_LOOKUP_KEY,
+  nickname: "Acesso vitalicio - Fundamentos de IA",
+  metadata: {
+    ipiia_course_slug: COURSE_SLUG
+  }
+)
+
+webhook_url = "#{public_base_url}/stripe/webhook"
+webhook = find_webhook_endpoint(webhook_url)
+created_webhook = false
+
+unless webhook
+  webhook = Stripe::WebhookEndpoint.create(
+    url: webhook_url,
+    enabled_events: WEBHOOK_EVENTS,
+    api_version: Stripe.api_version,
+    description: "IPIIA course checkout fulfillment"
+  )
+  created_webhook = true
+end
+
+puts "Stripe course setup complete."
+puts
+puts "Use these values in the app environment:"
+puts "STRIPE_PRICE_FUNDAMENTOS_IA=#{price.id}"
+if created_webhook && webhook.respond_to?(:secret) && webhook.secret.to_s != ""
+  puts "STRIPE_WEBHOOK_SECRET=#{webhook.secret}"
+else
+  puts "STRIPE_WEBHOOK_SECRET=<already-created-webhook-secret>"
+  puts "The webhook already existed, so Stripe does not reveal its signing secret again."
+end
+puts
+puts "Product: #{product.id}"
+puts "Price: #{price.id}"
+puts "Webhook: #{webhook.id} -> #{webhook.url}"

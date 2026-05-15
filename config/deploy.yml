@@ -47,6 +47,9 @@ env:
   secret:
     - RAILS_MASTER_KEY
     - RESEND_API_KEY
+    - STRIPE_SECRET_KEY
+    - STRIPE_WEBHOOK_SECRET
+    - OPENAI_API_KEY
   clear:
     APP_HOST: "ipiia.pt"
     PORT: "3000"
@@ -55,11 +58,8 @@ env:
     MAILER_FROM_EMAIL: "IPIIA <zelu@zelusottomayor.com>"
     CONTACT_EMAIL: "zelu@zelusottomayor.com"
     MAILER_DELIVERY_METHOD: "resend"
-    STRIPE_SECRET_KEY: ""
-    STRIPE_WEBHOOK_SECRET: ""
     STRIPE_PRICE_FUNDAMENTOS_IA: ""
     STRIPE_AUTOMATIC_TAX: "false"
-    OPENAI_API_KEY: ""
     OPENAI_MODEL: "gpt-5.4-mini"
     # Run the Solid Queue Supervisor inside the web server's Puma process to do jobs.
     # When you start using multiple servers, you should split out job processing to a dedicated machine.
