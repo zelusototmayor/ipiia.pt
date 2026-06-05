@@ -28,7 +28,7 @@ gem "prawn"
 
 # Google Calendar API integration for the custom intro-call booking flow.
 gem "google-apis-calendar_v3", "~> 0.46"
-gem "googleauth", "~> 1.9"
+gem "googleauth", "~> 1.17"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
