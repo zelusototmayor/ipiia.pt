@@ -1,0 +1,27 @@
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">
+      <%= image_tag "logo-cube.png", alt: "IPIIA" %>
+      <div class="nav-wordmark">
+        <div class="nav-name">Instituto Português de Implementação de IA</div>
+        <div class="nav-tagline">DIAGNÓSTICO · FORMAÇÃO · IMPLEMENTAÇÃO · GESTÃO COM IA</div>
+      </div>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <% [
+        ["Agente de Gestão", "/agente-de-gestao-ia.html"],
+        ["Serviços", "/servicos.html"],
+        ["Casos", "/casos.html"],
+        ["Apoios IA", "/fundos-europeus-ia-pmes"],
+        ["Teste IA", "/teste.html"],
+        ["Sobre", "/sobre.html"]
+      ].each do |label, href| %>
+        <a class="nav-link" href="<%= href %>"<%= ' aria-current="page"'.html_safe if nav_current?(href) %>><%= label %></a>
+      <% end %>
+      <a class="btn btn-primary nav-cta" href="/book-call.html">Intro call 15 min →</a>
+    </div>
+  </div>
+</nav>

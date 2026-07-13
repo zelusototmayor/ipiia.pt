@@ -55,8 +55,8 @@ class AiReadinessTest
     },
     "workflow_ready" => {
       title: "Pronto para workflows assistidos",
-      path: "curso-proficiencia.html",
-      summary: "Existe maturidade suficiente para transformar uso individual em workflows repetíveis, com validação, métricas e guardrails."
+      path: "book-call.html?tema=formacao",
+      summary: "Existe maturidade suficiente para transformar uso individual em workflows repetíveis, com validação, métricas e guardrails. O próximo passo mais útil é uma conversa curta para escolher entre formação avançada da equipa ou um primeiro piloto — o curso avançado online está em preparação e pode entrar na lista de espera."
     },
     "implementation_ready" => {
       title: "Pronto para diagnóstico de implementação",

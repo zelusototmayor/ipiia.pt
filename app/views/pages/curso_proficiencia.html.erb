@@ -1,20 +1,26 @@
-<div id="nav-mount"></div>
-
 <section class="page-hero">
   <div class="container">
-    <span class="eyebrow fade-in">Certificado IPIIA · Avançado</span>
+    <span class="eyebrow fade-in">Curso online · Avançado · Em preparação</span>
     <h1 class="fade-in delay-1">Proficiência em <em>Implementação de IA</em>.</h1>
     <p class="lead fade-in delay-2">
       Um percurso para quem já sabe usar IA e quer passar para workflows,
       automações, agentes e critérios de avaliação operacional.
     </p>
+    <p class="hero-note fade-in delay-2">
+      <strong>Em preparação</strong> — entre na lista de espera, ou marque uma intro call
+      se a necessidade for imediata.
+    </p>
+    <div class="hero-actions fade-in delay-3">
+      <a class="btn btn-primary" href="#lista-de-espera">Entrar na lista de espera ↓</a>
+      <a class="btn btn-secondary" href="/book-call.html?tema=formacao">Marcar intro call →</a>
+    </div>
   </div>
 </section>
 
 <section class="section section-dark">
   <div class="container">
     <div class="fade-in">
-      <span class="eyebrow eyebrow-dark">Estrutura prevista</span>
+      <span class="eyebrow eyebrow-dark">O que vai incluir</span>
       <h2>Da tarefa ao <em>sistema utilizável</em>.</h2>
     </div>
     <div class="method-grid fade-in delay-1">
@@ -54,7 +60,7 @@
         <h2>Automática, mas baseada em <em>evidência prática</em>.</h2>
       </div>
       <p class="lead fade-in delay-1">
-        A avaliação final deve combinar perguntas objetivas com um desafio aberto:
+        A avaliação final vai combinar perguntas objetivas com um desafio aberto:
         o aluno descreve um workflow, os riscos, os guardrails e a forma de medir
         sucesso. A IA avalia contra uma rubrica fixa.
       </p>
@@ -84,16 +90,55 @@
   </div>
 </section>
 
-<section class="section cta-banner">
-  <div class="container fade-in">
-    <span class="eyebrow eyebrow-dark">Próximo passo</span>
-    <h2>Confirme se está pronto para o <em>percurso avançado</em>.</h2>
-    <p class="lead">
-      O teste gratuito separa quem deve começar pelos fundamentos de quem já pode
-      avançar para implementação.
-    </p>
-    <a class="btn btn-terracota" href="teste.html">Fazer teste IA →</a>
+<section class="section section-alt" id="lista-de-espera">
+  <div class="container">
+    <div class="cta-split">
+      <div class="fade-in">
+        <span class="eyebrow">Lista de espera</span>
+        <h2>Seja avisado <em>quando abrir</em>.</h2>
+        <p class="lead">
+          Deixe o email e avisamos quando o curso avançado estiver disponível.
+          Sem spam — usamos o email apenas para isso.
+        </p>
+      </div>
+      <div class="fade-in delay-1">
+        <form class="contact-form" id="waitlist-form" data-endpoint="<%= course_waitlist_entries_path %>">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="w-nome">Nome</label>
+              <input class="form-input" id="w-nome" name="course_waitlist_entry[name]" type="text" placeholder="João Silva">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="w-email">Email</label>
+              <input class="form-input" id="w-email" name="course_waitlist_entry[email]" type="email" placeholder="joao@empresa.pt" required>
+            </div>
+          </div>
+          <div class="form-submit-row">
+            <button class="btn btn-terracota" type="submit" id="waitlist-submit">Entrar na lista de espera →</button>
+            <span class="form-disclaimer">Um único email quando o curso abrir.<br>Nada mais.</span>
+          </div>
+        </form>
+        <div class="form-success" id="waitlist-success" hidden>
+          <strong>Está na lista de espera.</strong>
+          <span id="waitlist-success-message">Avisamos por email assim que o curso avançado abrir.</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<div id="footer-mount"></div>
+<section class="section cta-banner">
+  <div class="container fade-in">
+    <span class="eyebrow eyebrow-dark">Enquanto o curso não abre</span>
+    <h2>Confirme se está pronto para o <em>percurso avançado</em>.</h2>
+    <p class="lead">
+      O teste gratuito separa quem deve começar pelos fundamentos de quem já pode
+      avançar para implementação — e, para necessidades imediatas, a formação
+      avançada pode ser feita in-company.
+    </p>
+    <div class="hero-actions" style="justify-content: center;">
+      <a class="btn btn-terracota" href="/teste.html">Fazer teste IA →</a>
+      <a class="btn btn-secondary" href="/book-call.html?tema=formacao">Falar sobre formação in-company →</a>
+    </div>
+  </div>
+</section>

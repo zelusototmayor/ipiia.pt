@@ -1,9 +1,8 @@
-<div id="nav-mount"></div>
 
 <section class="course-shell">
   <aside class="course-sidebar">
     <%= link_to "← Voltar ao curso", course_dashboard_path, class: "course-back-link" %>
-    <span class="eyebrow eyebrow-dark">Lesson</span>
+    <span class="eyebrow eyebrow-dark">Lição</span>
     <h1><%= @lesson[:title] %></h1>
     <p><%= @lesson[:duration] %></p>
     <div class="course-progress">
@@ -48,7 +47,7 @@
       </div>
 
       <p class="completion-criterion"><strong>Critério de conclusão:</strong> <%= @lesson[:completion] %></p>
-      <button class="btn btn-terracota" type="submit"><%= @progress.completed? ? "Guardar e continuar" : "Concluir lesson" %></button>
+      <button class="btn btn-terracota" type="submit"><%= @progress.completed? ? "Guardar e continuar" : "Concluir lição" %></button>
     <% end %>
   </main>
 </section>

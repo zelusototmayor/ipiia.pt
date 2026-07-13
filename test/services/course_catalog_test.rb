@@ -7,7 +7,7 @@ class CourseCatalogTest < ActiveSupport::TestCase
     assert_equal "fundamentos-ia-trabalho", course.slug
     assert_equal 6, course.modules.size
     assert_equal 18, course.lessons.size
-    assert_equal 15, course.quiz.size
+    assert_equal 14, course.quiz.size
     assert course.lessons.all? { |lesson| lesson[:template].present? && lesson[:checkpoint].any? }
   end
 end

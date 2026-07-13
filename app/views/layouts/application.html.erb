@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt">
   <head>
-    <title><%= @page_title || "IPIIA — Instituto Português de Implementação de IA" %></title>
+    <% page_title = @page_title || "IPIIA — Instituto Português de Implementação de IA" %>
+    <% meta_description = @meta_description || "Diagnóstico, formação e implementação de IA para PMEs portuguesas." %>
+    <title><%= page_title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="<%= @meta_description || "Diagnóstico, formação e implementação de IA para PMEs portuguesas." %>">
+    <meta name="description" content="<%= meta_description %>">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
+
+    <meta property="og:site_name" content="IPIIA — Instituto Português de Implementação de IA">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<%= page_title %>">
+    <meta property="og:description" content="<%= meta_description %>">
+    <meta property="og:url" content="<%= @canonical_path ? "#{request.base_url}#{@canonical_path}" : request.original_url %>">
+    <meta property="og:locale" content="pt_PT">
+    <% if @canonical_path %>
+      <link rel="canonical" href="<%= "#{request.base_url}#{@canonical_path}" %>">
+    <% end %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -17,16 +29,12 @@
     <%= favicon_link_tag "logo-cube.png", type: "image/png" %>
 
     <%= stylesheet_link_tag "shared", "styles", "data-turbo-track": "reload" %>
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-    <script>
-      window.IPIIA_ASSETS = {
-        logoCube: "<%= asset_path("logo-cube.png") %>"
-      };
-    </script>
+    <%= javascript_include_tag "lucide.min", defer: true %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+    <%= render "shared/nav" %>
     <% if notice.present? || alert.present? %>
       <div class="flash-stack">
         <% if notice.present? %><div class="flash flash-notice"><%= notice %></div><% end %>
@@ -34,5 +42,6 @@
       </div>
     <% end %>
     <%= yield %>
+    <%= render "shared/footer" %>
   </body>
 </html>

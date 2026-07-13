@@ -1,92 +1,29 @@
 (function () {
   'use strict';
 
-  const logoCubePath = window.IPIIA_ASSETS?.logoCube || '/assets/logo-cube.png';
+  // ── Mobile nav toggle ──
+  function initNavToggle() {
+    const nav = document.getElementById('nav');
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    if (!nav || !toggle || !links) return;
 
-  // ── Shared chrome (single source of truth across pages) ──
-  const NAV_HTML = `
-<nav class="nav" id="nav">
-  <div class="container nav-inner">
-    <a href="/" class="nav-logo">
-      <img src="${logoCubePath}" alt="IPIIA">
-      <div class="nav-wordmark">
-        <div class="nav-name">Instituto Português de Implementação de IA</div>
-        <div class="nav-tagline">TESTE · FORMAÇÃO · DIAGNÓSTICO · IMPLEMENTAÇÃO</div>
-      </div>
-    </a>
-    <div class="nav-links">
-      <a class="nav-link" href="/missao.html">Missão</a>
-      <a class="nav-link" href="/metodo.html">Método</a>
-      <a class="nav-link" href="/servicos.html">Serviços</a>
-      <a class="nav-link" href="/fundos-europeus-ia-pmes">Apoios IA</a>
-      <a class="nav-link" href="/teste.html">Teste IA</a>
-      <a class="nav-link" href="/casos.html">Casos</a>
-      <a class="nav-link" href="/sobre.html">Sobre</a>
-      <a class="btn btn-primary nav-cta" href="/book-call.html">Intro call 15 min →</a>
-    </div>
-  </div>
-</nav>`;
+    function setOpen(open) {
+      nav.classList.toggle('nav-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    }
 
-  const FOOTER_HTML = `
-<footer class="footer">
-  <div class="container footer-inner">
-    <div class="footer-logo-wrap">
-      <a href="/" class="footer-logo">
-        <img src="${logoCubePath}" alt="IPIIA">
-        <span class="footer-logo-name">Instituto Português de Implementação de IA</span>
-      </a>
-      <p class="footer-disclaimer">
-        Marca privada e independente. Não representa qualquer entidade pública,
-        governamental ou reguladora.
-      </p>
-      <span class="footer-copy">© 2026 IPIIA</span>
-    </div>
-    <div class="footer-cols">
-      <div class="footer-col">
-        <span class="footer-col-label">Instituto</span>
-        <a href="/missao.html" class="footer-link">Missão</a>
-        <a href="/sobre.html" class="footer-link">Sobre</a>
-        <a href="/book-call.html" class="footer-link">Intro call</a>
-        <a href="/contacto.html" class="footer-link">Contacto</a>
-      </div>
-      <div class="footer-col">
-        <span class="footer-col-label">Serviços</span>
-        <a href="/metodo.html" class="footer-link">Método</a>
-        <a href="/servicos.html" class="footer-link">Serviços</a>
-        <a href="/fundos-europeus-ia-pmes" class="footer-link">Fundos europeus IA</a>
-        <a href="/curso-fundamentos.html" class="footer-link">Curso fundamentos</a>
-        <a href="/curso-proficiencia.html" class="footer-link">Certificado avançado</a>
-        <a href="/casos.html" class="footer-link">Casos de uso</a>
-      </div>
-      <div class="footer-col">
-        <span class="footer-col-label">Recursos</span>
-        <a href="/teste.html" class="footer-link">Teste IA gratuito</a>
-        <a href="mailto:zelu@zelusottomayor.com" class="footer-link">zelu@zelusottomayor.com</a>
-        <a href="/privacidade.html" class="footer-link">Privacidade</a>
-        <a href="/termos.html" class="footer-link">Termos</a>
-        <a href="/cookies.html" class="footer-link">Cookies</a>
-      </div>
-    </div>
-  </div>
-</footer>`;
+    toggle.addEventListener('click', () => {
+      setOpen(!nav.classList.contains('nav-open'));
+    });
 
-  function mountChrome() {
-    const navSlot = document.getElementById('nav-mount');
-    if (navSlot) navSlot.outerHTML = NAV_HTML;
-    const footerSlot = document.getElementById('footer-mount');
-    if (footerSlot) footerSlot.outerHTML = FOOTER_HTML;
+    links.addEventListener('click', (e) => {
+      if (e.target.closest('a')) setOpen(false);
+    });
 
-    // Active nav link based on current page
-    const file = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-    document.querySelectorAll('.nav-link, .nav-cta').forEach((a) => {
-      const href = (a.getAttribute('href') || '').replace(/^\//, '').toLowerCase();
-      if (
-        href === file ||
-        href === `${file}.html` ||
-        (location.pathname.startsWith('/fundos-europeus-ia-pmes') && href === 'fundos-europeus-ia-pmes')
-      ) {
-        a.setAttribute('aria-current', 'page');
-      }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') setOpen(false);
     });
   }
 
@@ -188,32 +125,98 @@
     const success = document.getElementById('contact-success');
     const submit = document.getElementById('contact-submit');
     if (!form || !success || !submit) return;
+
+    function csrfToken() {
+      return document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') || '';
+    }
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       submit.disabled = true;
       const original = submit.textContent;
       submit.textContent = 'A enviar...';
-      await new Promise((r) => setTimeout(r, 900));
-      form.hidden = true;
-      success.hidden = false;
-      submit.textContent = original;
+
+      const payload = {
+        contact_message: {
+          name: form.elements['contact_message[name]']?.value || '',
+          email: form.elements['contact_message[email]']?.value || '',
+          company: form.elements['contact_message[company]']?.value || '',
+          role: form.elements['contact_message[role]']?.value || '',
+          message: form.elements['contact_message[message]']?.value || '',
+        },
+      };
+
+      try {
+        const response = await fetch(form.dataset.endpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'X-CSRF-Token': csrfToken(),
+          },
+          body: JSON.stringify(payload),
+        });
+        const data = await response.json();
+        if (!response.ok) throw new Error((data.errors || ['Não foi possível enviar o pedido.']).join(' '));
+
+        form.hidden = true;
+        success.hidden = false;
+      } catch (error) {
+        alert(error.message);
+      } finally {
+        submit.disabled = false;
+        submit.textContent = original;
+      }
     });
   }
 
-  function initAssessmentForm() {
-    const form = document.getElementById('assessment-form');
-    const success = document.getElementById('assessment-success');
-    const submit = document.getElementById('assessment-submit');
+  // ── Course waitlist form ──
+  function initWaitlistForm() {
+    const form = document.getElementById('waitlist-form');
+    const success = document.getElementById('waitlist-success');
+    const successMessage = document.getElementById('waitlist-success-message');
+    const submit = document.getElementById('waitlist-submit');
     if (!form || !success || !submit) return;
+
+    function csrfToken() {
+      return document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') || '';
+    }
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       submit.disabled = true;
       const original = submit.textContent;
       submit.textContent = 'A registar...';
-      await new Promise((r) => setTimeout(r, 900));
-      form.hidden = true;
-      success.hidden = false;
-      submit.textContent = original;
+
+      const payload = {
+        course_waitlist_entry: {
+          name: form.elements['course_waitlist_entry[name]']?.value || '',
+          email: form.elements['course_waitlist_entry[email]']?.value || '',
+        },
+      };
+
+      try {
+        const response = await fetch(form.dataset.endpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'X-CSRF-Token': csrfToken(),
+          },
+          body: JSON.stringify(payload),
+        });
+        const data = await response.json();
+        if (!response.ok) throw new Error((data.errors || ['Não foi possível registar o email.']).join(' '));
+
+        if (successMessage && data.message) successMessage.textContent = data.message;
+        form.hidden = true;
+        success.hidden = false;
+      } catch (error) {
+        alert(error.message);
+      } finally {
+        submit.disabled = false;
+        submit.textContent = original;
+      }
     });
   }
 
@@ -366,10 +369,7 @@
     const summary = document.getElementById('booking-summary');
     const dateInput = document.getElementById('booking-date');
     const timeInput = document.getElementById('booking-time');
-    const form = document.getElementById('booking-form');
-    const success = document.getElementById('booking-success');
     const state = { date: null, label: null, time: null };
-    const slotTimes = ['10:00', '10:30', '11:00', '14:30', '15:00', '16:00'];
 
     function showStep(step) {
       widget.querySelectorAll('[data-booking-step]').forEach((el) => {
@@ -403,7 +403,31 @@
     }
 
     function isoDay(date) {
-      return date.toISOString().slice(0, 10);
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const day = String(date.getDate()).padStart(2, '0');
+      return `${date.getFullYear()}-${month}-${day}`;
+    }
+
+    async function loadSlots(date) {
+      if (!slotsEl) return;
+      slotsEl.innerHTML = '<p class="booking-slots-empty">A verificar disponibilidade...</p>';
+      try {
+        const response = await fetch(`/bookings/availability?date=${encodeURIComponent(date)}`, {
+          headers: { 'Accept': 'application/json' },
+        });
+        if (!response.ok) throw new Error('unavailable');
+        const data = await response.json();
+        const slots = data.slots || [];
+        if (!slots.length) {
+          slotsEl.innerHTML = '<p class="booking-slots-empty">Sem horários livres neste dia. Escolha outro dia, por favor.</p>';
+          return;
+        }
+        slotsEl.innerHTML = slots.map((time) => `
+          <button type="button" class="booking-slot" data-time="${time}">${time}</button>
+        `).join('');
+      } catch (error) {
+        slotsEl.innerHTML = '<p class="booking-slots-empty">Não foi possível verificar a disponibilidade. Tente novamente.</p>';
+      }
     }
 
     if (daysEl) {
@@ -420,11 +444,7 @@
         state.date = button.dataset.date;
         state.label = button.dataset.label;
         if (selectedDateTitle) selectedDateTitle.textContent = state.label;
-        if (slotsEl) {
-          slotsEl.innerHTML = slotTimes.map((time) => `
-            <button type="button" class="booking-slot" data-time="${time}">${time}</button>
-          `).join('');
-        }
+        loadSlots(state.date);
         showStep(2);
       });
     }
@@ -446,26 +466,6 @@
     widget.querySelectorAll('[data-booking-back]').forEach((button) => {
       button.addEventListener('click', () => showStep(Number(button.dataset.bookingBack)));
     });
-
-    if (form && success) {
-      form.addEventListener('submit', (e) => {
-        if (form.dataset.remoteBooking === 'true') return;
-        e.preventDefault();
-        const booking = {
-          date: dateInput.value,
-          time: timeInput.value,
-          name: form.name.value,
-          email: form.email.value,
-          company: form.company.value,
-          topic: form.topic.value,
-          notes: form.notes.value,
-          createdAt: new Date().toISOString(),
-        };
-        window.localStorage.setItem('ipiia_last_booking', JSON.stringify(booking));
-        form.hidden = true;
-        success.hidden = false;
-      });
-    }
   }
 
   function initLucide() {
@@ -488,12 +488,12 @@
   }
 
   function init() {
-    mountChrome();
+    initNavToggle();
     initNavScroll();
     initFadeIn();
     initHeroCanvas();
     initContactForm();
-    initAssessmentForm();
+    initWaitlistForm();
     initReadinessTest();
     initBookingWidget();
     initCopyTemplates();

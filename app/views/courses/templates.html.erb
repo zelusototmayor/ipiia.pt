@@ -1,0 +1,36 @@
+<section class="course-shell">
+  <aside class="course-sidebar">
+    <%= link_to "← Voltar ao curso", course_dashboard_path, class: "course-back-link" %>
+    <span class="eyebrow eyebrow-dark">Recursos</span>
+    <h1>Os seus templates</h1>
+    <p>Todos os prompts e templates do curso, prontos a copiar e reutilizar no trabalho.</p>
+  </aside>
+
+  <main class="course-main lesson-content">
+    <span class="eyebrow">Biblioteca de templates</span>
+    <h2>O ativo mais valioso do curso, num só sítio.</h2>
+    <p class="lesson-paragraph">
+      Cada template abaixo corresponde a uma lição. Copie, adapte ao seu contexto e
+      guarde os que usar com frequência — é assim que uma conversa solta se torna
+      um workflow repetível.
+    </p>
+
+    <% @course.modules.each do |mod| %>
+      <section class="course-module">
+        <div class="course-module-head">
+          <span><%= mod[:key].upcase %></span>
+          <div>
+            <h3><%= mod[:title] %></h3>
+          </div>
+        </div>
+        <% mod[:lessons].each do |lesson| %>
+          <div class="lesson-block">
+            <h3><%= lesson[:title] %></h3>
+            <textarea class="copy-template" readonly rows="4"><%= lesson[:template] %></textarea>
+            <button class="btn btn-secondary copy-template-button" type="button">Copiar template</button>
+          </div>
+        <% end %>
+      </section>
+    <% end %>
+  </main>
+</section>

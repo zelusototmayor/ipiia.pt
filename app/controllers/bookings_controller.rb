@@ -18,6 +18,13 @@ class BookingsController < ApplicationController
   def show
   end
 
+  def availability
+    date = Date.iso8601(params[:date].to_s)
+    render json: { slots: Booking.available_slots_on(date) }
+  rescue Date::Error
+    render json: { errors: [ "Data inválida" ] }, status: :unprocessable_entity
+  end
+
   def cancel
     if @booking.pending? || @booking.confirmed?
       @booking.cancel!

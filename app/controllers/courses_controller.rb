@@ -17,6 +17,12 @@ class CoursesController < ApplicationController
     @progress = @enrollment.lesson_progresses.find_or_initialize_by(lesson_key: @lesson[:key])
   end
 
+
+  def templates
+    @course = @enrollment.course
+    @page_title = "Os seus templates — #{@course.title}"
+  end
+
   def complete_lesson
     course = @enrollment.course
     lesson = course.lesson(params[:lesson_key])
@@ -28,7 +34,7 @@ class CoursesController < ApplicationController
     progress.save!
     @enrollment.update!(last_lesson_key: course.next_lesson_key(lesson[:key]) || lesson[:key])
 
-    redirect_to next_course_destination(course, lesson), notice: "Lesson concluída."
+    redirect_to next_course_destination(course, lesson), notice: "Lição concluída."
   end
 
   private

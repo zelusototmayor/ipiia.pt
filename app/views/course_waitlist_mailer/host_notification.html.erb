@@ -1,0 +1,7 @@
+<h2>Nova inscrição na lista de espera do curso avançado</h2>
+<p>
+  <strong>Nome:</strong> <%= @entry.name.presence || "—" %><br>
+  <strong>Email:</strong> <%= @entry.email %><br>
+  <strong>Curso:</strong> <%= @entry.course_slug %><br>
+  <strong>Data:</strong> <%= @entry.created_at.strftime("%d/%m/%Y %H:%M") %>
+</p>

@@ -1,0 +1,12 @@
+<p>Novo pedido de contacto pelo site.</p>
+
+<p>
+  <strong>Nome:</strong> <%= @contact_message.name %><br>
+  <strong>Email:</strong> <%= @contact_message.email %><br>
+  <strong>Empresa:</strong> <%= @contact_message.company.presence || "Não indicada" %><br>
+  <strong>Cargo:</strong> <%= @contact_message.role.presence || "Não indicado" %>
+</p>
+
+<% if @contact_message.message.present? %>
+  <p><strong>Mensagem:</strong><br><%= simple_format(@contact_message.message) %></p>
+<% end %>

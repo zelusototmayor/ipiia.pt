@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_05_15_100500) do
+ActiveRecord::Schema[8.0].define(version: 2026_07_13_130000) do
   create_table "ai_assessments", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
@@ -67,6 +67,17 @@ ActiveRecord::Schema[8.0].define(version: 2026_05_15_100500) do
     t.index ["course_enrollment_id"], name: "index_certificates_on_course_enrollment_id", unique: true
   end
 
+  create_table "contact_messages", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "email", null: false
+    t.string "company"
+    t.string "role"
+    t.text "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_contact_messages_on_email"
+  end
+
   create_table "course_enrollments", force: :cascade do |t|
     t.integer "learner_id", null: false
     t.string "course_slug", null: false
@@ -98,6 +109,15 @@ ActiveRecord::Schema[8.0].define(version: 2026_05_15_100500) do
     t.datetime "updated_at", null: false
     t.index ["course_enrollment_id", "created_at"], name: "idx_on_course_enrollment_id_created_at_bea1c383ff"
     t.index ["course_enrollment_id"], name: "index_course_submissions_on_course_enrollment_id"
+  end
+
+  create_table "course_waitlist_entries", force: :cascade do |t|
+    t.string "name"
+    t.string "email", null: false
+    t.string "course_slug", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email", "course_slug"], name: "index_course_waitlist_entries_on_email_and_course_slug", unique: true
   end
 
   create_table "learners", force: :cascade do |t|

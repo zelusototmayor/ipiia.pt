@@ -1,4 +1,3 @@
-<div id="nav-mount"></div>
 
 <section class="course-shell">
   <aside class="course-sidebar">
@@ -14,6 +13,7 @@
       </div>
     </div>
     <%= link_to "Continuar", course_lesson_path(@next_lesson[:key]), class: "btn btn-terracota course-wide-button" %>
+    <%= link_to "Os seus templates", course_templates_path, class: "btn btn-secondary course-wide-button" %>
     <%= button_to "Sair", course_session_path, method: :delete, class: "btn btn-secondary course-wide-button" %>
   </aside>
 

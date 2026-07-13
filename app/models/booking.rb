@@ -3,6 +3,7 @@ class Booking < ApplicationRecord
   AVAILABILITY_START_HOUR = 10
   AVAILABILITY_END_HOUR = 18
   HOST_TIMEZONE = "Europe/Lisbon"
+  SLOT_TIMES = %w[10:00 10:30 11:00 14:30 15:00 16:00].freeze
 
   enum :status, {
     pending: 0,
@@ -26,6 +27,21 @@ class Booking < ApplicationRecord
     date = date.in_time_zone(HOST_TIMEZONE)
     where(starts_at: date.beginning_of_day..date.end_of_day)
   }
+
+  # Horários ainda livres num dia, no fuso do anfitrião. Exclui slots já
+  # reservados (pending/confirmed) e slots no passado.
+  def self.available_slots_on(date)
+    zone = Time.find_zone!(HOST_TIMEZONE)
+
+    SLOT_TIMES.filter_map do |time|
+      starts_at = zone.parse("#{date.iso8601} #{time}")
+      next if starts_at <= Time.current
+
+      ends_at = starts_at + SLOT_DURATION
+      taken = active.where("starts_at < ? AND ends_at > ?", ends_at, starts_at).exists?
+      time unless taken
+    end
+  end
 
   def confirm!
     update(status: :confirmed, confirmed_at: Time.current)

@@ -1,4 +1,3 @@
-<div id="nav-mount"></div>
 
 <section class="page-hero">
   <div class="container">
@@ -74,12 +73,12 @@
             </div>
             <div class="form-group">
               <label class="form-label" for="b-topic">Tema principal</label>
+              <% preselected_topic = { "agente" => "Agente de Gestão com IA", "formacao" => "Formação in-company", "curso" => "Teste IA / cursos online" }[params[:tema].to_s] %>
               <select class="form-input" id="b-topic" name="booking[topic]" required>
                 <option value="">Escolha uma opção</option>
-                <option>Teste IA / cursos online</option>
-                <option>Formação in-company</option>
-                <option>Diagnóstico de processos</option>
-                <option>Piloto ou implementação IA</option>
+                <% [ "Teste IA / cursos online", "Formação in-company", "Diagnóstico de processos", "Piloto ou implementação IA", "Agente de Gestão com IA" ].each do |topic| %>
+                  <option <%= "selected" if topic == preselected_topic %>><%= topic %></option>
+                <% end %>
               </select>
             </div>
           </div>
@@ -89,13 +88,9 @@
           </div>
           <div class="form-submit-row">
             <button class="btn btn-terracota" type="submit">Confirmar pedido →</button>
-            <span class="form-disclaimer">Cria evento no calendário.<br>Confirmação por email quando sincronizar.</span>
+            <span class="form-disclaimer">Recebe a confirmação por email,<br>com o convite de calendário incluído.</span>
           </div>
         </form>
-        <div class="form-success" id="booking-success" hidden>
-          <strong>Pedido de intro call registado.</strong>
-          A reserva foi enviada para o backend.
-        </div>
       </div>
     </div>
   </div>
@@ -132,10 +127,10 @@
       <div class="problem-card">
         <span class="problem-num">04</span>
         <h3>Se o caso já estiver claro</h3>
-        <p>Podemos avaliar um piloto de IA com métrica, âmbito e prazo definidos.</p>
+        <p>Podemos avaliar um piloto de IA com métrica, âmbito e prazo definidos — ou, se já tem
+        um piloto a funcionar bem, avaliar a evolução para um Agente de Gestão com IA, módulo a módulo.</p>
       </div>
     </div>
   </div>
 </section>
 
-<div id="footer-mount"></div>

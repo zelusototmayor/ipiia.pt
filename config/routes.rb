@@ -2,12 +2,19 @@ Rails.application.routes.draw do
   root "pages#home"
 
   resources :bookings, only: [ :create, :show ], param: :confirmation_token do
+    collection do
+      get :availability
+    end
     member do
       delete :cancel
     end
   end
 
   resources :ai_assessments, only: [ :create ]
+
+  resources :contact_messages, only: [ :create ]
+
+  resources :course_waitlist_entries, only: [ :create ]
 
   resource :checkout, only: [ :create ] do
     get :success
@@ -23,6 +30,7 @@ Rails.application.routes.draw do
   end
 
   get "/curso", to: "courses#show", as: :course_dashboard
+  get "/curso/templates", to: "courses#templates", as: :course_templates
   get "/curso/:lesson_key", to: "courses#lesson", as: :course_lesson
   patch "/curso/:lesson_key/progresso", to: "courses#complete_lesson", as: :complete_course_lesson
   get "/curso/avaliacao/quiz", to: "quizzes#show", as: :course_quiz
