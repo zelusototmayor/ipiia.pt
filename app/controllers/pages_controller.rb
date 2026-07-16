@@ -28,7 +28,7 @@ class PagesController < ApplicationController
     "agente-de-gestao-ia" => {
       template: "agente_de_gestao_ia",
       title: "Agente de Gestão com IA — IPIIA",
-      description: "Uma camada de gestão com IA que vê a operação da sua PME, sinaliza o que merece atenção e ajuda o trabalho a avançar — com autonomia progressiva e aprovação humana."
+      description: "Um assistente privado de gestão para PMEs: centraliza a informação da empresa, responde na hora, avisa do que merece atenção e executa automações — com aprovação humana."
     },
     "fundos-europeus-ia-pmes" => {
       template: "fundos_europeus_ia_pmes",
