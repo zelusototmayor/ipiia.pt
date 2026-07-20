@@ -1,22 +1,22 @@
 
 <!-- ── PAGE HERO ── -->
-<section class="page-hero">
-  <div class="container">
-    <span class="eyebrow fade-in">Agente de Gestão com IA</span>
-    <h1 class="fade-in delay-1">Toda a informação da sua empresa num só sítio. <em>E automações a trabalhar por cima dela.</em></h1>
-    <p class="lead fade-in delay-2">
-      Um assistente privado de gestão, ligado aos sistemas que já usa. Responde ao que perguntar,
-      avisa do que merece atenção sem que ninguém pergunte, e executa as rotinas que a gestão
-      definir — com aprovação humana nos pontos que importam.
-    </p>
-    <p class="hero-note fade-in delay-2">
-      Para PMEs com operação recorrente e várias frentes em simultâneo.
-    </p>
-    <div class="hero-actions fade-in delay-3">
-      <a class="btn btn-primary" href="/book-call.html?tema=agente">Marcar diagnóstico de operação →</a>
-      <a class="btn btn-secondary" href="#como-entregamos">Ver como funciona ↓</a>
+<section class="page-hero agent-page-hero">
+  <div class="container agent-hero-grid">
+    <div class="agent-hero-copy">
+      <h1 class="fade-in delay-1">Toda a informação da sua empresa num só sítio. <em>E automações a trabalhar por cima dela.</em></h1>
+      <p class="lead fade-in delay-2">
+        Um assistente privado de gestão, ligado aos sistemas que já usa. Responde ao que perguntar,
+        deteta o que merece atenção e executa sozinho as rotinas que a gestão definir.
+      </p>
+      <p class="hero-note fade-in delay-2">
+        Para PMEs com operação recorrente e várias frentes em simultâneo.
+      </p>
+      <div class="hero-actions fade-in delay-3">
+        <a class="btn btn-primary" href="/book-call.html?tema=agente">Marcar diagnóstico de operação →</a>
+        <a class="btn btn-secondary" href="#como-entregamos">Ver como funciona ↓</a>
+      </div>
     </div>
-    <div class="fade-in delay-4">
+    <div class="agent-hero-demo fade-in delay-3">
       <%= render "shared/agent_chat_mock" %>
     </div>
   </div>
@@ -287,12 +287,12 @@
   </div>
 </section>
 
-<!-- ── AUTONOMIA SOB CONTROLO ── -->
+<!-- ── AUTONOMIA CONFIGURÁVEL ── -->
 <section class="section section-dark">
   <div class="container">
     <div class="fade-in">
       <span class="eyebrow eyebrow-dark">Confiança</span>
-      <h2>Autonomia que se <em>conquista</em>, não que se assume.</h2>
+      <h2>Opera sozinho <em>onde faz sentido</em>.</h2>
     </div>
     <div class="method-grid fade-in delay-1">
       <div class="method-step">
@@ -315,23 +315,23 @@
       </div>
       <div class="method-step">
         <div class="method-num">03</div>
-        <span class="method-label">Executa com aprovação</span>
-        <div class="method-title">Prepara e aguarda</div>
-        <div class="method-body">Cria tarefas, prepara mensagens ou atualizações e aguarda validação.</div>
+        <span class="method-label">Executa</span>
+        <div class="method-title">Cumpre rotinas definidas</div>
+        <div class="method-body">Cria tarefas, envia mensagens e atualiza sistemas segundo as regras configuradas.</div>
         <div class="method-connector">
           <svg viewBox="0 0 12 12" fill="none" stroke="currentColor"><path d="M3 6h6M7 4l2 2-2 2"/></svg>
         </div>
       </div>
       <div class="method-step">
         <div class="method-num">04</div>
-        <span class="method-label">Automatiza dentro de regras</span>
-        <div class="method-title">Executa com limites</div>
-        <div class="method-body">Executa rotinas de baixo risco com limites, registos e mecanismos de exceção.</div>
+        <span class="method-label">Escala exceções</span>
+        <div class="method-title">Sabe quando parar</div>
+        <div class="method-body">Encaminha apenas situações fora das regras para a pessoa certa.</div>
       </div>
     </div>
     <p class="lead" style="margin-top: 2rem;">
-      O nível de autonomia define-se por tipo de tarefa — responder a uma pergunta frequente
-      não é o mesmo que tocar num pagamento.
+      O nível de autonomia define-se por tipo de tarefa. O objetivo é retirar trabalho da gestão,
+      sem tratar todas as decisões como se tivessem o mesmo risco.
     </p>
 
     <div class="values-list values-list-grid fade-in delay-2" style="margin-top: 2.5rem;">
@@ -341,7 +341,7 @@
       </div>
       <div class="value-item">
         <div class="value-dot"></div>
-        <p class="value-text">Validação humana nos pontos críticos.</p>
+        <p class="value-text">Exceções críticas encaminhadas automaticamente para a pessoa certa.</p>
       </div>
       <div class="value-item">
         <div class="value-dot"></div>
@@ -521,4 +521,3 @@
     <a class="btn btn-terracota" href="/book-call.html?tema=agente">Marcar diagnóstico de operação →</a>
   </div>
 </section>
-

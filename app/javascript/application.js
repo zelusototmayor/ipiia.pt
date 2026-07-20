@@ -57,65 +57,82 @@
 
   // ── Hero network canvas ──
   function initHeroCanvas() {
-    const canvas = document.getElementById('hero-canvas');
-    if (!canvas || !canvas.getContext) return;
-    const ctx = canvas.getContext('2d');
-    const N = 84;
-    const DIST = 120;
-    const SPEED = 0.2;
-    let w, h, nodes, raf;
-
-    function resize() {
-      w = canvas.width = canvas.offsetWidth;
-      h = canvas.height = canvas.offsetHeight;
-    }
-    function init() {
-      nodes = Array.from({ length: N }, () => ({
-        x: Math.random() * w,
-        y: Math.random() * h,
-        vx: (Math.random() - 0.5) * SPEED,
-        vy: (Math.random() - 0.5) * SPEED,
-        r: Math.random() * 1.6 + 0.8,
-      }));
-    }
-    function draw() {
-      ctx.clearRect(0, 0, w, h);
-      for (const n of nodes) {
-        n.x += n.vx;
-        n.y += n.vy;
-        if (n.x < 0 || n.x > w) n.vx *= -1;
-        if (n.y < 0 || n.y > h) n.vy *= -1;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.querySelectorAll('.hero, .page-hero').forEach((hero) => {
+      let canvas = hero.querySelector('.hero-canvas');
+      if (!canvas) {
+        canvas = document.createElement('canvas');
+        canvas.className = 'hero-canvas';
+        canvas.setAttribute('aria-hidden', 'true');
+        hero.prepend(canvas);
       }
-      for (let i = 0; i < nodes.length; i++) {
-        for (let j = i + 1; j < nodes.length; j++) {
-          const dx = nodes[i].x - nodes[j].x;
-          const dy = nodes[i].y - nodes[j].y;
-          const d = Math.sqrt(dx * dx + dy * dy);
-          if (d < DIST) {
-            ctx.beginPath();
-            ctx.moveTo(nodes[i].x, nodes[i].y);
-            ctx.lineTo(nodes[j].x, nodes[j].y);
-            ctx.strokeStyle = `rgba(11,31,58,${(1 - d / DIST) * 0.1})`;
-            ctx.lineWidth = 0.8;
-            ctx.stroke();
+
+      if (!canvas.getContext || canvas.dataset.networkReady === 'true') return;
+      canvas.dataset.networkReady = 'true';
+
+      const ctx = canvas.getContext('2d');
+      const N = 84;
+      const DIST = 120;
+      const SPEED = 0.2;
+      let w, h, nodes;
+
+      function resize() {
+        w = canvas.width = canvas.offsetWidth;
+        h = canvas.height = canvas.offsetHeight;
+      }
+
+      function resetNodes() {
+        nodes = Array.from({ length: N }, () => ({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          vx: (Math.random() - 0.5) * SPEED,
+          vy: (Math.random() - 0.5) * SPEED,
+          r: Math.random() * 1.6 + 0.8,
+        }));
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, w, h);
+        for (const node of nodes) {
+          node.x += node.vx;
+          node.y += node.vy;
+          if (node.x < 0 || node.x > w) node.vx *= -1;
+          if (node.y < 0 || node.y > h) node.vy *= -1;
+        }
+
+        for (let i = 0; i < nodes.length; i += 1) {
+          for (let j = i + 1; j < nodes.length; j += 1) {
+            const dx = nodes[i].x - nodes[j].x;
+            const dy = nodes[i].y - nodes[j].y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            if (distance < DIST) {
+              ctx.beginPath();
+              ctx.moveTo(nodes[i].x, nodes[i].y);
+              ctx.lineTo(nodes[j].x, nodes[j].y);
+              ctx.strokeStyle = `rgba(10,41,36,${(1 - distance / DIST) * 0.13225})`;
+              ctx.lineWidth = 0.8;
+              ctx.stroke();
+            }
           }
         }
-      }
-      for (const n of nodes) {
-        ctx.beginPath();
-        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(194,90,58,0.22)';
-        ctx.fill();
-      }
-      raf = requestAnimationFrame(draw);
-    }
 
-    resize();
-    init();
-    draw();
-    window.addEventListener('resize', () => {
+        for (const node of nodes) {
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, node.r, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(199,234,50,0.55545)';
+          ctx.fill();
+        }
+
+        requestAnimationFrame(draw);
+      }
+
       resize();
-      init();
+      resetNodes();
+      draw();
+      window.addEventListener('resize', () => {
+        resize();
+        resetNodes();
+      });
     });
   }
 
