@@ -1,0 +1,1414 @@
+{
+  "docker_save_config": "blobs/sha256/e0174861d09eb270ef761f9ebd89c117acffe7235c8ad93c9f0138219b294e50",
+  "docker_save_layer_count": 10,
+  "docker_save_repo_tags": [],
+  "docker_save_sha256": "b4a96bcc50ae6f7d678b8a27d7b783866aec5fb4108b78230388bf9328a0f400",
+  "excluded_member_counts_across_layers": {
+    "exclude_compiled_assets": 26,
+    "exclude_non_source_path": 1,
+    "exclude_runtime_state": 17440,
+    "exclude_secret_or_encrypted_config": 1
+  },
+  "excluded_sensitive_paths_present_names_only": [
+    "config/credentials.yml.enc"
+  ],
+  "file_count": 188,
+  "files": [
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": ".rubocop.yml",
+      "sha256": "474497601d8ff521eed710adf606b77417a88b8d51d3d323b177097f1b74677a",
+      "size": 249
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": ".ruby-version",
+      "sha256": "5eee6c0c5c6901f5e523f0a434bca4106e1ff7136deb451f982b0bb1a7b13716",
+      "size": 6
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "Gemfile",
+      "sha256": "f37ef5189d30808204c30c29553062bdce01a7e625031323f2f96498484d5ff2",
+      "size": 2361
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "Gemfile.lock",
+      "sha256": "caffa47667b41ecec7b227289e74f8095147f739c2e520d470842e4953ac41f4",
+      "size": 10839
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "README.md",
+      "sha256": "cb08e48b7df3451e22fb32b808eee8b7c12d330b7f04be49353715fe612fa7d7",
+      "size": 374
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "Rakefile",
+      "sha256": "895c6a69d01c14f0dd437c0eb44914754006ce317807264ca7ffbd1c79a91ebf",
+      "size": 227
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/assets/images/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/assets/images/logo-cube.png",
+      "sha256": "38e42d120db7d28bbbff1b2e4ee1f84526c2b70ed1fac261ca6b803445012f7b",
+      "size": 2126546
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/assets/images/logo-horizontal.svg",
+      "sha256": "2746a7c05677e8946121713017349f8c53c7271b09f7a7a0d72ee8e8699d7f6d",
+      "size": 705
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/assets/images/logo-light.svg",
+      "sha256": "1497e94e222bf488b351c3464dce7ad4d63d5dbd2297f9274585557a1229a08f",
+      "size": 447
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/assets/images/logo-operations-cube-v2.png",
+      "sha256": "a27698dc3c544210eff50d5a216cda0496bbd7058fc0fcd5a4aa8be460444577",
+      "size": 214703
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/assets/javascripts/lucide.min.js",
+      "sha256": "40bee90e38803be12dab4baf61e7dcb1833b844b6c529e173393fbcc09bd4778",
+      "size": 411139
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/assets/stylesheets/application.css",
+      "sha256": "478b66b3effc220e394a0ba1a9065c367d723bd73b2036067ea87f91094b2cdf",
+      "size": 491
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/assets/stylesheets/operations.css",
+      "sha256": "1796831c13efee841eee7d77ad22bb87eebb747f3c1400a0eb96f5e510707338",
+      "size": 16341
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/assets/stylesheets/shared.css",
+      "sha256": "37b86d981c0449e59d3198d4dbdb8d180738fa3c71e5f73958d1427606bd8102",
+      "size": 3331
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/assets/stylesheets/styles.css",
+      "sha256": "aad7f6bc10622e78eab0e2eb0439f043a50c18148d8a82dbb9f3e821b7dfc58c",
+      "size": 61946
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/controllers/ai_assessments_controller.rb",
+      "sha256": "e910c3b7d9c0b9017f248e2cf838a0f34fa410370359a895d863cba982378f47",
+      "size": 1587
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/controllers/application_controller.rb",
+      "sha256": "8e2399f1ec1f420bcfda2220151c42e4ff1440c581fce21d921f66bad60232f7",
+      "size": 546
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/controllers/bookings_controller.rb",
+      "sha256": "dc159cd2028a1e2af59cd4f5997f0e2297ac3962a630993948797237f33c652e",
+      "size": 1798
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/controllers/certificates_controller.rb",
+      "sha256": "943a1cfb60d5b5261783bd8c089d4f514aa15fe697bac0a2a85c01b80930d4d1",
+      "size": 579
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/controllers/checkouts_controller.rb",
+      "sha256": "ca2da7b7e4368e73a97d1f75f77d512b408236cf3d5415c3da4934b60f9f1d33",
+      "size": 2322
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/controllers/concerns/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/controllers/contact_messages_controller.rb",
+      "sha256": "fed99ef863e9a9fd7e4687a2a8a72a9ce0427418e4ddb745ce7f8500508d30c1",
+      "size": 716
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/controllers/course_sessions_controller.rb",
+      "sha256": "607a7a01680049e1d129fa2665d75add3c26d7dcb9e6864aa2d00e9757ac3b05",
+      "size": 1069
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/controllers/course_submissions_controller.rb",
+      "sha256": "e4fa6892f4c736c4c94ae868ea967dec28680213bcc9c10a14b96891d8d730b1",
+      "size": 1893
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/controllers/course_waitlist_entries_controller.rb",
+      "sha256": "e37ed6d83ccf9e2cc35c253149c549016ae5db2c3fe4e40d70a6b1045c790d11",
+      "size": 888
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/controllers/courses_controller.rb",
+      "sha256": "484853f0f16fea27a670c3441bc57566eaac47895e791523666a99a1d2341492",
+      "size": 1881
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/controllers/pages_controller.rb",
+      "sha256": "249d307b714fe4ae8c228b990164f75ffbb3bd775467436575246ce4b88ad0f5",
+      "size": 5590
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/controllers/quizzes_controller.rb",
+      "sha256": "3b4f70eeb6aa5d5b31349586b0da1ca7fa657db0d9dd3a6e977cf7086537a791",
+      "size": 1383
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/controllers/stripe/webhooks_controller.rb",
+      "sha256": "950717c4e9f13c1b83abfb21e2ff949025c1ba1a0aebaf0053b4032191a6efe8",
+      "size": 810
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/helpers/application_helper.rb",
+      "sha256": "431a2a843dcf64ddbdc6ea0e312410d7ff25ad4bad9813995a22f9f3512ae6d6",
+      "size": 415
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/javascript/application.js",
+      "sha256": "8ca629e71225c902b410c5ad9dc1ee8315be6d256a52afab4769b7c2958c4a57",
+      "size": 18275
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/javascript/controllers/application.js",
+      "sha256": "b5836315bab7b8d055ac3346bf57f933fa8aa8b37e9ea7b704cb2ae2bff129b8",
+      "size": 218
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/javascript/controllers/hello_controller.js",
+      "sha256": "a85435d6127f62a9dc5bece74854e75586089f18ea7759db1a9a672ef83934e5",
+      "size": 157
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/javascript/controllers/index.js",
+      "sha256": "a2d8f59d301f2f6ac02171ef63c930e00ea0f0bcf3b6cd8bf0c14a0733414058",
+      "size": 272
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/jobs/application_job.rb",
+      "sha256": "d51e125007521b0f59765422cf3cf949b59b2054cdac6567a95b4a7aeaf1d722",
+      "size": 269
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/jobs/google_calendar_cancel_job.rb",
+      "sha256": "bd417cd1e27329573705732432ebb99d568cfb1c55f1cc584a530252a0a8501d",
+      "size": 155
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/jobs/google_calendar_sync_job.rb",
+      "sha256": "c95ba31c982c3e7a136601b123139fcec6a4097cfdd664720872ff3bdfaa2d64",
+      "size": 698
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/mailers/ai_assessment_mailer.rb",
+      "sha256": "d49b48af98301c3bb4590f65b62cf279134be03860c490b8fed401e57eb52d0c",
+      "size": 485
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/mailers/application_mailer.rb",
+      "sha256": "88c5ca3e6b56c8434ac2ed57e194e09bf264bd4b9ac5cde4a5b374a0cf301bd7",
+      "size": 149
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/mailers/booking_mailer.rb",
+      "sha256": "d8ccf11132890a1c706a331d9e950ff97cf03f760cf5b553fa58d209a2b8b1c5",
+      "size": 765
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/mailers/contact_message_mailer.rb",
+      "sha256": "0acefe1ad8e649cff08f9864936cc9e0903ccbf2cb8f879de8cb243033f87184",
+      "size": 324
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/mailers/course_mailer.rb",
+      "sha256": "43d6def059f6e8a59467bed0433ac964dc03dbc312dcc30b16166521d31e2499",
+      "size": 1025
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/mailers/course_waitlist_mailer.rb",
+      "sha256": "933ab9dbdaf67ca53086ce5b8219cde46e381229fcb389c28ecd7077d725ed1f",
+      "size": 286
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/models/ai_assessment.rb",
+      "sha256": "1862032a695c5cac9a53d4ef64fbf76334c991c69390af0d3bfc01d3d0142f81",
+      "size": 688
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/models/application_record.rb",
+      "sha256": "12bf7d0eaefce4d50e0719991e19b48a36a7865aeb7ac745980584806155fdc1",
+      "size": 74
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/models/booking.rb",
+      "sha256": "4d8db02480e7618e682bef20dce87065d83c813feaacb07ea8a41cb61c00e8cc",
+      "size": 3213
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/models/certificate.rb",
+      "sha256": "93d9f1ec83c2bd9e888cf3b0737d365ef59d0a791988e40ade4c650f8a3465d3",
+      "size": 333
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/models/concerns/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/models/contact_message.rb",
+      "sha256": "f693072a5cc00633b696f1853a9bd24ad5eaf7f348e1aa6acbe5b0185297cfd9",
+      "size": 159
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/models/course_enrollment.rb",
+      "sha256": "1927dbb2ec5010ce643799b929f1c96039bfba38ef972788c460658ce1792b11",
+      "size": 1630
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/models/course_submission.rb",
+      "sha256": "ec65a35bf021023143ad37816f8f3f274a5feeeb9765d4fa6f293d3226fb5be5",
+      "size": 269
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/models/course_waitlist_entry.rb",
+      "sha256": "0d3d25fbb071fa00260e84771385ee1f1a3984bdf93c4439b57eb6598998f4a5",
+      "size": 475
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/models/learner.rb",
+      "sha256": "733944a28a5b09e5b6d48f4e19b33b852dc857fc01ab884ca4daaa6ac92402cc",
+      "size": 920
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/models/lesson_progress.rb",
+      "sha256": "a168589590a363c8cd523fae02e574f5ed02d148c366b30c276632b06dfa6a0c",
+      "size": 214
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/models/quiz_attempt.rb",
+      "sha256": "fe578aa556742a7d1f34621c6c9024de587c4b12f5c5317e7f751613d8547748",
+      "size": 225
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/services/ai_readiness_test.rb",
+      "sha256": "b0f30642fd38c0ef9a58feb2fec069eb765ad170e341b56e83df05b09b7d2fe4",
+      "size": 17043
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/services/certificate_pdf.rb",
+      "sha256": "77d5496d608d1da57a2b4bbee5904782e8fe1341d5376a35c6a5ba475b65ba9c",
+      "size": 1771
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/services/course_catalog.rb",
+      "sha256": "677053d3c8da364f07fade0cd7dcfd151c4444825eaeee706b2f864e24caa08f",
+      "size": 30922
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/services/course_checkout.rb",
+      "sha256": "15f8817a9890b29d18830f4cb864ca82291812fbd3120cc8c7fdb6d9917956ae",
+      "size": 3229
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/services/funding_support_pages.rb",
+      "sha256": "ceed953c7530aeab62921e0d3c16372ffdf3f996defeaf1b6c96a217e7ea5db4",
+      "size": 26347
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/services/google_calendar_service.rb",
+      "sha256": "8d4bfd361a6c4eb2b0db92b6be7d59d2438847ff8d1ca40de317a16a7dbab05b",
+      "size": 4423
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/services/workflow_evaluator.rb",
+      "sha256": "daade53b1dae6a87b418d70a82098d69fcaddba88f972e1f99addae4f20f4a11",
+      "size": 4168
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/ai_assessment_mailer/host_notification.html.erb",
+      "sha256": "8e39b2db8cfb4f0cb38f002507ae482b86385abd401017acbd238f66e244f6ba",
+      "size": 760
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/ai_assessment_mailer/results.html.erb",
+      "sha256": "17f8585d0b048f2eb8820ae89ede06d9c91610d4fa43a877b46e362cf33794b9",
+      "size": 5041
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/booking_mailer/cancellation.html.erb",
+      "sha256": "30a5040adfcf4a9bff547958bfb42b79205dd69f5278b386cf3525c6779c818d",
+      "size": 303
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/booking_mailer/confirmation.html.erb",
+      "sha256": "e7b8685277d821141b248436a6acca1d1b4ae4866c59e7e802de14d5c78cbc37",
+      "size": 333
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/booking_mailer/confirmed_with_meet_link.html.erb",
+      "sha256": "d1d33b322abc75aa0dbd2faa3333329e8c73994b09ff00493ca9f582e7c64f0e",
+      "size": 394
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/booking_mailer/host_notification.html.erb",
+      "sha256": "810227d9528477e88c8cb6c110f2c8ee1a10ff684654ae5c02fb37f35e633be1",
+      "size": 566
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/bookings/show.html.erb",
+      "sha256": "99275aa9fa07e2d4c48830a3feaffcada8c746b506cfe31af3636e92e82930fb",
+      "size": 1671
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/certificates/show.html.erb",
+      "sha256": "5beef4effbfae49aec0ef308523bf6b8a1793e308c09ddc32219bf2451bea246",
+      "size": 1291
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/checkouts/mock_success.html.erb",
+      "sha256": "f3dfff2c72cf0077759befb91146f42f6a49ca8e5cffe6b08a874470034fcbaa",
+      "size": 1093
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/checkouts/success.html.erb",
+      "sha256": "daae40cf43963706aedf8323b15fb411b65d7cca510de3f2cad62025fc2ae128",
+      "size": 760
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/contact_message_mailer/host_notification.html.erb",
+      "sha256": "a1c08f7d17daae836e730e1138ebcd00eacf28b62d6c09d19b42376a9dc46832",
+      "size": 485
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/course_mailer/access_link.html.erb",
+      "sha256": "58b444637c0082308cd5ae96317095eeda35355abd9a86ac3e50664319c97922",
+      "size": 1650
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/course_mailer/certificate_issued.html.erb",
+      "sha256": "bbb07e786317249e5568aea176df7a20d4899650a5f07e81d871011f1e99f870",
+      "size": 1642
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/course_sessions/new.html.erb",
+      "sha256": "7ddac451fa44b43e077c4226544a7ded07578a00865d6009680e82a0f8d68770",
+      "size": 1035
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/course_submissions/new.html.erb",
+      "sha256": "ebb425633ae07ca3fceff94402ca3470aafa461dbdca767e6cdb5f219893c860",
+      "size": 2170
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/course_waitlist_mailer/host_notification.html.erb",
+      "sha256": "c8273db7ef1085671992c6fd20ada63277adc9012879a1defd7e2616515469e2",
+      "size": 322
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/courses/lesson.html.erb",
+      "sha256": "9c3defe836fdca5740c8d7c269b7c40a96c342c9a0405f059e2dade61dbba43d",
+      "size": 2114
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/courses/show.html.erb",
+      "sha256": "dc26a487de607be0a1acee0895021c63554c7cbcff104a9f703ff69d3e04044e",
+      "size": 2278
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/courses/templates.html.erb",
+      "sha256": "0c601aad8035796079e2c2ae3e22fd7a61348b402f23cb65c9bd312aa1388552",
+      "size": 1422
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/layouts/application.html.erb",
+      "sha256": "0226531deade5ec70624d7223e1e450732a2487dceea2443d026ac6341a8e4f7",
+      "size": 2062
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/layouts/mailer.html.erb",
+      "sha256": "3be3ece9c575096f91f8ecc6a4efb0c7ffd509d2ed4b06c3461bd920201bbd37",
+      "size": 227
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/layouts/mailer.text.erb",
+      "sha256": "51353f9de3a26d4b28f7db91152bf56d31cfa9e4bd3c834680772a63cd374698",
+      "size": 13
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/pages/agente_de_gestao_ia.html.erb",
+      "sha256": "6fa47cc7831035ef545dbb984b3c2a30621e6863a6db1e4e38ac229def7792a9",
+      "size": 25767
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/pages/apoio_fundos.html.erb",
+      "sha256": "df4b971f32448a91bcedeb0bbf10f5acbb663baa341f2a6929811981d92b6ebd",
+      "size": 5987
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/pages/book_call.html.erb",
+      "sha256": "33aa0a7956f3a388b775cce907ed3622f42db2074485bbe49dbb0733f06a9772",
+      "size": 6422
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/pages/casos.html.erb",
+      "sha256": "cbeaa313e3be919f405c9014e4961d667284ca9211ea2e530a5eb44aa0fbe3d9",
+      "size": 7181
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/pages/contacto.html.erb",
+      "sha256": "687b95ce04f759fd6c70da89debdebe4042d514033fc64e6d6ec45c04daf27b9",
+      "size": 3498
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/pages/cookies.html.erb",
+      "sha256": "9d66ffeeb04869d19bd28c495a6a5bfd96a6b53c258124730d2d78626769b5e5",
+      "size": 1351
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/pages/curso_fundamentos.html.erb",
+      "sha256": "8ea1aec864d7b3b5a1c901ab696bae186b8bde979947b69f072d021452a4f2d0",
+      "size": 5303
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/pages/curso_proficiencia.html.erb",
+      "sha256": "82c04511bb98902e2e52c6391357cddce92d2de2b04086ee30b656f7e9ba2bb4",
+      "size": 6409
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/pages/fundos_europeus_ia_pmes.html.erb",
+      "sha256": "44b5270df685e2f2d032d0b87bdcd432c49b87cc4bf0016660b046e9dd849ec3",
+      "size": 19331
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/pages/index.html.erb",
+      "sha256": "d3fae74be6814cb5df2c06fcbea593d1d8a4ea81177d6343405a3a92b8344468",
+      "size": 14344
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/pages/metodo.html.erb",
+      "sha256": "64cf98b99e7aa6e2b8ed554cb75314f9b45e4bc3145ceb0e3bc8adebd8cc1a62",
+      "size": 7109
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/pages/missao.html.erb",
+      "sha256": "9e2cfe1191713b64f4a19c750d34bf0d2e68e4d2f5e87e93a08d4d66fdabd8d1",
+      "size": 6495
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/pages/privacidade.html.erb",
+      "sha256": "671afa2006f221298b1fcb9d3361caf447031d7840c959a748fe5f2457efb51e",
+      "size": 2679
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/pages/servicos.html.erb",
+      "sha256": "489a37cea19564f870ce508450192b709cb93e4044cfdc06c459159a3e082d05",
+      "size": 8191
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/pages/sobre.html.erb",
+      "sha256": "2084f0e58064e2009e121c9cac89435856722f7945947eb3868cda31e179a5c8",
+      "size": 4466
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/pages/termos.html.erb",
+      "sha256": "8366adf99d46e54167ddc016f15743bc6d741d04667873c6326bf34c45ac7a1e",
+      "size": 2791
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/pages/teste.html.erb",
+      "sha256": "fbcbd53869e239af215c01bff9a22f03126189374a1ce0c94cbd43638e09c0e1",
+      "size": 7969
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/pwa/manifest.json.erb",
+      "sha256": "29016ba687322fc9734342f743421676eb641fc832fd82f6b7486681d24cd609",
+      "size": 397
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/pwa/service-worker.js",
+      "sha256": "54bba97f108ac8d65af816aab152cc1860c9d9809641ba845231131db56d59bf",
+      "size": 876
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/quizzes/show.html.erb",
+      "sha256": "09463bc7607bda11c1cc8129495d0c69883d663c80cf9594e5a0b2f6cac53290",
+      "size": 1487
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/shared/_agent_chat_mock.html.erb",
+      "sha256": "f41811d3d1eeaac1fc9862eca0f3c86c958a4027a3fbd8fda82f03e05e95ab54",
+      "size": 1692
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/shared/_agent_mock.html.erb",
+      "sha256": "5e29bc524d47728e91f0427c1edb95a98c778029a21ebc75b90dbe9d525e19bd",
+      "size": 1068
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/shared/_footer.html.erb",
+      "sha256": "628aab07c6630d058b159ccde9efd14ac5981b70d2f71f07756863a4f633e978",
+      "size": 2157
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "app/views/shared/_nav.html.erb",
+      "sha256": "47a347587b93906cff336707e5984cda2429a1e3919c1b92e4e0272f2283f3f9",
+      "size": 1189
+    },
+    {
+      "git_compatible_mode": "100755",
+      "kind": "file",
+      "path": "bin/brakeman",
+      "sha256": "7825743df15f32a7a7a36b2098aec1dd56767031af0181d288f8a563c2c225b0",
+      "size": 139
+    },
+    {
+      "git_compatible_mode": "100755",
+      "kind": "file",
+      "path": "bin/bundle",
+      "sha256": "fe6efabc4133b9bcbbab276e58f2e65c1c6b9f10ca740d30703e7b9c2deb6f6c",
+      "size": 2801
+    },
+    {
+      "git_compatible_mode": "100755",
+      "kind": "file",
+      "path": "bin/dev",
+      "sha256": "bdf0071bfce9a25b347076aba2b678e2e90be4388e943ec8da21283b998680ca",
+      "size": 56
+    },
+    {
+      "git_compatible_mode": "100755",
+      "kind": "file",
+      "path": "bin/docker-entrypoint",
+      "sha256": "dc5492f02e7b3f3bcd67fa70afccc4c1c5500a29f8887f32b2233d79544700ea",
+      "size": 387
+    },
+    {
+      "git_compatible_mode": "100755",
+      "kind": "file",
+      "path": "bin/importmap",
+      "sha256": "aaaf65c0637afc4a2cd13b04660761cfaee83d7f6e81446986a3e3aaafb84da5",
+      "size": 91
+    },
+    {
+      "git_compatible_mode": "100755",
+      "kind": "file",
+      "path": "bin/jobs",
+      "sha256": "7b51c14b8871a220d4227a09c87634c5f20d574c5ea3cdfaeb32fa62e35fc988",
+      "size": 117
+    },
+    {
+      "git_compatible_mode": "100755",
+      "kind": "file",
+      "path": "bin/kamal",
+      "sha256": "9d9795dd6ef45db91f28a71e185555485aab41c09e9bad44014a2a9df27b0c4c",
+      "size": 745
+    },
+    {
+      "git_compatible_mode": "100755",
+      "kind": "file",
+      "path": "bin/rails",
+      "sha256": "0862d7bc09d5ed61785d677ef2dba10ce285387d4d5d9e3d90d97630e3f69ab6",
+      "size": 141
+    },
+    {
+      "git_compatible_mode": "100755",
+      "kind": "file",
+      "path": "bin/rake",
+      "sha256": "5943c3811dc345727b5f330b599c4c6c45abc04816dd8f4201aeed88cf268cb3",
+      "size": 90
+    },
+    {
+      "git_compatible_mode": "100755",
+      "kind": "file",
+      "path": "bin/rubocop",
+      "sha256": "56afe244a3ccefd6d728dce7413a3023472c5bcb751c58d3a9c35b402d807e34",
+      "size": 266
+    },
+    {
+      "git_compatible_mode": "100755",
+      "kind": "file",
+      "path": "bin/setup",
+      "sha256": "e5a76cd9ef202960d20fbd4fe1756e8da89acc49e52835aaa0184c5ccaffc8f0",
+      "size": 1010
+    },
+    {
+      "git_compatible_mode": "100755",
+      "kind": "file",
+      "path": "bin/setup_stripe_course",
+      "sha256": "4926b6183cf9e03949627418bd750b155cd2dfca3023977621331a47fcb7eea3",
+      "size": 2922
+    },
+    {
+      "git_compatible_mode": "100755",
+      "kind": "file",
+      "path": "bin/thrust",
+      "sha256": "ed1176b4df355db4b2a67ee37b45ca5c6d7118255d28a07dcdcb6d0fe4ae5c4f",
+      "size": 104
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "config/application.rb",
+      "sha256": "cba1f4e09aa7080df419c2db1290c0beea713451e7c9047614fcb40af9abcf8d",
+      "size": 1458
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "config/boot.rb",
+      "sha256": "bb5a9499136e72c70c557bc3ff4d2661cc9b05dc5b848fb720540e3fe716e4ea",
+      "size": 207
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "config/cache.yml",
+      "sha256": "1eeacb19bab1653c4d0817e093f0ae22fd1667853ee2e580704f41f13f21331d",
+      "size": 300
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "config/database.yml",
+      "sha256": "a02bfdeef9e81d13dfc050a1f18425bcb7ab66855dea86057ffa74a2374856a8",
+      "size": 1012
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "config/environment.rb",
+      "sha256": "73b2e731e02cedb9dc0335e1a35c3a2b7738032e3aa7e62ac32cbb8432b43c69",
+      "size": 128
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "config/environments/development.rb",
+      "sha256": "2833696c5d808c248bd081ddcd0940bda6e3a0ebd0e41a98aa8184aadf0a1e13",
+      "size": 2537
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "config/environments/production.rb",
+      "sha256": "ce30f93ef12b893451a36907a8093fdb9d3815771a35ddab7f169b189d09a603",
+      "size": 4119
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "config/environments/test.rb",
+      "sha256": "3ba000a52f5335d7c4357572ef09092328a9418e0ff49184d573b4e75a8614bd",
+      "size": 2202
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "config/importmap.rb",
+      "sha256": "148fdf21d156d2d1274627caa734d3e2d05ce23ae60e6a371fae054933ca30be",
+      "size": 285
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "config/initializers/assets.rb",
+      "sha256": "6b95e478f62078215b8ac5d3abcfd165d92972903290cb7d6d26317236a1265d",
+      "size": 449
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "config/initializers/content_security_policy.rb",
+      "sha256": "74c222dfd7c82fb1797dbe8eb4fce7b9e6afdfea8e413957692a021dfd7bfbb0",
+      "size": 1071
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "config/initializers/filter_parameter_logging.rb",
+      "sha256": "f864bd67e7bdaa63a5331b9fc15446613c410c3a314cd70d1b6a7c8b566b6120",
+      "size": 468
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "config/initializers/inflections.rb",
+      "sha256": "e2c18b803625a073b25e4ee4460677da33a8bf19bbbcad629718a8e15c58acc2",
+      "size": 649
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "config/initializers/resend.rb",
+      "sha256": "cfaa7fd2d7cf74e33b14873e0c55ee90fe9f0eb73f04725b001a9d17565d7be9",
+      "size": 39
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "config/initializers/stripe.rb",
+      "sha256": "58ff210467bbff2035a3a7511491ba8457f08c98c2442cbd69151fc99559d107",
+      "size": 79
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "config/locales/en.yml",
+      "sha256": "ad72af216ad0a67a1155c685535698fdd2a7138810c7e6dcb5eab7f0cc1c5922",
+      "size": 908
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "config/puma.rb",
+      "sha256": "9018e5a98af6989b2a20c9cb9e91cc06989c59de13dddd640652e8191a6e8c58",
+      "size": 1962
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "config/queue.yml",
+      "sha256": "4343b6cebcfc464f6f84b993b0c60d2b229cc5d97cde4fd845aebb15871f4bac",
+      "size": 290
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "config/recurring.yml",
+      "sha256": "1b308d44c793b26502423ab52361e20713c1294a47743d65f339059311e6dbe8",
+      "size": 474
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "config/routes.rb",
+      "sha256": "79ab0143b58f4eee9f507f3ed2aa22bfedb701a1a6a5b52f92811b11b09402df",
+      "size": 2186
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "config.ru",
+      "sha256": "1a5090e57cf9301e8bda3fec3abe4c72fbc001f6cd4909fd80b6cd488ab531b9",
+      "size": 160
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "db/cache_schema.rb",
+      "sha256": "31d6012503419a1be4aa87c4d18b2a9a85d84b6c23851428362d9a5e7b0eb26c",
+      "size": 613
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "db/migrate/20260505170100_create_bookings.rb",
+      "sha256": "843cea5088ce7509045ad8bfb2dd41025c8ef3e28b1ddcdb934c56c42182a84a",
+      "size": 843
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "db/migrate/20260505225500_create_ai_assessments.rb",
+      "sha256": "ed1fdb9b989bbdfb5fc351b0bae2a6906c4c6d75966855f6769ac68fc16ae3ad",
+      "size": 799
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "db/migrate/20260515100000_create_course_learners.rb",
+      "sha256": "c603357ed4c324d9412fc1ef4f2d4fc227f4dd5d540a71ebe355bf82e651cf0b",
+      "size": 384
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "db/migrate/20260515100100_create_course_enrollments.rb",
+      "sha256": "e5620fb76ddd65823e6d1f678ddd575f3f2a818b171ffd127d31baad572ae850",
+      "size": 786
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "db/migrate/20260515100200_create_lesson_progresses.rb",
+      "sha256": "3491846eb71b43f2fc1a79fe4a50477da7ee089558abebb9abdb3bc5d00305d6",
+      "size": 413
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "db/migrate/20260515100300_create_quiz_attempts.rb",
+      "sha256": "3c32299572595e90e1ae72d3a8b18b0080b571ae86e793f8f480c9c2a10b16bc",
+      "size": 502
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "db/migrate/20260515100400_create_course_submissions.rb",
+      "sha256": "dd580710d58c47384d5e6009f9e42f7a5695a1968d8136b434ca15ac839c157c",
+      "size": 512
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "db/migrate/20260515100500_create_certificates.rb",
+      "sha256": "cf24fced925654dbb8342c9b7ce2320f78e91d094f91feb4cbc9552be30f0474",
+      "size": 407
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "db/migrate/20260713120000_create_contact_messages.rb",
+      "sha256": "b3ce6521c5eff874ebd60e5572cd033cdef80fa601c6443fd565a442bf379632",
+      "size": 329
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "db/migrate/20260713130000_create_course_waitlist_entries.rb",
+      "sha256": "4181e9ef8aa79b1c9a5f363920f5e29e139fd147881b6c114948fbc5c389800d",
+      "size": 342
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "db/queue_schema.rb",
+      "sha256": "36b61820b43412c196933dc6182b164b6cfd86f7d13c918debc9e6cc2e1cfc29",
+      "size": 6278
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "db/schema.rb",
+      "sha256": "ad07fc351d9b80fd179b35f8b9b28254f532ec80780b1187e7af72bf50b8d530",
+      "size": 7127
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "db/seeds.rb",
+      "sha256": "4f24f361a5a875f32518a44f68f2d99a6495fcee5f9c54c30f8c3d7f8614512f",
+      "size": 494
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "docs/auditoria-e-plano-melhorias-2026-07.md",
+      "sha256": "2bc1052df9ba824923143c4830900a905040d3c0b5d2c17917f333920d9d5404",
+      "size": 16489
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "docs/auditoria-site-ipiia.md",
+      "sha256": "4d63c3f56bfbe4bfa75fa5ff3b0e6641b694bed788941d89af03089ce6dd9dd2",
+      "size": 10279
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "docs/guia-visual-densidade-imagens.md",
+      "sha256": "42ce96c9a925083bc8acc045a0dafabf5b789ea834b4c2ae06586e4017a157f7",
+      "size": 5299
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "docs/plano-redesign-oficina-operacoes.md",
+      "sha256": "9229326135c230b18269d23fb69d6c9c71f4288f93b9e0e5db0a547d57033a71",
+      "size": 2769
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "docs/production-roadmap.md",
+      "sha256": "1474378a35c044a69c18ffb1ad8791b54d449453e44f7d83cc8cae7adf9f90b8",
+      "size": 3855
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "docs/proposta-agente-gestao-ia-copy.md",
+      "sha256": "fcb6089fd9054ed93353244e68b4f61754114d04653b34e4403ff0e09eaa16f3",
+      "size": 16557
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "lib/tasks/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "log/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "plano-implementacao-chefe-staf-ia.md",
+      "sha256": "dbf831cb5af384c3068e35a07229e778c3edc7847c9128231612b1bd36615e33",
+      "size": 10387
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "public/400.html",
+      "sha256": "a22162717f188b736f1d646acc2d392449a4fd6b8437da310964516b04cdc3e9",
+      "size": 6685
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "public/404.html",
+      "sha256": "0f966fd28d4c2ad94dc3351c7ebcc9a65245c96e66650072de11a214c09d7e50",
+      "size": 4836
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "public/406-unsupported-browser.html",
+      "sha256": "d2e5e109f8908b7de017a5a21cf385db98ea9f2d8c434b11dbce4a648056d880",
+      "size": 6912
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "public/422.html",
+      "sha256": "e38e8bc96fa0c8bbb77d13cc98c023a22ae6fc81f8e03eec686563b854da71d0",
+      "size": 8380
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "public/500.html",
+      "sha256": "28bbc92a53f2667f153049939fd0762e309f8c4c57e2bd4918db2006a98ffbec",
+      "size": 7918
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "public/icon.png",
+      "sha256": "2e29c62b03e514c5a15f289f8fdc0abca6e22d0e91970503c9e2b7e0552c911c",
+      "size": 4166
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "public/icon.svg",
+      "sha256": "601dfb4db252852f3880ffc355bce0d4507b01afca6879189d10a65470ae6e3a",
+      "size": 122
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "public/robots.txt",
+      "sha256": "737579788d57ca1f2fc8f9395a2c6129998864b4697e69a547c373b9186d250f",
+      "size": 137
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "public/sitemap.xml",
+      "sha256": "52a4907a40195f71406f6ef29b22bba7288e046727e824116fffb0d6ccea7d9e",
+      "size": 1452
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "script/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "storage/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "test/controllers/course_sessions_controller_test.rb",
+      "sha256": "a1485b3d187ebfb72a2b1718231fad632b9334f32ec0a073b44e50c7d4ee2a3c",
+      "size": 323
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "test/models/course_enrollment_test.rb",
+      "sha256": "9bec841af1a60b07a463801b8540177a21c10faf1a5b6a88665c326e2121f757",
+      "size": 1885
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "test/services/course_catalog_test.rb",
+      "sha256": "13d0c8381800de87c55d48896732c1714e4ba279f9b55099843d811a3ec0a20e",
+      "size": 461
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "test/services/course_checkout_test.rb",
+      "sha256": "eb83c26bf50fd763ec93689af10c8bfd3bccd43c987c354500bb15e49f9af9ec",
+      "size": 1964
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "test/services/workflow_evaluator_test.rb",
+      "sha256": "7ac68d0fbe8edd8f7d059419d1ca3c8c76aa3bc2502ab55ca03acd49a71b8dc1",
+      "size": 681
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "test/test_helper.rb",
+      "sha256": "46625ae56ad10bb3d90cb0a7dc968989f1a34e23d5ff7c2c8d0ffd165eb9c995",
+      "size": 223
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "tmp/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "tmp/pids/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "tmp/storage/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "vendor/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "git_compatible_mode": "100644",
+      "kind": "file",
+      "path": "vendor/javascript/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    }
+  ],
+  "layers": [
+    {
+      "path": "blobs/sha256/1f00ff20147800878a4ebc9c283f79149a1dde5cc11d659c69d3a9c0bfeb7d4f",
+      "sha256": "1f00ff20147800878a4ebc9c283f79149a1dde5cc11d659c69d3a9c0bfeb7d4f",
+      "size": 77833728
+    },
+    {
+      "path": "blobs/sha256/e3af1b9e0ed85cff60df3d34cdfa27830e656fff5df6fd90f82ddd9863491f12",
+      "sha256": "e3af1b9e0ed85cff60df3d34cdfa27830e656fff5df6fd90f82ddd9863491f12",
+      "size": 48338432
+    },
+    {
+      "path": "blobs/sha256/3532874eae7c8b6a5c60d2e4299052c39bc6d65f1c39d0e05315e7045a4ee146",
+      "sha256": "3532874eae7c8b6a5c60d2e4299052c39bc6d65f1c39d0e05315e7045a4ee146",
+      "size": 3584
+    },
+    {
+      "path": "blobs/sha256/51f8c70334d5ebb5dbb42f5f6ce86f0ccd33aeecda91ca19c4c44d7aec807b66",
+      "sha256": "51f8c70334d5ebb5dbb42f5f6ce86f0ccd33aeecda91ca19c4c44d7aec807b66",
+      "size": 61936640
+    },
+    {
+      "path": "blobs/sha256/b3243e5ec57268071d952048a9d36adcbdc5c8eedb12d11e5372ddbfa42c5f81",
+      "sha256": "b3243e5ec57268071d952048a9d36adcbdc5c8eedb12d11e5372ddbfa42c5f81",
+      "size": 2560
+    },
+    {
+      "path": "blobs/sha256/617044668ea1b9b6d648c5bdbbe9a33a52c9233fe8c03dd0fa5c3eabdc64389c",
+      "sha256": "617044668ea1b9b6d648c5bdbbe9a33a52c9233fe8c03dd0fa5c3eabdc64389c",
+      "size": 1536
+    },
+    {
+      "path": "blobs/sha256/a2f5647b3be41365a9797750b69cc617ceb705c88211e4cab2dbe07880a10902",
+      "sha256": "a2f5647b3be41365a9797750b69cc617ceb705c88211e4cab2dbe07880a10902",
+      "size": 6902272
+    },
+    {
+      "path": "blobs/sha256/e5a7bfe4ecca1950552e02c54e4d9bca743e22fd7298088c3a89c325d4929cc9",
+      "sha256": "e5a7bfe4ecca1950552e02c54e4d9bca743e22fd7298088c3a89c325d4929cc9",
+      "size": 132727296
+    },
+    {
+      "path": "blobs/sha256/86887a3c996c267e24a9676b51f6e815547d14ec055c77fd3edcc53e11f4fc14",
+      "sha256": "86887a3c996c267e24a9676b51f6e815547d14ec055c77fd3edcc53e11f4fc14",
+      "size": 76642304
+    },
+    {
+      "path": "blobs/sha256/1c0e597476997579c0d9ecea7b2206112f663168833a52842c187c7df3ef7ac2",
+      "sha256": "1c0e597476997579c0d9ecea7b2206112f663168833a52842c187c7df3ef7ac2",
+      "size": 69304832
+    }
+  ],
+  "projection_policy": {
+    "excluded": [
+      ".git",
+      ".env*",
+      ".kamal",
+      "config secrets/keys/encrypted credentials",
+      "runtime storage/log/tmp",
+      "databases",
+      "sockets/pids",
+      "dependencies",
+      "compiled public/assets",
+      "coverage/backups/dumps"
+    ],
+    "included": [
+      "application source",
+      "executables",
+      "config except credential material",
+      "database schemas/migrations",
+      "tests",
+      "docs",
+      "public source assets",
+      "safe root build metadata"
+    ],
+    "runtime_equivalence_support": "active container image ID equals selected immutable image ID and docker diff reported zero source/config/test/doc path changes"
+  },
+  "selected_image_id": "sha256:e0174861d09eb270ef761f9ebd89c117acffe7235c8ad93c9f0138219b294e50",
+  "selected_image_index_digest": "sha256:c3011a731dac5e58a7164bbe28000d2c0648d8b7e9282fccaa818d7ada3c8cf0",
+  "source": "read-only docker image save from production host"
+}

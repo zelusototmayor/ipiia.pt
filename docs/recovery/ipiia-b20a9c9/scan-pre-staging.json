@@ -1,0 +1,1603 @@
+{
+  "blocking_counts": {
+    "forbidden_paths": 0,
+    "known_token_prefixes": 0,
+    "literal_secret_assignments": 0,
+    "private_key_markers": 0
+  },
+  "candidate_counts": {
+    "high_entropy_candidates": 51,
+    "high_entropy_manual_review_required": 5,
+    "pii_email_or_phone_line_candidates": 24
+  },
+  "file_manifest": [
+    {
+      "path": ".dockerignore",
+      "sha256": "8dad33df9e450a9e42deb56a86ee6a20b559578a6f0121b3375c4cf4e32d4aac",
+      "size": 874
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "sha256": "08a0fa3aa3009b7f66044b2dba9ef2d1d7d84fd36b133e55d5fb0187252797e9",
+      "size": 245
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "3242f2e2179c7b55428ac6f62fd6800722c8ef7a43d50208146ad38714788ad7",
+      "size": 1142
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "0bc250fe3ffd428865be51aa34fc812f54ed8db62bf0c04a8808ee5604e4435d",
+      "size": 276
+    },
+    {
+      "path": ".kamal/hooks/docker-setup.sample",
+      "sha256": "40c56e29f32bdfce5dd0c662b320521f714195d046bb61b664210c924298bef6",
+      "size": 51
+    },
+    {
+      "path": ".kamal/hooks/post-app-boot.sample",
+      "sha256": "a6e48e32fe52416aa6de28a3218ec673fd378504a850dc13bae5c0ffefaf2297",
+      "size": 71
+    },
+    {
+      "path": ".kamal/hooks/post-deploy.sample",
+      "sha256": "6834a9ba30caf297ec51f16d4ec37de69ddf76ab5a9ebf708446dcf5c7f7cce6",
+      "size": 319
+    },
+    {
+      "path": ".kamal/hooks/post-proxy-reboot.sample",
+      "sha256": "ede265811b0aa1ffa76a25d894d4b2acfd32850a1750b223443f6a377d17791a",
+      "size": 55
+    },
+    {
+      "path": ".kamal/hooks/pre-app-boot.sample",
+      "sha256": "8eef4a4b7ba94e3a0716ab5a6d79929c7be2d15f1e309b5c9d264e1dc59d91a8",
+      "size": 72
+    },
+    {
+      "path": ".kamal/hooks/pre-build.sample",
+      "sha256": "6af5bdc3d93c04d04f00eede43e8311f8fe5fbc28f5598d36ca3147456d3ab5d",
+      "size": 1103
+    },
+    {
+      "path": ".kamal/hooks/pre-connect.sample",
+      "sha256": "8fde93782c4ad494a837f6f9f457d2346eea5328805526d2dda2b0af44dba95b",
+      "size": 1039
+    },
+    {
+      "path": ".kamal/hooks/pre-deploy.sample",
+      "sha256": "9b8075f6612bb0c896dee99b91b54042c884678f82c15422b3c94a5ad79542b5",
+      "size": 2833
+    },
+    {
+      "path": ".kamal/hooks/pre-proxy-reboot.sample",
+      "sha256": "98195d7311954ce4c3db6581fcf214fab908b1e6d34254a5515026e753520053",
+      "size": 59
+    },
+    {
+      "path": ".rubocop.yml",
+      "sha256": "474497601d8ff521eed710adf606b77417a88b8d51d3d323b177097f1b74677a",
+      "size": 249
+    },
+    {
+      "path": ".ruby-version",
+      "sha256": "5eee6c0c5c6901f5e523f0a434bca4106e1ff7136deb451f982b0bb1a7b13716",
+      "size": 6
+    },
+    {
+      "path": "Dockerfile",
+      "sha256": "9fa28965b86047dc774cf19f6b5324c7826a1e60245d69e2279eeec720df738e",
+      "size": 2360
+    },
+    {
+      "path": "Gemfile",
+      "sha256": "f37ef5189d30808204c30c29553062bdce01a7e625031323f2f96498484d5ff2",
+      "size": 2361
+    },
+    {
+      "path": "Gemfile.lock",
+      "sha256": "caffa47667b41ecec7b227289e74f8095147f739c2e520d470842e4953ac41f4",
+      "size": 10839
+    },
+    {
+      "path": "README.md",
+      "sha256": "cb08e48b7df3451e22fb32b808eee8b7c12d330b7f04be49353715fe612fa7d7",
+      "size": 374
+    },
+    {
+      "path": "Rakefile",
+      "sha256": "895c6a69d01c14f0dd437c0eb44914754006ce317807264ca7ffbd1c79a91ebf",
+      "size": 227
+    },
+    {
+      "path": "app/assets/images/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "app/assets/images/logo-cube.png",
+      "sha256": "38e42d120db7d28bbbff1b2e4ee1f84526c2b70ed1fac261ca6b803445012f7b",
+      "size": 2126546
+    },
+    {
+      "path": "app/assets/images/logo-horizontal.svg",
+      "sha256": "2746a7c05677e8946121713017349f8c53c7271b09f7a7a0d72ee8e8699d7f6d",
+      "size": 705
+    },
+    {
+      "path": "app/assets/images/logo-light.svg",
+      "sha256": "1497e94e222bf488b351c3464dce7ad4d63d5dbd2297f9274585557a1229a08f",
+      "size": 447
+    },
+    {
+      "path": "app/assets/images/logo-operations-cube-v2.png",
+      "sha256": "a27698dc3c544210eff50d5a216cda0496bbd7058fc0fcd5a4aa8be460444577",
+      "size": 214703
+    },
+    {
+      "path": "app/assets/javascripts/lucide.min.js",
+      "sha256": "40bee90e38803be12dab4baf61e7dcb1833b844b6c529e173393fbcc09bd4778",
+      "size": 411139
+    },
+    {
+      "path": "app/assets/stylesheets/application.css",
+      "sha256": "478b66b3effc220e394a0ba1a9065c367d723bd73b2036067ea87f91094b2cdf",
+      "size": 491
+    },
+    {
+      "path": "app/assets/stylesheets/operations.css",
+      "sha256": "1796831c13efee841eee7d77ad22bb87eebb747f3c1400a0eb96f5e510707338",
+      "size": 16341
+    },
+    {
+      "path": "app/assets/stylesheets/shared.css",
+      "sha256": "37b86d981c0449e59d3198d4dbdb8d180738fa3c71e5f73958d1427606bd8102",
+      "size": 3331
+    },
+    {
+      "path": "app/assets/stylesheets/styles.css",
+      "sha256": "aad7f6bc10622e78eab0e2eb0439f043a50c18148d8a82dbb9f3e821b7dfc58c",
+      "size": 61946
+    },
+    {
+      "path": "app/controllers/ai_assessments_controller.rb",
+      "sha256": "e910c3b7d9c0b9017f248e2cf838a0f34fa410370359a895d863cba982378f47",
+      "size": 1587
+    },
+    {
+      "path": "app/controllers/application_controller.rb",
+      "sha256": "8e2399f1ec1f420bcfda2220151c42e4ff1440c581fce21d921f66bad60232f7",
+      "size": 546
+    },
+    {
+      "path": "app/controllers/bookings_controller.rb",
+      "sha256": "dc159cd2028a1e2af59cd4f5997f0e2297ac3962a630993948797237f33c652e",
+      "size": 1798
+    },
+    {
+      "path": "app/controllers/certificates_controller.rb",
+      "sha256": "943a1cfb60d5b5261783bd8c089d4f514aa15fe697bac0a2a85c01b80930d4d1",
+      "size": 579
+    },
+    {
+      "path": "app/controllers/checkouts_controller.rb",
+      "sha256": "ca2da7b7e4368e73a97d1f75f77d512b408236cf3d5415c3da4934b60f9f1d33",
+      "size": 2322
+    },
+    {
+      "path": "app/controllers/concerns/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "app/controllers/contact_messages_controller.rb",
+      "sha256": "fed99ef863e9a9fd7e4687a2a8a72a9ce0427418e4ddb745ce7f8500508d30c1",
+      "size": 716
+    },
+    {
+      "path": "app/controllers/course_sessions_controller.rb",
+      "sha256": "607a7a01680049e1d129fa2665d75add3c26d7dcb9e6864aa2d00e9757ac3b05",
+      "size": 1069
+    },
+    {
+      "path": "app/controllers/course_submissions_controller.rb",
+      "sha256": "e4fa6892f4c736c4c94ae868ea967dec28680213bcc9c10a14b96891d8d730b1",
+      "size": 1893
+    },
+    {
+      "path": "app/controllers/course_waitlist_entries_controller.rb",
+      "sha256": "e37ed6d83ccf9e2cc35c253149c549016ae5db2c3fe4e40d70a6b1045c790d11",
+      "size": 888
+    },
+    {
+      "path": "app/controllers/courses_controller.rb",
+      "sha256": "484853f0f16fea27a670c3441bc57566eaac47895e791523666a99a1d2341492",
+      "size": 1881
+    },
+    {
+      "path": "app/controllers/pages_controller.rb",
+      "sha256": "249d307b714fe4ae8c228b990164f75ffbb3bd775467436575246ce4b88ad0f5",
+      "size": 5590
+    },
+    {
+      "path": "app/controllers/quizzes_controller.rb",
+      "sha256": "3b4f70eeb6aa5d5b31349586b0da1ca7fa657db0d9dd3a6e977cf7086537a791",
+      "size": 1383
+    },
+    {
+      "path": "app/controllers/stripe/webhooks_controller.rb",
+      "sha256": "950717c4e9f13c1b83abfb21e2ff949025c1ba1a0aebaf0053b4032191a6efe8",
+      "size": 810
+    },
+    {
+      "path": "app/helpers/application_helper.rb",
+      "sha256": "431a2a843dcf64ddbdc6ea0e312410d7ff25ad4bad9813995a22f9f3512ae6d6",
+      "size": 415
+    },
+    {
+      "path": "app/javascript/application.js",
+      "sha256": "8ca629e71225c902b410c5ad9dc1ee8315be6d256a52afab4769b7c2958c4a57",
+      "size": 18275
+    },
+    {
+      "path": "app/javascript/controllers/application.js",
+      "sha256": "b5836315bab7b8d055ac3346bf57f933fa8aa8b37e9ea7b704cb2ae2bff129b8",
+      "size": 218
+    },
+    {
+      "path": "app/javascript/controllers/hello_controller.js",
+      "sha256": "a85435d6127f62a9dc5bece74854e75586089f18ea7759db1a9a672ef83934e5",
+      "size": 157
+    },
+    {
+      "path": "app/javascript/controllers/index.js",
+      "sha256": "a2d8f59d301f2f6ac02171ef63c930e00ea0f0bcf3b6cd8bf0c14a0733414058",
+      "size": 272
+    },
+    {
+      "path": "app/jobs/application_job.rb",
+      "sha256": "d51e125007521b0f59765422cf3cf949b59b2054cdac6567a95b4a7aeaf1d722",
+      "size": 269
+    },
+    {
+      "path": "app/jobs/google_calendar_cancel_job.rb",
+      "sha256": "bd417cd1e27329573705732432ebb99d568cfb1c55f1cc584a530252a0a8501d",
+      "size": 155
+    },
+    {
+      "path": "app/jobs/google_calendar_sync_job.rb",
+      "sha256": "c95ba31c982c3e7a136601b123139fcec6a4097cfdd664720872ff3bdfaa2d64",
+      "size": 698
+    },
+    {
+      "path": "app/mailers/ai_assessment_mailer.rb",
+      "sha256": "d49b48af98301c3bb4590f65b62cf279134be03860c490b8fed401e57eb52d0c",
+      "size": 485
+    },
+    {
+      "path": "app/mailers/application_mailer.rb",
+      "sha256": "88c5ca3e6b56c8434ac2ed57e194e09bf264bd4b9ac5cde4a5b374a0cf301bd7",
+      "size": 149
+    },
+    {
+      "path": "app/mailers/booking_mailer.rb",
+      "sha256": "d8ccf11132890a1c706a331d9e950ff97cf03f760cf5b553fa58d209a2b8b1c5",
+      "size": 765
+    },
+    {
+      "path": "app/mailers/contact_message_mailer.rb",
+      "sha256": "0acefe1ad8e649cff08f9864936cc9e0903ccbf2cb8f879de8cb243033f87184",
+      "size": 324
+    },
+    {
+      "path": "app/mailers/course_mailer.rb",
+      "sha256": "43d6def059f6e8a59467bed0433ac964dc03dbc312dcc30b16166521d31e2499",
+      "size": 1025
+    },
+    {
+      "path": "app/mailers/course_waitlist_mailer.rb",
+      "sha256": "933ab9dbdaf67ca53086ce5b8219cde46e381229fcb389c28ecd7077d725ed1f",
+      "size": 286
+    },
+    {
+      "path": "app/models/ai_assessment.rb",
+      "sha256": "1862032a695c5cac9a53d4ef64fbf76334c991c69390af0d3bfc01d3d0142f81",
+      "size": 688
+    },
+    {
+      "path": "app/models/application_record.rb",
+      "sha256": "12bf7d0eaefce4d50e0719991e19b48a36a7865aeb7ac745980584806155fdc1",
+      "size": 74
+    },
+    {
+      "path": "app/models/booking.rb",
+      "sha256": "4d8db02480e7618e682bef20dce87065d83c813feaacb07ea8a41cb61c00e8cc",
+      "size": 3213
+    },
+    {
+      "path": "app/models/certificate.rb",
+      "sha256": "93d9f1ec83c2bd9e888cf3b0737d365ef59d0a791988e40ade4c650f8a3465d3",
+      "size": 333
+    },
+    {
+      "path": "app/models/concerns/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "app/models/contact_message.rb",
+      "sha256": "f693072a5cc00633b696f1853a9bd24ad5eaf7f348e1aa6acbe5b0185297cfd9",
+      "size": 159
+    },
+    {
+      "path": "app/models/course_enrollment.rb",
+      "sha256": "1927dbb2ec5010ce643799b929f1c96039bfba38ef972788c460658ce1792b11",
+      "size": 1630
+    },
+    {
+      "path": "app/models/course_submission.rb",
+      "sha256": "ec65a35bf021023143ad37816f8f3f274a5feeeb9765d4fa6f293d3226fb5be5",
+      "size": 269
+    },
+    {
+      "path": "app/models/course_waitlist_entry.rb",
+      "sha256": "0d3d25fbb071fa00260e84771385ee1f1a3984bdf93c4439b57eb6598998f4a5",
+      "size": 475
+    },
+    {
+      "path": "app/models/learner.rb",
+      "sha256": "733944a28a5b09e5b6d48f4e19b33b852dc857fc01ab884ca4daaa6ac92402cc",
+      "size": 920
+    },
+    {
+      "path": "app/models/lesson_progress.rb",
+      "sha256": "a168589590a363c8cd523fae02e574f5ed02d148c366b30c276632b06dfa6a0c",
+      "size": 214
+    },
+    {
+      "path": "app/models/quiz_attempt.rb",
+      "sha256": "fe578aa556742a7d1f34621c6c9024de587c4b12f5c5317e7f751613d8547748",
+      "size": 225
+    },
+    {
+      "path": "app/services/ai_readiness_test.rb",
+      "sha256": "b0f30642fd38c0ef9a58feb2fec069eb765ad170e341b56e83df05b09b7d2fe4",
+      "size": 17043
+    },
+    {
+      "path": "app/services/certificate_pdf.rb",
+      "sha256": "77d5496d608d1da57a2b4bbee5904782e8fe1341d5376a35c6a5ba475b65ba9c",
+      "size": 1771
+    },
+    {
+      "path": "app/services/course_catalog.rb",
+      "sha256": "677053d3c8da364f07fade0cd7dcfd151c4444825eaeee706b2f864e24caa08f",
+      "size": 30922
+    },
+    {
+      "path": "app/services/course_checkout.rb",
+      "sha256": "15f8817a9890b29d18830f4cb864ca82291812fbd3120cc8c7fdb6d9917956ae",
+      "size": 3229
+    },
+    {
+      "path": "app/services/funding_support_pages.rb",
+      "sha256": "ceed953c7530aeab62921e0d3c16372ffdf3f996defeaf1b6c96a217e7ea5db4",
+      "size": 26347
+    },
+    {
+      "path": "app/services/google_calendar_service.rb",
+      "sha256": "8d4bfd361a6c4eb2b0db92b6be7d59d2438847ff8d1ca40de317a16a7dbab05b",
+      "size": 4423
+    },
+    {
+      "path": "app/services/workflow_evaluator.rb",
+      "sha256": "daade53b1dae6a87b418d70a82098d69fcaddba88f972e1f99addae4f20f4a11",
+      "size": 4168
+    },
+    {
+      "path": "app/views/ai_assessment_mailer/host_notification.html.erb",
+      "sha256": "8e39b2db8cfb4f0cb38f002507ae482b86385abd401017acbd238f66e244f6ba",
+      "size": 760
+    },
+    {
+      "path": "app/views/ai_assessment_mailer/results.html.erb",
+      "sha256": "17f8585d0b048f2eb8820ae89ede06d9c91610d4fa43a877b46e362cf33794b9",
+      "size": 5041
+    },
+    {
+      "path": "app/views/booking_mailer/cancellation.html.erb",
+      "sha256": "30a5040adfcf4a9bff547958bfb42b79205dd69f5278b386cf3525c6779c818d",
+      "size": 303
+    },
+    {
+      "path": "app/views/booking_mailer/confirmation.html.erb",
+      "sha256": "e7b8685277d821141b248436a6acca1d1b4ae4866c59e7e802de14d5c78cbc37",
+      "size": 333
+    },
+    {
+      "path": "app/views/booking_mailer/confirmed_with_meet_link.html.erb",
+      "sha256": "d1d33b322abc75aa0dbd2faa3333329e8c73994b09ff00493ca9f582e7c64f0e",
+      "size": 394
+    },
+    {
+      "path": "app/views/booking_mailer/host_notification.html.erb",
+      "sha256": "810227d9528477e88c8cb6c110f2c8ee1a10ff684654ae5c02fb37f35e633be1",
+      "size": 566
+    },
+    {
+      "path": "app/views/bookings/show.html.erb",
+      "sha256": "99275aa9fa07e2d4c48830a3feaffcada8c746b506cfe31af3636e92e82930fb",
+      "size": 1671
+    },
+    {
+      "path": "app/views/certificates/show.html.erb",
+      "sha256": "5beef4effbfae49aec0ef308523bf6b8a1793e308c09ddc32219bf2451bea246",
+      "size": 1291
+    },
+    {
+      "path": "app/views/checkouts/mock_success.html.erb",
+      "sha256": "f3dfff2c72cf0077759befb91146f42f6a49ca8e5cffe6b08a874470034fcbaa",
+      "size": 1093
+    },
+    {
+      "path": "app/views/checkouts/success.html.erb",
+      "sha256": "daae40cf43963706aedf8323b15fb411b65d7cca510de3f2cad62025fc2ae128",
+      "size": 760
+    },
+    {
+      "path": "app/views/contact_message_mailer/host_notification.html.erb",
+      "sha256": "a1c08f7d17daae836e730e1138ebcd00eacf28b62d6c09d19b42376a9dc46832",
+      "size": 485
+    },
+    {
+      "path": "app/views/course_mailer/access_link.html.erb",
+      "sha256": "58b444637c0082308cd5ae96317095eeda35355abd9a86ac3e50664319c97922",
+      "size": 1650
+    },
+    {
+      "path": "app/views/course_mailer/certificate_issued.html.erb",
+      "sha256": "bbb07e786317249e5568aea176df7a20d4899650a5f07e81d871011f1e99f870",
+      "size": 1642
+    },
+    {
+      "path": "app/views/course_sessions/new.html.erb",
+      "sha256": "7ddac451fa44b43e077c4226544a7ded07578a00865d6009680e82a0f8d68770",
+      "size": 1035
+    },
+    {
+      "path": "app/views/course_submissions/new.html.erb",
+      "sha256": "ebb425633ae07ca3fceff94402ca3470aafa461dbdca767e6cdb5f219893c860",
+      "size": 2170
+    },
+    {
+      "path": "app/views/course_waitlist_mailer/host_notification.html.erb",
+      "sha256": "c8273db7ef1085671992c6fd20ada63277adc9012879a1defd7e2616515469e2",
+      "size": 322
+    },
+    {
+      "path": "app/views/courses/lesson.html.erb",
+      "sha256": "9c3defe836fdca5740c8d7c269b7c40a96c342c9a0405f059e2dade61dbba43d",
+      "size": 2114
+    },
+    {
+      "path": "app/views/courses/show.html.erb",
+      "sha256": "dc26a487de607be0a1acee0895021c63554c7cbcff104a9f703ff69d3e04044e",
+      "size": 2278
+    },
+    {
+      "path": "app/views/courses/templates.html.erb",
+      "sha256": "0c601aad8035796079e2c2ae3e22fd7a61348b402f23cb65c9bd312aa1388552",
+      "size": 1422
+    },
+    {
+      "path": "app/views/layouts/application.html.erb",
+      "sha256": "0226531deade5ec70624d7223e1e450732a2487dceea2443d026ac6341a8e4f7",
+      "size": 2062
+    },
+    {
+      "path": "app/views/layouts/mailer.html.erb",
+      "sha256": "3be3ece9c575096f91f8ecc6a4efb0c7ffd509d2ed4b06c3461bd920201bbd37",
+      "size": 227
+    },
+    {
+      "path": "app/views/layouts/mailer.text.erb",
+      "sha256": "51353f9de3a26d4b28f7db91152bf56d31cfa9e4bd3c834680772a63cd374698",
+      "size": 13
+    },
+    {
+      "path": "app/views/pages/agente_de_gestao_ia.html.erb",
+      "sha256": "6fa47cc7831035ef545dbb984b3c2a30621e6863a6db1e4e38ac229def7792a9",
+      "size": 25767
+    },
+    {
+      "path": "app/views/pages/apoio_fundos.html.erb",
+      "sha256": "df4b971f32448a91bcedeb0bbf10f5acbb663baa341f2a6929811981d92b6ebd",
+      "size": 5987
+    },
+    {
+      "path": "app/views/pages/book_call.html.erb",
+      "sha256": "33aa0a7956f3a388b775cce907ed3622f42db2074485bbe49dbb0733f06a9772",
+      "size": 6422
+    },
+    {
+      "path": "app/views/pages/casos.html.erb",
+      "sha256": "cbeaa313e3be919f405c9014e4961d667284ca9211ea2e530a5eb44aa0fbe3d9",
+      "size": 7181
+    },
+    {
+      "path": "app/views/pages/contacto.html.erb",
+      "sha256": "687b95ce04f759fd6c70da89debdebe4042d514033fc64e6d6ec45c04daf27b9",
+      "size": 3498
+    },
+    {
+      "path": "app/views/pages/cookies.html.erb",
+      "sha256": "9d66ffeeb04869d19bd28c495a6a5bfd96a6b53c258124730d2d78626769b5e5",
+      "size": 1351
+    },
+    {
+      "path": "app/views/pages/curso_fundamentos.html.erb",
+      "sha256": "8ea1aec864d7b3b5a1c901ab696bae186b8bde979947b69f072d021452a4f2d0",
+      "size": 5303
+    },
+    {
+      "path": "app/views/pages/curso_proficiencia.html.erb",
+      "sha256": "82c04511bb98902e2e52c6391357cddce92d2de2b04086ee30b656f7e9ba2bb4",
+      "size": 6409
+    },
+    {
+      "path": "app/views/pages/fundos_europeus_ia_pmes.html.erb",
+      "sha256": "44b5270df685e2f2d032d0b87bdcd432c49b87cc4bf0016660b046e9dd849ec3",
+      "size": 19331
+    },
+    {
+      "path": "app/views/pages/index.html.erb",
+      "sha256": "d3fae74be6814cb5df2c06fcbea593d1d8a4ea81177d6343405a3a92b8344468",
+      "size": 14344
+    },
+    {
+      "path": "app/views/pages/metodo.html.erb",
+      "sha256": "64cf98b99e7aa6e2b8ed554cb75314f9b45e4bc3145ceb0e3bc8adebd8cc1a62",
+      "size": 7109
+    },
+    {
+      "path": "app/views/pages/missao.html.erb",
+      "sha256": "9e2cfe1191713b64f4a19c750d34bf0d2e68e4d2f5e87e93a08d4d66fdabd8d1",
+      "size": 6495
+    },
+    {
+      "path": "app/views/pages/privacidade.html.erb",
+      "sha256": "671afa2006f221298b1fcb9d3361caf447031d7840c959a748fe5f2457efb51e",
+      "size": 2679
+    },
+    {
+      "path": "app/views/pages/servicos.html.erb",
+      "sha256": "489a37cea19564f870ce508450192b709cb93e4044cfdc06c459159a3e082d05",
+      "size": 8191
+    },
+    {
+      "path": "app/views/pages/sobre.html.erb",
+      "sha256": "2084f0e58064e2009e121c9cac89435856722f7945947eb3868cda31e179a5c8",
+      "size": 4466
+    },
+    {
+      "path": "app/views/pages/termos.html.erb",
+      "sha256": "8366adf99d46e54167ddc016f15743bc6d741d04667873c6326bf34c45ac7a1e",
+      "size": 2791
+    },
+    {
+      "path": "app/views/pages/teste.html.erb",
+      "sha256": "fbcbd53869e239af215c01bff9a22f03126189374a1ce0c94cbd43638e09c0e1",
+      "size": 7969
+    },
+    {
+      "path": "app/views/pwa/manifest.json.erb",
+      "sha256": "29016ba687322fc9734342f743421676eb641fc832fd82f6b7486681d24cd609",
+      "size": 397
+    },
+    {
+      "path": "app/views/pwa/service-worker.js",
+      "sha256": "54bba97f108ac8d65af816aab152cc1860c9d9809641ba845231131db56d59bf",
+      "size": 876
+    },
+    {
+      "path": "app/views/quizzes/show.html.erb",
+      "sha256": "09463bc7607bda11c1cc8129495d0c69883d663c80cf9594e5a0b2f6cac53290",
+      "size": 1487
+    },
+    {
+      "path": "app/views/shared/_agent_chat_mock.html.erb",
+      "sha256": "f41811d3d1eeaac1fc9862eca0f3c86c958a4027a3fbd8fda82f03e05e95ab54",
+      "size": 1692
+    },
+    {
+      "path": "app/views/shared/_agent_mock.html.erb",
+      "sha256": "5e29bc524d47728e91f0427c1edb95a98c778029a21ebc75b90dbe9d525e19bd",
+      "size": 1068
+    },
+    {
+      "path": "app/views/shared/_footer.html.erb",
+      "sha256": "628aab07c6630d058b159ccde9efd14ac5981b70d2f71f07756863a4f633e978",
+      "size": 2157
+    },
+    {
+      "path": "app/views/shared/_nav.html.erb",
+      "sha256": "47a347587b93906cff336707e5984cda2429a1e3919c1b92e4e0272f2283f3f9",
+      "size": 1189
+    },
+    {
+      "path": "bin/brakeman",
+      "sha256": "7825743df15f32a7a7a36b2098aec1dd56767031af0181d288f8a563c2c225b0",
+      "size": 139
+    },
+    {
+      "path": "bin/bundle",
+      "sha256": "fe6efabc4133b9bcbbab276e58f2e65c1c6b9f10ca740d30703e7b9c2deb6f6c",
+      "size": 2801
+    },
+    {
+      "path": "bin/dev",
+      "sha256": "bdf0071bfce9a25b347076aba2b678e2e90be4388e943ec8da21283b998680ca",
+      "size": 56
+    },
+    {
+      "path": "bin/docker-entrypoint",
+      "sha256": "dc5492f02e7b3f3bcd67fa70afccc4c1c5500a29f8887f32b2233d79544700ea",
+      "size": 387
+    },
+    {
+      "path": "bin/importmap",
+      "sha256": "aaaf65c0637afc4a2cd13b04660761cfaee83d7f6e81446986a3e3aaafb84da5",
+      "size": 91
+    },
+    {
+      "path": "bin/jobs",
+      "sha256": "7b51c14b8871a220d4227a09c87634c5f20d574c5ea3cdfaeb32fa62e35fc988",
+      "size": 117
+    },
+    {
+      "path": "bin/kamal",
+      "sha256": "9d9795dd6ef45db91f28a71e185555485aab41c09e9bad44014a2a9df27b0c4c",
+      "size": 745
+    },
+    {
+      "path": "bin/rails",
+      "sha256": "0862d7bc09d5ed61785d677ef2dba10ce285387d4d5d9e3d90d97630e3f69ab6",
+      "size": 141
+    },
+    {
+      "path": "bin/rake",
+      "sha256": "5943c3811dc345727b5f330b599c4c6c45abc04816dd8f4201aeed88cf268cb3",
+      "size": 90
+    },
+    {
+      "path": "bin/rubocop",
+      "sha256": "56afe244a3ccefd6d728dce7413a3023472c5bcb751c58d3a9c35b402d807e34",
+      "size": 266
+    },
+    {
+      "path": "bin/setup",
+      "sha256": "e5a76cd9ef202960d20fbd4fe1756e8da89acc49e52835aaa0184c5ccaffc8f0",
+      "size": 1010
+    },
+    {
+      "path": "bin/setup_stripe_course",
+      "sha256": "4926b6183cf9e03949627418bd750b155cd2dfca3023977621331a47fcb7eea3",
+      "size": 2922
+    },
+    {
+      "path": "bin/thrust",
+      "sha256": "ed1176b4df355db4b2a67ee37b45ca5c6d7118255d28a07dcdcb6d0fe4ae5c4f",
+      "size": 104
+    },
+    {
+      "path": "config.ru",
+      "sha256": "1a5090e57cf9301e8bda3fec3abe4c72fbc001f6cd4909fd80b6cd488ab531b9",
+      "size": 160
+    },
+    {
+      "path": "config/application.rb",
+      "sha256": "cba1f4e09aa7080df419c2db1290c0beea713451e7c9047614fcb40af9abcf8d",
+      "size": 1458
+    },
+    {
+      "path": "config/boot.rb",
+      "sha256": "bb5a9499136e72c70c557bc3ff4d2661cc9b05dc5b848fb720540e3fe716e4ea",
+      "size": 207
+    },
+    {
+      "path": "config/cache.yml",
+      "sha256": "1eeacb19bab1653c4d0817e093f0ae22fd1667853ee2e580704f41f13f21331d",
+      "size": 300
+    },
+    {
+      "path": "config/credentials.yml.enc",
+      "sha256": "e0f6d8599d6cc4b0ec7ee08cc5e9a38d80ae6ad4510ed6cd232b5a5c44b77af1",
+      "size": 3512
+    },
+    {
+      "path": "config/database.yml",
+      "sha256": "a02bfdeef9e81d13dfc050a1f18425bcb7ab66855dea86057ffa74a2374856a8",
+      "size": 1012
+    },
+    {
+      "path": "config/deploy.yml",
+      "sha256": "f45c5a7de7277cc04d11b62800399e042fce6479c45375e7c48722bea27397a4",
+      "size": 4274
+    },
+    {
+      "path": "config/environment.rb",
+      "sha256": "73b2e731e02cedb9dc0335e1a35c3a2b7738032e3aa7e62ac32cbb8432b43c69",
+      "size": 128
+    },
+    {
+      "path": "config/environments/development.rb",
+      "sha256": "2833696c5d808c248bd081ddcd0940bda6e3a0ebd0e41a98aa8184aadf0a1e13",
+      "size": 2537
+    },
+    {
+      "path": "config/environments/production.rb",
+      "sha256": "ce30f93ef12b893451a36907a8093fdb9d3815771a35ddab7f169b189d09a603",
+      "size": 4119
+    },
+    {
+      "path": "config/environments/test.rb",
+      "sha256": "3ba000a52f5335d7c4357572ef09092328a9418e0ff49184d573b4e75a8614bd",
+      "size": 2202
+    },
+    {
+      "path": "config/importmap.rb",
+      "sha256": "148fdf21d156d2d1274627caa734d3e2d05ce23ae60e6a371fae054933ca30be",
+      "size": 285
+    },
+    {
+      "path": "config/initializers/assets.rb",
+      "sha256": "6b95e478f62078215b8ac5d3abcfd165d92972903290cb7d6d26317236a1265d",
+      "size": 449
+    },
+    {
+      "path": "config/initializers/content_security_policy.rb",
+      "sha256": "74c222dfd7c82fb1797dbe8eb4fce7b9e6afdfea8e413957692a021dfd7bfbb0",
+      "size": 1071
+    },
+    {
+      "path": "config/initializers/filter_parameter_logging.rb",
+      "sha256": "f864bd67e7bdaa63a5331b9fc15446613c410c3a314cd70d1b6a7c8b566b6120",
+      "size": 468
+    },
+    {
+      "path": "config/initializers/inflections.rb",
+      "sha256": "e2c18b803625a073b25e4ee4460677da33a8bf19bbbcad629718a8e15c58acc2",
+      "size": 649
+    },
+    {
+      "path": "config/initializers/resend.rb",
+      "sha256": "cfaa7fd2d7cf74e33b14873e0c55ee90fe9f0eb73f04725b001a9d17565d7be9",
+      "size": 39
+    },
+    {
+      "path": "config/initializers/stripe.rb",
+      "sha256": "58ff210467bbff2035a3a7511491ba8457f08c98c2442cbd69151fc99559d107",
+      "size": 79
+    },
+    {
+      "path": "config/locales/en.yml",
+      "sha256": "ad72af216ad0a67a1155c685535698fdd2a7138810c7e6dcb5eab7f0cc1c5922",
+      "size": 908
+    },
+    {
+      "path": "config/puma.rb",
+      "sha256": "9018e5a98af6989b2a20c9cb9e91cc06989c59de13dddd640652e8191a6e8c58",
+      "size": 1962
+    },
+    {
+      "path": "config/queue.yml",
+      "sha256": "4343b6cebcfc464f6f84b993b0c60d2b229cc5d97cde4fd845aebb15871f4bac",
+      "size": 290
+    },
+    {
+      "path": "config/recurring.yml",
+      "sha256": "1b308d44c793b26502423ab52361e20713c1294a47743d65f339059311e6dbe8",
+      "size": 474
+    },
+    {
+      "path": "config/routes.rb",
+      "sha256": "79ab0143b58f4eee9f507f3ed2aa22bfedb701a1a6a5b52f92811b11b09402df",
+      "size": 2186
+    },
+    {
+      "path": "db/cache_schema.rb",
+      "sha256": "31d6012503419a1be4aa87c4d18b2a9a85d84b6c23851428362d9a5e7b0eb26c",
+      "size": 613
+    },
+    {
+      "path": "db/migrate/20260505170100_create_bookings.rb",
+      "sha256": "843cea5088ce7509045ad8bfb2dd41025c8ef3e28b1ddcdb934c56c42182a84a",
+      "size": 843
+    },
+    {
+      "path": "db/migrate/20260505225500_create_ai_assessments.rb",
+      "sha256": "ed1fdb9b989bbdfb5fc351b0bae2a6906c4c6d75966855f6769ac68fc16ae3ad",
+      "size": 799
+    },
+    {
+      "path": "db/migrate/20260515100000_create_course_learners.rb",
+      "sha256": "c603357ed4c324d9412fc1ef4f2d4fc227f4dd5d540a71ebe355bf82e651cf0b",
+      "size": 384
+    },
+    {
+      "path": "db/migrate/20260515100100_create_course_enrollments.rb",
+      "sha256": "e5620fb76ddd65823e6d1f678ddd575f3f2a818b171ffd127d31baad572ae850",
+      "size": 786
+    },
+    {
+      "path": "db/migrate/20260515100200_create_lesson_progresses.rb",
+      "sha256": "3491846eb71b43f2fc1a79fe4a50477da7ee089558abebb9abdb3bc5d00305d6",
+      "size": 413
+    },
+    {
+      "path": "db/migrate/20260515100300_create_quiz_attempts.rb",
+      "sha256": "3c32299572595e90e1ae72d3a8b18b0080b571ae86e793f8f480c9c2a10b16bc",
+      "size": 502
+    },
+    {
+      "path": "db/migrate/20260515100400_create_course_submissions.rb",
+      "sha256": "dd580710d58c47384d5e6009f9e42f7a5695a1968d8136b434ca15ac839c157c",
+      "size": 512
+    },
+    {
+      "path": "db/migrate/20260515100500_create_certificates.rb",
+      "sha256": "cf24fced925654dbb8342c9b7ce2320f78e91d094f91feb4cbc9552be30f0474",
+      "size": 407
+    },
+    {
+      "path": "db/migrate/20260713120000_create_contact_messages.rb",
+      "sha256": "b3ce6521c5eff874ebd60e5572cd033cdef80fa601c6443fd565a442bf379632",
+      "size": 329
+    },
+    {
+      "path": "db/migrate/20260713130000_create_course_waitlist_entries.rb",
+      "sha256": "4181e9ef8aa79b1c9a5f363920f5e29e139fd147881b6c114948fbc5c389800d",
+      "size": 342
+    },
+    {
+      "path": "db/queue_schema.rb",
+      "sha256": "36b61820b43412c196933dc6182b164b6cfd86f7d13c918debc9e6cc2e1cfc29",
+      "size": 6278
+    },
+    {
+      "path": "db/schema.rb",
+      "sha256": "ad07fc351d9b80fd179b35f8b9b28254f532ec80780b1187e7af72bf50b8d530",
+      "size": 7127
+    },
+    {
+      "path": "db/seeds.rb",
+      "sha256": "4f24f361a5a875f32518a44f68f2d99a6495fcee5f9c54c30f8c3d7f8614512f",
+      "size": 494
+    },
+    {
+      "path": "docs/auditoria-e-plano-melhorias-2026-07.md",
+      "sha256": "2bc1052df9ba824923143c4830900a905040d3c0b5d2c17917f333920d9d5404",
+      "size": 16489
+    },
+    {
+      "path": "docs/auditoria-site-ipiia.md",
+      "sha256": "4d63c3f56bfbe4bfa75fa5ff3b0e6641b694bed788941d89af03089ce6dd9dd2",
+      "size": 10279
+    },
+    {
+      "path": "docs/guia-visual-densidade-imagens.md",
+      "sha256": "42ce96c9a925083bc8acc045a0dafabf5b789ea834b4c2ae06586e4017a157f7",
+      "size": 5299
+    },
+    {
+      "path": "docs/plano-redesign-oficina-operacoes.md",
+      "sha256": "9229326135c230b18269d23fb69d6c9c71f4288f93b9e0e5db0a547d57033a71",
+      "size": 2769
+    },
+    {
+      "path": "docs/production-roadmap.md",
+      "sha256": "1474378a35c044a69c18ffb1ad8791b54d449453e44f7d83cc8cae7adf9f90b8",
+      "size": 3855
+    },
+    {
+      "path": "docs/proposta-agente-gestao-ia-copy.md",
+      "sha256": "fcb6089fd9054ed93353244e68b4f61754114d04653b34e4403ff0e09eaa16f3",
+      "size": 16557
+    },
+    {
+      "path": "docs/recovery/ipiia-b20a9c9/accessible-baseline.json",
+      "sha256": "442b4b86061004905ac728f23828c88e62268bfe53b4dc10efb2f241857c5756",
+      "size": 79527
+    },
+    {
+      "path": "docs/recovery/ipiia-b20a9c9/active-image-source.json",
+      "sha256": "519e90004f03e9c09e9334690bb0a4009502e04a6973256dfa22284e81771b98",
+      "size": 46087
+    },
+    {
+      "path": "docs/recovery/ipiia-b20a9c9/baseline-vs-active-image.json",
+      "sha256": "350d06fe8252c2204d6ff164c39df75b1d1c47735ae98a025bfa2c0e052924f9",
+      "size": 88433
+    },
+    {
+      "path": "docs/recovery/ipiia-b20a9c9/command-ledger.json",
+      "sha256": "192e884a3f541f79f569230f9e1702941dfa4069de10684e4bac8a0a8246bc17",
+      "size": 2876
+    },
+    {
+      "path": "docs/recovery/ipiia-b20a9c9/gates-baseline.json",
+      "sha256": "13a93b132a7db4c67df39ceeaffd84ed9f4307b559205359df10c6a038fabe16",
+      "size": 37093
+    },
+    {
+      "path": "docs/recovery/ipiia-b20a9c9/gates-delta.json",
+      "sha256": "c101df513467dbc4b8653878c5600c25d11aea317e29f6147c7be5e77a720c69",
+      "size": 1156
+    },
+    {
+      "path": "docs/recovery/ipiia-b20a9c9/gates-recovered.json",
+      "sha256": "77b6527c898d84793c286c732a06ec775b1d7d7033b983a2cd18b036ccb9632e",
+      "size": 37093
+    },
+    {
+      "path": "docs/recovery/ipiia-b20a9c9/original-object-host-and-image.json",
+      "sha256": "574de39020a819b3e8079fae072a24ec420a7da042bac896fe5b8862e9bfd440",
+      "size": 5641
+    },
+    {
+      "path": "docs/recovery/ipiia-b20a9c9/original-object-local.json",
+      "sha256": "0840cc6537bc19b0b967a6e9603f241bb879de5acaa7cb6c478be9a79eaec1a1",
+      "size": 2112
+    },
+    {
+      "path": "docs/recovery/ipiia-b20a9c9/provenance.md",
+      "sha256": "4298d24004827e36141793450ab73274befeda911a01436e7b400558d40a4de5",
+      "size": 6935
+    },
+    {
+      "path": "docs/recovery/ipiia-b20a9c9/recovery-exclusions.json",
+      "sha256": "42e95d7b82ab87e5a7a2d41e385a4faac1e5ee9ff1c509e2e369f62411ee55d0",
+      "size": 6886
+    },
+    {
+      "path": "docs/recovery/ipiia-b20a9c9/scan-pre-staging-review.json",
+      "sha256": "65a04e90673162fd8fe360298d8bb551456899e082908f11a0d9d46dc8c2b592",
+      "size": 1132
+    },
+    {
+      "path": "docs/recovery/ipiia-b20a9c9/scan-pre-staging.json",
+      "sha256": "473dde9a6c3d6154c4e6aa73174f79062b2ec9c79f2ea20b673e6174036cbc46",
+      "size": 47606
+    },
+    {
+      "path": "lib/tasks/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "log/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "plano-implementacao-chefe-staf-ia.md",
+      "sha256": "dbf831cb5af384c3068e35a07229e778c3edc7847c9128231612b1bd36615e33",
+      "size": 10387
+    },
+    {
+      "path": "public/400.html",
+      "sha256": "a22162717f188b736f1d646acc2d392449a4fd6b8437da310964516b04cdc3e9",
+      "size": 6685
+    },
+    {
+      "path": "public/404.html",
+      "sha256": "0f966fd28d4c2ad94dc3351c7ebcc9a65245c96e66650072de11a214c09d7e50",
+      "size": 4836
+    },
+    {
+      "path": "public/406-unsupported-browser.html",
+      "sha256": "d2e5e109f8908b7de017a5a21cf385db98ea9f2d8c434b11dbce4a648056d880",
+      "size": 6912
+    },
+    {
+      "path": "public/422.html",
+      "sha256": "e38e8bc96fa0c8bbb77d13cc98c023a22ae6fc81f8e03eec686563b854da71d0",
+      "size": 8380
+    },
+    {
+      "path": "public/500.html",
+      "sha256": "28bbc92a53f2667f153049939fd0762e309f8c4c57e2bd4918db2006a98ffbec",
+      "size": 7918
+    },
+    {
+      "path": "public/icon.png",
+      "sha256": "2e29c62b03e514c5a15f289f8fdc0abca6e22d0e91970503c9e2b7e0552c911c",
+      "size": 4166
+    },
+    {
+      "path": "public/icon.svg",
+      "sha256": "601dfb4db252852f3880ffc355bce0d4507b01afca6879189d10a65470ae6e3a",
+      "size": 122
+    },
+    {
+      "path": "public/robots.txt",
+      "sha256": "737579788d57ca1f2fc8f9395a2c6129998864b4697e69a547c373b9186d250f",
+      "size": 137
+    },
+    {
+      "path": "public/sitemap.xml",
+      "sha256": "52a4907a40195f71406f6ef29b22bba7288e046727e824116fffb0d6ccea7d9e",
+      "size": 1452
+    },
+    {
+      "path": "script/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "storage/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "test/controllers/course_sessions_controller_test.rb",
+      "sha256": "a1485b3d187ebfb72a2b1718231fad632b9334f32ec0a073b44e50c7d4ee2a3c",
+      "size": 323
+    },
+    {
+      "path": "test/models/course_enrollment_test.rb",
+      "sha256": "9bec841af1a60b07a463801b8540177a21c10faf1a5b6a88665c326e2121f757",
+      "size": 1885
+    },
+    {
+      "path": "test/services/course_catalog_test.rb",
+      "sha256": "13d0c8381800de87c55d48896732c1714e4ba279f9b55099843d811a3ec0a20e",
+      "size": 461
+    },
+    {
+      "path": "test/services/course_checkout_test.rb",
+      "sha256": "eb83c26bf50fd763ec93689af10c8bfd3bccd43c987c354500bb15e49f9af9ec",
+      "size": 1964
+    },
+    {
+      "path": "test/services/workflow_evaluator_test.rb",
+      "sha256": "7ac68d0fbe8edd8f7d059419d1ca3c8c76aa3bc2502ab55ca03acd49a71b8dc1",
+      "size": 681
+    },
+    {
+      "path": "test/test_helper.rb",
+      "sha256": "46625ae56ad10bb3d90cb0a7dc968989f1a34e23d5ff7c2c8d0ffd165eb9c995",
+      "size": 223
+    },
+    {
+      "path": "tmp/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "vendor/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "vendor/javascript/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    }
+  ],
+  "forbidden_paths": [],
+  "high_entropy_candidates_no_values": [
+    {
+      "classification": "tracked_vendored_static_javascript",
+      "length": 30,
+      "line": 11,
+      "path": "app/assets/javascripts/lucide.min.js",
+      "token_sha256": "fef1ea67b328481dc6c0b8559473507c6b47a9bc8ec1a6519ab5278fe594a375"
+    },
+    {
+      "classification": "tracked_vendored_static_javascript",
+      "length": 29,
+      "line": 11,
+      "path": "app/assets/javascripts/lucide.min.js",
+      "token_sha256": "1514af1febc6107e5a7a4b5433eaa01514c2f92bb3018beba0ffdf32b24cd0d3"
+    },
+    {
+      "classification": "tracked_vendored_static_javascript",
+      "length": 24,
+      "line": 11,
+      "path": "app/assets/javascripts/lucide.min.js",
+      "token_sha256": "e1dd6ff9bbab06fbce757968888b832876f634d63aa0f4c91ba3211d46bd6a3f"
+    },
+    {
+      "classification": "tracked_vendored_static_javascript",
+      "length": 28,
+      "line": 11,
+      "path": "app/assets/javascripts/lucide.min.js",
+      "token_sha256": "4cf3b89b1839253367db782687d03ba2bb245ecdf0d5c090007152d4858a95a9"
+    },
+    {
+      "classification": "manual_review_required",
+      "length": 68,
+      "line": 74,
+      "path": "app/services/funding_support_pages.rb",
+      "token_sha256": "39e40de50b2e0bb6e1acde530cb2bacf1f9417cc4be0a27c58cb66a9cd82d194"
+    },
+    {
+      "classification": "manual_review_required",
+      "length": 60,
+      "line": 144,
+      "path": "app/services/funding_support_pages.rb",
+      "token_sha256": "9f7d50adf7807c5c40c8dd5c3d7255b9a020e91539b4a74dfd104bca051b488b"
+    },
+    {
+      "classification": "manual_review_required",
+      "length": 52,
+      "line": 145,
+      "path": "app/services/funding_support_pages.rb",
+      "token_sha256": "65938298cd75e83c185b02295a1b2149bf2cfd55d902932ea07aa327e16fe287"
+    },
+    {
+      "classification": "manual_review_required",
+      "length": 91,
+      "line": 217,
+      "path": "app/services/funding_support_pages.rb",
+      "token_sha256": "2d7e22ee89ed73ff817df6c382a2b8f4d5a26cee22d98fad017a3eed3851aec0"
+    },
+    {
+      "classification": "manual_review_required",
+      "length": 60,
+      "line": 386,
+      "path": "app/views/pages/fundos_europeus_ia_pmes.html.erb",
+      "token_sha256": "9f7d50adf7807c5c40c8dd5c3d7255b9a020e91539b4a74dfd104bca051b488b"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 49,
+      "line": 737,
+      "path": "docs/recovery/ipiia-b20a9c9/accessible-baseline.json",
+      "token_sha256": "d980a43f85e59e483adf9d81fdfd73734aa709c0a976d716d6d6a3003dc0a0b0"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 41,
+      "line": 1439,
+      "path": "docs/recovery/ipiia-b20a9c9/accessible-baseline.json",
+      "token_sha256": "3fa18e2f52e037f4b5da974e1283cfd4d3a3657cb2dbe6b240cb7fb4680e79ef"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 51,
+      "line": 1466,
+      "path": "docs/recovery/ipiia-b20a9c9/accessible-baseline.json",
+      "token_sha256": "9d3bb42de5754e331d95867db6c9684709da0012dc8518117b58c9d8a10e1c74"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 46,
+      "line": 1484,
+      "path": "docs/recovery/ipiia-b20a9c9/accessible-baseline.json",
+      "token_sha256": "863a30bd0a70bc1ba8efa976c6f3e8dffbe09b5151517ffbb7769fa21219f9ea"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 51,
+      "line": 1493,
+      "path": "docs/recovery/ipiia-b20a9c9/accessible-baseline.json",
+      "token_sha256": "b782b40be4d94e21905f61fad6cba72dd41e7c3a3ca58d08d4c916578dff60d4"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 56,
+      "line": 1520,
+      "path": "docs/recovery/ipiia-b20a9c9/accessible-baseline.json",
+      "token_sha256": "f95fc776a308093c165941328eb5503fe3435dac1c7fb760feb544eac7b8d4c4"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 77,
+      "line": 2,
+      "path": "docs/recovery/ipiia-b20a9c9/active-image-source.json",
+      "token_sha256": "fdb015cb858f33925fd0331289b205c9b9bc7728ead7d0cc0339ef2984841472"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 49,
+      "line": 489,
+      "path": "docs/recovery/ipiia-b20a9c9/active-image-source.json",
+      "token_sha256": "d980a43f85e59e483adf9d81fdfd73734aa709c0a976d716d6d6a3003dc0a0b0"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 41,
+      "line": 1028,
+      "path": "docs/recovery/ipiia-b20a9c9/active-image-source.json",
+      "token_sha256": "3fa18e2f52e037f4b5da974e1283cfd4d3a3657cb2dbe6b240cb7fb4680e79ef"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 51,
+      "line": 1049,
+      "path": "docs/recovery/ipiia-b20a9c9/active-image-source.json",
+      "token_sha256": "9d3bb42de5754e331d95867db6c9684709da0012dc8518117b58c9d8a10e1c74"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 46,
+      "line": 1063,
+      "path": "docs/recovery/ipiia-b20a9c9/active-image-source.json",
+      "token_sha256": "863a30bd0a70bc1ba8efa976c6f3e8dffbe09b5151517ffbb7769fa21219f9ea"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 51,
+      "line": 1070,
+      "path": "docs/recovery/ipiia-b20a9c9/active-image-source.json",
+      "token_sha256": "b782b40be4d94e21905f61fad6cba72dd41e7c3a3ca58d08d4c916578dff60d4"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 56,
+      "line": 1091,
+      "path": "docs/recovery/ipiia-b20a9c9/active-image-source.json",
+      "token_sha256": "f95fc776a308093c165941328eb5503fe3435dac1c7fb760feb544eac7b8d4c4"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 77,
+      "line": 1336,
+      "path": "docs/recovery/ipiia-b20a9c9/active-image-source.json",
+      "token_sha256": "2ec6417ebe7423aa7007e6882f19d3543ad964c041bfc8fa1ca8179efe44aecc"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 49,
+      "line": 783,
+      "path": "docs/recovery/ipiia-b20a9c9/baseline-vs-active-image.json",
+      "token_sha256": "d980a43f85e59e483adf9d81fdfd73734aa709c0a976d716d6d6a3003dc0a0b0"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 41,
+      "line": 1485,
+      "path": "docs/recovery/ipiia-b20a9c9/baseline-vs-active-image.json",
+      "token_sha256": "3fa18e2f52e037f4b5da974e1283cfd4d3a3657cb2dbe6b240cb7fb4680e79ef"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 51,
+      "line": 1512,
+      "path": "docs/recovery/ipiia-b20a9c9/baseline-vs-active-image.json",
+      "token_sha256": "9d3bb42de5754e331d95867db6c9684709da0012dc8518117b58c9d8a10e1c74"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 46,
+      "line": 1530,
+      "path": "docs/recovery/ipiia-b20a9c9/baseline-vs-active-image.json",
+      "token_sha256": "863a30bd0a70bc1ba8efa976c6f3e8dffbe09b5151517ffbb7769fa21219f9ea"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 51,
+      "line": 1539,
+      "path": "docs/recovery/ipiia-b20a9c9/baseline-vs-active-image.json",
+      "token_sha256": "b782b40be4d94e21905f61fad6cba72dd41e7c3a3ca58d08d4c916578dff60d4"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 56,
+      "line": 1566,
+      "path": "docs/recovery/ipiia-b20a9c9/baseline-vs-active-image.json",
+      "token_sha256": "f95fc776a308093c165941328eb5503fe3435dac1c7fb760feb544eac7b8d4c4"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 55,
+      "line": 24,
+      "path": "docs/recovery/ipiia-b20a9c9/command-ledger.json",
+      "token_sha256": "8a75f1927c9b383fb9fb4784e3aa0dbc2b6e39a45482fa660a33f2c00d08ea9b"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 49,
+      "line": 126,
+      "path": "docs/recovery/ipiia-b20a9c9/gates-baseline.json",
+      "token_sha256": "a25c5f12a9c789cbef5222624cff451d848a37993709b0360d5352e869661263"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 51,
+      "line": 808,
+      "path": "docs/recovery/ipiia-b20a9c9/gates-baseline.json",
+      "token_sha256": "9d3bb42de5754e331d95867db6c9684709da0012dc8518117b58c9d8a10e1c74"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 51,
+      "line": 816,
+      "path": "docs/recovery/ipiia-b20a9c9/gates-baseline.json",
+      "token_sha256": "9d3bb42de5754e331d95867db6c9684709da0012dc8518117b58c9d8a10e1c74"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 46,
+      "line": 840,
+      "path": "docs/recovery/ipiia-b20a9c9/gates-baseline.json",
+      "token_sha256": "863a30bd0a70bc1ba8efa976c6f3e8dffbe09b5151517ffbb7769fa21219f9ea"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 46,
+      "line": 848,
+      "path": "docs/recovery/ipiia-b20a9c9/gates-baseline.json",
+      "token_sha256": "863a30bd0a70bc1ba8efa976c6f3e8dffbe09b5151517ffbb7769fa21219f9ea"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 51,
+      "line": 856,
+      "path": "docs/recovery/ipiia-b20a9c9/gates-baseline.json",
+      "token_sha256": "b782b40be4d94e21905f61fad6cba72dd41e7c3a3ca58d08d4c916578dff60d4"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 51,
+      "line": 864,
+      "path": "docs/recovery/ipiia-b20a9c9/gates-baseline.json",
+      "token_sha256": "b782b40be4d94e21905f61fad6cba72dd41e7c3a3ca58d08d4c916578dff60d4"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 51,
+      "line": 808,
+      "path": "docs/recovery/ipiia-b20a9c9/gates-recovered.json",
+      "token_sha256": "9d3bb42de5754e331d95867db6c9684709da0012dc8518117b58c9d8a10e1c74"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 51,
+      "line": 816,
+      "path": "docs/recovery/ipiia-b20a9c9/gates-recovered.json",
+      "token_sha256": "9d3bb42de5754e331d95867db6c9684709da0012dc8518117b58c9d8a10e1c74"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 46,
+      "line": 840,
+      "path": "docs/recovery/ipiia-b20a9c9/gates-recovered.json",
+      "token_sha256": "863a30bd0a70bc1ba8efa976c6f3e8dffbe09b5151517ffbb7769fa21219f9ea"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 46,
+      "line": 848,
+      "path": "docs/recovery/ipiia-b20a9c9/gates-recovered.json",
+      "token_sha256": "863a30bd0a70bc1ba8efa976c6f3e8dffbe09b5151517ffbb7769fa21219f9ea"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 51,
+      "line": 856,
+      "path": "docs/recovery/ipiia-b20a9c9/gates-recovered.json",
+      "token_sha256": "b782b40be4d94e21905f61fad6cba72dd41e7c3a3ca58d08d4c916578dff60d4"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 51,
+      "line": 864,
+      "path": "docs/recovery/ipiia-b20a9c9/gates-recovered.json",
+      "token_sha256": "b782b40be4d94e21905f61fad6cba72dd41e7c3a3ca58d08d4c916578dff60d4"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 35,
+      "line": 6,
+      "path": "docs/recovery/ipiia-b20a9c9/original-object-local.json",
+      "token_sha256": "335c4badb4fc8828ba526334e2b0f3034b7e69da6880b96f9d40bc31eecd7c24"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 49,
+      "line": 420,
+      "path": "docs/recovery/ipiia-b20a9c9/scan-pre-staging.json",
+      "token_sha256": "d980a43f85e59e483adf9d81fdfd73734aa709c0a976d716d6d6a3003dc0a0b0"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 41,
+      "line": 815,
+      "path": "docs/recovery/ipiia-b20a9c9/scan-pre-staging.json",
+      "token_sha256": "3fa18e2f52e037f4b5da974e1283cfd4d3a3657cb2dbe6b240cb7fb4680e79ef"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 51,
+      "line": 830,
+      "path": "docs/recovery/ipiia-b20a9c9/scan-pre-staging.json",
+      "token_sha256": "9d3bb42de5754e331d95867db6c9684709da0012dc8518117b58c9d8a10e1c74"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 46,
+      "line": 840,
+      "path": "docs/recovery/ipiia-b20a9c9/scan-pre-staging.json",
+      "token_sha256": "863a30bd0a70bc1ba8efa976c6f3e8dffbe09b5151517ffbb7769fa21219f9ea"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 51,
+      "line": 845,
+      "path": "docs/recovery/ipiia-b20a9c9/scan-pre-staging.json",
+      "token_sha256": "b782b40be4d94e21905f61fad6cba72dd41e7c3a3ca58d08d4c916578dff60d4"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 56,
+      "line": 860,
+      "path": "docs/recovery/ipiia-b20a9c9/scan-pre-staging.json",
+      "token_sha256": "f95fc776a308093c165941328eb5503fe3435dac1c7fb760feb544eac7b8d4c4"
+    },
+    {
+      "classification": "recovery_evidence_identifier_or_digest",
+      "length": 58,
+      "line": 930,
+      "path": "docs/recovery/ipiia-b20a9c9/scan-pre-staging.json",
+      "token_sha256": "06d84dc1fe497462775c6b5b5b8e5cdbdba0487672e2853f84d4c7fc2cdedff6"
+    }
+  ],
+  "known_token_prefixes": [],
+  "label": "pre-staging-final",
+  "literal_secret_assignments": [],
+  "path_count": 215,
+  "pii_candidates_no_values": [
+    {
+      "kind": "email_like",
+      "line": 86,
+      "path": ".kamal/hooks/pre-deploy.sample",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 87,
+      "path": ".kamal/hooks/pre-deploy.sample",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 15,
+      "path": "app/mailers/ai_assessment_mailer.rb",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 2,
+      "path": "app/mailers/application_mailer.rb",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 33,
+      "path": "app/mailers/booking_mailer.rb",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 6,
+      "path": "app/mailers/contact_message_mailer.rb",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 6,
+      "path": "app/mailers/course_waitlist_mailer.rb",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 2,
+      "path": "app/services/funding_support_pages.rb",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 35,
+      "path": "app/services/google_calendar_service.rb",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 18,
+      "path": "app/views/course_sessions/new.html.erb",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 66,
+      "path": "app/views/pages/book_call.html.erb",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 54,
+      "path": "app/views/pages/contacto.html.erb",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 113,
+      "path": "app/views/pages/curso_proficiencia.html.erb",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 402,
+      "path": "app/views/pages/fundos_europeus_ia_pmes.html.erb",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 85,
+      "path": "app/views/pages/teste.html.erb",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 36,
+      "path": "app/views/shared/_footer.html.erb",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 58,
+      "path": "config/deploy.yml",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 59,
+      "path": "config/deploy.yml",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 39,
+      "path": "config/environments/development.rb",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 66,
+      "path": "config/environments/production.rb",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 5,
+      "path": "test/models/course_enrollment_test.rb",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 32,
+      "path": "test/models/course_enrollment_test.rb",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 27,
+      "path": "test/services/course_checkout_test.rb",
+      "review": "static_source_or_fixture_candidate"
+    },
+    {
+      "kind": "email_like",
+      "line": 40,
+      "path": "test/services/course_checkout_test.rb",
+      "review": "static_source_or_fixture_candidate"
+    }
+  ],
+  "private_key_markers": [],
+  "ref": "working",
+  "result": "pass_with_manual_candidate_review"
+}

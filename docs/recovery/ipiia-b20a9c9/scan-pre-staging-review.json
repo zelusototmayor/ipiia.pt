@@ -1,0 +1,19 @@
+{
+  "label": "pre-staging-final-manual-review",
+  "source_scan": "pre-staging-final.json",
+  "reviewed": {
+    "scanned_intended_paths": 215,
+    "pii_email_or_phone_line_candidates": 24,
+    "high_entropy_candidates": 51,
+    "high_entropy_manual_review_required": 5,
+    "image_only_deployed_source_paths": 4
+  },
+  "conclusions": {
+    "pii_candidates": "All candidates are static application/business contact destinations, code/config placeholders, or synthetic example-domain test fixtures already present in the baseline/image source. No customer, user, lead, booking, form, CRM, database, log, storage, or free-text runtime record was found.",
+    "high_entropy_candidates": "The five manually reviewed candidates are public official-source URL slugs in funding content, not credentials, identifiers for private systems, or secret values. The remaining candidates are classified dependency hashes, cryptographic provenance identifiers, or tracked vendored static JavaScript.",
+    "image_only_sources": "The PNG is a generic branded IA cube asset; the stylesheet and design document contain only presentation/source content; the chat partial labels itself illustrative and uses a placeholder company plus synthetic operational examples. No real customer/user/runtime data was found.",
+    "ignored_generated_runtime_artifact": "Both baseline and recovered test runs created tmp/local_secret.txt. It was never read, was identified as ignored test output, and was deleted from both task worktrees before the final pre-staging scan. It is not present in the intended tree.",
+    "blocking_findings": "none"
+  },
+  "result": "pass"
+}

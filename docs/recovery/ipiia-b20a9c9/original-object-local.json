@@ -1,0 +1,56 @@
+{
+  "conclusion": "original_commit_object_not_found_locally_or_on_accessible_remote",
+  "local_repository_scan": {
+    "matching_remote_repositories": [
+      {
+        "path": "[MATCHING_LOCAL_CLONE_1]",
+        "target_object_present": false
+      },
+      {
+        "path": "[MATCHING_LOCAL_CLONE_2]",
+        "target_object_present": false
+      },
+      {
+        "path": "[MATCHING_LOCAL_CLONE_3]",
+        "target_object_present": false
+      }
+    ],
+    "repository_count": 27,
+    "roots": [
+      "Kanban scratch workspaces",
+      "primary source workspace roots",
+      "common user source directories",
+      "temporary workspace roots"
+    ],
+    "target_object_holders": []
+  },
+  "remote_probe": {
+    "direct_fetch": {
+      "exit_code": 128,
+      "stderr": "fatal: remote error: upload-pack: not our ref b20a9c9e3eaf268d87d7dfd29dc8e89ce35f4c28\n",
+      "stdout": ""
+    },
+    "github_commit_api": {
+      "exit_code": 1,
+      "stderr": "gh: No commit found for SHA: b20a9c9e3eaf268d87d7dfd29dc8e89ce35f4c28 (HTTP 422)\n",
+      "stdout": "{\"message\":\"No commit found for SHA: b20a9c9e3eaf268d87d7dfd29dc8e89ce35f4c28\",\"documentation_url\":\"https://docs.github.com/rest/commits/commits#get-a-commit\",\"status\":\"422\"}"
+    },
+    "github_git_commit_api": {
+      "exit_code": 1,
+      "stderr": "gh: Not Found (HTTP 404)\n",
+      "stdout": "{\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/git/commits#get-a-commit-object\",\"status\":\"404\"}"
+    },
+    "ls_remote_exact": {
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    "object_after_all_refs": {
+      "exit_code": 128,
+      "stderr": "fatal: git cat-file: could not get object info\n",
+      "stdout": ""
+    }
+  },
+  "repo_slug": "zelusototmayor/ipiia.pt",
+  "target": "b20a9c9e3eaf268d87d7dfd29dc8e89ce35f4c28"
+}

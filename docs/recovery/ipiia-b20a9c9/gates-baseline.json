@@ -1,0 +1,1213 @@
+{
+  "assets_precompile": {
+    "exit_code": 0
+  },
+  "brakeman": {
+    "exit_code": 3,
+    "warning_count": 3,
+    "warnings": [
+      {
+        "confidence": "Weak",
+        "fingerprint": "21ab0fe00fdd5899ffc405cff75aadb91b805ee996a614f7e27b08a287e9062d",
+        "line": 263,
+        "message": "Support for Rails 8.0.5 ends on 2026-10-07",
+        "path": "Gemfile.lock",
+        "warning_code": 122,
+        "warning_type": "Unmaintained Dependency"
+      },
+      {
+        "confidence": "Medium",
+        "fingerprint": "9df790481dcf3397778d1f385a25c7ea9475f24cb3a2c28c074ad5592d87f863",
+        "line": 43,
+        "message": "Potentially dangerous key allowed for mass assignment",
+        "path": "app/controllers/ai_assessments_controller.rb",
+        "warning_code": 105,
+        "warning_type": "Mass Assignment"
+      },
+      {
+        "confidence": "Medium",
+        "fingerprint": "e465ce69adae2dbc0135fe437cafa0803d5d09be3bf666e7d12c5dd345dca231",
+        "line": 21,
+        "message": "Potentially dangerous key allowed for mass assignment",
+        "path": "app/controllers/contact_messages_controller.rb",
+        "warning_code": 105,
+        "warning_type": "Mass Assignment"
+      }
+    ]
+  },
+  "commit": "a5828237556938f446943096883580ad5c90cf1f",
+  "gates": [
+    {
+      "argv": [
+        "rbenv",
+        "exec",
+        "ruby",
+        "bin/rails",
+        "test"
+      ],
+      "env_overrides": {
+        "RAILS_ENV": "test"
+      },
+      "exit_code": 0,
+      "name": "tests",
+      "stderr_lines": 0,
+      "stdout_lines": 9
+    },
+    {
+      "argv": [
+        "rbenv",
+        "exec",
+        "ruby",
+        "bin/importmap",
+        "audit"
+      ],
+      "env_overrides": {},
+      "exit_code": 0,
+      "name": "importmap_audit",
+      "stderr_lines": 0,
+      "stdout_lines": 1
+    },
+    {
+      "argv": [
+        "rbenv",
+        "exec",
+        "ruby",
+        "bin/rails",
+        "assets:precompile"
+      ],
+      "env_overrides": {
+        "RAILS_ENV": "production",
+        "SECRET_KEY_BASE_DUMMY": "1"
+      },
+      "exit_code": 0,
+      "name": "assets_precompile",
+      "stderr_lines": 0,
+      "stdout_lines": 23
+    },
+    {
+      "argv": [
+        "rbenv",
+        "exec",
+        "ruby",
+        "bin/rubocop",
+        "--format",
+        "json"
+      ],
+      "env_overrides": {},
+      "exit_code": 1,
+      "name": "rubocop",
+      "stderr_lines": 0,
+      "stdout_lines": 1
+    },
+    {
+      "argv": [
+        "rbenv",
+        "exec",
+        "bundle",
+        "exec",
+        "brakeman",
+        "--no-pager",
+        "--format",
+        "json",
+        "--output",
+        "$EVIDENCE_DIR/gates/baseline/brakeman.json"
+      ],
+      "env_overrides": {},
+      "exit_code": 3,
+      "name": "brakeman",
+      "stderr_lines": 20,
+      "stdout_lines": 0
+    }
+  ],
+  "importmap_audit": {
+    "exit_code": 0
+  },
+  "label": "baseline",
+  "repo": "$BASELINE_REPO",
+  "rubocop": {
+    "exit_code": 1,
+    "offense_count": 134,
+    "offenses": [
+      {
+        "column": 37,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 2,
+        "message": "Use space inside array brackets.",
+        "path": "app/controllers/bookings_controller.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 52,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 2,
+        "message": "Use space inside array brackets.",
+        "path": "app/controllers/bookings_controller.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 37,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 25,
+        "message": "Use space inside array brackets.",
+        "path": "app/models/booking.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 58,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 25,
+        "message": "Use space inside array brackets.",
+        "path": "app/models/booking.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 142,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 75,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 154,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 75,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 112,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 86,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 130,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 86,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 144,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 88,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 162,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 88,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 119,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 98,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 131,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 98,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 113,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 108,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 128,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 108,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 142,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 109,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 157,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 109,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 119,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 110,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 134,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 110,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 140,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 119,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 158,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 119,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 137,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 120,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 160,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 120,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 139,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 121,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 157,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 121,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 143,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 130,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 155,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 130,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 111,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 153,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 123,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 153,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 112,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 163,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 127,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 163,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 134,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 174,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 157,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 174,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 121,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 196,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 139,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 196,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 9,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 238,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 38,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 238,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 29,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 265,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 52,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 265,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/ai_readiness_test.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 9,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 73,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 118,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 73,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 9,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 74,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 142,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 74,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 9,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 75,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 59,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 75,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 9,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 76,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 83,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 76,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 9,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 144,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 133,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 144,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 9,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 145,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 133,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 145,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 9,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 146,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 66,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 146,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 9,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 147,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 85,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 147,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 9,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 215,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 134,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 215,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 9,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 216,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 162,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 216,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 9,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 217,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 163,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 217,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 9,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 218,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 59,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 218,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 9,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 286,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 221,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 286,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 9,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 287,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 211,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 287,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 9,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 288,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 59,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 288,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 9,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 289,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 83,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 289,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 9,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 356,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 148,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 356,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 9,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 357,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 59,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 357,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 9,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 358,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 83,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 358,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/funding_support_pages.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 128,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/google_calendar_service.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 43,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 128,
+        "message": "Use space inside array brackets.",
+        "path": "app/services/google_calendar_service.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 8,
+        "message": "Use space inside array brackets.",
+        "path": "db/cache_schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 25,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 8,
+        "message": "Use space inside array brackets.",
+        "path": "db/cache_schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 9,
+        "message": "Use space inside array brackets.",
+        "path": "db/cache_schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 37,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 9,
+        "message": "Use space inside array brackets.",
+        "path": "db/cache_schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 10,
+        "message": "Use space inside array brackets.",
+        "path": "db/cache_schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 24,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 10,
+        "message": "Use space inside array brackets.",
+        "path": "db/cache_schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 36,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 19,
+        "message": "Use space inside array brackets.",
+        "path": "db/migrate/20260515100100_create_course_enrollments.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 62,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 19,
+        "message": "Use space inside array brackets.",
+        "path": "db/migrate/20260515100100_create_course_enrollments.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 35,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 12,
+        "message": "Use space inside array brackets.",
+        "path": "db/migrate/20260515100200_create_lesson_progresses.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 70,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 12,
+        "message": "Use space inside array brackets.",
+        "path": "db/migrate/20260515100200_create_lesson_progresses.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 31,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 14,
+        "message": "Use space inside array brackets.",
+        "path": "db/migrate/20260515100300_create_quiz_attempts.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 66,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 14,
+        "message": "Use space inside array brackets.",
+        "path": "db/migrate/20260515100300_create_quiz_attempts.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 36,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 15,
+        "message": "Use space inside array brackets.",
+        "path": "db/migrate/20260515100400_create_course_submissions.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 71,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 15,
+        "message": "Use space inside array brackets.",
+        "path": "db/migrate/20260515100400_create_course_submissions.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 32,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 21,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 32,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 33,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 27,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 33,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 53,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 34,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 53,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 54,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 31,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 54,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 55,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 25,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 55,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 56,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 22,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 56,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 66,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 20,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 66,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 67,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 36,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 67,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 78,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 21,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 78,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 95,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 41,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 95,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 96,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 26,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 96,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 97,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 42,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 97,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 110,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 50,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 110,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 111,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 36,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 111,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 120,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 36,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 120,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 131,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 21,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 131,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 132,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 34,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 132,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 142,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 50,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 142,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 143,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 36,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 143,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 155,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 50,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 155,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 13,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 156,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      },
+      {
+        "column": 36,
+        "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+        "line": 156,
+        "message": "Use space inside array brackets.",
+        "path": "db/schema.rb",
+        "severity": "convention"
+      }
+    ]
+  },
+  "tests": {
+    "assertions": 28,
+    "errors": 0,
+    "exit_code": 0,
+    "failures": 0,
+    "runs": 8,
+    "skips": 0
+  }
+}

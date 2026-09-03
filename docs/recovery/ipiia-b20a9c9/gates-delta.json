@@ -1,0 +1,50 @@
+{
+  "assets_precompile": {
+    "baseline_exit_code": 0,
+    "recovered_exit_code": 0,
+    "regression": false
+  },
+  "baseline_commit": "a5828237556938f446943096883580ad5c90cf1f",
+  "brakeman": {
+    "baseline_warning_count": 3,
+    "new_warning_count": 0,
+    "new_warnings": [],
+    "recovered_warning_count": 3,
+    "resolved_warning_count": 0,
+    "resolved_warnings": []
+  },
+  "importmap_audit": {
+    "baseline_exit_code": 0,
+    "recovered_exit_code": 0,
+    "regression": false
+  },
+  "recovered_working_tree_parent_commit": "a5828237556938f446943096883580ad5c90cf1f",
+  "rubocop": {
+    "baseline_offense_count": 134,
+    "new_offense_count": 0,
+    "new_offenses": [],
+    "recovered_offense_count": 134,
+    "resolved_offense_count": 0,
+    "resolved_offenses": []
+  },
+  "tests": {
+    "baseline": {
+      "assertions": 28,
+      "errors": 0,
+      "exit_code": 0,
+      "failures": 0,
+      "runs": 8,
+      "skips": 0
+    },
+    "recovered": {
+      "assertions": 28,
+      "errors": 0,
+      "exit_code": 0,
+      "failures": 0,
+      "runs": 8,
+      "skips": 0
+    },
+    "regression": false
+  },
+  "zero_unexplained_regressions": true
+}

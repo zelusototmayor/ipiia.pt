@@ -1,0 +1,53 @@
+{
+  "commands": [
+    {
+      "command": "git clone https://github.com/zelusototmayor/ipiia.pt.git source-repo",
+      "result": "repository cloned; HEAD a5828237556938f446943096883580ad5c90cf1f; tree 0b5c4c8cb2f9dd0c3cc1cbe1a1c10527c276323a"
+    },
+    {
+      "command": "git ls-remote --heads --tags https://github.com/zelusototmayor/ipiia.pt.git",
+      "result": "accessible heads enumerated; target object/ref absent"
+    },
+    {
+      "command": "git fetch origin +refs/heads/* +refs/tags/* +refs/pull/*/head",
+      "result": "all accessible heads, tags, and pull heads fetched; target object absent"
+    },
+    {
+      "command": "git fetch origin b20a9c9e3eaf268d87d7dfd29dc8e89ce35f4c28",
+      "result": "failed: remote reported not our ref"
+    },
+    {
+      "command": "gh api repos/zelusototmayor/ipiia.pt/commits/b20a9c9e3eaf268d87d7dfd29dc8e89ce35f4c28",
+      "result": "HTTP 422: no commit found"
+    },
+    {
+      "command": "gh api repos/zelusototmayor/ipiia.pt/git/commits/b20a9c9e3eaf268d87d7dfd29dc8e89ce35f4c28",
+      "result": "HTTP 404"
+    },
+    {
+      "command": "python3 forensics_probe.py",
+      "result": "27 local Git repositories checked; 3 matching repository clones; target object holders: 0"
+    },
+    {
+      "command": "ssh <authorized-deploy-host> python3 - < remote_forensics.py",
+      "result": "host Git repositories checked: 1; target object holders: 0; active container image matched selected image: True; source-path docker diff count: 0"
+    },
+    {
+      "command": "docker buildx imagetools inspect zelusottomayor/ipiia@sha256:c3011a731dac5e58a7164bbe28000d2c0648d8b7e9282fccaa818d7ada3c8cf0",
+      "result": "registry index digest matched; linux/amd64 manifest sha256:1f452844b99a968c653d40fd8117b36772657333b16c51eff6581fa45e4cf5be"
+    },
+    {
+      "command": "ssh <authorized-deploy-host> 'docker image save <exact digest> | gzip -1'",
+      "result": "read-only immutable image save acquired; archive SHA-256 b4a96bcc50ae6f7d678b8a27d7b783866aec5fb4108b78230388bf9328a0f400"
+    },
+    {
+      "command": "python3 extract_image_rootfs.py",
+      "result": "selected image config ID verified as sha256:e0174861d09eb270ef761f9ebd89c117acffe7235c8ad93c9f0138219b294e50; source projection created without secret/runtime/generated content"
+    },
+    {
+      "command": "python3 compare_and_reconstruct.py --apply",
+      "result": "172 baseline tracked paths matched image exactly; 10 differing paths copied from image; 4 image-only deployed source paths added; 16 Docker-context/encrypted paths preserved from baseline; 2 explicitly forbidden tracked paths removed"
+    }
+  ],
+  "safety": "At evidence-collection time, commands against GitHub, registry, production host, containers, and image were read-only. The isolated branch reconstruction was the only source-tree mutation. Commit and push remained authorized but pending."
+}

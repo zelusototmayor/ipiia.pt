@@ -1,0 +1,201 @@
+{
+  "active_container": {
+    "created": "2026-07-20T16:49:06.96274097Z",
+    "image_id": "sha256:e0174861d09eb270ef761f9ebd89c117acffe7235c8ad93c9f0138219b294e50",
+    "name": "/ipiia-web-b20a9c9e3eaf268d87d7dfd29dc8e89ce35f4c28",
+    "running": true,
+    "service_label": "ipiia",
+    "started_at": "2026-07-20T16:49:07.051939826Z"
+  },
+  "active_container_git_directory": "absent",
+  "active_container_image_matches_selected_image": true,
+  "active_container_runtime_source_diff": [],
+  "active_container_runtime_source_diff_count": 0,
+  "container_candidates": [
+    {
+      "image": "e0174861d09e",
+      "name": "/ipiia-web-b20a9c9e3eaf268d87d7dfd29dc8e89ce35f4c28",
+      "state": "running",
+      "status": "Up 6 weeks"
+    },
+    {
+      "image": "zelusottomayor/ipiia:f47c889dc28c3fc654b3644b7fbf4f8541967d5b",
+      "name": "/ipiia-web-f47c889dc28c3fc654b3644b7fbf4f8541967d5b",
+      "state": "exited",
+      "status": "Exited (143) 6 weeks ago"
+    }
+  ],
+  "docker_diff_error": null,
+  "errors": {
+    "container_list": null,
+    "image_history": null,
+    "image_inspect": null
+  },
+  "host_git_repository_count": 1,
+  "host_matching_remote_repositories": [],
+  "host_target_object_holders": [],
+  "image_history_layer_count": 24,
+  "image_history_safe_metadata": [
+    {
+      "comment": "buildkit.dockerfile.v0",
+      "created_at": "2026-07-20T16:47:58Z",
+      "id": "sha256:e0174861d09eb270ef761f9ebd89c117acffe7235c8ad93c9f0138219b294e50",
+      "size": "0B"
+    },
+    {
+      "comment": "buildkit.dockerfile.v0",
+      "created_at": "2026-07-20T16:47:58Z",
+      "id": "<missing>",
+      "size": "0B"
+    },
+    {
+      "comment": "buildkit.dockerfile.v0",
+      "created_at": "2026-07-20T16:47:58Z",
+      "id": "<missing>",
+      "size": "0B"
+    },
+    {
+      "comment": "buildkit.dockerfile.v0",
+      "created_at": "2026-07-20T16:47:58Z",
+      "id": "<missing>",
+      "size": "0B"
+    },
+    {
+      "comment": "buildkit.dockerfile.v0",
+      "created_at": "2026-07-20T16:47:58Z",
+      "id": "<missing>",
+      "size": "62.7MB"
+    },
+    {
+      "comment": "buildkit.dockerfile.v0",
+      "created_at": "2026-07-20T16:47:44Z",
+      "id": "<missing>",
+      "size": "69.9MB"
+    },
+    {
+      "comment": "buildkit.dockerfile.v0",
+      "created_at": "2026-05-15T09:08:33Z",
+      "id": "<missing>",
+      "size": "124MB"
+    },
+    {
+      "comment": "buildkit.dockerfile.v0",
+      "created_at": "2026-05-15T09:08:33Z",
+      "id": "<missing>",
+      "size": "0B"
+    },
+    {
+      "comment": "buildkit.dockerfile.v0",
+      "created_at": "2026-05-05T17:40:42Z",
+      "id": "<missing>",
+      "size": "6.78MB"
+    },
+    {
+      "comment": "buildkit.dockerfile.v0",
+      "created_at": "2025-11-16T20:59:54Z",
+      "id": "<missing>",
+      "size": "0B"
+    },
+    {
+      "comment": "buildkit.dockerfile.v0",
+      "created_at": "2024-04-05T21:54:06Z",
+      "id": "<missing>",
+      "size": "0B"
+    },
+    {
+      "comment": "buildkit.dockerfile.v0",
+      "created_at": "2024-04-05T21:54:06Z",
+      "id": "<missing>",
+      "size": "0B"
+    },
+    {
+      "comment": "buildkit.dockerfile.v0",
+      "created_at": "2024-04-05T21:54:06Z",
+      "id": "<missing>",
+      "size": "0B"
+    },
+    {
+      "comment": "buildkit.dockerfile.v0",
+      "created_at": "2024-04-05T21:54:06Z",
+      "id": "<missing>",
+      "size": "0B"
+    },
+    {
+      "comment": "buildkit.dockerfile.v0",
+      "created_at": "2024-04-05T21:54:06Z",
+      "id": "<missing>",
+      "size": "0B"
+    },
+    {
+      "comment": "buildkit.dockerfile.v0",
+      "created_at": "2024-04-05T21:54:06Z",
+      "id": "<missing>",
+      "size": "59.7MB"
+    },
+    {
+      "comment": "buildkit.dockerfile.v0",
+      "created_at": "2024-04-05T21:54:06Z",
+      "id": "<missing>",
+      "size": "0B"
+    },
+    {
+      "comment": "buildkit.dockerfile.v0",
+      "created_at": "2024-04-05T21:54:06Z",
+      "id": "<missing>",
+      "size": "0B"
+    },
+    {
+      "comment": "buildkit.dockerfile.v0",
+      "created_at": "2024-04-05T21:54:06Z",
+      "id": "<missing>",
+      "size": "0B"
+    },
+    {
+      "comment": "buildkit.dockerfile.v0",
+      "created_at": "2024-04-05T21:54:06Z",
+      "id": "<missing>",
+      "size": "0B"
+    },
+    {
+      "comment": "buildkit.dockerfile.v0",
+      "created_at": "2024-04-05T21:54:06Z",
+      "id": "<missing>",
+      "size": "45B"
+    },
+    {
+      "comment": "buildkit.dockerfile.v0",
+      "created_at": "2024-04-05T21:54:06Z",
+      "id": "<missing>",
+      "size": "46.5MB"
+    },
+    {
+      "comment": "",
+      "created_at": "2024-04-05T21:54:06Z",
+      "id": "<missing>",
+      "size": "0B"
+    },
+    {
+      "comment": "",
+      "created_at": "2024-04-05T21:54:06Z",
+      "id": "<missing>",
+      "size": "74.8MB"
+    }
+  ],
+  "selected_digest": "sha256:c3011a731dac5e58a7164bbe28000d2c0648d8b7e9282fccaa818d7ada3c8cf0",
+  "selected_image": {
+    "created": "2026-07-20T16:47:58.306327679Z",
+    "id": "sha256:e0174861d09eb270ef761f9ebd89c117acffe7235c8ad93c9f0138219b294e50",
+    "label_keys": [
+      "service"
+    ],
+    "oci_revision": null,
+    "oci_source": null,
+    "oci_version": null,
+    "repo_digests": [
+      "zelusottomayor/ipiia@sha256:c3011a731dac5e58a7164bbe28000d2c0648d8b7e9282fccaa818d7ada3c8cf0"
+    ],
+    "service_label": "ipiia"
+  },
+  "selected_image_ref": "zelusottomayor/ipiia@sha256:c3011a731dac5e58a7164bbe28000d2c0648d8b7e9282fccaa818d7ada3c8cf0",
+  "target_revision": "b20a9c9e3eaf268d87d7dfd29dc8e89ce35f4c28"
+}

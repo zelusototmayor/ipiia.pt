@@ -1,0 +1,1807 @@
+{
+  "commit": "a5828237556938f446943096883580ad5c90cf1f",
+  "files": [
+    {
+      "classification": "baseline_only_unprovable_from_image",
+      "git_blob": "325bfc036d21dbb7b73d9a5afdde12ea18deea89",
+      "git_mode": "100644",
+      "path": ".dockerignore",
+      "reason": "tracked Docker-context control file excluded from COPY by .dockerignore; preserved from accessible Git baseline",
+      "sha256": "8dad33df9e450a9e42deb56a86ee6a20b559578a6f0121b3375c4cf4e32d4aac",
+      "size": 874
+    },
+    {
+      "classification": "excluded_from_recovery",
+      "git_blob": "6c6038ce79ae905a647257ff089be9b06e10bb7d",
+      "git_mode": "100644",
+      "path": ".env.example",
+      "reason": "explicit recovery exclusion: .env*",
+      "sha256": "35a604f1963592aae3a7126a1692a4451bc6e82160b2082074452004173a6ceb",
+      "size": 326
+    },
+    {
+      "classification": "baseline_only_unprovable_from_image",
+      "git_blob": "f0527e6be17cb797afac3293ea52c74043d27839",
+      "git_mode": "100644",
+      "path": ".github/dependabot.yml",
+      "reason": "tracked CI metadata excluded from image by .dockerignore; preserved from accessible Git baseline",
+      "sha256": "08a0fa3aa3009b7f66044b2dba9ef2d1d7d84fd36b133e55d5fb0187252797e9",
+      "size": 245
+    },
+    {
+      "classification": "baseline_only_unprovable_from_image",
+      "git_blob": "875e92e795a584fe17871934c055c4561e3ec74e",
+      "git_mode": "100644",
+      "path": ".github/workflows/ci.yml",
+      "reason": "tracked CI metadata excluded from image by .dockerignore; preserved from accessible Git baseline",
+      "sha256": "3242f2e2179c7b55428ac6f62fd6800722c8ef7a43d50208146ad38714788ad7",
+      "size": 1142
+    },
+    {
+      "classification": "baseline_only_unprovable_from_image",
+      "git_blob": "d4c9cb5e3b4d5388860588b84d01aaf6b12292c8",
+      "git_mode": "100644",
+      "path": ".gitignore",
+      "reason": "tracked Docker-context control file excluded from COPY by .dockerignore; preserved from accessible Git baseline",
+      "sha256": "0bc250fe3ffd428865be51aa34fc812f54ed8db62bf0c04a8808ee5604e4435d",
+      "size": 276
+    },
+    {
+      "classification": "baseline_only_unprovable_from_image",
+      "git_blob": "2fb07d7d7a33b7e6585ef9cf0dc2e7c516e48d2c",
+      "git_mode": "100755",
+      "path": ".kamal/hooks/docker-setup.sample",
+      "reason": "tracked non-secret Kamal sample hook excluded from image by .dockerignore; preserved from accessible Git baseline",
+      "sha256": "40c56e29f32bdfce5dd0c662b320521f714195d046bb61b664210c924298bef6",
+      "size": 51
+    },
+    {
+      "classification": "baseline_only_unprovable_from_image",
+      "git_blob": "70f9c4bc9553892271d237bdf284ddf196c40965",
+      "git_mode": "100755",
+      "path": ".kamal/hooks/post-app-boot.sample",
+      "reason": "tracked non-secret Kamal sample hook excluded from image by .dockerignore; preserved from accessible Git baseline",
+      "sha256": "a6e48e32fe52416aa6de28a3218ec673fd378504a850dc13bae5c0ffefaf2297",
+      "size": 71
+    },
+    {
+      "classification": "baseline_only_unprovable_from_image",
+      "git_blob": "fd364c2a77ba90eabd6c1b56a83b73fa487ad996",
+      "git_mode": "100755",
+      "path": ".kamal/hooks/post-deploy.sample",
+      "reason": "tracked non-secret Kamal sample hook excluded from image by .dockerignore; preserved from accessible Git baseline",
+      "sha256": "6834a9ba30caf297ec51f16d4ec37de69ddf76ab5a9ebf708446dcf5c7f7cce6",
+      "size": 319
+    },
+    {
+      "classification": "baseline_only_unprovable_from_image",
+      "git_blob": "1435a677f2b1944ab575225a3d234074bed752ba",
+      "git_mode": "100755",
+      "path": ".kamal/hooks/post-proxy-reboot.sample",
+      "reason": "tracked non-secret Kamal sample hook excluded from image by .dockerignore; preserved from accessible Git baseline",
+      "sha256": "ede265811b0aa1ffa76a25d894d4b2acfd32850a1750b223443f6a377d17791a",
+      "size": 55
+    },
+    {
+      "classification": "baseline_only_unprovable_from_image",
+      "git_blob": "45f73550456ac958c58b9f9eed18817431bddefa",
+      "git_mode": "100755",
+      "path": ".kamal/hooks/pre-app-boot.sample",
+      "reason": "tracked non-secret Kamal sample hook excluded from image by .dockerignore; preserved from accessible Git baseline",
+      "sha256": "8eef4a4b7ba94e3a0716ab5a6d79929c7be2d15f1e309b5c9d264e1dc59d91a8",
+      "size": 72
+    },
+    {
+      "classification": "baseline_only_unprovable_from_image",
+      "git_blob": "c5a55678b2e5d28f452d5cf6ecc5f0ec3206f19c",
+      "git_mode": "100755",
+      "path": ".kamal/hooks/pre-build.sample",
+      "reason": "tracked non-secret Kamal sample hook excluded from image by .dockerignore; preserved from accessible Git baseline",
+      "sha256": "6af5bdc3d93c04d04f00eede43e8311f8fe5fbc28f5598d36ca3147456d3ab5d",
+      "size": 1103
+    },
+    {
+      "classification": "baseline_only_unprovable_from_image",
+      "git_blob": "77744bdca8f27d7caa5210ead82bdc1f079a7f71",
+      "git_mode": "100755",
+      "path": ".kamal/hooks/pre-connect.sample",
+      "reason": "tracked non-secret Kamal sample hook excluded from image by .dockerignore; preserved from accessible Git baseline",
+      "sha256": "8fde93782c4ad494a837f6f9f457d2346eea5328805526d2dda2b0af44dba95b",
+      "size": 1039
+    },
+    {
+      "classification": "baseline_only_unprovable_from_image",
+      "git_blob": "05b3055b72d62f4d93a76e116b5686b5f6f844de",
+      "git_mode": "100755",
+      "path": ".kamal/hooks/pre-deploy.sample",
+      "reason": "tracked non-secret Kamal sample hook excluded from image by .dockerignore; preserved from accessible Git baseline",
+      "sha256": "9b8075f6612bb0c896dee99b91b54042c884678f82c15422b3c94a5ad79542b5",
+      "size": 2833
+    },
+    {
+      "classification": "baseline_only_unprovable_from_image",
+      "git_blob": "061f8059e6a83145ddaed43383346bde68296eda",
+      "git_mode": "100755",
+      "path": ".kamal/hooks/pre-proxy-reboot.sample",
+      "reason": "tracked non-secret Kamal sample hook excluded from image by .dockerignore; preserved from accessible Git baseline",
+      "sha256": "98195d7311954ce4c3db6581fcf214fab908b1e6d34254a5515026e753520053",
+      "size": 59
+    },
+    {
+      "classification": "excluded_from_recovery",
+      "git_blob": "79b8489d081e4f59c21c8f23dc1c7366e916b149",
+      "git_mode": "100644",
+      "path": ".kamal/secrets",
+      "reason": "explicit recovery exclusion: .kamal/secrets",
+      "sha256": "be793fef1b8dcfea6682b3014d5c871ee0901fa91672aa2b3e925e3f68f7a148",
+      "size": 1448
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "f9d86d4a5480283221e922c5e4c42b7f7e532996",
+      "git_mode": "100644",
+      "path": ".rubocop.yml",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "474497601d8ff521eed710adf606b77417a88b8d51d3d323b177097f1b74677a",
+      "size": 249
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "15a279981720791464e46ab21ae96b3c1c65c3b6",
+      "git_mode": "100644",
+      "path": ".ruby-version",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "5eee6c0c5c6901f5e523f0a434bca4106e1ff7136deb451f982b0bb1a7b13716",
+      "size": 6
+    },
+    {
+      "classification": "baseline_only_unprovable_from_image",
+      "git_blob": "2f58204022cf95865e87e4ec9eebb80e686eb20e",
+      "git_mode": "100644",
+      "path": "Dockerfile",
+      "reason": "tracked image build definition excluded from final image by .dockerignore; preserved from accessible Git baseline",
+      "sha256": "9fa28965b86047dc774cf19f6b5324c7826a1e60245d69e2279eeec720df738e",
+      "size": 2360
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "dffe983de7c749b0ed317ca1477a8ddf12323838",
+      "git_mode": "100644",
+      "path": "Gemfile",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "f37ef5189d30808204c30c29553062bdce01a7e625031323f2f96498484d5ff2",
+      "size": 2361
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "73e6c88d4f42863030599d0f51c839f036fadaa4",
+      "git_mode": "100644",
+      "path": "Gemfile.lock",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "caffa47667b41ecec7b227289e74f8095147f739c2e520d470842e4953ac41f4",
+      "size": 10839
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "7db80e4ca1bf849701dce58a63f09a102cb9f931",
+      "git_mode": "100644",
+      "path": "README.md",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "cb08e48b7df3451e22fb32b808eee8b7c12d330b7f04be49353715fe612fa7d7",
+      "size": 374
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "9a5ea7383aa83eec12490380a7391d1bb93eeb96",
+      "git_mode": "100644",
+      "path": "Rakefile",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "895c6a69d01c14f0dd437c0eb44914754006ce317807264ca7ffbd1c79a91ebf",
+      "size": 227
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "git_mode": "100644",
+      "path": "app/assets/images/.keep",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "c95d3a530d06037a5e2d453561cd97a0e914af80",
+      "git_mode": "100644",
+      "path": "app/assets/images/logo-cube.png",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "38e42d120db7d28bbbff1b2e4ee1f84526c2b70ed1fac261ca6b803445012f7b",
+      "size": 2126546
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "17982d60c8f01df08cbc31e78f22467387421a25",
+      "git_mode": "100644",
+      "path": "app/assets/images/logo-horizontal.svg",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "2746a7c05677e8946121713017349f8c53c7271b09f7a7a0d72ee8e8699d7f6d",
+      "size": 705
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "a0e4ce0bb71c627369e009ad9f767a12030f79c2",
+      "git_mode": "100644",
+      "path": "app/assets/images/logo-light.svg",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "1497e94e222bf488b351c3464dce7ad4d63d5dbd2297f9274585557a1229a08f",
+      "size": 447
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "7780cd6e2fd96b4d0a64a1447c921ab4802ff80b",
+      "git_mode": "100644",
+      "path": "app/assets/javascripts/lucide.min.js",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "40bee90e38803be12dab4baf61e7dcb1833b844b6c529e173393fbcc09bd4778",
+      "size": 411139
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "fe93333c0f6b9903e09b795bae7f6ab56b71c0ca",
+      "git_mode": "100644",
+      "path": "app/assets/stylesheets/application.css",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "478b66b3effc220e394a0ba1a9065c367d723bd73b2036067ea87f91094b2cdf",
+      "size": 491
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "78f2057d6e2b35129a7523e8ef4fac525014f8cc",
+      "git_mode": "100644",
+      "path": "app/assets/stylesheets/shared.css",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "e1ec0bea4defd1d412aa7cc17e6fd77abc14f98de1ef5808b4c945bb98ce295e",
+      "size": 3372
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "af833ddcf867991896c162e57f20ac3a155ce529",
+      "git_mode": "100644",
+      "path": "app/assets/stylesheets/styles.css",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "b250056133569be00ab7fb15ac772ec967da937cb1e08415d0951c5825484c64",
+      "size": 58911
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "cad925fc3e5c749d5bfc64840440b5ee04c6dcd9",
+      "git_mode": "100644",
+      "path": "app/controllers/ai_assessments_controller.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "e910c3b7d9c0b9017f248e2cf838a0f34fa410370359a895d863cba982378f47",
+      "size": 1587
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "67fb5e89ed2d679358db9f077e236e4ccf6e2904",
+      "git_mode": "100644",
+      "path": "app/controllers/application_controller.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "8e2399f1ec1f420bcfda2220151c42e4ff1440c581fce21d921f66bad60232f7",
+      "size": 546
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "4c949e60ba93fd9a816d83f91f0947b9762cd45d",
+      "git_mode": "100644",
+      "path": "app/controllers/bookings_controller.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "dc159cd2028a1e2af59cd4f5997f0e2297ac3962a630993948797237f33c652e",
+      "size": 1798
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "f6308b1fbe9b6f3e57beac2eec30d8193014b870",
+      "git_mode": "100644",
+      "path": "app/controllers/certificates_controller.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "943a1cfb60d5b5261783bd8c089d4f514aa15fe697bac0a2a85c01b80930d4d1",
+      "size": 579
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "64390e84b543bac257d0fe5400b092f726eb56b1",
+      "git_mode": "100644",
+      "path": "app/controllers/checkouts_controller.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "ca2da7b7e4368e73a97d1f75f77d512b408236cf3d5415c3da4934b60f9f1d33",
+      "size": 2322
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "git_mode": "100644",
+      "path": "app/controllers/concerns/.keep",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "c8ac484aa4247955f885ab459f50c63c078bdcff",
+      "git_mode": "100644",
+      "path": "app/controllers/contact_messages_controller.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "fed99ef863e9a9fd7e4687a2a8a72a9ce0427418e4ddb745ce7f8500508d30c1",
+      "size": 716
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "143801a0f63b122a2789aabbd86bbbb05298bb8b",
+      "git_mode": "100644",
+      "path": "app/controllers/course_sessions_controller.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "607a7a01680049e1d129fa2665d75add3c26d7dcb9e6864aa2d00e9757ac3b05",
+      "size": 1069
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "80e9da7b54c956284446241fbd70406700a4d1f9",
+      "git_mode": "100644",
+      "path": "app/controllers/course_submissions_controller.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "e4fa6892f4c736c4c94ae868ea967dec28680213bcc9c10a14b96891d8d730b1",
+      "size": 1893
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "b540d9dde3316320f7c42b64757586a57d39feae",
+      "git_mode": "100644",
+      "path": "app/controllers/course_waitlist_entries_controller.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "e37ed6d83ccf9e2cc35c253149c549016ae5db2c3fe4e40d70a6b1045c790d11",
+      "size": 888
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "cc0dfdd41e01d84a7ca1c507d1213a23832eee11",
+      "git_mode": "100644",
+      "path": "app/controllers/courses_controller.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "484853f0f16fea27a670c3441bc57566eaac47895e791523666a99a1d2341492",
+      "size": 1881
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "f17e9515cf6b77e3edafb8f574f6f3d2b9d44e41",
+      "git_mode": "100644",
+      "path": "app/controllers/pages_controller.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "c93ac19940b73f8f624826c0056f420af71c98623b668c750f07a99f40ad59d2",
+      "size": 5585
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "278c92ea14e496210d4eae3904057bd4acc75ebf",
+      "git_mode": "100644",
+      "path": "app/controllers/quizzes_controller.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "3b4f70eeb6aa5d5b31349586b0da1ca7fa657db0d9dd3a6e977cf7086537a791",
+      "size": 1383
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "79c571629d1657f344122fee9e86cfc5d538797f",
+      "git_mode": "100644",
+      "path": "app/controllers/stripe/webhooks_controller.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "950717c4e9f13c1b83abfb21e2ff949025c1ba1a0aebaf0053b4032191a6efe8",
+      "size": 810
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "be7e36ce36bcedc3b77db764d487f887f092cc5d",
+      "git_mode": "100644",
+      "path": "app/helpers/application_helper.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "431a2a843dcf64ddbdc6ea0e312410d7ff25ad4bad9813995a22f9f3512ae6d6",
+      "size": 415
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "3a12acaece729addb66ec5ee7b9ea35e19c4f5f3",
+      "git_mode": "100644",
+      "path": "app/javascript/application.js",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "e8df36f98476281ba3e6978e456b2de91bc09d707e1f39561b041b18519c7a21",
+      "size": 17634
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "1213e85c7ac805be18b4ea04f93ab028cc975255",
+      "git_mode": "100644",
+      "path": "app/javascript/controllers/application.js",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "b5836315bab7b8d055ac3346bf57f933fa8aa8b37e9ea7b704cb2ae2bff129b8",
+      "size": 218
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "5975c0789d7cf1cc918034ba31a8f102e06e93b9",
+      "git_mode": "100644",
+      "path": "app/javascript/controllers/hello_controller.js",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "a85435d6127f62a9dc5bece74854e75586089f18ea7759db1a9a672ef83934e5",
+      "size": 157
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "1156bf8362e91a105188da4fe2c4e8967a890d63",
+      "git_mode": "100644",
+      "path": "app/javascript/controllers/index.js",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "a2d8f59d301f2f6ac02171ef63c930e00ea0f0bcf3b6cd8bf0c14a0733414058",
+      "size": 272
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "d394c3d106230849e4ff6f4020d41b3e62589061",
+      "git_mode": "100644",
+      "path": "app/jobs/application_job.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "d51e125007521b0f59765422cf3cf949b59b2054cdac6567a95b4a7aeaf1d722",
+      "size": 269
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "d51bcffe4c208d39a7ffd8d1002d0491263908c4",
+      "git_mode": "100644",
+      "path": "app/jobs/google_calendar_cancel_job.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "bd417cd1e27329573705732432ebb99d568cfb1c55f1cc584a530252a0a8501d",
+      "size": 155
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "66fbe709c45aecb8cb73b66e7dc1b6f0ccdcb7d1",
+      "git_mode": "100644",
+      "path": "app/jobs/google_calendar_sync_job.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "c95ba31c982c3e7a136601b123139fcec6a4097cfdd664720872ff3bdfaa2d64",
+      "size": 698
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "15b38035f5b72ae072589bf50e4243255d5a5581",
+      "git_mode": "100644",
+      "path": "app/mailers/ai_assessment_mailer.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "d49b48af98301c3bb4590f65b62cf279134be03860c490b8fed401e57eb52d0c",
+      "size": 485
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "71d054df8d5d20418381beec0b40432da6160888",
+      "git_mode": "100644",
+      "path": "app/mailers/application_mailer.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "88c5ca3e6b56c8434ac2ed57e194e09bf264bd4b9ac5cde4a5b374a0cf301bd7",
+      "size": 149
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "d418d1203059f38af3787f1abe6b7e20b59e6e4e",
+      "git_mode": "100644",
+      "path": "app/mailers/booking_mailer.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "d8ccf11132890a1c706a331d9e950ff97cf03f760cf5b553fa58d209a2b8b1c5",
+      "size": 765
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "6462a8b320fea65a80d73add4e457c8cbda7e804",
+      "git_mode": "100644",
+      "path": "app/mailers/contact_message_mailer.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "0acefe1ad8e649cff08f9864936cc9e0903ccbf2cb8f879de8cb243033f87184",
+      "size": 324
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "b642b2b2ca5b1e5f4ed6d395c189f6e59276f4d0",
+      "git_mode": "100644",
+      "path": "app/mailers/course_mailer.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "43d6def059f6e8a59467bed0433ac964dc03dbc312dcc30b16166521d31e2499",
+      "size": 1025
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "a74c1bddb61d85ee3effc5599fbee69fa374e329",
+      "git_mode": "100644",
+      "path": "app/mailers/course_waitlist_mailer.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "933ab9dbdaf67ca53086ce5b8219cde46e381229fcb389c28ecd7077d725ed1f",
+      "size": 286
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "d0f3d102056c1bc35384ed8880a6dc15c52532d3",
+      "git_mode": "100644",
+      "path": "app/models/ai_assessment.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "1862032a695c5cac9a53d4ef64fbf76334c991c69390af0d3bfc01d3d0142f81",
+      "size": 688
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "b63caeb8a5c4a21feec3ea870c4e4a52b89a8fa5",
+      "git_mode": "100644",
+      "path": "app/models/application_record.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "12bf7d0eaefce4d50e0719991e19b48a36a7865aeb7ac745980584806155fdc1",
+      "size": 74
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "dc1efabd6794c13b028ac59cbd45d242e6035a61",
+      "git_mode": "100644",
+      "path": "app/models/booking.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "4d8db02480e7618e682bef20dce87065d83c813feaacb07ea8a41cb61c00e8cc",
+      "size": 3213
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "d5879946df418f4c9b844c5df91bf873433c1853",
+      "git_mode": "100644",
+      "path": "app/models/certificate.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "93d9f1ec83c2bd9e888cf3b0737d365ef59d0a791988e40ade4c650f8a3465d3",
+      "size": 333
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "git_mode": "100644",
+      "path": "app/models/concerns/.keep",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "1c846503c75e04b041a479fe58a4543447c00a07",
+      "git_mode": "100644",
+      "path": "app/models/contact_message.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "f693072a5cc00633b696f1853a9bd24ad5eaf7f348e1aa6acbe5b0185297cfd9",
+      "size": 159
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "ff4620680c571197dedb66b6ade2ebe795b5223f",
+      "git_mode": "100644",
+      "path": "app/models/course_enrollment.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "1927dbb2ec5010ce643799b929f1c96039bfba38ef972788c460658ce1792b11",
+      "size": 1630
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "4ac7539ffc7b59d97e5d21a3fbf8a8b2a1cbf1c6",
+      "git_mode": "100644",
+      "path": "app/models/course_submission.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "ec65a35bf021023143ad37816f8f3f274a5feeeb9765d4fa6f293d3226fb5be5",
+      "size": 269
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "c55d47bc96730c1564a1403ee2ec797252af0cad",
+      "git_mode": "100644",
+      "path": "app/models/course_waitlist_entry.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "0d3d25fbb071fa00260e84771385ee1f1a3984bdf93c4439b57eb6598998f4a5",
+      "size": 475
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "83f5ed7c0398c45d1d660056230fcf5ef83e9b78",
+      "git_mode": "100644",
+      "path": "app/models/learner.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "733944a28a5b09e5b6d48f4e19b33b852dc857fc01ab884ca4daaa6ac92402cc",
+      "size": 920
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "a98e64b4c4668a6e6e6d563e021a6286784c6536",
+      "git_mode": "100644",
+      "path": "app/models/lesson_progress.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "a168589590a363c8cd523fae02e574f5ed02d148c366b30c276632b06dfa6a0c",
+      "size": 214
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "a114b587a670bcecc4c98da9650d1d6b77b85bb6",
+      "git_mode": "100644",
+      "path": "app/models/quiz_attempt.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "fe578aa556742a7d1f34621c6c9024de587c4b12f5c5317e7f751613d8547748",
+      "size": 225
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "60c6192330c7f5fe701653d20dc0644c5f917fda",
+      "git_mode": "100644",
+      "path": "app/services/ai_readiness_test.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "b0f30642fd38c0ef9a58feb2fec069eb765ad170e341b56e83df05b09b7d2fe4",
+      "size": 17043
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "c1875f110ab68c7dae777203b89054049cf8449d",
+      "git_mode": "100644",
+      "path": "app/services/certificate_pdf.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "77d5496d608d1da57a2b4bbee5904782e8fe1341d5376a35c6a5ba475b65ba9c",
+      "size": 1771
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "2c4b045c0377342117ec625ad198bbe17b680540",
+      "git_mode": "100644",
+      "path": "app/services/course_catalog.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "677053d3c8da364f07fade0cd7dcfd151c4444825eaeee706b2f864e24caa08f",
+      "size": 30922
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "2fc19cac1948137ce856d9fa38d1f45563a86243",
+      "git_mode": "100644",
+      "path": "app/services/course_checkout.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "15f8817a9890b29d18830f4cb864ca82291812fbd3120cc8c7fdb6d9917956ae",
+      "size": 3229
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "963674820436b328624c1eb3b96cef8123092dda",
+      "git_mode": "100644",
+      "path": "app/services/funding_support_pages.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "ceed953c7530aeab62921e0d3c16372ffdf3f996defeaf1b6c96a217e7ea5db4",
+      "size": 26347
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "10b662056af1a38c4c45695d93407d8d3c6ca02e",
+      "git_mode": "100644",
+      "path": "app/services/google_calendar_service.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "8d4bfd361a6c4eb2b0db92b6be7d59d2438847ff8d1ca40de317a16a7dbab05b",
+      "size": 4423
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "fadf5a4c6ae9ea3197185d94b3b41a7010e10073",
+      "git_mode": "100644",
+      "path": "app/services/workflow_evaluator.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "daade53b1dae6a87b418d70a82098d69fcaddba88f972e1f99addae4f20f4a11",
+      "size": 4168
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "49e3944efa483330114bde59fc415a773c7bb363",
+      "git_mode": "100644",
+      "path": "app/views/ai_assessment_mailer/host_notification.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "8e39b2db8cfb4f0cb38f002507ae482b86385abd401017acbd238f66e244f6ba",
+      "size": 760
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "70ad6d779b1e0cb0868b8c3968276c60095a0862",
+      "git_mode": "100644",
+      "path": "app/views/ai_assessment_mailer/results.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "17f8585d0b048f2eb8820ae89ede06d9c91610d4fa43a877b46e362cf33794b9",
+      "size": 5041
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "dabaeb1dacb09c35fb19a38c6e2fdfab76eb15ac",
+      "git_mode": "100644",
+      "path": "app/views/booking_mailer/cancellation.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "30a5040adfcf4a9bff547958bfb42b79205dd69f5278b386cf3525c6779c818d",
+      "size": 303
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "05011d8f06a29b2b307d4e45a9158160efee20bd",
+      "git_mode": "100644",
+      "path": "app/views/booking_mailer/confirmation.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "e7b8685277d821141b248436a6acca1d1b4ae4866c59e7e802de14d5c78cbc37",
+      "size": 333
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "f836f687b01b392bca2d43641559bb5f58703077",
+      "git_mode": "100644",
+      "path": "app/views/booking_mailer/confirmed_with_meet_link.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "d1d33b322abc75aa0dbd2faa3333329e8c73994b09ff00493ca9f582e7c64f0e",
+      "size": 394
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "55be073bacadb6a8550f693befa585ef5760bffc",
+      "git_mode": "100644",
+      "path": "app/views/booking_mailer/host_notification.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "810227d9528477e88c8cb6c110f2c8ee1a10ff684654ae5c02fb37f35e633be1",
+      "size": 566
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "a877e361d55af506d04a989ee1f67fa352eb2e79",
+      "git_mode": "100644",
+      "path": "app/views/bookings/show.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "99275aa9fa07e2d4c48830a3feaffcada8c746b506cfe31af3636e92e82930fb",
+      "size": 1671
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "651457376c442bd3b2446f10c7cdecebf2a4d446",
+      "git_mode": "100644",
+      "path": "app/views/certificates/show.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "5beef4effbfae49aec0ef308523bf6b8a1793e308c09ddc32219bf2451bea246",
+      "size": 1291
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "fc3d125b1bd3fae9a4a8aac9c5fe4e6314318452",
+      "git_mode": "100644",
+      "path": "app/views/checkouts/mock_success.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "f3dfff2c72cf0077759befb91146f42f6a49ca8e5cffe6b08a874470034fcbaa",
+      "size": 1093
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "cf310d27afdbf9aa462673746ca22f0874130f37",
+      "git_mode": "100644",
+      "path": "app/views/checkouts/success.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "daae40cf43963706aedf8323b15fb411b65d7cca510de3f2cad62025fc2ae128",
+      "size": 760
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "1c0f0d0e812d89f4fb43792f03c24ba32750c33b",
+      "git_mode": "100644",
+      "path": "app/views/contact_message_mailer/host_notification.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "a1c08f7d17daae836e730e1138ebcd00eacf28b62d6c09d19b42376a9dc46832",
+      "size": 485
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "6f7b76ed9216b4e7a961ad96df7ba010d7712188",
+      "git_mode": "100644",
+      "path": "app/views/course_mailer/access_link.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "58b444637c0082308cd5ae96317095eeda35355abd9a86ac3e50664319c97922",
+      "size": 1650
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "3a920fa9b1471934f96e21c829c4ecf31b3c9fad",
+      "git_mode": "100644",
+      "path": "app/views/course_mailer/certificate_issued.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "bbb07e786317249e5568aea176df7a20d4899650a5f07e81d871011f1e99f870",
+      "size": 1642
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "d7473f02e00d7e24e72152af20ae8a41085e6dc8",
+      "git_mode": "100644",
+      "path": "app/views/course_sessions/new.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "7ddac451fa44b43e077c4226544a7ded07578a00865d6009680e82a0f8d68770",
+      "size": 1035
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "166a021cbb1fa121a7a14dc6f43a77af17708ac1",
+      "git_mode": "100644",
+      "path": "app/views/course_submissions/new.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "ebb425633ae07ca3fceff94402ca3470aafa461dbdca767e6cdb5f219893c860",
+      "size": 2170
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "a768f646a33cfcc1d729d78766c4a28c2981734a",
+      "git_mode": "100644",
+      "path": "app/views/course_waitlist_mailer/host_notification.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "c8273db7ef1085671992c6fd20ada63277adc9012879a1defd7e2616515469e2",
+      "size": 322
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "82465f2eac768ec9948508c66469d0afe6cb2751",
+      "git_mode": "100644",
+      "path": "app/views/courses/lesson.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "9c3defe836fdca5740c8d7c269b7c40a96c342c9a0405f059e2dade61dbba43d",
+      "size": 2114
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "5f193f4ab6f0a89fc221739e8ed1a8736ef7979a",
+      "git_mode": "100644",
+      "path": "app/views/courses/show.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "dc26a487de607be0a1acee0895021c63554c7cbcff104a9f703ff69d3e04044e",
+      "size": 2278
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "b9827ac55e6dc921447c2606f196c09c94ed49c1",
+      "git_mode": "100644",
+      "path": "app/views/courses/templates.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "0c601aad8035796079e2c2ae3e22fd7a61348b402f23cb65c9bd312aa1388552",
+      "size": 1422
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "85ab113eca2ce6266e8972f1c41966f2580751e9",
+      "git_mode": "100644",
+      "path": "app/views/layouts/application.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "a53e6114204d0b3ae9631efd15affe0bd0a2938cb12e1b3859d3d41212e960cb",
+      "size": 2034
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "3aac9002edca73300507bcd9f9589ffb36ba1faf",
+      "git_mode": "100644",
+      "path": "app/views/layouts/mailer.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "3be3ece9c575096f91f8ecc6a4efb0c7ffd509d2ed4b06c3461bd920201bbd37",
+      "size": 227
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "37f0bddbd746bc24923ce9a8eb0dae1ca3076284",
+      "git_mode": "100644",
+      "path": "app/views/layouts/mailer.text.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "51353f9de3a26d4b28f7db91152bf56d31cfa9e4bd3c834680772a63cd374698",
+      "size": 13
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "b6b9b2b7ac87534a4528bc110deb66146e3a1f5f",
+      "git_mode": "100644",
+      "path": "app/views/pages/agente_de_gestao_ia.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "538da8e3fe8000a44eef312f76fdf5afef3321ad13c9d4cb1a814d84cd90e1dd",
+      "size": 21979
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "04f6ddb82210369761bdd0839011019b97a30fcc",
+      "git_mode": "100644",
+      "path": "app/views/pages/apoio_fundos.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "df4b971f32448a91bcedeb0bbf10f5acbb663baa341f2a6929811981d92b6ebd",
+      "size": 5987
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "0d52c99854ca3173acfa209197ae0f6abcd379fb",
+      "git_mode": "100644",
+      "path": "app/views/pages/book_call.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "33aa0a7956f3a388b775cce907ed3622f42db2074485bbe49dbb0733f06a9772",
+      "size": 6422
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "901505c05a83bee8ab7d23693e250b12a931b236",
+      "git_mode": "100644",
+      "path": "app/views/pages/casos.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "cbeaa313e3be919f405c9014e4961d667284ca9211ea2e530a5eb44aa0fbe3d9",
+      "size": 7181
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "b182157db33ffc5f8137e0ef88da9ee50d669edd",
+      "git_mode": "100644",
+      "path": "app/views/pages/contacto.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "687b95ce04f759fd6c70da89debdebe4042d514033fc64e6d6ec45c04daf27b9",
+      "size": 3498
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "4ab6d8b0058dbdc395a5b688214e863a947c4578",
+      "git_mode": "100644",
+      "path": "app/views/pages/cookies.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "9d66ffeeb04869d19bd28c495a6a5bfd96a6b53c258124730d2d78626769b5e5",
+      "size": 1351
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "d088208b71f0f16d9a7dddee18002f20beb2fb67",
+      "git_mode": "100644",
+      "path": "app/views/pages/curso_fundamentos.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "8ea1aec864d7b3b5a1c901ab696bae186b8bde979947b69f072d021452a4f2d0",
+      "size": 5303
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "50046642a6b3d1b9735f5c56c21f9c3eff75abc8",
+      "git_mode": "100644",
+      "path": "app/views/pages/curso_proficiencia.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "82c04511bb98902e2e52c6391357cddce92d2de2b04086ee30b656f7e9ba2bb4",
+      "size": 6409
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "bddc47489587c76e0a8ceb406875b339f1676e06",
+      "git_mode": "100644",
+      "path": "app/views/pages/fundos_europeus_ia_pmes.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "44b5270df685e2f2d032d0b87bdcd432c49b87cc4bf0016660b046e9dd849ec3",
+      "size": 19331
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "a76544ee6bdaced9036217ae501fcc8d06754925",
+      "git_mode": "100644",
+      "path": "app/views/pages/index.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "2f78b2a475de8233c313df883c613b8f76a601184d17373429ac594a15443086",
+      "size": 13861
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "daaa54d4268d28c55df3ba303354745c604d40f3",
+      "git_mode": "100644",
+      "path": "app/views/pages/metodo.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "64cf98b99e7aa6e2b8ed554cb75314f9b45e4bc3145ceb0e3bc8adebd8cc1a62",
+      "size": 7109
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "fca0bf51913474ad9ffb213c9555a3cdfa3bb57b",
+      "git_mode": "100644",
+      "path": "app/views/pages/missao.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "9e2cfe1191713b64f4a19c750d34bf0d2e68e4d2f5e87e93a08d4d66fdabd8d1",
+      "size": 6495
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "7b191e8f108149443ef163c8237e021af2530524",
+      "git_mode": "100644",
+      "path": "app/views/pages/privacidade.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "671afa2006f221298b1fcb9d3361caf447031d7840c959a748fe5f2457efb51e",
+      "size": 2679
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "51c7109e7a233f24da5048be11ec626d2ae8be21",
+      "git_mode": "100644",
+      "path": "app/views/pages/servicos.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "f6a3b8a1e254862149d6a8dc03bbc88c7cbcb4d17b019ce94b0379f4341ee6a6",
+      "size": 8206
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "3232959eed8da42dc98a90e6d4316d861b9af797",
+      "git_mode": "100644",
+      "path": "app/views/pages/sobre.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "2084f0e58064e2009e121c9cac89435856722f7945947eb3868cda31e179a5c8",
+      "size": 4466
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "9f8a19975193f89e3910bf7266192d2df592fbed",
+      "git_mode": "100644",
+      "path": "app/views/pages/termos.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "8366adf99d46e54167ddc016f15743bc6d741d04667873c6326bf34c45ac7a1e",
+      "size": 2791
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "d3f0d12997e247f4dac3ff55bacf0389bce9d86a",
+      "git_mode": "100644",
+      "path": "app/views/pages/teste.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "fbcbd53869e239af215c01bff9a22f03126189374a1ce0c94cbd43638e09c0e1",
+      "size": 7969
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "c579b5e443c466e40a2223e9e3435673aaa24d70",
+      "git_mode": "100644",
+      "path": "app/views/pwa/manifest.json.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "29016ba687322fc9734342f743421676eb641fc832fd82f6b7486681d24cd609",
+      "size": 397
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "b3a13fb7bbbf2b8a4666ea12446a7903243713a2",
+      "git_mode": "100644",
+      "path": "app/views/pwa/service-worker.js",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "54bba97f108ac8d65af816aab152cc1860c9d9809641ba845231131db56d59bf",
+      "size": 876
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "540a7b1299e924a4916f2e2da404230937041ae6",
+      "git_mode": "100644",
+      "path": "app/views/quizzes/show.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "09463bc7607bda11c1cc8129495d0c69883d663c80cf9594e5a0b2f6cac53290",
+      "size": 1487
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "cb1d7abd8e97cc9e44432755d8cedce01e58683c",
+      "git_mode": "100644",
+      "path": "app/views/shared/_agent_mock.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "5e29bc524d47728e91f0427c1edb95a98c778029a21ebc75b90dbe9d525e19bd",
+      "size": 1068
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "2e035c95770747181a6c468214f3dbe3c8e6f656",
+      "git_mode": "100644",
+      "path": "app/views/shared/_footer.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "a7f3e434a2df8edd5ae62b274f230ff5ce24f3bf8d927f130ef121be7172280e",
+      "size": 2073
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "914f39aa0f5cdf79ebada6b381bcf02ca2c087a7",
+      "git_mode": "100644",
+      "path": "app/views/shared/_nav.html.erb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "af3cb53bf75074cfe77c9a9789372287dc1d0fdc8ceaf0dcaac54d885ba45c9a",
+      "size": 1185
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "ace1c9ba08ad76f113b8cb284494a1d65cc3749e",
+      "git_mode": "100755",
+      "path": "bin/brakeman",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "7825743df15f32a7a7a36b2098aec1dd56767031af0181d288f8a563c2c225b0",
+      "size": 139
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "50da5fdf9e8fea705894b93f665421a8cbbf77f9",
+      "git_mode": "100755",
+      "path": "bin/bundle",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "fe6efabc4133b9bcbbab276e58f2e65c1c6b9f10ca740d30703e7b9c2deb6f6c",
+      "size": 2801
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "5f91c20545355b344e2ad312e03ad419ef331184",
+      "git_mode": "100755",
+      "path": "bin/dev",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "bdf0071bfce9a25b347076aba2b678e2e90be4388e943ec8da21283b998680ca",
+      "size": 56
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "57567d69b4b6aeae7a5d0386fbe0fe9b71c212b3",
+      "git_mode": "100755",
+      "path": "bin/docker-entrypoint",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "dc5492f02e7b3f3bcd67fa70afccc4c1c5500a29f8887f32b2233d79544700ea",
+      "size": 387
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "36502ab16c7adf42dfc804702966e684d68610dd",
+      "git_mode": "100755",
+      "path": "bin/importmap",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "aaaf65c0637afc4a2cd13b04660761cfaee83d7f6e81446986a3e3aaafb84da5",
+      "size": 91
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "dcf59f309ae53acda98d718376bacbbaeb37b8f3",
+      "git_mode": "100755",
+      "path": "bin/jobs",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "7b51c14b8871a220d4227a09c87634c5f20d574c5ea3cdfaeb32fa62e35fc988",
+      "size": 117
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "cbe59b95ed79e96482beb8c203012cf15f6ced60",
+      "git_mode": "100755",
+      "path": "bin/kamal",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "9d9795dd6ef45db91f28a71e185555485aab41c09e9bad44014a2a9df27b0c4c",
+      "size": 745
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "efc0377492f7e0ec9f6cedf7b5e1f6119bbbd24e",
+      "git_mode": "100755",
+      "path": "bin/rails",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "0862d7bc09d5ed61785d677ef2dba10ce285387d4d5d9e3d90d97630e3f69ab6",
+      "size": 141
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "4fbf10b960ef780b748861e6a616a4d88b00b50a",
+      "git_mode": "100755",
+      "path": "bin/rake",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "5943c3811dc345727b5f330b599c4c6c45abc04816dd8f4201aeed88cf268cb3",
+      "size": 90
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "40330c0ff1cdcb147d15fbbe1cc8f633ea948eb0",
+      "git_mode": "100755",
+      "path": "bin/rubocop",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "56afe244a3ccefd6d728dce7413a3023472c5bcb751c58d3a9c35b402d807e34",
+      "size": 266
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "be3db3c0d62cbe282139b11deda7c646f7e72ad3",
+      "git_mode": "100755",
+      "path": "bin/setup",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "e5a76cd9ef202960d20fbd4fe1756e8da89acc49e52835aaa0184c5ccaffc8f0",
+      "size": 1010
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "f8525c5284eb42cc759b6ec4a07428ee2decbf4c",
+      "git_mode": "100755",
+      "path": "bin/setup_stripe_course",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "4926b6183cf9e03949627418bd750b155cd2dfca3023977621331a47fcb7eea3",
+      "size": 2922
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "36bde2d832f6c5c1545ec6eacb82cbb79f4473b6",
+      "git_mode": "100755",
+      "path": "bin/thrust",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "ed1176b4df355db4b2a67ee37b45ca5c6d7118255d28a07dcdcb6d0fe4ae5c4f",
+      "size": 104
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "4a3c09a6889a97a54af8cbcc1a47e03e58cce376",
+      "git_mode": "100644",
+      "path": "config.ru",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "1a5090e57cf9301e8bda3fec3abe4c72fbc001f6cd4909fd80b6cd488ab531b9",
+      "size": 160
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "c063d78205d25abf7ef5412c21d485e2a6f4d589",
+      "git_mode": "100644",
+      "path": "config/application.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "cba1f4e09aa7080df419c2db1290c0beea713451e7c9047614fcb40af9abcf8d",
+      "size": 1458
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "988a5ddc460f03c2cafb3b91d98f0cc930ebc8ed",
+      "git_mode": "100644",
+      "path": "config/boot.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "bb5a9499136e72c70c557bc3ff4d2661cc9b05dc5b848fb720540e3fe716e4ea",
+      "size": 207
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "19d490843bb5c1cd86b12c391f32c2277384428d",
+      "git_mode": "100644",
+      "path": "config/cache.yml",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "1eeacb19bab1653c4d0817e093f0ae22fd1667853ee2e580704f41f13f21331d",
+      "size": 300
+    },
+    {
+      "classification": "baseline_only_unprovable_from_image",
+      "git_blob": "d1398c00d8980b982e5ce932e32af6761602874d",
+      "git_mode": "100644",
+      "path": "config/credentials.yml.enc",
+      "reason": "tracked encrypted credentials ciphertext preserved byte-for-byte from accessible Git baseline; image copy intentionally not read",
+      "sha256": "e0f6d8599d6cc4b0ec7ee08cc5e9a38d80ae6ad4510ed6cd232b5a5c44b77af1",
+      "size": 3512
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "6e674d598d2d16a022aaaff73c7a8e4c6652ef0c",
+      "git_mode": "100644",
+      "path": "config/database.yml",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "a02bfdeef9e81d13dfc050a1f18425bcb7ab66855dea86057ffa74a2374856a8",
+      "size": 1012
+    },
+    {
+      "classification": "baseline_only_unprovable_from_image",
+      "git_blob": "6a4bb439b3ed80b353444cc2a8db4ef8ae7096d3",
+      "git_mode": "100644",
+      "path": "config/deploy.yml",
+      "reason": "tracked secret-free deploy input intentionally absent from runtime image by .dockerignore; preserved from accessible Git baseline",
+      "sha256": "f45c5a7de7277cc04d11b62800399e042fce6479c45375e7c48722bea27397a4",
+      "size": 4274
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "cac5315775258a68f5e18885605d3fb1b758319e",
+      "git_mode": "100644",
+      "path": "config/environment.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "73b2e731e02cedb9dc0335e1a35c3a2b7738032e3aa7e62ac32cbb8432b43c69",
+      "size": 128
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "53cbbf9794039cd9f288edf3b288afc429215e84",
+      "git_mode": "100644",
+      "path": "config/environments/development.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "2833696c5d808c248bd081ddcd0940bda6e3a0ebd0e41a98aa8184aadf0a1e13",
+      "size": 2537
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "01cf66cc081d37d747caef506877a90599fb6a4b",
+      "git_mode": "100644",
+      "path": "config/environments/production.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "ce30f93ef12b893451a36907a8093fdb9d3815771a35ddab7f169b189d09a603",
+      "size": 4119
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "0424d0f565904b543bc35dca20cfb3967840d052",
+      "git_mode": "100644",
+      "path": "config/environments/test.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "3ba000a52f5335d7c4357572ef09092328a9418e0ff49184d573b4e75a8614bd",
+      "size": 2202
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "909dfc542d2af92331a4f26f72c50ab97751cf70",
+      "git_mode": "100644",
+      "path": "config/importmap.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "148fdf21d156d2d1274627caa734d3e2d05ce23ae60e6a371fae054933ca30be",
+      "size": 285
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "89ee4c02a43aa4cba7047fde5065fb52bb74ebcb",
+      "git_mode": "100644",
+      "path": "config/initializers/assets.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "6b95e478f62078215b8ac5d3abcfd165d92972903290cb7d6d26317236a1265d",
+      "size": 449
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "b3076b38fe14399a56099ba187b1cb21cac15f09",
+      "git_mode": "100644",
+      "path": "config/initializers/content_security_policy.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "74c222dfd7c82fb1797dbe8eb4fce7b9e6afdfea8e413957692a021dfd7bfbb0",
+      "size": 1071
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "c0b717f7ecbb904e158e17ff5236b05211e03f81",
+      "git_mode": "100644",
+      "path": "config/initializers/filter_parameter_logging.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "f864bd67e7bdaa63a5331b9fc15446613c410c3a314cd70d1b6a7c8b566b6120",
+      "size": 468
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "3860f659ead02224f524351d612cd92aefcd5d8b",
+      "git_mode": "100644",
+      "path": "config/initializers/inflections.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "e2c18b803625a073b25e4ee4460677da33a8bf19bbbcad629718a8e15c58acc2",
+      "size": 649
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "ddaf6a6b7b42049f59a6fe73cf5755142806a136",
+      "git_mode": "100644",
+      "path": "config/initializers/resend.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "cfaa7fd2d7cf74e33b14873e0c55ee90fe9f0eb73f04725b001a9d17565d7be9",
+      "size": 39
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "130ccc396cbbc428d7b5b40177e2b6e70ce5bb08",
+      "git_mode": "100644",
+      "path": "config/initializers/stripe.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "58ff210467bbff2035a3a7511491ba8457f08c98c2442cbd69151fc99559d107",
+      "size": 79
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "6c349ae5e37433af7fd8c4ced3b219e710a368c3",
+      "git_mode": "100644",
+      "path": "config/locales/en.yml",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "ad72af216ad0a67a1155c685535698fdd2a7138810c7e6dcb5eab7f0cc1c5922",
+      "size": 908
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "a248513b2427144aac5cf9b81fc61f2aa1ca4170",
+      "git_mode": "100644",
+      "path": "config/puma.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "9018e5a98af6989b2a20c9cb9e91cc06989c59de13dddd640652e8191a6e8c58",
+      "size": 1962
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "9eace59c41e6a3a63d294e53480eaf5a8945e014",
+      "git_mode": "100644",
+      "path": "config/queue.yml",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "4343b6cebcfc464f6f84b993b0c60d2b229cc5d97cde4fd845aebb15871f4bac",
+      "size": 290
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "b4207f9b07cc3ecda5ec87b384927b41a6e7d269",
+      "git_mode": "100644",
+      "path": "config/recurring.yml",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "1b308d44c793b26502423ab52361e20713c1294a47743d65f339059311e6dbe8",
+      "size": 474
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "1b170225e64c6d0d126822f10e85e6777387b970",
+      "git_mode": "100644",
+      "path": "config/routes.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "79ab0143b58f4eee9f507f3ed2aa22bfedb701a1a6a5b52f92811b11b09402df",
+      "size": 2186
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "81a410d188764f677c4fec3f9af48b6ddda43d7a",
+      "git_mode": "100644",
+      "path": "db/cache_schema.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "31d6012503419a1be4aa87c4d18b2a9a85d84b6c23851428362d9a5e7b0eb26c",
+      "size": 613
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "8d2ac5ffaf74885b3193c211d3db5a95527301f2",
+      "git_mode": "100644",
+      "path": "db/migrate/20260505170100_create_bookings.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "843cea5088ce7509045ad8bfb2dd41025c8ef3e28b1ddcdb934c56c42182a84a",
+      "size": 843
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "28cc67db5f4c986d6305fe9e27566afb25d85da8",
+      "git_mode": "100644",
+      "path": "db/migrate/20260505225500_create_ai_assessments.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "ed1fdb9b989bbdfb5fc351b0bae2a6906c4c6d75966855f6769ac68fc16ae3ad",
+      "size": 799
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "cbffaf9394064a87b7c4bdb8391870fd9d3391ca",
+      "git_mode": "100644",
+      "path": "db/migrate/20260515100000_create_course_learners.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "c603357ed4c324d9412fc1ef4f2d4fc227f4dd5d540a71ebe355bf82e651cf0b",
+      "size": 384
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "e6635ac41a9d65d9bff2e49d160bf9f604fde4fa",
+      "git_mode": "100644",
+      "path": "db/migrate/20260515100100_create_course_enrollments.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "e5620fb76ddd65823e6d1f678ddd575f3f2a818b171ffd127d31baad572ae850",
+      "size": 786
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "9c4017d0595a5bc52694711a197b670643d661c7",
+      "git_mode": "100644",
+      "path": "db/migrate/20260515100200_create_lesson_progresses.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "3491846eb71b43f2fc1a79fe4a50477da7ee089558abebb9abdb3bc5d00305d6",
+      "size": 413
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "089e71c2fe11742fef658e62a3956d6bbddb9d8b",
+      "git_mode": "100644",
+      "path": "db/migrate/20260515100300_create_quiz_attempts.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "3c32299572595e90e1ae72d3a8b18b0080b571ae86e793f8f480c9c2a10b16bc",
+      "size": 502
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "7f6627f9240fa50fdcb7c730726a384a4b1d5b18",
+      "git_mode": "100644",
+      "path": "db/migrate/20260515100400_create_course_submissions.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "dd580710d58c47384d5e6009f9e42f7a5695a1968d8136b434ca15ac839c157c",
+      "size": 512
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "2e7a710953398e2cf7c5a3193dca32617aeb7caa",
+      "git_mode": "100644",
+      "path": "db/migrate/20260515100500_create_certificates.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "cf24fced925654dbb8342c9b7ce2320f78e91d094f91feb4cbc9552be30f0474",
+      "size": 407
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "ea7d5dcd30d392f2b7d59e91a7f5aa5d4163d2e2",
+      "git_mode": "100644",
+      "path": "db/migrate/20260713120000_create_contact_messages.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "b3ce6521c5eff874ebd60e5572cd033cdef80fa601c6443fd565a442bf379632",
+      "size": 329
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "f82f5e2537c7109db04857c4c609bb2a5b252f79",
+      "git_mode": "100644",
+      "path": "db/migrate/20260713130000_create_course_waitlist_entries.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "4181e9ef8aa79b1c9a5f363920f5e29e139fd147881b6c114948fbc5c389800d",
+      "size": 342
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "85194b6a8809eac596ebbbfef72fb9e24799d3d8",
+      "git_mode": "100644",
+      "path": "db/queue_schema.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "36b61820b43412c196933dc6182b164b6cfd86f7d13c918debc9e6cc2e1cfc29",
+      "size": 6278
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "a274b40d70603deda24f9ebdec550a05e36e8902",
+      "git_mode": "100644",
+      "path": "db/schema.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "ad07fc351d9b80fd179b35f8b9b28254f532ec80780b1187e7af72bf50b8d530",
+      "size": 7127
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "4fbd6ed970cb439af968458dc6aec586ee0dbc76",
+      "git_mode": "100644",
+      "path": "db/seeds.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "4f24f361a5a875f32518a44f68f2d99a6495fcee5f9c54c30f8c3d7f8614512f",
+      "size": 494
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "6dea8497657d1cccedf232e0ed9788163a242d4a",
+      "git_mode": "100644",
+      "path": "docs/auditoria-e-plano-melhorias-2026-07.md",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "2bc1052df9ba824923143c4830900a905040d3c0b5d2c17917f333920d9d5404",
+      "size": 16489
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "7088e7361c18fb718c0604b553cf2c5eef93d9df",
+      "git_mode": "100644",
+      "path": "docs/auditoria-site-ipiia.md",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "4d63c3f56bfbe4bfa75fa5ff3b0e6641b694bed788941d89af03089ce6dd9dd2",
+      "size": 10279
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "870ed8c1bcb8fabfaad805d3249b240c60efab8a",
+      "git_mode": "100644",
+      "path": "docs/guia-visual-densidade-imagens.md",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "42ce96c9a925083bc8acc045a0dafabf5b789ea834b4c2ae06586e4017a157f7",
+      "size": 5299
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "1c3419edd4504b19c1830a69e9781b0d47dd91f8",
+      "git_mode": "100644",
+      "path": "docs/production-roadmap.md",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "1474378a35c044a69c18ffb1ad8791b54d449453e44f7d83cc8cae7adf9f90b8",
+      "size": 3855
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "9aaf74597a99677259ff402550cb15117d7401b8",
+      "git_mode": "100644",
+      "path": "docs/proposta-agente-gestao-ia-copy.md",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "fcb6089fd9054ed93353244e68b4f61754114d04653b34e4403ff0e09eaa16f3",
+      "size": 16557
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "git_mode": "100644",
+      "path": "lib/tasks/.keep",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "git_mode": "100644",
+      "path": "log/.keep",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "7a6df460ceaf66c7ac7bf2a90f90b53756a3c668",
+      "git_mode": "100644",
+      "path": "plano-implementacao-chefe-staf-ia.md",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "dbf831cb5af384c3068e35a07229e778c3edc7847c9128231612b1bd36615e33",
+      "size": 10387
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "282dbc8cc9833571b25174c2f59c1a815046d339",
+      "git_mode": "100644",
+      "path": "public/400.html",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "a22162717f188b736f1d646acc2d392449a4fd6b8437da310964516b04cdc3e9",
+      "size": 6685
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "c0670bc877c37592981dc902face6c686e582b6a",
+      "git_mode": "100644",
+      "path": "public/404.html",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "0f966fd28d4c2ad94dc3351c7ebcc9a65245c96e66650072de11a214c09d7e50",
+      "size": 4836
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "9532a9ccd0f5caa333332925b50346dc481700c8",
+      "git_mode": "100644",
+      "path": "public/406-unsupported-browser.html",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "d2e5e109f8908b7de017a5a21cf385db98ea9f2d8c434b11dbce4a648056d880",
+      "size": 6912
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "8bcf06014f20b6873a37cf427d3870d61af760dc",
+      "git_mode": "100644",
+      "path": "public/422.html",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "e38e8bc96fa0c8bbb77d13cc98c023a22ae6fc81f8e03eec686563b854da71d0",
+      "size": 8380
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "d77718c3a45df5b6285ff470bc684cac5fb13ae3",
+      "git_mode": "100644",
+      "path": "public/500.html",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "28bbc92a53f2667f153049939fd0762e309f8c4c57e2bd4918db2006a98ffbec",
+      "size": 7918
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "c4c9dbfbbd2f7c1421ffd5727188146213abbcef",
+      "git_mode": "100644",
+      "path": "public/icon.png",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "2e29c62b03e514c5a15f289f8fdc0abca6e22d0e91970503c9e2b7e0552c911c",
+      "size": 4166
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "04b34bf83f34441a1f7ae93a6f7f6ac0d27bef16",
+      "git_mode": "100644",
+      "path": "public/icon.svg",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "601dfb4db252852f3880ffc355bce0d4507b01afca6879189d10a65470ae6e3a",
+      "size": 122
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "8b1d3e72a1f993abecc42914456a0152a7ba42e8",
+      "git_mode": "100644",
+      "path": "public/robots.txt",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "737579788d57ca1f2fc8f9395a2c6129998864b4697e69a547c373b9186d250f",
+      "size": 137
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "ea73547ac53fa97e5d1afa2968549adaf58c8334",
+      "git_mode": "100644",
+      "path": "public/sitemap.xml",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "52a4907a40195f71406f6ef29b22bba7288e046727e824116fffb0d6ccea7d9e",
+      "size": 1452
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "git_mode": "100644",
+      "path": "script/.keep",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "git_mode": "100644",
+      "path": "storage/.keep",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "eb92c16d3308c6bc28cbdabae948acef0982c285",
+      "git_mode": "100644",
+      "path": "test/controllers/course_sessions_controller_test.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "a1485b3d187ebfb72a2b1718231fad632b9334f32ec0a073b44e50c7d4ee2a3c",
+      "size": 323
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "5f668052c89ddb0d31b890ab56502b7575b29de4",
+      "git_mode": "100644",
+      "path": "test/models/course_enrollment_test.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "9bec841af1a60b07a463801b8540177a21c10faf1a5b6a88665c326e2121f757",
+      "size": 1885
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "5ed69f1c6ce0f45d586bc971a1dcf511145d52f6",
+      "git_mode": "100644",
+      "path": "test/services/course_catalog_test.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "13d0c8381800de87c55d48896732c1714e4ba279f9b55099843d811a3ec0a20e",
+      "size": 461
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "138874574387d28b69a857a4c30f8b0f5b2e0239",
+      "git_mode": "100644",
+      "path": "test/services/course_checkout_test.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "eb83c26bf50fd763ec93689af10c8bfd3bccd43c987c354500bb15e49f9af9ec",
+      "size": 1964
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "a5d1976e0f1847f4d48fc0d25de2a00f0009a566",
+      "git_mode": "100644",
+      "path": "test/services/workflow_evaluator_test.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "7ac68d0fbe8edd8f7d059419d1ca3c8c76aa3bc2502ab55ca03acd49a71b8dc1",
+      "size": 681
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "bc0b2d036ad9e064e2c235c8593fae7b63533754",
+      "git_mode": "100644",
+      "path": "test/test_helper.rb",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "46625ae56ad10bb3d90cb0a7dc968989f1a34e23d5ff7c2c8d0ffd165eb9c995",
+      "size": 223
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "git_mode": "100644",
+      "path": "tmp/.keep",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "git_mode": "100644",
+      "path": "vendor/.keep",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "classification": "runtime_source_allowlist",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "git_mode": "100644",
+      "path": "vendor/javascript/.keep",
+      "reason": "tracked baseline path expected in immutable image source projection",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    }
+  ],
+  "tracked_file_count": 200,
+  "tree": "0b5c4c8cb2f9dd0c3cc1cbe1a1c10527c276323a"
+}

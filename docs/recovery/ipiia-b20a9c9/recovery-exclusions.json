@@ -1,0 +1,170 @@
+{
+  "baseline_only_unprovable_paths": [
+    {
+      "path": ".dockerignore",
+      "reason": "tracked Docker-context control file excluded from COPY by .dockerignore; preserved from accessible Git baseline"
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "reason": "tracked CI metadata excluded from image by .dockerignore; preserved from accessible Git baseline"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "reason": "tracked CI metadata excluded from image by .dockerignore; preserved from accessible Git baseline"
+    },
+    {
+      "path": ".gitignore",
+      "reason": "tracked Docker-context control file excluded from COPY by .dockerignore; preserved from accessible Git baseline"
+    },
+    {
+      "path": ".kamal/hooks/docker-setup.sample",
+      "reason": "tracked non-secret Kamal sample hook excluded from image by .dockerignore; preserved from accessible Git baseline"
+    },
+    {
+      "path": ".kamal/hooks/post-app-boot.sample",
+      "reason": "tracked non-secret Kamal sample hook excluded from image by .dockerignore; preserved from accessible Git baseline"
+    },
+    {
+      "path": ".kamal/hooks/post-deploy.sample",
+      "reason": "tracked non-secret Kamal sample hook excluded from image by .dockerignore; preserved from accessible Git baseline"
+    },
+    {
+      "path": ".kamal/hooks/post-proxy-reboot.sample",
+      "reason": "tracked non-secret Kamal sample hook excluded from image by .dockerignore; preserved from accessible Git baseline"
+    },
+    {
+      "path": ".kamal/hooks/pre-app-boot.sample",
+      "reason": "tracked non-secret Kamal sample hook excluded from image by .dockerignore; preserved from accessible Git baseline"
+    },
+    {
+      "path": ".kamal/hooks/pre-build.sample",
+      "reason": "tracked non-secret Kamal sample hook excluded from image by .dockerignore; preserved from accessible Git baseline"
+    },
+    {
+      "path": ".kamal/hooks/pre-connect.sample",
+      "reason": "tracked non-secret Kamal sample hook excluded from image by .dockerignore; preserved from accessible Git baseline"
+    },
+    {
+      "path": ".kamal/hooks/pre-deploy.sample",
+      "reason": "tracked non-secret Kamal sample hook excluded from image by .dockerignore; preserved from accessible Git baseline"
+    },
+    {
+      "path": ".kamal/hooks/pre-proxy-reboot.sample",
+      "reason": "tracked non-secret Kamal sample hook excluded from image by .dockerignore; preserved from accessible Git baseline"
+    },
+    {
+      "path": "Dockerfile",
+      "reason": "tracked image build definition excluded from final image by .dockerignore; preserved from accessible Git baseline"
+    },
+    {
+      "path": "config/credentials.yml.enc",
+      "reason": "tracked encrypted credentials ciphertext preserved byte-for-byte from accessible Git baseline; image copy intentionally not read"
+    },
+    {
+      "path": "config/deploy.yml",
+      "reason": "tracked secret-free deploy input intentionally absent from runtime image by .dockerignore; preserved from accessible Git baseline"
+    }
+  ],
+  "global_exclusion_patterns": [
+    {
+      "pattern": ".git/**",
+      "reason": "Git metadata is not application source and was absent from image"
+    },
+    {
+      "pattern": ".env*",
+      "reason": "environment files are explicitly forbidden even when template-like"
+    },
+    {
+      "pattern": ".kamal/secrets",
+      "reason": "secret-resolution path is explicitly forbidden"
+    },
+    {
+      "pattern": "config/master.key",
+      "reason": "credential key material is explicitly forbidden"
+    },
+    {
+      "pattern": "decrypted credentials",
+      "reason": "secret material is explicitly forbidden"
+    },
+    {
+      "pattern": "storage/** except tracked .keep",
+      "reason": "runtime/customer/user data"
+    },
+    {
+      "pattern": "*.sqlite*, *.db",
+      "reason": "runtime database files"
+    },
+    {
+      "pattern": "log/** except tracked .keep",
+      "reason": "runtime logs"
+    },
+    {
+      "pattern": "tmp/cache/**, tmp/pids/**, tmp/storage/**, *.pid, *.sock",
+      "reason": "runtime/generated state"
+    },
+    {
+      "pattern": "vendor/bundle/**, node_modules/**",
+      "reason": "dependencies"
+    },
+    {
+      "pattern": "public/assets/**, app/assets/builds/**",
+      "reason": "compiled assets"
+    },
+    {
+      "pattern": "coverage/**, backups, dumps",
+      "reason": "generated or potentially sensitive artifacts"
+    }
+  ],
+  "image_only_deployed_source_added": [
+    {
+      "mode": "100644",
+      "path": "app/assets/images/logo-operations-cube-v2.png",
+      "reason": "manually reviewed image-only deployed source/asset; copied byte-for-byte from immutable image projection",
+      "sha256": "a27698dc3c544210eff50d5a216cda0496bbd7058fc0fcd5a4aa8be460444577"
+    },
+    {
+      "mode": "100644",
+      "path": "app/assets/stylesheets/operations.css",
+      "reason": "manually reviewed image-only deployed source/asset; copied byte-for-byte from immutable image projection",
+      "sha256": "1796831c13efee841eee7d77ad22bb87eebb747f3c1400a0eb96f5e510707338"
+    },
+    {
+      "mode": "100644",
+      "path": "app/views/shared/_agent_chat_mock.html.erb",
+      "reason": "manually reviewed image-only deployed source/asset; copied byte-for-byte from immutable image projection",
+      "sha256": "f41811d3d1eeaac1fc9862eca0f3c86c958a4027a3fbd8fda82f03e05e95ab54"
+    },
+    {
+      "mode": "100644",
+      "path": "docs/plano-redesign-oficina-operacoes.md",
+      "reason": "manually reviewed image-only deployed source/asset; copied byte-for-byte from immutable image projection",
+      "sha256": "9229326135c230b18269d23fb69d6c9c71f4288f93b9e0e5db0a547d57033a71"
+    }
+  ],
+  "image_only_generated_or_runtime_paths_not_added": [
+    {
+      "path": "tmp/pids/.keep",
+      "reason": "image-only generated/runtime directory placeholder; excluded from reconstruction by recovery policy"
+    },
+    {
+      "path": "tmp/storage/.keep",
+      "reason": "image-only generated/runtime directory placeholder; excluded from reconstruction by recovery policy"
+    }
+  ],
+  "policy": "No runtime/customer/user data or secret material is recovered from the image. Tracked encrypted credentials ciphertext is preserved only from the accessible Git baseline.",
+  "removed_tracked_baseline_paths": [
+    {
+      "path": ".env.example",
+      "reason": "explicit recovery exclusion: .env*"
+    },
+    {
+      "path": ".kamal/secrets",
+      "reason": "explicit recovery exclusion: .kamal/secrets"
+    }
+  ],
+  "unprovable_original_git_metadata": [
+    "the original b20a9c9 commit object, tree object, parent list, author, committer, timestamps, commit message, signature, and branch name",
+    "exact bytes at Docker-context-excluded tracked paths for the unavailable original b20a9c9 checkout",
+    "whether the Kamal version string was produced from a clean Git checkout"
+  ]
+}
