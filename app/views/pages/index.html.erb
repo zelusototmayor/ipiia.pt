@@ -7,8 +7,7 @@
         Menos horas a perseguir informação. <em>Mais decisões no momento certo.</em>
       </h1>
       <p class="lead fade-in delay-2">
-        Ajudamos PMEs portuguesas a pôr a IA a trabalhar nos processos reais —
-        diagnóstico, formação e sistemas que devolvem tempo à gestão.
+        Ajudamos PMEs portuguesas a pôr a IA a trabalhar nos processos reais, com diagnóstico, formação e sistemas que devolvem tempo à gestão.
       </p>
       <div class="hero-actions fade-in delay-3">
         <a class="btn btn-primary" href="/book-call.html">Marcar intro call <span aria-hidden="true">→</span></a>
@@ -44,6 +43,23 @@
   </div>
 </section>
 
+<section class="client-strip" aria-label="Clientes IPIIA">
+  <div class="container client-strip-inner">
+    <p>Empresas com quem trabalhamos</p>
+    <div class="client-marquee" tabindex="0" aria-label="JAM, SellPoint e Cerealis. A animação pausa ao focar esta faixa.">
+      <div class="client-track">
+      <% 4.times do |copy| %>
+      <div class="client-logos" <%= 'aria-hidden=true' if copy > 0 %>>
+      <%= image_tag "client-jam.png", alt: "JAM", class: "client-logo client-logo-jam", width: 765, height: 362 %>
+      <%= image_tag "client-sellpoint.png", alt: "SellPoint", class: "client-logo", width: 676, height: 322 %>
+      <%= image_tag "client-cerealis.svg", alt: "Cerealis", class: "client-logo", width: 136, height: 60 %>
+      </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── CRED BAR ── -->
 <div class="cred-bar">
   <div class="container cred-bar-inner">
@@ -64,36 +80,33 @@
 <!-- ── PROBLEM ── -->
 <section class="section section-alt">
   <div class="container">
-    <div class="problem-intro">
+    <div class="problem-intro problem-intro-photographic">
       <div class="fade-in">
-        <span class="eyebrow">O Problema</span>
-        <h2>A maioria das empresas <em>perde-se</em> antes de começar.</h2>
+        <h2>A informação está espalhada. A gestão <em>perde tempo</em> a reuni-la.</h2>
       </div>
       <p class="lead fade-in delay-1">
-        Não por falta de interesse na IA — mas por falta de um parceiro que conheça
-        tanto os processos de negócio como as ferramentas certas.
+        Emails, folhas de cálculo e sistemas separados obrigam a equipa a procurar, confirmar e copiar informação todos os dias.
       </p>
+      <figure class="editorial-photo">
+        <%= image_tag "corporate-focus.jpg", alt: "Profissional a rever documentação numa secretária organizada", width: 1536, height: 1024, loading: "lazy" %>
+      </figure>
     </div>
     <div class="problem-grid fade-in delay-2">
       <div class="problem-card">
-        <span class="problem-num">01</span>
         <h3>A gestão descobre os problemas tarde.</h3>
         <p>A informação vive espalhada por emails, folhas de cálculo e sistemas. Quando o desvio aparece, já custou tempo, dinheiro ou um cliente.</p>
       </div>
       <div class="problem-card">
-        <span class="problem-num">02</span>
         <h3>Já tentou uma solução que não gerou resultados.</h3>
-        <p>Comprou uma ferramenta ou contratou uma consultora. Ficou sem ROI. A teoria não chegou aos processos reais.</p>
+        <p>A ferramenta foi instalada, mas a equipa continua a fazer o mesmo trabalho manual.</p>
       </div>
       <div class="problem-card">
-        <span class="problem-num">03</span>
         <h3>A equipa técnica está sobrecarregada.</h3>
         <p>Não tem capacidade interna para explorar e testar IA em cima das operações do dia-a-dia.</p>
       </div>
       <div class="problem-card">
-        <span class="problem-num">04</span>
         <h3>Não sabe como medir o impacto da IA.</h3>
-        <p>Sem métricas claras, qualquer piloto parece um custo — não um investimento com retorno mensurável.</p>
+        <p>É difícil avaliar o investimento sem comparar tempo, custo ou erros antes e depois.</p>
       </div>
     </div>
   </div>
@@ -104,12 +117,11 @@
   <div class="container">
     <div class="agent-split">
       <div class="fade-in">
-        <span class="eyebrow">Novo · Agente de Gestão com IA</span>
-        <h2>Uma camada de gestão que vê a sua operação — <em>e ajuda-a a avançar</em>.</h2>
+        <h2>Um agente que reúne informação, identifica pendentes e <em>executa rotinas</em>.</h2>
         <p class="lead" style="margin-top: 1.25rem;">
           Um sistema privado, ligado às fontes que a empresa autorizar, que reúne o que
           está a acontecer, sinaliza o que merece atenção e prepara o trabalho para
-          avançar — sozinho ou com intervenção da equipa, conforme as regras definidas.
+          avançar, sozinho ou com intervenção da equipa, conforme as regras definidas.
         </p>
         <div class="hero-actions" style="margin-top: 2rem;">
           <a class="btn btn-terracota" href="/agente-de-gestao-ia.html">Conhecer o Agente de Gestão →</a>
@@ -123,19 +135,16 @@
     <div class="pillars-grid pillars-grid-three fade-in delay-1" style="margin-top: 3.5rem;">
       <div class="pillar">
         <div class="pillar-icon"><i data-lucide="eye" style="width:18px;height:18px;stroke-width:1.5"></i></div>
-        <span class="pillar-num">01</span>
         <div class="pillar-title">Vê o que está a acontecer</div>
         <div class="pillar-body">Reúne informação dispersa numa visão atual da operação.</div>
       </div>
       <div class="pillar">
         <div class="pillar-icon"><i data-lucide="bell" style="width:18px;height:18px;stroke-width:1.5"></i></div>
-        <span class="pillar-num">02</span>
         <div class="pillar-title">Sabe o que merece atenção</div>
         <div class="pillar-body">Deteta pendentes, desvios, riscos e prioridades antes de crescerem.</div>
       </div>
       <div class="pillar">
         <div class="pillar-icon"><i data-lucide="settings-2" style="width:18px;height:18px;stroke-width:1.5"></i></div>
-        <span class="pillar-num">03</span>
         <div class="pillar-title">Ajuda o trabalho a avançar</div>
         <div class="pillar-body">Prepara e coordena ações, com o nível de autonomia que a gestão definir.</div>
       </div>
@@ -147,7 +156,6 @@
 <section class="section section-dark">
   <div class="container">
     <div class="fade-in">
-      <span class="eyebrow eyebrow-dark">O Método</span>
       <h2>Quatro fases que <em>transformam diagnóstico em resultados</em>.</h2>
     </div>
     <div class="method-grid fade-in delay-1">
@@ -196,7 +204,6 @@
   <div class="container">
     <div class="offers-header">
       <div class="fade-in">
-        <span class="eyebrow">Serviços</span>
         <h2>Quatro formas de <em>começar</em>.</h2>
       </div>
       <p class="lead fade-in delay-1">
@@ -215,7 +222,6 @@
           <li>Recomendação de percurso formativo</li>
           <li>Relatório enviado por email</li>
         </ul>
-        <span class="offer-scope">Lead magnet gratuito</span>
         <a class="btn btn-primary" href="/teste.html">Fazer teste →</a>
       </div>
       <div class="offer-card">
@@ -228,11 +234,9 @@
           <li>Prompting, verificação e uso responsável</li>
           <li>Percurso básico ou avançado</li>
         </ul>
-        <span class="offer-scope">Inscrição ou proposta</span>
         <a class="btn btn-primary" href="/servicos.html">Ver formação →</a>
       </div>
       <div class="offer-card featured">
-        <div class="offer-badge">Mais procurado</div>
         <div class="offer-eyebrow dark">03 / Diagnóstico</div>
         <div class="offer-title">Diagnóstico IA</div>
         <div class="offer-duration dark">5–10 dias úteis</div>
@@ -242,7 +246,6 @@
           <li>Identificação de oportunidades concretas</li>
           <li>Roadmap priorizado por impacto</li>
         </ul>
-        <span class="offer-scope dark">Sob proposta</span>
         <a class="btn btn-terracota" href="/servicos.html">Saber mais →</a>
       </div>
       <div class="offer-card">
@@ -255,7 +258,6 @@
           <li>Métrica clara de impacto à partida</li>
           <li>Adoção acompanhada com a equipa</li>
         </ul>
-        <span class="offer-scope">Sob proposta</span>
         <a class="btn btn-primary" href="/servicos.html">Saber mais →</a>
       </div>
     </div>
@@ -266,8 +268,7 @@
 <section class="section section-alt">
   <div class="container">
     <div class="fade-in">
-      <span class="eyebrow">Cenários de aplicação</span>
-      <h2>Onde a IA <em>gera impacto real</em>.</h2>
+      <h2>Exemplos de tarefas que podemos <em>automatizar</em>.</h2>
     </div>
     <div class="cases-grid fade-in delay-1">
       <div class="case-item">
@@ -283,12 +284,12 @@
       <div class="case-item">
         <div class="case-icon"><i data-lucide="bar-chart-2" style="width:16px;height:16px;stroke-width:1.5"></i></div>
         <div class="case-title">Reporting automatizado</div>
-        <div class="case-body">Dashboards que se constroem sozinhos. Relatórios semanais sem esforço manual.</div>
+        <div class="case-body">Relatórios semanais preparados automaticamente a partir dos sistemas ligados ao agente.</div>
       </div>
     </div>
     <div class="fade-in delay-2" style="margin-top: 3rem; max-width: 62ch;">
       <p class="lead">
-        Cada um destes cenários pode começar como um piloto isolado — e, depois de
+        Cada um destes cenários pode começar como um piloto isolado, e, depois de
         provar valor, tornar-se um módulo do Agente de Gestão com IA, em vez de
         recomeçar do zero a cada novo processo.
       </p>
@@ -302,7 +303,6 @@
 <!-- ── FINAL CTA ── -->
 <section class="section cta-banner">
   <div class="container fade-in">
-    <span class="eyebrow eyebrow-dark">Próximo passo</span>
     <h2>Comece por uma <em>intro call de 15 minutos</em>.</h2>
     <p class="lead">
       Sem compromisso. Percebemos juntos o contexto e, se fizer sentido,
