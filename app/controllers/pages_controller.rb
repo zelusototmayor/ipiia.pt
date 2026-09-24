@@ -3,12 +3,12 @@ class PagesController < ApplicationController
     "home" => {
       template: "index",
       title: "IPIIA · Instituto Português de Implementação de IA",
-      description: "Diagnóstico, formação e implementação de IA para PMEs portuguesas. Pilotos em 30 dias com métrica definida e um Agente de Gestão com IA para a operação."
+      description: "Automações e agentes de IA para PMEs: tratamento de faturas, atendimento por voz e gestão interna, ligados aos sistemas da empresa."
     },
     "index" => {
       template: "index",
       title: "IPIIA · Instituto Português de Implementação de IA",
-      description: "Diagnóstico, formação e implementação de IA para PMEs portuguesas. Pilotos em 30 dias com métrica definida e um Agente de Gestão com IA para a operação."
+      description: "Automações e agentes de IA para PMEs: tratamento de faturas, atendimento por voz e gestão interna, ligados aos sistemas da empresa."
     },
     "missao" => {
       template: "missao",
@@ -22,8 +22,8 @@ class PagesController < ApplicationController
     },
     "servicos" => {
       template: "servicos",
-      title: "Serviços · IPIIA",
-      description: "Teste gratuito de literacia IA, cursos online, workshops in-company, diagnóstico, pilotos de 30 dias e Agente de Gestão com IA para PMEs portuguesas."
+      title: "Soluções de IA e automação · IPIIA",
+      description: "Implementação de automações e agentes para documentos, atendimento e gestão interna. Projetos ajustados aos processos e sistemas da empresa."
     },
     "agente-de-gestao-ia" => {
       template: "agente_de_gestao_ia",
@@ -37,8 +37,23 @@ class PagesController < ApplicationController
     },
     "casos" => {
       template: "casos",
-      title: "Cenários de aplicação · IPIIA",
-      description: "Cenários de aplicação de IA em PMEs: triagem de email, propostas, reporting, atendimento e conhecimento interno · e os critérios para escolher um piloto."
+      title: "Exemplos e demos · IPIIA",
+      description: "Conheça exemplos de tratamento de faturas, atendimento por voz e gestão interna com IA."
+    },
+    "formacao" => {
+      template: "formacao",
+      title: "Formação em IA · IPIIA",
+      description: "Cursos online e workshops para usar IA nas tarefas da equipa."
+    },
+    "automacao-faturas" => {
+      template: "automacao_faturas",
+      title: "Faturas do email ao ERP · IPIIA",
+      description: "Como automatizar a receção, leitura e inserção de faturas no ERP, com integração ajustada aos sistemas da empresa."
+    },
+    "reboques-ipiia" => {
+      template: "reboques_ipiia",
+      title: "Demonstração de voz Reboques IPIIA",
+      description: "Demonstração de um agente de voz que recolhe e regista pedidos de assistência. Empresa fictícia, sem despacho real."
     },
     "teste" => {
       template: "teste",

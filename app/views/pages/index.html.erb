@@ -1,44 +1,14 @@
-<!-- ── HERO ── -->
-<section class="hero">
+<!-- Homepage: concrete applications before method and training. -->
+<section class="hero implementation-hero">
   <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
   <div class="container hero-content">
     <div class="hero-copy">
-      <h1 class="fade-in delay-1">
-        Menos horas a perseguir informação. <em>Mais decisões no momento certo.</em>
-      </h1>
-      <p class="lead fade-in delay-2">
-        Ajudamos PMEs portuguesas a pôr a IA a trabalhar nos processos reais, com diagnóstico, formação e sistemas que devolvem tempo à gestão.
-      </p>
-      <div class="hero-actions fade-in delay-3">
-        <a class="btn btn-primary" href="/book-call.html">Marcar intro call <span aria-hidden="true">→</span></a>
-        <a class="text-link" href="/metodo.html">Ver como trabalhamos</a>
+      <h1 class="fade-in">Automatizamos tarefas que ainda faz <em>à mão.</em></h1>
+      <p class="lead fade-in delay-1">Desenvolvemos automações e agentes de IA à medida dos processos da sua empresa, ligados aos sistemas que já utiliza.</p>
+      <div class="hero-actions fade-in delay-2">
+        <a class="btn btn-primary" href="/book-call.html">Falar sobre um processo <span aria-hidden="true">→</span></a>
+        <a class="text-link" href="#exemplos">Ver exemplos</a>
       </div>
-    </div>
-    <div class="ops-flow fade-in delay-2" aria-label="Exemplo de fluxo operacional autónomo">
-      <div class="ops-flow-head">
-        <span>Fluxo operacional</span>
-        <span class="ops-flow-status"><i></i> Em execução</span>
-      </div>
-      <div class="ops-flow-steps">
-        <div class="ops-flow-step">
-          <span class="ops-flow-num">01</span>
-          <strong>Informação reunida</strong>
-          <small>Dados e pendentes num só lugar</small>
-        </div>
-        <span class="ops-flow-arrow" aria-hidden="true">→</span>
-        <div class="ops-flow-step is-active">
-          <span class="ops-flow-num">02</span>
-          <strong>Prioridades detetadas</strong>
-          <small>O agente aplica as regras da operação</small>
-        </div>
-        <span class="ops-flow-arrow" aria-hidden="true">→</span>
-        <div class="ops-flow-step">
-          <span class="ops-flow-num">03</span>
-          <strong>Ação executada</strong>
-          <small>O trabalho avança automaticamente</small>
-        </div>
-      </div>
-      <div class="ops-flow-foot">Exemplo ilustrativo · autonomia configurada à operação</div>
     </div>
   </div>
 </section>
@@ -60,254 +30,55 @@
   </div>
 </section>
 
-<!-- ── CRED BAR ── -->
-<div class="cred-bar">
-  <div class="container cred-bar-inner">
-    <span class="cred-label">Setores em foco</span>
-    <div class="cred-pipe"></div>
-    <div class="cred-items">
-      <span class="cred-item">Indústria</span>
-      <span class="cred-item">Retalho</span>
-      <span class="cred-item">Logística</span>
-      <span class="cred-item">Serviços financeiros</span>
-      <span class="cred-item">Saúde</span>
-      <span class="cred-item">Jurídico</span>
-      <span class="cred-item">Construção</span>
-    </div>
-  </div>
-</div>
 
-<!-- ── PROBLEM ── -->
-<section class="section section-alt">
+<section class="section" id="exemplos">
   <div class="container">
-    <div class="problem-intro problem-intro-photographic">
-      <div class="fade-in">
-        <h2>A informação está espalhada. A gestão <em>perde tempo</em> a reuni-la.</h2>
-      </div>
-      <p class="lead fade-in delay-1">
-        Emails, folhas de cálculo e sistemas separados obrigam a equipa a procurar, confirmar e copiar informação todos os dias.
-      </p>
-      <figure class="editorial-photo">
-        <%= image_tag "corporate-focus.jpg", alt: "Profissional a rever documentação numa secretária organizada", width: 1536, height: 1024, loading: "lazy" %>
-      </figure>
+    <div class="section-intro">
+      <h2>Alguns exemplos do que podemos <em>automatizar.</em></h2>
+      <p class="lead">Cada solução é feita à medida do processo e dos sistemas da empresa. Estes são apenas alguns exemplos.</p>
     </div>
-    <div class="problem-grid fade-in delay-2">
-      <div class="problem-card">
-        <h3>A gestão descobre os problemas tarde.</h3>
-        <p>A informação vive espalhada por emails, folhas de cálculo e sistemas. Quando o desvio aparece, já custou tempo, dinheiro ou um cliente.</p>
-      </div>
-      <div class="problem-card">
-        <h3>Já tentou uma solução que não gerou resultados.</h3>
-        <p>A ferramenta foi instalada, mas a equipa continua a fazer o mesmo trabalho manual.</p>
-      </div>
-      <div class="problem-card">
-        <h3>A equipa técnica está sobrecarregada.</h3>
-        <p>Não tem capacidade interna para explorar e testar IA em cima das operações do dia-a-dia.</p>
-      </div>
-      <div class="problem-card">
-        <h3>Não sabe como medir o impacto da IA.</h3>
-        <p>É difícil avaliar o investimento sem comparar tempo, custo ou erros antes e depois.</p>
-      </div>
-    </div>
+    <%= render "shared/implementation_examples" %>
+    <a class="text-link section-follow-link" href="/casos.html">Ver exemplos e demonstrações →</a>
   </div>
 </section>
 
-<!-- ── AGENTE DE GESTÃO ── -->
-<section class="section">
-  <div class="container">
-    <div class="agent-split">
-      <div class="fade-in">
-        <h2>Um agente que reúne informação, identifica pendentes e <em>executa rotinas</em>.</h2>
-        <p class="lead" style="margin-top: 1.25rem;">
-          Um sistema privado, ligado às fontes que a empresa autorizar, que reúne o que
-          está a acontecer, sinaliza o que merece atenção e prepara o trabalho para
-          avançar, sozinho ou com intervenção da equipa, conforme as regras definidas.
-        </p>
-        <div class="hero-actions" style="margin-top: 2rem;">
-          <a class="btn btn-terracota" href="/agente-de-gestao-ia.html">Conhecer o Agente de Gestão →</a>
-          <a class="btn btn-secondary" href="/book-call.html?tema=agente">Marcar diagnóstico</a>
-        </div>
-      </div>
-      <div class="fade-in delay-1">
-        <%= render "shared/agent_mock" %>
-      </div>
-    </div>
-    <div class="pillars-grid pillars-grid-three fade-in delay-1" style="margin-top: 3.5rem;">
-      <div class="pillar">
-        <div class="pillar-icon"><i data-lucide="eye" style="width:18px;height:18px;stroke-width:1.5"></i></div>
-        <div class="pillar-title">Vê o que está a acontecer</div>
-        <div class="pillar-body">Reúne informação dispersa numa visão atual da operação.</div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon"><i data-lucide="bell" style="width:18px;height:18px;stroke-width:1.5"></i></div>
-        <div class="pillar-title">Sabe o que merece atenção</div>
-        <div class="pillar-body">Deteta pendentes, desvios, riscos e prioridades antes de crescerem.</div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon"><i data-lucide="settings-2" style="width:18px;height:18px;stroke-width:1.5"></i></div>
-        <div class="pillar-title">Ajuda o trabalho a avançar</div>
-        <div class="pillar-body">Prepara e coordena ações, com o nível de autonomia que a gestão definir.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── METHOD PREVIEW ── -->
 <section class="section section-dark">
-  <div class="container">
-    <div class="fade-in">
-      <h2>Quatro fases que <em>transformam diagnóstico em resultados</em>.</h2>
+  <div class="container implementation-method">
+    <div>
+      <h2>Começamos por conhecer <em>o trabalho.</em></h2>
+      <p class="lead">Mostre-nos como trata hoje esse processo. Vemos o que pode ser automatizado, a que sistemas precisamos de nos ligar e como avaliar o resultado.</p>
+      <a class="text-link" href="/metodo.html">Conhecer o método →</a>
     </div>
-    <div class="method-grid fade-in delay-1">
-      <div class="method-step">
-        <div class="method-num">01</div>
-        <span class="method-label">Diagnóstico</span>
-        <div class="method-title">Mapeamos os processos reais</div>
-        <div class="method-body">Identificamos onde a IA pode gerar impacto operacional concreto.</div>
-        <div class="method-connector">
-          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor"><path d="M3 6h6M7 4l2 2-2 2"/></svg>
-        </div>
-      </div>
-      <div class="method-step">
-        <div class="method-num">02</div>
-        <span class="method-label">Priorização</span>
-        <div class="method-title">Escolhemos o piloto certo</div>
-        <div class="method-body">Classificamos oportunidades por impacto e viabilidade. Alinhamos expectativas antes de avançar.</div>
-        <div class="method-connector">
-          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor"><path d="M3 6h6M7 4l2 2-2 2"/></svg>
-        </div>
-      </div>
-      <div class="method-step">
-        <div class="method-num">03</div>
-        <span class="method-label">Piloto</span>
-        <div class="method-title">Construímos e entregamos</div>
-        <div class="method-body">Um piloto funcional em 30 dias. Acompanhamos a adoção com a equipa.</div>
-        <div class="method-connector">
-          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor"><path d="M3 6h6M7 4l2 2-2 2"/></svg>
-        </div>
-      </div>
-      <div class="method-step">
-        <div class="method-num">04</div>
-        <span class="method-label">Medição</span>
-        <div class="method-title">Validamos o impacto</div>
-        <div class="method-body">A métrica é definida desde o início. Validamos o retorno. Decidimos juntos o próximo passo.</div>
-      </div>
-    </div>
-    <div style="margin-top: 3rem;" class="fade-in delay-2">
-      <a class="btn btn-terracota" href="/metodo.html">Ver método completo →</a>
-    </div>
+    <ol class="implementation-steps">
+      <li><h3>Escolher o processo</h3><p>Identificamos as tarefas repetidas, os dados necessários e as exceções.</p></li>
+      <li><h3>Construir e testar</h3><p>Implementamos um primeiro fluxo e testamo-lo com a equipa antes de o pôr em utilização.</p></li>
+      <li><h3>Acompanhar o uso</h3><p>Comparamos o resultado com o ponto de partida e ajustamos o que for preciso.</p></li>
+    </ol>
   </div>
 </section>
 
-<!-- ── SERVICES PREVIEW (no prices) ── -->
 <section class="section">
-  <div class="container">
-    <div class="offers-header">
-      <div class="fade-in">
-        <h2>Quatro formas de <em>começar</em>.</h2>
-      </div>
-      <p class="lead fade-in delay-1">
-        Pode começar por conhecimento, formação, diagnóstico ou implementação.
-        O caminho certo depende da maturidade da equipa e do processo.
-      </p>
-    </div>
-    <div class="offers-grid offers-grid-four fade-in delay-2">
-      <div class="offer-card">
-        <div class="offer-eyebrow">01 / Teste gratuito</div>
-        <div class="offer-title">Diagnóstico de conhecimento IA</div>
-        <div class="offer-duration">5–7 minutos</div>
-        <div class="offer-sep"></div>
-        <ul class="offer-features">
-          <li>Pontuação por dimensões de literacia IA</li>
-          <li>Recomendação de percurso formativo</li>
-          <li>Relatório enviado por email</li>
-        </ul>
-        <a class="btn btn-primary" href="/teste.html">Fazer teste →</a>
-      </div>
-      <div class="offer-card">
-        <div class="offer-eyebrow">02 / Formação</div>
-        <div class="offer-title">Cursos e workshops IA</div>
-        <div class="offer-duration">Online ou in-company</div>
-        <div class="offer-sep"></div>
-        <ul class="offer-features">
-          <li>IA aplicada ao trabalho real</li>
-          <li>Prompting, verificação e uso responsável</li>
-          <li>Percurso básico ou avançado</li>
-        </ul>
-        <a class="btn btn-primary" href="/servicos.html">Ver formação →</a>
-      </div>
-      <div class="offer-card featured">
-        <div class="offer-eyebrow dark">03 / Diagnóstico</div>
-        <div class="offer-title">Diagnóstico IA</div>
-        <div class="offer-duration dark">5–10 dias úteis</div>
-        <div class="offer-sep dark"></div>
-        <ul class="offer-features dark">
-          <li>Mapeamento de processos reais</li>
-          <li>Identificação de oportunidades concretas</li>
-          <li>Roadmap priorizado por impacto</li>
-        </ul>
-        <a class="btn btn-terracota" href="/servicos.html">Saber mais →</a>
-      </div>
-      <div class="offer-card">
-        <div class="offer-eyebrow">04 / Implementação</div>
-        <div class="offer-title">Piloto IA em 30 dias</div>
-        <div class="offer-duration">2–4 semanas</div>
-        <div class="offer-sep"></div>
-        <ul class="offer-features">
-          <li>Automação ou agente funcional</li>
-          <li>Métrica clara de impacto à partida</li>
-          <li>Adoção acompanhada com a equipa</li>
-        </ul>
-        <a class="btn btn-primary" href="/servicos.html">Saber mais →</a>
-      </div>
+  <div class="container training-preview">
+    <figure class="editorial-photo">
+      <%= image_tag "corporate-collaboration.jpg", alt: "Colegas a experimentar uma ferramenta em conjunto", width: 1536, height: 1024, loading: "lazy" %>
+    </figure>
+    <div>
+      <h2>Formação para usar IA <em>no trabalho.</em></h2>
+      <p class="lead">Nem tudo exige uma integração. Nos cursos e workshops, a equipa aprende a usar as ferramentas de IA em tarefas do dia a dia.</p>
+      <a class="text-link" href="/formacao.html">Ver cursos e workshops →</a>
     </div>
   </div>
 </section>
 
-<!-- ── CENÁRIOS DE APLICAÇÃO ── -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="fade-in">
-      <h2>Exemplos de tarefas que podemos <em>automatizar</em>.</h2>
+<section class="section cta-banner implementation-contact">
+  <div class="container implementation-contact-grid">
+    <div>
+    <h2>Que tarefa ocupa demasiado tempo à <em>sua equipa?</em></h2>
+    <p class="lead">Numa conversa de 15 minutos, percebemos o processo e se faz sentido estudá-lo consigo.</p>
+    <a class="btn btn-terracota" href="/book-call.html">Falar sobre um processo →</a>
     </div>
-    <div class="cases-grid fade-in delay-1">
-      <div class="case-item">
-        <div class="case-icon"><i data-lucide="mail" style="width:16px;height:16px;stroke-width:1.5"></i></div>
-        <div class="case-title">Agente de email</div>
-        <div class="case-body">Triagem e resposta automática a emails repetitivos. Reduz horas de backoffice por semana.</div>
-      </div>
-      <div class="case-item">
-        <div class="case-icon"><i data-lucide="file-text" style="width:16px;height:16px;stroke-width:1.5"></i></div>
-        <div class="case-title">Documentos e propostas</div>
-        <div class="case-body">Geração automática a partir de templates e dados existentes.</div>
-      </div>
-      <div class="case-item">
-        <div class="case-icon"><i data-lucide="bar-chart-2" style="width:16px;height:16px;stroke-width:1.5"></i></div>
-        <div class="case-title">Reporting automatizado</div>
-        <div class="case-body">Relatórios semanais preparados automaticamente a partir dos sistemas ligados ao agente.</div>
-      </div>
-    </div>
-    <div class="fade-in delay-2" style="margin-top: 3rem; max-width: 62ch;">
-      <p class="lead">
-        Cada um destes cenários pode começar como um piloto isolado, e, depois de
-        provar valor, tornar-se um módulo do Agente de Gestão com IA, em vez de
-        recomeçar do zero a cada novo processo.
-      </p>
-      <div class="hero-actions" style="margin-top: 1.5rem;">
-        <a class="btn btn-primary" href="/casos.html">Ver todos os cenários →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── FINAL CTA ── -->
-<section class="section cta-banner">
-  <div class="container fade-in">
-    <h2>Comece por uma <em>intro call de 15 minutos</em>.</h2>
-    <p class="lead">
-      Sem compromisso. Percebemos juntos o contexto e, se fizer sentido,
-      encaminhamos para teste, formação, diagnóstico, implementação ou o Agente de Gestão com IA.
-    </p>
-    <a class="btn btn-terracota" href="/book-call.html">Marcar intro call →</a>
+    <figure class="implementation-photo">
+      <%= image_tag "corporate-focus.jpg", alt: "Profissional a rever documentos na sua secretária", width: 1536, height: 1024, loading: "lazy" %>
+    </figure>
   </div>
 </section>

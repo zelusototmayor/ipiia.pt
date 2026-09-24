@@ -920,6 +920,62 @@ textarea:focus,
   .hero-canvas { display: none; }
 }
 
+/* Concrete applications, method and training. */
+.implementation-hero .hero-content { display: block; text-align: center; }
+.implementation-hero .hero-copy { max-width: 850px; margin-inline: auto; }
+.implementation-hero h1 { font-size: clamp(3rem, 4.4vw, 4.7rem); max-width: 22ch; margin-inline: auto; text-align: center; }
+.implementation-hero .lead { max-width: 60ch; margin-inline: auto; text-align: center; }
+.implementation-hero .hero-actions { justify-content: center; }
+.implementation-contact .implementation-contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, .55fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; text-align: left; }
+.implementation-contact h2, .implementation-contact .lead { margin-left: 0; margin-right: 0; text-align: left; }
+.implementation-contact h2 em { color: var(--lime); }
+.implementation-contact .implementation-photo { max-width: 350px; justify-self: end; }
+.implementation-photo { margin: 0; }
+.implementation-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.section-intro { max-width: 780px; margin-bottom: 2.75rem; }
+.section-intro .lead { margin-top: 1rem; }
+.implementation-examples { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.5rem; }
+.implementation-example { display: flex; flex-direction: column; align-items: flex-start; }
+.implementation-example > svg { width: 26px; height: 26px; color: var(--terracota); margin-bottom: 1.3rem; }
+.implementation-example h3 { font-family: var(--font-d); font-size: 1.9rem; line-height: 1.15; margin-bottom: .85rem; }
+.implementation-example p { color: var(--muted); line-height: 1.65; margin-bottom: 1.25rem; }
+.implementation-example .text-link { margin-top: auto; }
+.section-follow-link { display: inline-block; margin-top: 3rem; }
+.implementation-method, .training-preview, .voice-example-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+.implementation-method .lead, .training-preview .lead { margin: 1.2rem 0 1.5rem; }
+.implementation-method .text-link { color: inherit; }
+.implementation-steps { list-style: decimal; padding-left: 1.5rem; }
+.implementation-steps li { padding-left: .65rem; margin-bottom: 1.5rem; }
+.implementation-steps li:last-child { margin-bottom: 0; }
+.implementation-steps li::marker { color: var(--terracota); font-weight: 600; }
+.section-dark .implementation-steps li::marker { color: var(--lime); }
+.section-dark .implementation-steps h3 { color: var(--papel); }
+.implementation-steps h3, .case-notes h3 { font-family: var(--font-d); font-size: 1.65rem; margin-bottom: .5rem; }
+.implementation-steps p, .case-notes p { line-height: 1.65; }
+.case-notes p { margin-bottom: 1.35rem; }
+.training-preview > img { width: 100%; height: auto; }
+.training-courses { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 2rem; }
+.example-context { font-size: .9rem; line-height: 1.6; color: var(--muted); margin-top: 1.75rem; max-width: 72ch; }
+.voice-example-sheet { padding: clamp(1.5rem, 3vw, 2.5rem); background: var(--azul); color: var(--papel); }
+.voice-example-sheet h3 { color: var(--papel); font-family: var(--font-d); font-size: 2rem; }
+.voice-example-sheet p { font-size: .875rem; color: rgba(245,246,242,.8); }
+.voice-example-sheet dl { margin: 1.5rem 0; }
+.voice-example-sheet dl > div { padding: .8rem 0; display: grid; grid-template-columns: 100px 1fr; gap: 1rem; border-bottom: 1px solid rgba(245,246,242,.15); }
+.voice-example-sheet dt { color: var(--lime); }
+.voice-example-sheet dd { margin: 0; }
+@media (max-width: 850px) {
+  .implementation-hero .hero-content, .implementation-method, .training-preview, .voice-example-layout { grid-template-columns: 1fr; }
+  .implementation-examples { grid-template-columns: 1fr; gap: 2.5rem; }
+  .implementation-example { max-width: 560px; }
+  .implementation-hero h1 { max-width: 18ch; font-size: clamp(2.75rem, 9vw, 4rem); }
+  .implementation-photo img { aspect-ratio: 16 / 9; }
+  .training-courses { grid-template-columns: 1fr; gap: 2rem; }
+}
+@media (max-width: 700px) {
+  .implementation-contact .implementation-contact-grid { grid-template-columns: 1fr; }
+  .implementation-contact .implementation-photo { width: 100%; max-width: 350px; justify-self: start; }
+}
+
 /* Editorial imagery and quieter page furniture. */
 .about-quote { border: 0; padding-left: 0; margin-top: 0; }
 .about-quote p { font-style: normal; }

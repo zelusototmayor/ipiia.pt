@@ -1,0 +1,44 @@
+<section class="page-hero">
+  <div class="container">
+    <h1>Um agente de voz para <em>recolher pedidos.</em></h1>
+    <p class="lead">Na demonstração Reboques IPIIA, o agente atende uma chamada de assistência, faz as perguntas necessárias e prepara uma ficha para a equipa.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container voice-example-layout">
+    <div class="case-notes">
+      <h2>Experimente <em>uma conversa.</em></h2>
+      <p>Pode descrever uma avaria, indicar uma localização e corrigir um dado durante a chamada. No fim, o agente confirma a informação recolhida.</p>
+      <p>Use dados fictícios. Reboques IPIIA é uma empresa de demonstração e não presta assistência real.</p>
+      <a class="btn btn-primary" href="/book-call.html?tema=voz">Pedir acesso à demo de voz →</a>
+      <% if Rails.env.development? %>
+        <p class="example-context">Só nesta revisão local: <a class="text-link" href="http://127.0.0.1:8001/" target="_blank" rel="noopener">Abrir a pré-visualização da demo →</a>. Login mantido e chamadas desativadas. A versão online ainda não foi alterada.</p>
+      <% end %>
+      <p class="example-context">A demo está protegida por login. O acesso é acompanhado, sem expor pedidos de outras sessões.</p>
+    </div>
+    <div class="voice-example-sheet" aria-label="Exemplo fictício de pedido recolhido">
+      <h3>Reboques IPIIA</h3>
+      <p>Exemplo fictício de ficha de assistência</p>
+      <dl>
+        <div><dt>Motivo</dt><dd>O carro não pega.</dd></div>
+        <div><dt>Localização</dt><dd>Telheiras, Lisboa. Morada por confirmar.</dd></div>
+        <div><dt>Viatura</dt><dd>Renault Clio</dd></div>
+        <div><dt>Destino</dt><dd>Por indicar</dd></div>
+      </dl>
+      <p>Pedido para revisão da equipa. Nenhuma viatura acionada.</p>
+    </div>
+  </div>
+</section>
+<section class="section section-alt">
+  <div class="container implementation-method">
+    <div>
+      <h2>Da conversa ao <em>pedido registado.</em></h2>
+      <p class="lead">O exemplo usa assistência automóvel. A mesma abordagem pode ser adaptada a outras operações que recebem pedidos por telefone.</p>
+    </div>
+    <div class="case-notes">
+      <h3>O que a demo faz</h3><p>Recolhe contacto, localização, viatura e motivo do pedido. Guarda a informação, aceita correções e pede confirmação.</p>
+      <h3>O que fica fora</h3><p>Não envia reboques, não confirma preços ou tempos de chegada e não insere pedidos num sistema de despacho.</p>
+      <h3>Privacidade</h3><p>O áudio é processado por fornecedores de voz e pode haver transcrição. Não utilize dados pessoais reais na demonstração.</p>
+    </div>
+  </div>
+</section>

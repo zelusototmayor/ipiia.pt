@@ -12,16 +12,15 @@
     </button>
     <div class="nav-links" id="nav-links">
       <% [
-        ["Agente de Gestão", "/agente-de-gestao-ia.html"],
-        ["Serviços", "/servicos.html"],
-        ["Casos", "/casos.html"],
+        ["Soluções", "/servicos.html"],
+        ["Exemplos e demos", "/casos.html"],
+        ["Formação", "/formacao.html"],
         ["Apoios IA", "/fundos-europeus-ia-pmes"],
-        ["Teste IA", "/teste.html"],
         ["Sobre", "/sobre.html"]
       ].each do |label, href| %>
         <a class="nav-link" href="<%= href %>"<%= ' aria-current="page"'.html_safe if nav_current?(href) %>><%= label %></a>
       <% end %>
-      <a class="btn btn-primary nav-cta" href="/book-call.html">Marcar intro call <span aria-hidden="true">→</span></a>
+      <a class="btn btn-primary nav-cta" href="/book-call.html">Falar connosco <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </nav>
