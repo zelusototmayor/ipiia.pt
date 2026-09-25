@@ -922,8 +922,10 @@ textarea:focus,
 
 /* Concrete applications, method and training. */
 .implementation-hero .hero-content { display: block; text-align: center; }
-.implementation-hero .hero-copy { max-width: 850px; margin-inline: auto; }
-.implementation-hero h1 { font-size: clamp(3rem, 4.4vw, 4.7rem); max-width: 22ch; margin-inline: auto; text-align: center; }
+.implementation-hero .hero-copy { max-width: 1100px; margin-inline: auto; }
+.implementation-hero h1 { font-size: clamp(3rem, 5.5vw, 5.5rem); max-width: none; margin-inline: auto; text-align: center; line-height: 1.08; }
+.implementation-hero .hero-title-line { display: block; }
+.implementation-hero h1 em { display: inline; margin-top: 0; white-space: nowrap; }
 .implementation-hero .lead { max-width: 60ch; margin-inline: auto; text-align: center; }
 .implementation-hero .hero-actions { justify-content: center; }
 .implementation-contact .implementation-contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, .55fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; text-align: left; }
@@ -967,7 +969,7 @@ textarea:focus,
   .implementation-hero .hero-content, .implementation-method, .training-preview, .voice-example-layout { grid-template-columns: 1fr; }
   .implementation-examples { grid-template-columns: 1fr; gap: 2.5rem; }
   .implementation-example { max-width: 560px; }
-  .implementation-hero h1 { max-width: 18ch; font-size: clamp(2.75rem, 9vw, 4rem); }
+  .implementation-hero h1 { max-width: none; font-size: clamp(2.15rem, 6.8vw, 4rem); }
   .implementation-photo img { aspect-ratio: 16 / 9; }
   .training-courses { grid-template-columns: 1fr; gap: 2rem; }
 }
