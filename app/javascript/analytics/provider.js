@@ -5,6 +5,8 @@ import { ROUTES, BINDINGS } from 'analytics/dictionary';
 /** Site-local boundary. collector is disabled by default; no buffering/replay. */
 export function createAnalytics({ collector = null, storage = () => window.localStorage, now = () => Date.now(), production = true, context = () => ({ url: window.location.href, referrer: document.referrer, width: window.innerWidth }) } = {}) {
   let consent = false;
+  let consentGeneration = 0;
+  let pendingConsent = false;
   let attribution = { version: 1, first: null, last: null };
   let lastPage = null;
   let lastAttributionUrl = null;
@@ -25,6 +27,7 @@ export function createAnalytics({ collector = null, storage = () => window.local
   };
   function updateAttribution() {
     if (!consent) return;
+    if (collector?.isActive && !collector.isActive()) { setConsent(false); return; }
     const saved = io((store) => JSON.parse(store.getItem(STORAGE_KEY) || 'null'));
     attribution = { version: 1, first: safeTouch(saved?.version === 1 ? saved.first : null), last: safeTouch(saved?.version === 1 ? saved.last : null) };
     const ctx = context();
@@ -39,19 +42,32 @@ export function createAnalytics({ collector = null, storage = () => window.local
     else io((store) => store.removeItem(STORAGE_KEY));
   }
   function setConsent(value) {
+    const generation = ++consentGeneration;
     if (value === true && !consent) {
       // No SDK init, identity creation or storage access before explicit opt-in.
-      try { if (!collector || collector.start() === false) return false; } catch { return false; }
-      consent = true;
-      updateAttribution();
-      pageView();
+      const accepted = (result) => {
+        if (generation !== consentGeneration || result === false) return false;
+        pendingConsent = false;
+        consent = true;
+        updateAttribution();
+        pageView();
+        return true;
+      };
+      try {
+        if (!collector) return false;
+        pendingConsent = true;
+        const result = collector.start();
+        if (result?.then) return result.then(accepted, () => accepted(false));
+        return accepted(result);
+      } catch { pendingConsent = false; return false; }
     } else if (value !== true) {
       const wasConsented = consent;
       consent = false; // close boundary before reset/opt-out (including callbacks)
-      if (wasConsented) {
+      if (wasConsented || pendingConsent || collector?.isActive) {
         try { collector?.stop(); } catch { /* transport failure cannot reopen consent */ }
         io((store) => store.removeItem(STORAGE_KEY));
       }
+      pendingConsent = false;
       attribution = { version: 1, first: null, last: null };
       lastPage = null;
       lastAttributionUrl = null;
@@ -64,7 +80,7 @@ export function createAnalytics({ collector = null, storage = () => window.local
     if (!EVENTS.includes(eventName)) return reject('Unknown event');
     if (!controlledProps || typeof controlledProps !== 'object' || Array.isArray(controlledProps)) return reject('Invalid properties');
     if (Object.keys(controlledProps).some((key) => !PROPERTIES.includes(key))) return reject('Unknown property');
-    if (!consent) return false;
+    if (!hasConsent()) return false;
     const props = { site: 'ipiia.pt' };
     const ctx = context();
     const path = pathname(controlledProps.page_path || ctx.url);
@@ -119,12 +135,15 @@ export function createAnalytics({ collector = null, storage = () => window.local
     completed.add(flow);
     return true;
   }
-  return Object.freeze({ track, setConsent, pageView, begin, confirm, hasConsent: () => consent });
+  function hasConsent() {
+    if (consent && collector?.isActive && !collector.isActive()) setConsent(false);
+    return consent;
+  }
+  return Object.freeze({ track, setConsent, pageView, begin, confirm, hasConsent });
 }
 
-// Adapter contract exercised with an injected SYNTHETIC SDK, not loaded on this card.
-// A separately approved live release must pin/audit/vendor the official SDK and wire
-// a lazy factory + deploy-env MIXPANEL_TOKEN. No CDN snippet, token or loader shipped.
+// Historical mock adapter retained for the preserved local preview proof. Real
+// pinned SDK candidate applies additional controls in analytics/sdk.
 export const MIXPANEL_CONFIG = Object.freeze({
   api_host: 'https://api-eu.mixpanel.com', autocapture: false, track_pageview: false,
   record_sessions_percent: 0, record_heatmap_data: false, ip: false,

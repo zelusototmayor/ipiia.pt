@@ -5,6 +5,10 @@ Base: https://github.com/zelusototmayor/ipiia.pt, recovery/ipiia-b20a9c9-preview
 sole parent db7fa7f01b8a899dee090013d16b35364d7e0ada. Candidate branch analytics/t_2e812733.
 Scope: LOCAL MOCK/SYNTHETIC only. Not production-ready privacy/release approval.
 
+Historical phase only: the separately frozen official SDK/CMP/env successor is
+documented in analytics-sdk-candidate.md. Do not use the mock-only storage/identity
+claims below as current official SDK or production facts.
+
 ## Single site-local boundary
 
 app/javascript/analytics/contract.js is the versioned exact 12-event/15-business-property

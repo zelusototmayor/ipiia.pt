@@ -1,9 +1,10 @@
 import { createAnalytics } from 'analytics/provider';
 import { ROUTES, BINDINGS, EXTERNAL_HOSTS, bindingId } from 'analytics/dictionary';
 import { FORMS } from 'analytics/contract';
+import { createSdkCollector, validConfig } from 'analytics/sdk';
+import { mountConsent } from 'analytics/consent';
 
-// The production/default instance has NO collector and cannot be enabled by env,
-// query string, DOM attributes or consent alone. Only local preview installs mock.
+// Server-rendered env candidate, absent/disabled by default. No query override.
 let analytics = createAnalytics();
 export const track = (event, props) => analytics.track(event, props);
 export const begin = (flow) => analytics.begin(flow);
@@ -34,6 +35,15 @@ export function clickBinding(anchor) {
 }
 const seenMarkers = new WeakSet();
 function loaded() {
+  const panel = document.querySelector('[data-analytics-consent]');
+  if (panel && !panel.dataset.mounted) {
+    let config;
+    try { config = JSON.parse(panel.dataset.config); } catch { config = null; }
+    if (validConfig(config)) {
+      if (!analytics.hasConsent()) analytics = createAnalytics({ collector: createSdkCollector(config) });
+      mountConsent(panel, analytics);
+    }
+  }
   analytics.pageView();
   const marker = document.querySelector('meta[name="ipiia-booking-confirmed"]');
   if (marker && !seenMarkers.has(marker)) {

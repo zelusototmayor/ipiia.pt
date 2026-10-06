@@ -1,0 +1,5 @@
+.analytics-consent { margin: 1rem; padding: 1rem; border: 1px solid currentColor; border-radius: .5rem; }
+.analytics-consent-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+.analytics-consent-actions button { font: inherit; color: inherit; background: transparent; border: 1px solid currentColor; border-radius: .25rem; min-height: 44px; padding: .75rem 1rem; }
+.analytics-consent-actions button:focus-visible { outline: 3px solid currentColor; outline-offset: 3px; }
+.analytics-consent-actions button[hidden] { display: none; }
