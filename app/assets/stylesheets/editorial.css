@@ -19,4 +19,7 @@
 .editorial-sources, .editorial-related { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
 .editorial-body .btn { margin: .5rem 0 1.5rem; min-height: 44px; white-space: normal; }
 .editorial-page .page-hero h1 { max-width: 22ch; }
+@media (max-width: 600px) {
+  .editorial-table--checklist th, .editorial-table--checklist td { min-width: 0; }
+}
 @media (prefers-reduced-motion: reduce) { .editorial-page * { scroll-behavior: auto; } }
