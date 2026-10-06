@@ -9,6 +9,7 @@ class BookingsController < ApplicationController
       BookingMailer.confirmation(@booking).deliver_later
       BookingMailer.host_notification(@booking).deliver_later
 
+      flash[:analytics_booking_completed] = true if params[:analytics_consented] == "true"
       redirect_to booking_path(@booking.confirmation_token), notice: "Intro call registada."
     else
       redirect_to page_path("book-call"), alert: @booking.errors.full_messages.to_sentence

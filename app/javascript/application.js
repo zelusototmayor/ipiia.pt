@@ -1,3 +1,5 @@
+import { begin as analyticsBegin, confirm as analyticsConfirm } from 'analytics/index';
+
 (function () {
   'use strict';
 
@@ -152,6 +154,7 @@
       submit.disabled = true;
       const original = submit.textContent;
       submit.textContent = 'A enviar...';
+      analyticsBegin('contact');
 
       const payload = {
         contact_message: {
@@ -178,6 +181,7 @@
 
         form.hidden = true;
         success.hidden = false;
+        analyticsConfirm('contact', { status: response.status, ok: data.ok });
       } catch (error) {
         alert(error.message);
       } finally {
@@ -204,6 +208,7 @@
       submit.disabled = true;
       const original = submit.textContent;
       submit.textContent = 'A registar...';
+      analyticsBegin('course_waitlist');
 
       const payload = {
         course_waitlist_entry: {
@@ -228,6 +233,7 @@
         if (successMessage && data.message) successMessage.textContent = data.message;
         form.hidden = true;
         success.hidden = false;
+        analyticsConfirm('course_waitlist', { status: response.status, ok: data.ok });
       } catch (error) {
         alert(error.message);
       } finally {
@@ -292,6 +298,7 @@
     function startTest() {
       showPanel('question');
       renderQuestion();
+      analyticsBegin('diagnostic');
       shell.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
@@ -364,6 +371,7 @@
 
         completeMessage.textContent = data.message || completeMessage.textContent;
         showPanel('complete');
+        analyticsConfirm('diagnostic', { status: response.status, ok: data.ok });
         complete.scrollIntoView({ behavior: 'smooth', block: 'start' });
       } catch (error) {
         alert(error.message);
@@ -463,6 +471,7 @@
         if (selectedDateTitle) selectedDateTitle.textContent = state.label;
         loadSlots(state.date);
         showStep(2);
+        analyticsBegin('booking');
       });
     }
 
