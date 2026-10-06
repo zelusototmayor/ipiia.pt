@@ -807,14 +807,14 @@ textarea:focus,
 }
 
 .footer-disclaimer {
-  color: rgba(245, 246, 242, .4);
+  color: rgba(245, 246, 242, .58);
   font-size: .58rem;
 }
 
 .footer-col-label { color: var(--lime); }
 .footer-link { color: rgba(245, 246, 242, .65); }
 .footer-link:hover { color: var(--papel); }
-.footer-copy { color: rgba(245, 246, 242, .38); }
+.footer-copy { color: rgba(245, 246, 242, .58); }
 
 @media (max-width: 1100px) {
   .nav-name { display: none; }
