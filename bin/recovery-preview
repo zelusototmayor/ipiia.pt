@@ -1,0 +1,317 @@
+#!/usr/bin/env python3
+"""Local no-send preview. Python stdlib + local Docker only; never invoke Kamal."""
+import hashlib
+import http.server
+import json
+import os
+from pathlib import Path
+import re
+import secrets
+import shutil
+import subprocess
+import sys
+import tempfile
+import threading
+import time
+import urllib.parse
+import urllib.request
+import xml.etree.ElementTree as ET
+
+ROOT = Path(__file__).resolve().parents[1]
+ANCHOR = "db7fa7f01b8a899dee090013d16b35364d7e0ada"
+STATE = ROOT / "tmp/recovery-preview"
+LABEL = "ipiia.recovery-preview"
+CSP = ("default-src 'self'; script-src 'self' 'unsafe-inline'; "
+       "style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; "
+       "connect-src 'self'; form-action 'none'; frame-src 'none'; "
+       "object-src 'none'; base-uri 'none'")
+EXCLUDED = [".env.example", "config/credentials.yml.enc", "log/.keep", "storage/.keep", "tmp/.keep"]
+EXCLUDED += [".kamal/secrets"] + [f".kamal/hooks/{name}.sample" for name in (
+    "docker-setup", "post-app-boot", "post-deploy", "post-proxy-reboot",
+    "pre-app-boot", "pre-build", "pre-connect", "pre-deploy", "pre-proxy-reboot")]
+
+
+def run(*args, **kwargs):
+    return subprocess.check_output(list(args), **kwargs)
+
+
+def git(*args):
+    return run("git", "-C", str(ROOT), *args, text=True).strip()
+
+
+def routes():
+    # Production sitemap URLs are metadata ONLY: extract paths, never fetch hosts.
+    doc = ET.parse(ROOT / "public/sitemap.xml")
+    return sorted({urllib.parse.urlsplit(n.text).path for n in doc.iter()
+                   if n.tag.endswith("}loc")})
+
+
+def preflight():
+    if os.environ.get("RECOVERY_PREVIEW_HOST", "127.0.0.1") != "127.0.0.1":
+        raise RuntimeError("Only 127.0.0.1 is authorized")
+    for key in ("RAILS_MASTER_KEY", "DATABASE_URL", "APP_HOST", "RESEND_API_KEY",
+                "STRIPE_SECRET_KEY", "GOOGLE_CALENDAR_ID", "GOOGLE_CLIENT_SECRET",
+                "DOCKER_HOST", "DOCKER_CONTEXT"):
+        if key in os.environ:
+            raise RuntimeError(f"Unset inherited integration configuration: {key}")
+    context = json.loads(run("docker", "context", "inspect", text=True))[0]
+    if not context["Endpoints"]["docker"]["Host"].startswith("unix://"):
+        raise RuntimeError("A local unix Docker engine is required")
+    git("merge-base", "--is-ancestor", ANCHOR, "HEAD")
+    tracked = git("ls-files").splitlines()
+    for name in EXCLUDED:
+        # Classify inherited exceptions by object ID only; never read their values.
+        if git("rev-parse", f"HEAD:{name}") != git("rev-parse", f"{ANCHOR}:{name}"):
+            raise RuntimeError(f"Inherited exception changed: {name}")
+    for name in tracked:
+        if name in EXCLUDED:
+            continue
+        if (re.search(r"(^|/)(\.env|master\.key|credentials|secrets)([./]|$)", name)
+                or name.startswith(("log/", "storage/", "tmp/", "public/assets/", ".kamal/"))):
+            raise RuntimeError(f"Unexpected credential/runtime path: {name}")
+    for pattern in (".env*", "config/*.key", "config/credentials/*", ".bundle/config"):
+        for path in ROOT.glob(pattern):
+            if str(path.relative_to(ROOT)) not in EXCLUDED:
+                raise RuntimeError(f"Unexpected local secret/config file: {path.name}")
+    return tracked
+
+
+def build():
+    tracked = preflight()
+    if git("status", "--porcelain"):
+        raise RuntimeError("Build requires a clean committed checkout")
+    revision = git("rev-parse", "HEAD")
+    with tempfile.TemporaryDirectory(prefix="ipiia-recovery-build-") as tmp:
+        dest = Path(tmp)
+        for name in tracked:
+            if name in EXCLUDED:
+                continue
+            path = dest / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(ROOT / name, path)
+        for name in ("log", "storage", "tmp"):
+            (dest / name).mkdir(exist_ok=True)
+        for target, suffix in (("build", "tools"), (None, "app")):
+            command = ["docker", "build", "--progress=plain", "--label", f"{LABEL}={revision}",
+                       "--label", f"org.opencontainers.image.revision={revision}",
+                       "-t", f"ipiia-recovery-{suffix}:{revision}"]
+            if target:
+                command += ["--target", target]
+            subprocess.run(command + [tmp], check=True)
+    print(run("docker", "image", "inspect", f"ipiia-recovery-app:{revision}",
+              "--format", '{{json .}}', text=True))
+
+
+def info():
+    return json.loads((STATE / "state.json").read_text())
+
+
+def inspect_container(data):
+    obj = json.loads(run("docker", "inspect", data["container"], text=True))[0]
+    if obj["Config"]["Labels"].get(LABEL) != data["revision"]:
+        raise RuntimeError("Container ownership mismatch")
+    if (obj["HostConfig"]["NetworkMode"] != "none" or obj["HostConfig"]["Binds"]
+            or obj["HostConfig"]["PortBindings"] or obj["HostConfig"]["Privileged"]
+            or any(m["Type"] != "tmpfs" for m in obj["Mounts"])):
+        raise RuntimeError("Unsafe runtime network, port or persistent mount")
+    env = dict(s.split("=", 1) for s in obj["Config"]["Env"])
+    if env.get("RAILS_ENV") != "test" or env.get("APP_HOST") != "127.0.0.1":
+        raise RuntimeError("Unsafe runtime host/environment")
+    if any(k.startswith(("STRIPE_", "RESEND_", "GOOGLE_", "MIXPANEL_")) for k in env):
+        raise RuntimeError("Provider configuration detected")
+    return obj
+
+
+def upstream(data, path):
+    # Docker exec is the tunnel: container has NO network interface but loopback.
+    raw = run("docker", "exec", data["container"], "curl", "--noproxy", "*",
+              "--max-time", "15", "-sS", "-i", "-H", "Host: 127.0.0.1",
+              "http://127.0.0.1:3000" + path, timeout=20)
+    headers, body = raw.split(b"\r\n\r\n", 1)
+    lines = headers.decode().split("\r\n")
+    return int(lines[0].split()[1]), dict(line.split(": ", 1) for line in lines[1:]), body
+
+
+def filter_body(body, content_type):
+    if "text/css" in content_type:
+        body = re.sub(rb"@import\s+url\(['\"]https?://[^;]+;", b"/* external fonts disabled in preview */", body)
+    if "text/html" in content_type:
+        # Disable external/mail/tel navigation before it reaches a browser.
+        body = re.sub(rb'(href|action)=("|\')(?:https?:|//|mailto:|tel:)[^"\']*\2', rb'\1="#"', body)
+        guard = b'''<script>document.addEventListener('submit',e=>{e.preventDefault();e.stopImmediatePropagation()},true);document.addEventListener('click',e=>{let a=e.target.closest('a');if(a&&new URL(a.href,location.href).origin!==location.origin){e.preventDefault();e.stopImmediatePropagation()}},true);</script>'''
+        body = body.replace(b"<head>", b"<head>" + guard, 1)
+    return body
+
+
+def public_path(path):
+    return path in set(routes()) | {"/up", "/icon.png", "/icon.svg"} or (
+        bool(re.fullmatch(r"/assets/[a-zA-Z0-9_./-]+", path))
+        and not any(p in (".", "..") for p in path.split("/")))
+
+
+def serve():
+    data = info()
+
+    class Handler(http.server.BaseHTTPRequestHandler):
+        def do_GET(self):
+            if self.path == "/__recovery_shutdown/" + data["shutdown"]:
+                self.send_response(200)
+                self.end_headers()
+                threading.Thread(target=self.server.shutdown).start()
+                return
+            path = urllib.parse.urlsplit(self.path).path
+            if self.headers.get("Host") != f"127.0.0.1:{data['port']}":
+                self.send_error(403, "Loopback host only")
+                return
+            if path == "/bookings/availability":
+                status, headers, body = 200, {"Content-Type": "application/json"}, b'{"slots":[],"preview":true}'
+            elif public_path(path):
+                try:
+                    status, headers, body = upstream(data, path)
+                except Exception:
+                    self.send_error(502, "Preview tunnel failed")
+                    return
+            else:
+                self.send_error(403, "Read-only public preview")
+                return
+            ctype = next((v for k, v in headers.items() if k.lower() == "content-type"), "application/octet-stream")
+            body = filter_body(body, ctype)
+            self.send_response(status)
+            self.send_header("Content-Type", ctype)
+            self.send_header("Content-Length", str(len(body)))
+            self.send_header("Content-Security-Policy", CSP)
+            self.send_header("X-Recovery-Preview", "synthetic-no-send")
+            self.send_header("Cache-Control", "no-store")
+            self.end_headers()
+            self.wfile.write(body)
+
+        def do_POST(self):
+            self.send_error(405, "Submissions disabled")
+
+        do_PUT = do_PATCH = do_DELETE = do_POST
+
+    inspect_container(data)
+    http.server.ThreadingHTTPServer(("127.0.0.1", data["port"]), Handler).serve_forever()
+
+
+def up():
+    preflight()
+    if git("status", "--porcelain"):
+        raise RuntimeError("Preview requires a clean committed checkout")
+    if STATE.exists():
+        raise RuntimeError("Preview state exists: run down first")
+    revision = git("rev-parse", "HEAD")
+    port = int(os.environ.get("RECOVERY_PREVIEW_PORT", "43187"))
+    if not 1024 <= port <= 65535:
+        raise RuntimeError("Invalid unprivileged port")
+    image = json.loads(run("docker", "image", "inspect", f"ipiia-recovery-app:{revision}", text=True))[0]
+    if image["Config"]["Labels"].get(LABEL) != revision:
+        raise RuntimeError("Image ownership/revision mismatch: rebuild this exact commit")
+    STATE.mkdir(parents=True, mode=0o700)
+    data = {"revision": revision, "port": port, "shutdown": secrets.token_hex(24),
+            "container": "ipiia-recovery-" + hashlib.sha256(str(ROOT).encode()).hexdigest()[:12]}
+    (STATE / "state.json").write_text(json.dumps(data))
+    command = ["docker", "run", "-d", "--name", data["container"], "--label", f"{LABEL}={revision}",
+               "--network", "none", "--read-only", "--cap-drop", "ALL", "--security-opt", "no-new-privileges",
+               "--tmpfs", "/rails/storage:uid=1000,gid=1000", "--tmpfs", "/rails/log:uid=1000,gid=1000",
+               "--tmpfs", "/rails/tmp:uid=1000,gid=1000", "--tmpfs", "/tmp",
+               "-e", "RAILS_ENV=test", "-e", "APP_HOST=127.0.0.1", "-e", "RAILS_LOG_TO_STDOUT=1",
+               "-e", "SECRET_KEY_BASE=" + secrets.token_hex(64), "--entrypoint", "/bin/sh",
+               f"ipiia-recovery-app:{revision}", "-c",
+               "bin/rails db:prepare && exec bin/rails server -b 127.0.0.1 -p 3000"]
+    try:
+        subprocess.run(command, check=True)
+        inspect_container(data)
+        for attempt in range(60):
+            try:
+                if upstream(data, "/up")[0] == 200:
+                    break
+            except Exception:
+                pass
+            time.sleep(1)
+        else:
+            raise RuntimeError("Rails startup timed out")
+        with (STATE / "proxy.log").open("wb") as out:
+            subprocess.Popen([sys.executable, str(Path(__file__).resolve()), "__serve"],
+                             stdout=out, stderr=out, start_new_session=True)
+        for attempt in range(30):
+            try:
+                with urllib.request.urlopen(f"http://127.0.0.1:{port}/up", timeout=5) as response:
+                    if response.status == 200:
+                        print(f"Preview http://127.0.0.1:{port} (test, synthetic, no-send)")
+                        return
+            except Exception:
+                time.sleep(0.2)
+        raise RuntimeError("Proxy startup failed")
+    except Exception:
+        down()
+        raise
+
+
+def verify():
+    preflight()
+    data = info()
+    obj = inspect_container(data)
+    base = f"http://127.0.0.1:{data['port']}"
+    assets = set()
+    checked = []
+    for path in ["/up"] + routes():
+        with urllib.request.urlopen(base + path, timeout=30) as response:
+            body = response.read().decode()
+            assert response.status == 200 and response.headers["Content-Security-Policy"] == CSP
+            assets.update(re.findall(r'[/]assets/[\w./-]+', body))
+            checked.append(path)
+    for path in sorted(assets):
+        with urllib.request.urlopen(base + path, timeout=30) as response:
+            assert response.status == 200
+            body = response.read()
+            if path.endswith(".css"):
+                assert not re.search(rb"@import[^;]+https?://", body)
+    files = run("docker", "exec", data["container"], "sh", "-c",
+                "test ! -e /rails/.kamal && test ! -e /rails/config/credentials.yml.enc && "
+                "test ! -e /rails/config/master.key && test ! -e /rails/.env && "
+                "ls /rails/storage", text=True)
+    assert "production" not in files
+    tables = ("bookings", "ai_assessments", "learners", "course_enrollments", "lesson_progresses",
+              "quiz_attempts", "course_submissions", "certificates", "contact_messages", "course_waitlist_entries")
+    counts = {}
+    for table in tables:
+        count = run("docker", "exec", data["container"], "sqlite3", "/rails/storage/test.sqlite3",
+                    f"SELECT count(*) FROM {table};", text=True)
+        counts[table] = int(count)
+    assert not any(counts.values()), "Preview contains nonempty application tables"
+    print(json.dumps({"routes": checked, "route_count": len(checked), "assets": sorted(assets),
+                      "application_table_counts": counts,
+                      "asset_count": len(assets), "network": obj["HostConfig"]["NetworkMode"],
+                      "mounts": [{"type": m["Type"], "destination": m["Destination"]} for m in obj["Mounts"]],
+                      "rails_env": "test", "credential_paths_absent": True}, indent=2))
+
+
+def down():
+    if not STATE.exists():
+        print("No preview state/resources")
+        return
+    data = info()
+    try:
+        urllib.request.urlopen(f"http://127.0.0.1:{data['port']}/__recovery_shutdown/{data['shutdown']}", timeout=5).close()
+    except OSError:
+        pass
+    result = subprocess.run(["docker", "inspect", data["container"]], capture_output=True)
+    if result.returncode == 0:
+        obj = json.loads(result.stdout)[0]
+        if obj["Config"]["Labels"].get(LABEL) != data["revision"]:
+            raise RuntimeError("Refuse removing unowned container")
+        subprocess.run(["docker", "rm", "-f", "-v", data["container"]], check=True)
+    shutil.rmtree(STATE)
+    assert subprocess.run(["docker", "inspect", data["container"]], capture_output=True).returncode != 0
+    print("Preview container/tmpfs/state removed; no volumes/networks were created")
+
+
+if __name__ == "__main__":
+    operations = {"build": build, "up": up, "verify": verify, "down": down, "__serve": serve}
+    if len(sys.argv) != 2 or sys.argv[1] not in operations:
+        sys.exit("Usage: bin/recovery-preview build|up|verify|down")
+    try:
+        operations[sys.argv[1]]()
+    except Exception as error:
+        sys.exit(str(error))
