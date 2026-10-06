@@ -1,0 +1,22 @@
+.editorial-body { max-width: 82ch; padding-block: clamp(2rem, 5vw, 4rem); color: var(--grafite); }
+.editorial-body h2 { margin: 2.75rem 0 1rem; font-size: clamp(1.75rem, 4vw, 2.5rem); }
+.editorial-body h3 { margin: 2rem 0 .75rem; font-size: clamp(1.35rem, 3vw, 1.8rem); }
+.editorial-body p, .editorial-body li { font-size: 1.0625rem; line-height: 1.75; }
+.editorial-body p { margin-bottom: 1.25rem; }
+.editorial-body ul, .editorial-body ol { padding-left: 1.5rem; margin: 1rem 0 1.75rem; }
+.editorial-body li + li { margin-top: .4rem; }
+.editorial-body a:not(.btn) { color: var(--azul); text-decoration: underline; text-underline-offset: .2em; overflow-wrap: anywhere; }
+.editorial-body a:focus-visible, .editorial-table:focus-visible { outline: 3px solid var(--terracota); outline-offset: 4px; }
+.editorial-body blockquote { border-left: 4px solid var(--terracota); margin: 1.5rem 0; padding: 1rem 1.25rem; background: var(--papel-q); }
+.editorial-body blockquote p { margin: 0; }
+.editorial-citation { display: inline-block; padding: .15rem .25rem; font-size: .85em; }
+.editorial-table { overflow-x: auto; margin: 1.5rem 0; border: 1px solid var(--rule); }
+.editorial-table table { border-collapse: collapse; width: 100%; }
+.editorial-table caption { padding: .8rem 1rem; text-align: left; font-weight: 700; background: var(--papel-q); }
+.editorial-table th, .editorial-table td { padding: .9rem; text-align: left; vertical-align: top; min-width: 9rem; border-bottom: 1px solid var(--rule); font-size: 1rem; line-height: 1.5; }
+.editorial-table thead { background: var(--azul); color: var(--papel); }
+.editorial-table tbody th { font-weight: 600; background: var(--papel-q); }
+.editorial-sources, .editorial-related { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+.editorial-body .btn { margin: .5rem 0 1.5rem; min-height: 44px; white-space: normal; }
+.editorial-page .page-hero h1 { max-width: 22ch; }
+@media (prefers-reduced-motion: reduce) { .editorial-page * { scroll-behavior: auto; } }

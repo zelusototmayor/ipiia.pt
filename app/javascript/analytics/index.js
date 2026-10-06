@@ -1,5 +1,5 @@
 import { createAnalytics } from 'analytics/provider';
-import { ROUTES, BINDINGS, EXTERNAL_HOSTS, bindingId } from 'analytics/dictionary';
+import { ROUTES, BINDINGS, EXTERNAL_HOSTS, EDITORIAL_CTAS, bindingId } from 'analytics/dictionary';
 import { FORMS } from 'analytics/contract';
 import { createSdkCollector, validConfig } from 'analytics/sdk';
 import { mountConsent } from 'analytics/consent';
@@ -27,6 +27,13 @@ export function clickBinding(anchor) {
   else {
     try {
       const url = new URL(raw, window.location.href);
+      const editorialId = anchor.getAttribute('data-analytics-cta');
+      const editorial = Object.hasOwn(EDITORIAL_CTAS, editorialId) ? EDITORIAL_CTAS[editorialId] : null;
+      if (editorial && window.location.pathname.replace(/\.html$/, '') === editorial.page &&
+          url.origin === window.location.origin && url.pathname === '/book-call.html' &&
+          url.searchParams.size === 1 && url.searchParams.get('tema') === editorial.tema && !url.hash) {
+        return BINDINGS[editorialId];
+      }
       if (url.origin === window.location.origin && Object.hasOwn(ROUTES, url.pathname)) id = bindingId(area, url.pathname);
       else if (url.protocol === 'https:' && EXTERNAL_HOSTS.includes(url.hostname)) id = `${area}_external`;
     } catch { return null; }

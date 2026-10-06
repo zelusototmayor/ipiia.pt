@@ -7,7 +7,9 @@ const pages = {
   'reboques-ipiia': 'Demonstração de voz Reboques IPIIA', teste: 'Teste IA gratuito · IPIIA', sobre: 'Sobre · IPIIA',
   contacto: 'Contacto · IPIIA', 'book-call': 'Intro call · IPIIA', 'curso-fundamentos': 'Fundamentos de IA para o Trabalho · IPIIA',
   'curso-proficiencia': 'Proficiência em Implementação de IA · IPIIA', privacidade: 'Política de Privacidade · IPIIA',
-  termos: 'Termos e Condições · IPIIA', cookies: 'Política de Cookies · IPIIA'
+  termos: 'Termos e Condições · IPIIA', cookies: 'Política de Cookies · IPIIA',
+  'agente-ia-vs-chatgpt-copilot-automacao': 'Agente de IA vs ChatGPT, Copilot e automação | IPIIA',
+  'como-escolher-parceiro-implementacao-ia-pme': 'Como escolher um parceiro de implementação de IA | IPIIA'
 };
 const funding = {
   'sice-qualificacao-pme': 'SICE Qualificação das PME para Projetos de IA | IPIIA',
@@ -41,5 +43,11 @@ for (const area of ['nav', 'footer', 'page']) {
     bindings[id] = Object.freeze({ cta_id: id, cta_label: label, destination_type: destination });
   }
 }
+export const EDITORIAL_CTAS = Object.freeze({
+  comparison_assessment: Object.freeze({ page: '/agente-ia-vs-chatgpt-copilot-automacao', tema: 'agente' }),
+  partner_checklist_call: Object.freeze({ page: '/como-escolher-parceiro-implementacao-ia-pme', tema: 'diagnostico' })
+});
+bindings.comparison_assessment = Object.freeze({ cta_id: 'comparison_assessment', cta_label: 'Marcar diagnóstico de operação', destination_type: 'booking' });
+bindings.partner_checklist_call = Object.freeze({ cta_id: 'partner_checklist_call', cta_label: 'Marcar conversa', destination_type: 'booking' });
 export const BINDINGS = Object.freeze(bindings);
 export const EXTERNAL_HOSTS = Object.freeze(['zelusottomayor.com', 'portugal2030.pt', 'www.compete2030.gov.pt', 'www3.compete2030.gov.pt', 'balcaofundosue.pt', 'recuperarportugal.gov.pt', 'portal.recuperarportugal.gov.pt', 'benef.recuperarportugal.gov.pt', 'algarve.portugal2030.pt']);

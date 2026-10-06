@@ -1,0 +1,182 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag "editorial", "data-turbo-track": "reload" %>
+  <script type="application/ld+json"><%= raw json_escape({ "@context" => "https://schema.org", "@type" => "WebPage", "@id" => "https://ipiia.pt/agente-ia-vs-chatgpt-copilot-automacao.html", "name" => @page_title, "description" => @meta_description, "isPartOf" => { "@type" => "WebSite", "name" => "IPIIA", "url" => "https://ipiia.pt/" } }.to_json) %></script>
+<% end %>
+<main class="editorial-page" id="conteudo">
+<section class="page-hero"><div class="container"><h1>Agente de gestão, ChatGPT, Copilot ou automação?</h1></div></section>
+<article class="editorial-body container" aria-label="Agente de gestão, ChatGPT, Copilot ou automação?">
+<div data-approved-editorial>
+<p>ChatGPT, Microsoft Copilot, automações por regras e agentes ligados à operação podem resolver problemas diferentes, mas as categorias sobrepõem-se. O ChatGPT pode ligar-se a aplicações e executar ações suportadas, e o Microsoft Copilot inclui agentes e o Copilot Cowork, consoante o plano e a configuração.<a class="editorial-citation" href="#fonte-2" aria-label="Fonte 2">[2]</a><a class="editorial-citation" href="#fonte-5" aria-label="Fonte 5">[5]</a></p>
+<p>Nesta página, «assistente geral» e «Copilot» significam a utilização assistida iniciada por uma pessoa. «Agente ligado à operação» descreve um padrão de implementação com vários passos, contexto e ferramentas, não uma marca exclusiva.</p>
+<p>O erro mais comum é escolher primeiro a ferramenta e só depois procurar onde a usar. Numa PME, a escolha deve começar pelo processo: que informação entra, que decisão é necessária, que ação pode ser executada e onde tem de existir aprovação humana.</p>
+<h2>Resposta curta</h2>
+<p>Use uma experiência de chat ou assistente no ChatGPT ou Microsoft Copilot quando uma pessoa quer analisar, escrever ou explorar informação durante o trabalho.</p>
+<p>Use automação por regras quando o processo é previsível e as condições podem ser definidas com clareza.</p>
+<p>Use um agente ligado à operação quando o trabalho exige contexto de várias fontes, vários passos, tratamento de exceções e ações controladas nos sistemas da empresa.</p>
+<p>Nem todos os processos precisam de IA. Muitas vezes, uma regra simples é mais barata, mais rápida e mais fácil de auditar.</p>
+<h2>O que estamos a comparar</h2>
+<h3>ChatGPT numa utilização de assistente geral</h3>
+<p>Neste modo de utilização, a pessoa inicia o pedido, fornece o contexto e decide o que fazer com a resposta.</p>
+<p>Nos produtos empresariais da OpenAI, os dados de negócio não são usados para treinar os modelos por defeito. As condições concretas de retenção, administração e acesso dependem do produto e da configuração escolhidos.<a class="editorial-citation" href="#fonte-4" aria-label="Fonte 4">[4]</a></p>
+<p>É adequado para:</p>
+<ul>
+<li>preparar um primeiro rascunho;</li>
+<li>resumir um documento fornecido pelo utilizador;</li>
+<li>explorar alternativas;</li>
+<li>analisar informação numa tarefa pontual;</li>
+<li>apoiar trabalho individual.</li>
+</ul>
+<p>Não é, por si só, um processo operacional integrado. Se alguém tiver de copiar o pedido, procurar os dados, verificar a resposta e voltar a copiar o resultado para outro sistema, o trabalho continua dependente dessa pessoa.</p>
+<h3>Microsoft Copilot numa utilização assistida</h3>
+<p>O nome Copilot cobre experiências diferentes. As capacidades variam consoante a licença e a configuração. Algumas versões trabalham sobretudo com informação pública ou com conteúdo que o utilizador fornece. Outras podem usar dados de trabalho através do Microsoft Graph e de serviços associados.<a class="editorial-citation" href="#fonte-2" aria-label="Fonte 2">[2]</a></p>
+<p>É adequado quando a empresa já trabalha dentro do Microsoft 365 e quer apoiar tarefas em ferramentas como Outlook, Word, Excel, PowerPoint ou Teams.</p>
+<p>As permissões existentes continuam a ser importantes. A Microsoft indica que o Copilot apresenta ao utilizador apenas dados aos quais esse utilizador já tem acesso. Também indica que prompts, respostas e dados acedidos através do Microsoft Graph não são usados para treinar os modelos base.<a class="editorial-citation" href="#fonte-3" aria-label="Fonte 3">[3]</a></p>
+<p>Isto não resolve automaticamente processos mal definidos, permissões excessivas ou informação desorganizada. Se qualquer pessoa já consegue abrir documentos que não devia, ligar uma nova camada de pesquisa não corrige o problema de origem.</p>
+<h3>Automação por regras</h3>
+<p>Uma automação executa passos predefinidos quando acontece uma condição conhecida.</p>
+<p>Exemplos:</p>
+<ul>
+<li>guardar anexos de um remetente numa pasta;</li>
+<li>criar uma tarefa quando chega um formulário;</li>
+<li>enviar um aviso quando uma fatura ultrapassa a data;</li>
+<li>copiar um campo validado entre dois sistemas;</li>
+<li>gerar um documento a partir de um template.</li>
+</ul>
+<p>É adequada quando as entradas são estáveis, as regras são claras e as exceções são raras. Para trabalho determinístico, uma automação convencional tende a ser mais fácil de testar e explicar do que um modelo de IA.</p>
+<h3>Agente ligado à operação</h3>
+<p>Um agente pode planear e executar vários passos, consultar fontes e usar ferramentas para concluir uma tarefa. A definição varia entre fornecedores, mas a capacidade de trabalhar em múltiplos passos e usar software externo é uma característica recorrente.<a class="editorial-citation" href="#fonte-1" aria-label="Fonte 1">[1]</a></p>
+<p>No IPIIA, não usamos a palavra "agente" como sinónimo de autonomia total.</p>
+<p>Um Agente de Gestão deve operar dentro de limites definidos pela empresa. Pode reunir informação, detetar pendentes, preparar trabalho e executar ações de baixo risco. Uma decisão sensível, uma despesa, uma comunicação delicada ou uma alteração irreversível continua a exigir validação humana.</p>
+<p>É adequado quando o processo tem:</p>
+<ul>
+<li>informação espalhada por email, documentos e sistemas;</li>
+<li>passos que mudam conforme o contexto;</li>
+<li>exceções frequentes;</li>
+<li>necessidade de manter estado e histórico;</li>
+<li>ações que devem ficar registadas;</li>
+<li>diferentes níveis de autonomia conforme o risco.</li>
+</ul>
+<h2>Matriz de decisão</h2>
+<div class="editorial-table" tabindex="0" role="region" aria-label="Tabela de comparação, deslocamento horizontal"><table>
+<caption>Matriz de decisão</caption><thead><tr>
+<th scope="col">Critério</th>
+<th scope="col">Assistente geral</th>
+<th scope="col">Copilot no Microsoft 365</th>
+<th scope="col">Automação por regras</th>
+<th scope="col">Agente ligado à operação</th>
+</tr></thead><tbody>
+<tr>
+<th scope="row">Quem inicia</th>
+<td>Normalmente uma pessoa</td>
+<td>Normalmente uma pessoa, dentro das ferramentas Microsoft</td>
+<td>Um evento ou horário</td>
+<td>Um evento, horário ou pessoa</td>
+</tr>
+<tr>
+<th scope="row">Contexto</th>
+<td>O que é fornecido ou ligado</td>
+<td>Web, conteúdo fornecido e, conforme licença, dados Microsoft 365</td>
+<td>Campos e sistemas predefinidos</td>
+<td>Várias fontes autorizadas e estado do processo</td>
+</tr>
+<tr>
+<th scope="row">Tipo de trabalho</th>
+<td>Analisar, escrever, explorar</td>
+<td>Apoiar trabalho no ecossistema Microsoft</td>
+<td>Executar passos previsíveis</td>
+<td>Coordenar vários passos e tratar exceções</td>
+</tr>
+<tr>
+<th scope="row">Variação</th>
+<td>Boa para pedidos diferentes</td>
+<td>Boa dentro das capacidades e dados configurados</td>
+<td>Fraca fora das regras previstas</td>
+<td>Maior flexibilidade, com mais necessidade de controlo</td>
+</tr>
+<tr>
+<th scope="row">Ações em sistemas</th>
+<td>Dependem das integrações disponíveis</td>
+<td>Dependem da licença, agentes e conectores</td>
+<td>Sim, de forma determinística</td>
+<td>Sim, através de ferramentas e permissões limitadas</td>
+</tr>
+<tr>
+<th scope="row">Supervisão</th>
+<td>Revisão da resposta</td>
+<td>Revisão da resposta e controlos Microsoft</td>
+<td>Monitorização de falhas</td>
+<td>Aprovação por risco, logs e avaliação contínua</td>
+</tr>
+<tr>
+<th scope="row">Melhor uso</th>
+<td>Trabalho individual</td>
+<td>Equipas centradas em Microsoft 365</td>
+<td>Processos repetitivos e estáveis</td>
+<td>Processos operacionais com contexto e exceções</td>
+</tr>
+</tbody></table></div>
+<p>A tabela é uma orientação. Licenças, conectores, políticas e configurações podem mudar o que cada produto consegue fazer.</p>
+<h2>Seis exemplos concretos</h2>
+<h3>1. Responder a uma pergunta sobre um documento</h3>
+<p>Escolha provável: assistente geral ou Copilot.</p>
+<p>A pessoa tem o documento, faz a pergunta e verifica a resposta. Não há motivo para construir um processo inteiro.</p>
+<h3>2. Guardar automaticamente uma fatura recebida por email</h3>
+<p>Escolha provável: automação por regras.</p>
+<p>Se o remetente, o formato e o destino são previsíveis, não é preciso um agente para mover o ficheiro.</p>
+<h3>3. Extrair dados de faturas com formatos diferentes e encaminhar exceções</h3>
+<p>Escolha provável: automação com componente de IA.</p>
+<p>A IA pode interpretar documentos variáveis. As regras validam campos, impedem duplicados e enviam casos incertos para revisão.</p>
+<h3>4. Preparar um resumo diário da operação</h3>
+<p>Escolha provável: agente ligado às fontes autorizadas.</p>
+<p>O sistema precisa de reunir pendentes, alterações e exceções de várias fontes. Deve mostrar a origem de cada ponto e separar informação de recomendação.</p>
+<h3>5. Redigir uma proposta comercial</h3>
+<p>Escolha provável: assistente com template ou automação controlada.</p>
+<p>Se os dados já estão estruturados, uma automação pode preencher o documento. A IA só deve entrar onde existe texto variável e continua a ser necessária revisão antes do envio.</p>
+<h3>6. Aprovar um pagamento ou aceitar um contrato</h3>
+<p>Escolha provável: nenhuma autonomia final.</p>
+<p>O sistema pode reunir contexto e preparar a decisão. A aprovação deve ficar com uma pessoa autorizada.</p>
+<h2>Quando não usar um agente</h2>
+<p>Não use um agente quando:</p>
+<ul>
+<li>o processo ainda muda todas as semanas;</li>
+<li>ninguém consegue explicar quem decide o quê;</li>
+<li>os dados necessários não são fiáveis;</li>
+<li>uma regra simples resolve o problema;</li>
+<li>não existe forma de testar o resultado;</li>
+<li>uma falha pequena pode causar uma consequência grande e não há aprovação humana;</li>
+<li>a empresa não consegue limitar acessos nem consultar logs.</li>
+</ul>
+<p>Um agente não corrige um processo que ninguém compreende. Apenas executa a confusão mais depressa.</p>
+<h2>A pergunta certa para começar</h2>
+<p>Em vez de perguntar "qual ferramenta devemos comprar?", escolha um processo e responda:</p>
+<ol>
+<li>Quantas vezes acontece por semana?</li>
+<li>Quanto tempo consome?</li>
+<li>Que informação é necessária?</li>
+<li>Que partes são regras e que partes exigem interpretação?</li>
+<li>Que erros e exceções aparecem?</li>
+<li>Que ação pode ser automática?</li>
+<li>Onde é obrigatória aprovação humana?</li>
+<li>Como saberemos se melhorou?</li>
+</ol>
+<p>Com estas respostas, a escolha entre assistente, Copilot, automação ou agente costuma ficar bastante mais simples.</p>
+<h2>Avalie um processo real, não uma lista de ferramentas</h2>
+<p>Numa conversa de 15 minutos, percebemos o processo, os sistemas envolvidos e o nível de autonomia aceitável. Se uma automação simples chegar, dizemos isso.</p>
+<p><a class="btn btn-primary" href="/book-call.html?tema=agente" data-analytics-cta="comparison_assessment">Marcar diagnóstico de operação</a></p>
+</div>
+<section class="editorial-sources" aria-labelledby="fontes"><h2 id="fontes">Fontes</h2><ol>
+<li id="fonte-1"><a href="https://www.sap.com/portugal/resources/what-are-ai-agents">[1] https://www.sap.com/portugal/resources/what-are-ai-agents</a></li>
+<li id="fonte-2"><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview">[2] https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview</a></li>
+<li id="fonte-3"><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy">[3] https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy</a></li>
+<li id="fonte-4"><a href="https://openai.com/enterprise-privacy">[4] https://openai.com/enterprise-privacy</a></li>
+<li id="fonte-5"><a href="https://help.openai.com/en/articles/11487775-connectors-in-chatgpt">[5] https://help.openai.com/en/articles/11487775-connectors-in-chatgpt</a></li>
+</ol></section>
+<nav class="editorial-related" aria-label="Leitura relacionada"><h2>Leitura relacionada</h2><ul>
+<li><a href="/agente-de-gestao-ia.html">Agente de Gestão com IA</a></li>
+<li><a href="/casos.html">Exemplos e demos</a></li>
+<li><a href="/metodo.html">Método</a></li>
+<li><a href="/privacidade.html">Privacidade</a></li>
+<li><a href="/como-escolher-parceiro-implementacao-ia-pme.html">Checklist de parceiro de implementação de IA</a></li>
+</ul></nav>
+</article>
+</main>

@@ -99,6 +99,16 @@ class PagesController < ApplicationController
       template: "cookies",
       title: "Política de Cookies · IPIIA",
       description: "Que cookies o site do IPIIA utiliza e para quê."
+    },
+    "agente-ia-vs-chatgpt-copilot-automacao" => {
+      template: "agente_ia_vs_chatgpt_copilot_automacao",
+      title: "Agente de IA vs ChatGPT, Copilot e automação | IPIIA",
+      description: "Compare ChatGPT, Microsoft Copilot, automação por regras e um Agente de Gestão. Veja qual faz sentido para cada processo da sua PME."
+    },
+    "como-escolher-parceiro-implementacao-ia-pme" => {
+      template: "como_escolher_parceiro_implementacao_ia_pme",
+      title: "Como escolher um parceiro de implementação de IA | IPIIA",
+      description: "Checklist prática para comparar propostas de IA: processo, dados, segurança, testes, custos, autonomia, manutenção e reversibilidade."
     }
   }.freeze
 

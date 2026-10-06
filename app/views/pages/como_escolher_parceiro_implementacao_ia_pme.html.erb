@@ -1,0 +1,238 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag "editorial", "data-turbo-track": "reload" %>
+  <script type="application/ld+json"><%= raw json_escape({ "@context" => "https://schema.org", "@type" => "WebPage", "@id" => "https://ipiia.pt/como-escolher-parceiro-implementacao-ia-pme.html", "name" => @page_title, "description" => @meta_description, "isPartOf" => { "@type" => "WebSite", "name" => "IPIIA", "url" => "https://ipiia.pt/" } }.to_json) %></script>
+<% end %>
+<main class="editorial-page" id="conteudo">
+<section class="page-hero"><div class="container"><h1>Como escolher um parceiro de implementação de IA para uma PME</h1></div></section>
+<article class="editorial-body container" aria-label="Como escolher um parceiro de implementação de IA para uma PME">
+<div data-approved-editorial>
+<p>Uma boa apresentação de IA é fácil de fazer. Uma implementação que continua a funcionar ao fim de seis meses é outra conversa.</p>
+<p>Esta checklist ajuda uma PME a comparar propostas sem depender de demos preparadas, nomes de modelos ou promessas de produtividade.</p>
+<h2>1. O problema está definido como um processo?</h2>
+<p>A proposta deve identificar:</p>
+<ul>
+<li>onde o trabalho começa;</li>
+<li>quem participa;</li>
+<li>que sistemas e documentos são usados;</li>
+<li>quais são os passos atuais;</li>
+<li>onde existem esperas, erros e retrabalho;</li>
+<li>qual é o resultado esperado.</li>
+</ul>
+<p>Sinal de alerta: a solução começa com uma ferramenta e não com um processo concreto.</p>
+<p>Pergunta a fazer:</p>
+<blockquote><p>Pode mostrar o fluxo atual e o fluxo proposto, incluindo as exceções?</p></blockquote>
+<h2>2. Existe uma baseline antes de começar?</h2>
+<p>Sem baseline, qualquer melhoria pode parecer sucesso.</p>
+<p>A proposta deve definir o que será medido antes e depois. Por exemplo:</p>
+<ul>
+<li>minutos por ocorrência;</li>
+<li>ocorrências por semana;</li>
+<li>taxa de erro ou retrabalho;</li>
+<li>tempo de resposta;</li>
+<li>número de pendentes;</li>
+<li>percentagem de casos que exige intervenção humana.</li>
+</ul>
+<p>Sinal de alerta: promessas de ROI sem explicar os dados de partida e a fórmula.</p>
+<p>Pergunta a fazer:</p>
+<blockquote><p>Que dados temos de recolher antes do piloto para decidir se valeu a pena?</p></blockquote>
+<h2>3. Está claro onde entra IA e onde entram regras?</h2>
+<p>Nem todos os passos devem usar um modelo de IA.</p>
+<p>Extração de texto variável, classificação e preparação de rascunhos podem beneficiar de IA. Validações, permissões, limites financeiros, deduplicação e ações irreversíveis tendem a precisar de regras claras.</p>
+<p>Sinal de alerta: o modelo decide tudo e não há separação entre interpretação e controlo.</p>
+<p>Pergunta a fazer:</p>
+<blockquote><p>Que partes são probabilísticas e que partes são determinísticas?</p></blockquote>
+<h2>4. A proposta mostra o caminho das exceções?</h2>
+<p>O processo real não é uma demo perfeita.</p>
+<p>A proposta deve explicar o que acontece quando:</p>
+<ul>
+<li>falta informação;</li>
+<li>o documento não é legível;</li>
+<li>existem dois registos possíveis;</li>
+<li>o sistema externo está indisponível;</li>
+<li>a confiança do modelo é baixa;</li>
+<li>uma pessoa rejeita a sugestão;</li>
+<li>a ação falha a meio.</li>
+</ul>
+<p>Sinal de alerta: só existe o percurso feliz.</p>
+<p>Pergunta a fazer:</p>
+<blockquote><p>Pode mostrar um caso em que o sistema não sabe o que fazer?</p></blockquote>
+<h2>5. Quem pode ver e alterar cada dado?</h2>
+<p>A resposta precisa de ser específica. "É seguro" não chega.</p>
+<p>Peça informação sobre:</p>
+<ul>
+<li>dados enviados a cada fornecedor;</li>
+<li>local e prazo de retenção;</li>
+<li>utilização dos dados para treino;</li>
+<li>permissões por utilizador e sistema;</li>
+<li>registos de acesso e ações;</li>
+<li>subprocessadores relevantes;</li>
+<li>eliminação e exportação de dados;</li>
+<li>resposta a incidentes.</li>
+</ul>
+<p>As condições variam por produto, licença e configuração. Por exemplo, a OpenAI declara que não usa dados de produtos empresariais e API para treino por defeito.<a class="editorial-citation" href="#fonte-4" aria-label="Fonte 4">[4]</a> A Microsoft declara proteção por permissões do utilizador e compromissos próprios para os dados usados pelo Copilot.<a class="editorial-citation" href="#fonte-3" aria-label="Fonte 3">[3]</a> Isto não dispensa a verificação do produto contratado, dos conectores e da configuração concreta.</p>
+<p>Sinal de alerta: a resposta mistura políticas de um produto gratuito com as condições do produto empresarial proposto.</p>
+<p>Pergunta a fazer:</p>
+<blockquote><p>Pode listar todos os sistemas que recebem dados e a base contratual para cada um?</p></blockquote>
+<h2>6. A autonomia está dividida por risco?</h2>
+<p>A proposta deve distinguir:</p>
+<ul>
+<li>ler;</li>
+<li>sugerir;</li>
+<li>preparar;</li>
+<li>executar;</li>
+<li>executar com aprovação;</li>
+<li>bloquear e escalar.</li>
+</ul>
+<p>Uma alteração numa nota interna não tem o mesmo risco que enviar um email, alterar um preço ou aprovar um pagamento.</p>
+<p>Sinal de alerta: "totalmente autónomo" aparece como benefício sem limites operacionais.</p>
+<p>Pergunta a fazer:</p>
+<blockquote><p>Que ações ficam sempre dependentes de uma pessoa e como é registada a aprovação?</p></blockquote>
+<h2>7. Como será testado?</h2>
+<p>Peça um plano de testes antes da produção.</p>
+<p>Deve incluir:</p>
+<ul>
+<li>exemplos normais;</li>
+<li>exceções conhecidas;</li>
+<li>dados incompletos;</li>
+<li>duplicados;</li>
+<li>falhas de integrações;</li>
+<li>permissões erradas;</li>
+<li>instruções maliciosas presentes em emails ou documentos;</li>
+<li>regressões após alterações.</li>
+</ul>
+<p>Sinal de alerta: "testámos com alguns exemplos" sem conjunto de teste, critérios de aprovação ou resultados guardados.</p>
+<p>Pergunta a fazer:</p>
+<blockquote><p>Que casos têm de passar para o piloto entrar em produção?</p></blockquote>
+<h2>8. O custo total está separado?</h2>
+<p>Compare propostas com a mesma estrutura:</p>
+<ul>
+<li>diagnóstico e desenho;</li>
+<li>implementação;</li>
+<li>integrações;</li>
+<li>licenças;</li>
+<li>utilização de modelos;</li>
+<li>infraestrutura;</li>
+<li>monitorização;</li>
+<li>suporte;</li>
+<li>alterações futuras;</li>
+<li>formação e adoção;</li>
+<li>saída ou migração.</li>
+</ul>
+<p>Sinal de alerta: preço inicial baixo que exclui operação, suporte e consumo.</p>
+<p>Pergunta a fazer:</p>
+<blockquote><p>Quanto custa manter este sistema com o volume atual e com o dobro do volume?</p></blockquote>
+<h2>9. A empresa consegue sair?</h2>
+<p>A implementação deve ter um caminho de reversão.</p>
+<p>Confirme:</p>
+<ul>
+<li>quem é dono do código, prompts, configurações e documentação;</li>
+<li>como exportar dados e logs;</li>
+<li>se as integrações usam contas da empresa;</li>
+<li>o que acontece quando o contrato termina;</li>
+<li>quanto tempo demora desligar ou voltar ao processo anterior;</li>
+<li>que componentes dependem de um fornecedor específico.</li>
+</ul>
+<p>Sinal de alerta: o fornecedor controla todas as contas e não existe documentação de saída.</p>
+<p>Pergunta a fazer:</p>
+<blockquote><p>Se terminarmos a relação amanhã, o que fica connosco e o que deixa de funcionar?</p></blockquote>
+<h2>10. Quem mantém o sistema depois do lançamento?</h2>
+<p>Modelos, APIs, formatos de documentos e processos mudam.</p>
+<p>A proposta deve indicar:</p>
+<ul>
+<li>quem recebe alertas;</li>
+<li>que falhas são monitorizadas;</li>
+<li>prazo de resposta;</li>
+<li>como são aprovadas alterações;</li>
+<li>como se evitam regressões;</li>
+<li>que métricas serão revistas;</li>
+<li>como ficam registadas decisões e incidentes.</li>
+</ul>
+<p>Sinal de alerta: o projeto termina no dia da demo.</p>
+<p>Pergunta a fazer:</p>
+<blockquote><p>Quem verifica, daqui a três meses, se o sistema continua a fazer o que foi aprovado?</p></blockquote>
+<h2>Grelha de comparação</h2>
+<p>Atribua 0, 1 ou 2 pontos a cada área:</p>
+<ul>
+<li>0: não está explicado;</li>
+<li>1: existe uma resposta genérica;</li>
+<li>2: existe uma resposta específica, verificável e incluída na proposta.</li>
+</ul>
+<div class="editorial-table" tabindex="0" role="region" aria-label="Tabela de comparação, deslocamento horizontal"><table>
+<caption>Grelha de comparação</caption><thead><tr>
+<th scope="col">Área</th>
+<th scope="col">Pontos</th>
+</tr></thead><tbody>
+<tr>
+<th scope="row">Processo atual e futuro</th>
+<td>/2</td>
+</tr>
+<tr>
+<th scope="row">Baseline e métricas</th>
+<td>/2</td>
+</tr>
+<tr>
+<th scope="row">Separação entre IA e regras</th>
+<td>/2</td>
+</tr>
+<tr>
+<th scope="row">Exceções e falhas</th>
+<td>/2</td>
+</tr>
+<tr>
+<th scope="row">Dados, privacidade e acessos</th>
+<td>/2</td>
+</tr>
+<tr>
+<th scope="row">Autonomia por risco</th>
+<td>/2</td>
+</tr>
+<tr>
+<th scope="row">Testes e aprovação</th>
+<td>/2</td>
+</tr>
+<tr>
+<th scope="row">Custo total</th>
+<td>/2</td>
+</tr>
+<tr>
+<th scope="row">Reversibilidade</th>
+<td>/2</td>
+</tr>
+<tr>
+<th scope="row">Manutenção</th>
+<td>/2</td>
+</tr>
+<tr>
+<th scope="row">Total</th>
+<td>/20</td>
+</tr>
+</tbody></table></div>
+<p>Uma pontuação alta não substitui referências, uma análise técnica ou revisão contratual. Serve para encontrar perguntas que ainda não foram respondidas.</p>
+<h2>A pergunta final</h2>
+<p>Peça ao parceiro que demonstre três coisas:</p>
+<ol>
+<li>um caso normal;</li>
+<li>uma exceção;</li>
+<li>uma falha de integração.</li>
+</ol>
+<p>Se a proposta só funciona no primeiro caso, ainda não descreve um sistema de produção.</p>
+<h2>Traga um processo ou uma proposta</h2>
+<p>Podemos usar esta checklist numa conversa de 15 minutos. O objetivo é perceber o que está bem definido, o que falta medir e onde está o risco antes de começar.</p>
+<p><a class="btn btn-primary" href="/book-call.html?tema=diagnostico" data-analytics-cta="partner_checklist_call">Marcar conversa</a></p>
+</div>
+<section class="editorial-sources" aria-labelledby="fontes"><h2 id="fontes">Fontes</h2><ol>
+<li id="fonte-1"><a href="https://www.sap.com/portugal/resources/what-are-ai-agents">[1] https://www.sap.com/portugal/resources/what-are-ai-agents</a></li>
+<li id="fonte-2"><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview">[2] https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview</a></li>
+<li id="fonte-3"><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy">[3] https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy</a></li>
+<li id="fonte-4"><a href="https://openai.com/enterprise-privacy">[4] https://openai.com/enterprise-privacy</a></li>
+<li id="fonte-5"><a href="https://help.openai.com/en/articles/11487775-connectors-in-chatgpt">[5] https://help.openai.com/en/articles/11487775-connectors-in-chatgpt</a></li>
+</ol></section>
+<nav class="editorial-related" aria-label="Leitura relacionada"><h2>Leitura relacionada</h2><ul>
+<li><a href="/metodo.html">Método</a></li>
+<li><a href="/servicos.html">Soluções</a></li>
+<li><a href="/agente-de-gestao-ia.html">Agente de Gestão com IA</a></li>
+<li><a href="/privacidade.html">Privacidade</a></li>
+<li><a href="/agente-ia-vs-chatgpt-copilot-automacao.html">Comparar modos de utilização e implementação</a></li>
+</ul></nav>
+</article>
+</main>
