@@ -1,4 +1,4 @@
-import { begin as analyticsBegin, confirm as analyticsConfirm } from 'analytics/index';
+import { begin as analyticsBegin, confirm as analyticsConfirm } from 'analytics';
 
 (function () {
   'use strict';

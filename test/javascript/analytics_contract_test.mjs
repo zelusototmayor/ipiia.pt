@@ -4,6 +4,14 @@ import { readFileSync } from 'node:fs';
 import { createAnalytics, syntheticSdkAdapter, MIXPANEL_CONFIG } from 'analytics/provider';
 import { EVENTS, PROPERTIES, STORAGE_KEY, TTL, slug, pathname, externalHost, touchFrom } from 'analytics/contract';
 import { ROUTES, BINDINGS, EXTERNAL_HOSTS } from 'analytics/dictionary';
+import { track as boundTrack } from 'analytics';
+
+test('application uses the Rails directory-index importmap alias', () => {
+  const application = readFileSync(new URL('../../app/javascript/application.js', import.meta.url), 'utf8');
+  assert.match(application, /from 'analytics';/);
+  assert.ok(!application.includes("from 'analytics/index'"));
+  assert.equal(typeof boundTrack, 'function');
+});
 
 function fixture(production = false) {
   const entries = new Map(); const events = []; const calls = [];
