@@ -1,11 +1,13 @@
 <% if (config = analytics_client_config) %>
-  <section class="analytics-consent" aria-label="Preferências de analytics" data-analytics-consent data-config="<%= config.to_json %>">
-    <p>Analytics opcional: medir a utilização do site com um identificador anónimo. A escolha aplica-se apenas até recarregar a página.</p>
+  <section class="analytics-consent" id="preferencias-de-cookies" aria-label="Preferências de cookies" data-analytics-consent data-config="<%= config.to_json %>">
+    <h2>Preferências de cookies</h2>
+    <p>Com a sua autorização, usamos o Mixpanel para medir a utilização das páginas e as ações concluídas. Não gravamos sessões nem enviamos o conteúdo dos formulários.</p>
     <p data-consent-status role="status" aria-live="polite">Analytics não autorizado.</p>
     <div class="analytics-consent-actions">
       <button type="button" data-consent-choice="accept">Aceitar analytics</button>
-      <button type="button" data-consent-choice="reject">Rejeitar analytics</button>
+      <button type="button" data-consent-choice="reject">Recusar</button>
       <button type="button" data-consent-choice="revoke" hidden>Revogar analytics</button>
     </div>
+    <a href="/cookies.html">Saber mais</a>
   </section>
 <% end %>
