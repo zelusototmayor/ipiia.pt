@@ -28,3 +28,12 @@
 .ipiia-quiz-page #answer-review article { border-top:1px solid var(--rule); margin-top:16px; padding-top:12px; }
 @media(max-width:550px) { .ipiia-quiz-page .card { padding:18px; } .ipiia-quiz-page .choices label { padding:13px; } }
 @media print { .ipiia-quiz-page .noprint,.ipiia-quiz-page button,.ipiia-quiz-page .quiz-resource-links { display:none; } }
+
+/* Hybrid task context: bounded mobile fields, local non-semantic prompt. */
+.ipiia-quiz-page textarea { display:block; width:100%; max-width:100%; box-sizing:border-box; font:inherit; padding:12px; border:1px solid var(--rule,#cfd6d2); border-radius:var(--radius,2px); background:white; color:inherit; resize:vertical; margin:8px 0 20px; }
+.ipiia-quiz-page label[for] { display:block; font-weight:600; }
+.ipiia-quiz-page textarea:focus-visible { outline:3px solid #a16400; outline-offset:4px; }
+.ipiia-quiz-page #context-review { white-space:pre-wrap; overflow-wrap:anywhere; max-height:12rem; overflow:auto; }
+.ipiia-quiz-page :is(dd,#prompt-text,#question-note) { overflow-wrap:anywhere; }
+.ipiia-quiz-page #prompt-text { min-height:14rem; }
+.ipiia-quiz-page #followups li { margin:12px 0; }

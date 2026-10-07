@@ -3,33 +3,33 @@
   "dimensions": {
     "foundations": {
       "label": "Fundamentos de IA",
-      "low": "As escolhas nestes cenários deixam critérios por consolidar. Use a IA como apoio, confirme factos e identifique se a falha é da tarefa, dos dados ou da ferramenta.",
-      "medium": "As escolhas mostram alguns critérios úteis, mas ainda vale praticar. Use a IA como apoio, confirme factos e identifique se a falha é da tarefa, dos dados ou da ferramenta.",
-      "high": "Selecionou critérios fortes nestes cenários. Isto não demonstra execução competente. Use a IA como apoio, confirme factos e identifique se a falha é da tarefa, dos dados ou da ferramenta."
+      "low": "Vale a pena praticar estes pontos. Use a IA como apoio, confirme factos e identifique se a falha é da tarefa, dos dados ou da ferramenta.",
+      "medium": "Acertou em alguns critérios. Pratique os pontos em que teve dúvidas. Use a IA como apoio, confirme factos e identifique se a falha é da tarefa, dos dados ou da ferramenta.",
+      "high": "Escolheu bons critérios nestes cenários. Confirme-os agora num exercício real, com revisão. Use a IA como apoio, confirme factos e identifique se a falha é da tarefa, dos dados ou da ferramenta."
     },
     "prompting": {
-      "label": "Prompting e workflow",
-      "low": "As escolhas nestes cenários deixam critérios por consolidar. Dê objetivo, contexto permitido, exemplos e critérios. Compare a resposta com esses critérios.",
-      "medium": "As escolhas mostram alguns critérios úteis, mas ainda vale praticar. Dê objetivo, contexto permitido, exemplos e critérios. Compare a resposta com esses critérios.",
-      "high": "Selecionou critérios fortes nestes cenários. Isto não demonstra execução competente. Dê objetivo, contexto permitido, exemplos e critérios. Compare a resposta com esses critérios."
+      "label": "Pedir ajuda à IA",
+      "low": "Vale a pena praticar estes pontos. Diga o que quer, dê contexto permitido e um exemplo, e explique como vai verificar. Compare a resposta com esses critérios.",
+      "medium": "Acertou em alguns critérios. Pratique os pontos em que teve dúvidas. Diga o que quer, dê contexto permitido e um exemplo, e explique como vai verificar. Compare a resposta com esses critérios.",
+      "high": "Escolheu bons critérios nestes cenários. Confirme-os agora num exercício real, com revisão. Diga o que quer, dê contexto permitido e um exemplo, e explique como vai verificar. Compare a resposta com esses critérios."
     },
     "evaluation": {
-      "label": "Avaliação de outputs",
-      "low": "As escolhas nestes cenários deixam critérios por consolidar. Separe factos de inferências e confirme os pontos críticos fora do modelo.",
-      "medium": "As escolhas mostram alguns critérios úteis, mas ainda vale praticar. Separe factos de inferências e confirme os pontos críticos fora do modelo.",
-      "high": "Selecionou critérios fortes nestes cenários. Isto não demonstra execução competente. Separe factos de inferências e confirme os pontos críticos fora do modelo."
+      "label": "Verificar respostas",
+      "low": "Vale a pena praticar estes pontos. Separe factos do que a IA deduziu e confirme os pontos críticos fora do modelo.",
+      "medium": "Acertou em alguns critérios. Pratique os pontos em que teve dúvidas. Separe factos do que a IA deduziu e confirme os pontos críticos fora do modelo.",
+      "high": "Escolheu bons critérios nestes cenários. Confirme-os agora num exercício real, com revisão. Separe factos do que a IA deduziu e confirme os pontos críticos fora do modelo."
     },
     "responsible": {
       "label": "Dados e uso responsável",
-      "low": "As escolhas nestes cenários deixam critérios por consolidar. Confirme dados permitidos, ferramenta aprovada, permissões e revisão. Retirar nomes não elimina necessariamente o risco.",
-      "medium": "As escolhas mostram alguns critérios úteis, mas ainda vale praticar. Confirme dados permitidos, ferramenta aprovada, permissões e revisão. Retirar nomes não elimina necessariamente o risco.",
-      "high": "Selecionou critérios fortes nestes cenários. Isto não demonstra execução competente. Confirme dados permitidos, ferramenta aprovada, permissões e revisão. Retirar nomes não elimina necessariamente o risco."
+      "low": "Vale a pena praticar estes pontos. Confirme dados permitidos, ferramenta aprovada, permissões e revisão. Retirar nomes não elimina necessariamente o risco.",
+      "medium": "Acertou em alguns critérios. Pratique os pontos em que teve dúvidas. Confirme dados permitidos, ferramenta aprovada, permissões e revisão. Retirar nomes não elimina necessariamente o risco.",
+      "high": "Escolheu bons critérios nestes cenários. Confirme-os agora num exercício real, com revisão. Confirme dados permitidos, ferramenta aprovada, permissões e revisão. Retirar nomes não elimina necessariamente o risco."
     },
     "automation": {
       "label": "Automação e processos",
-      "low": "As escolhas nestes cenários deixam critérios por consolidar. Defina tarefa, exceções, validação e limites. Comece sem ações automáticas e meça tempo líquido, erros e retrabalho.",
-      "medium": "As escolhas mostram alguns critérios úteis, mas ainda vale praticar. Defina tarefa, exceções, validação e limites. Comece sem ações automáticas e meça tempo líquido, erros e retrabalho.",
-      "high": "Selecionou critérios fortes nestes cenários. Isto não demonstra execução competente. Defina tarefa, exceções, validação e limites. Comece sem ações automáticas e meça tempo líquido, erros e retrabalho."
+      "low": "Vale a pena praticar estes pontos. Defina tarefa, exceções, validação e limites. Comece sem ações automáticas e meça tempo líquido, erros e retrabalho.",
+      "medium": "Acertou em alguns critérios. Pratique os pontos em que teve dúvidas. Defina tarefa, exceções, validação e limites. Comece sem ações automáticas e meça tempo líquido, erros e retrabalho.",
+      "high": "Escolheu bons critérios nestes cenários. Confirme-os agora num exercício real, com revisão. Defina tarefa, exceções, validação e limites. Comece sem ações automáticas e meça tempo líquido, erros e retrabalho."
     }
   },
   "questions": [
@@ -195,7 +195,7 @@
     {
       "id": "q4",
       "dimension": "responsible",
-      "text": "Uma equipa quer colar tickets reais de clientes numa ferramenta pública de IA para acelerar respostas. Qual é a melhor decisão?",
+      "text": "Uma equipa quer colar pedidos reais de clientes numa ferramenta pública de IA para acelerar respostas. Qual é a melhor decisão?",
       "options": [
         {
           "id": "a",
@@ -207,7 +207,7 @@
         },
         {
           "id": "b",
-          "text": "Permitir se removerem nomes e emails antes de colar os tickets.",
+          "text": "Permitir se removerem nomes e emails antes de colar os pedidos.",
           "scores": {
             "responsible": 1
           },
@@ -217,7 +217,7 @@
         },
         {
           "id": "c",
-          "text": "Começar com poucos tickets para testar valor antes de criar política interna.",
+          "text": "Começar com poucos pedidos para testar valor antes de criar política interna.",
           "scores": {
             "responsible": 1,
             "automation": 1
@@ -228,7 +228,7 @@
         },
         {
           "id": "d",
-          "text": "Usar apenas para tickets antigos, porque o risco operacional é menor.",
+          "text": "Usar apenas para pedidos antigos, porque o risco operacional é menor.",
           "scores": {
             "responsible": 1
           },
@@ -307,7 +307,7 @@
     {
       "id": "q6",
       "dimension": "foundations",
-      "text": "Um colaborador diz: 'a IA errou, portanto esta tecnologia ainda não serve para a nossa empresa'. Qual é a resposta mais madura?",
+      "text": "Um colaborador diz: 'a IA errou, portanto esta tecnologia ainda não serve para a nossa empresa'. O que vale a pena verificar primeiro?",
       "options": [
         {
           "id": "a",
@@ -338,7 +338,7 @@
         },
         {
           "id": "d",
-          "text": "Criar uma lista de erros e pedir à equipa para evitar esses prompts no futuro.",
+          "text": "Criar uma lista de erros e pedir à equipa para evitar esses pedidos à IA no futuro.",
           "scores": {
             "foundations": 2,
             "prompting": 1
@@ -409,7 +409,7 @@
     {
       "id": "q8",
       "dimension": "evaluation",
-      "text": "A IA criou uma tabela com recomendações de fornecedores. O texto parece bom, mas alguns dados foram inferidos. Como deve usar esse output?",
+      "text": "A IA criou uma tabela com recomendações de fornecedores. O texto parece bom, mas alguns dados foram inferidos. Como deve usar essa resposta?",
       "options": [
         {
           "id": "a",
@@ -421,7 +421,7 @@
         },
         {
           "id": "b",
-          "text": "Usar a tabela como shortlist inicial, desde que a decisão final continue humana.",
+          "text": "Usar a tabela como lista inicial de opções, desde que a decisão final continue humana.",
           "scores": {
             "evaluation": 2
           },
@@ -618,7 +618,7 @@
     {
       "id": "q12",
       "dimension": "evaluation",
-      "text": "Quando encontra uma tarefa repetitiva que talvez pudesse ser melhorada com IA, qual é o seu primeiro instinto?",
+      "text": "Quando encontra uma tarefa repetitiva que talvez pudesse ser melhorada com IA, o que costuma fazer primeiro?",
       "options": [
         {
           "id": "a",
@@ -664,7 +664,7 @@
         }
       ],
       "measure": "self_report",
-      "feedback": "Separe factos de inferências e confirme os pontos críticos fora do modelo."
+      "feedback": "Separe factos do que a IA deduziu e confirme os pontos críticos fora do modelo."
     }
   ],
   "profiles": {
