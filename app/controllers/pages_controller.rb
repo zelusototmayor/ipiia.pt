@@ -57,8 +57,18 @@ class PagesController < ApplicationController
     },
     "teste" => {
       template: "teste",
-      title: "Teste IA gratuito · IPIIA",
-      description: "Teste gratuito de 5–7 minutos que avalia a prontidão em IA por dimensões · fundamentos, prompting, validação e segurança · com relatório enviado por email."
+      title: "Conhecimentos em IA no trabalho · IPIIA",
+      description: "Doze perguntas: dez cenários e dois hábitos declarados. Resultado imediato por dimensão, sem contacto obrigatório; não é certificação nem avaliação da empresa."
+    },
+    "diagnostico-ia" => {
+      template: "diagnostico_ia",
+      title: "Diagnóstico de um processo · IPIIA",
+      description: "Onze perguntas para comparar o próximo passo de um processo: alternativa existente, teste interno, orientação, avaliação ou continuidade. Sem contratação automática."
+    },
+    "guia-decisao-ia" => {
+      template: "guia_decisao_ia",
+      title: "Guia de decisão para um processo · IPIIA",
+      description: "Compare os seis percursos do diagnóstico de um processo, sem score agregado, contratação automática ou garantia de segurança."
     },
     "sobre" => {
       template: "sobre",
