@@ -2333,6 +2333,7 @@ body::before {
   flex-direction: column;
   gap: 1.25rem;
 }
+.contact-form[hidden] { display: none; }
 .form-group { display: flex; flex-direction: column; gap: .5rem; }
 .form-label {
   font-family: var(--font-m);
